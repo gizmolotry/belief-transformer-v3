@@ -1,0 +1,707 @@
+{
+  "formulas_and_limitations": {
+    "adjusted_r2": "1 - (1 - R2) * (n - 1) / (n - p - 1)",
+    "analysis_scope": "exploratory and descriptive; no confirmatory decision labels are emitted",
+    "mbfc": "publisher-level external scores are observational targets, not ground truth",
+    "observer_polarity": "softmax(logits_raw)[entailment] - softmax(logits_raw)[contradiction]",
+    "overall_two_predictor_f_test": "F=((SST-SSE)/2)/(SSE/(n-3)); upper-tail F distribution with df=(2,n-3)",
+    "pca": "SVD of the column-centered article-by-eight observer-polarity matrix",
+    "predictive_r2": "1 - sum((observed-LOO_prediction)^2)/sum((observed-mean_observed)^2)",
+    "publisher_centroid": "unweighted arithmetic mean across articles from each publisher",
+    "temporal_inference": {
+      "reason": "Articles are nested within publishers; the prior article-level bootstrap treated dependent articles as independent and was invalid.",
+      "status": "not_estimated"
+    }
+  },
+  "provenance": {
+    "alignment": {
+      "artifact_row_ids_present": false,
+      "limitation": "NLI rows have no article IDs; equal counts are verified, but semantic row alignment cannot be independently authenticated.",
+      "mode": "row_order_only"
+    },
+    "class_order": [
+      "contradiction",
+      "neutral",
+      "entailment"
+    ],
+    "git_commit": "9107495acbe81e2a2b42b5aaa0afeb3999430cb1",
+    "inputs": {
+      "corpus_jsonl": {
+        "path": "D:\\belief-transformer\\V3\\data\\controlled_N_dense_corpus.jsonl",
+        "sha256": "3b16c0355c8896a1025235e1d07265a9606bd937f1f8b50bf86bbb2e879899c9"
+      },
+      "mbfc_json": {
+        "path": "D:\\belief-transformer\\V3\\data\\mbfc_continuous_scores.json",
+        "sha256": "4ccaf1cb55045115b858da73201a69eb5b80ad920554cd7480a4df64d285b547"
+      },
+      "nli_artifact": {
+        "path": "D:\\belief-transformer\\V3\\data\\controlled_ideo_embeddings_dense.pt",
+        "sha256": "375b10220219de0b1efde4ac1c47ed7a5307206bd1fcb904deed1d1f76a31fca"
+      }
+    },
+    "runtime_environment": {
+      "numpy": "2.3.3",
+      "python": "3.13.2",
+      "python_implementation": "CPython",
+      "scipy": "1.16.2",
+      "torch": "2.10.0+cu128"
+    },
+    "script": {
+      "exact_head_match": true,
+      "git_head_sha256": "910bcb55bc8661207b34d20cec40512e70ac17c0d9922f9f7857c8d7167d0a9a",
+      "repo_relative_path": "scripts/exploratory_internal_structure_analysis.py",
+      "sha256": "910bcb55bc8661207b34d20cec40512e70ac17c0d9922f9f7857c8d7167d0a9a"
+    }
+  },
+  "results": {
+    "mbfc": {
+      "leave_one_publisher_out": {
+        "pearson": {
+          "p_value": 0.7856353303498962,
+          "r": -0.07389720928689505
+        },
+        "predictions": [
+          {
+            "observed": -1.8,
+            "predicted": 1.2360318760548814,
+            "publisher": "aljazeera.com",
+            "residual": -3.0360318760548815
+          },
+          {
+            "observed": 1.5,
+            "predicted": 2.8570519125292098,
+            "publisher": "bbc.co.uk",
+            "residual": -1.3570519125292098
+          },
+          {
+            "observed": 1.5,
+            "predicted": 1.4086926205481851,
+            "publisher": "bbc.com",
+            "residual": 0.09130737945181489
+          },
+          {
+            "observed": 8.1,
+            "predicted": 4.900627621426054,
+            "publisher": "breitbart.com",
+            "residual": 3.199372378573946
+          },
+          {
+            "observed": -3.6,
+            "predicted": 2.347858883284472,
+            "publisher": "cnn.com",
+            "residual": -5.947858883284471
+          },
+          {
+            "observed": 6.6,
+            "predicted": -2.0952955975640206,
+            "publisher": "dailymail.co.uk",
+            "residual": 8.69529559756402
+          },
+          {
+            "observed": -1.1,
+            "predicted": 2.234909528082592,
+            "publisher": "express.co.uk",
+            "residual": -3.334909528082592
+          },
+          {
+            "observed": 8.0,
+            "predicted": 3.2091185639546005,
+            "publisher": "foxnews.com",
+            "residual": 4.7908814360453995
+          },
+          {
+            "observed": -5.2,
+            "predicted": 1.8026889931305452,
+            "publisher": "haaretz.com",
+            "residual": -7.002688993130546
+          },
+          {
+            "observed": -3.5,
+            "predicted": -0.14894615803523248,
+            "publisher": "middleeasteye.net",
+            "residual": -3.3510538419647675
+          },
+          {
+            "observed": -6.1,
+            "predicted": -0.25786502377090237,
+            "publisher": "middleeastmonitor.com",
+            "residual": -5.842134976229097
+          },
+          {
+            "observed": 4.0,
+            "predicted": 3.991189653307167,
+            "publisher": "nypost.com",
+            "residual": 0.008810346692833093
+          },
+          {
+            "observed": 7.8,
+            "predicted": -9.36577691457063,
+            "publisher": "presstv.ir",
+            "residual": 17.16577691457063
+          },
+          {
+            "observed": -3.5,
+            "predicted": 3.6883229806669915,
+            "publisher": "theguardian.com",
+            "residual": -7.1883229806669915
+          },
+          {
+            "observed": 7.0,
+            "predicted": 2.3410200764296185,
+            "publisher": "townhall.com",
+            "residual": 4.6589799235703815
+          },
+          {
+            "observed": 9.0,
+            "predicted": 3.9322346561898365,
+            "publisher": "wnd.com",
+            "residual": 5.067765343810164
+          }
+        ],
+        "predictive_r2": -0.49021094823061384
+      },
+      "pc1_fit": {
+        "adjusted_r2": -0.0589846605164881,
+        "coefficients": [
+          2.1566037672459455
+        ],
+        "intercept": 1.7937500000000008,
+        "n_publishers": 16,
+        "r2": 0.011614316851277784
+      },
+      "pc2_fit": {
+        "adjusted_r2": 0.12749707108054387,
+        "coefficients": [
+          -11.269530717073458
+        ],
+        "intercept": 1.7937500000000008,
+        "n_publishers": 16,
+        "r2": 0.1856639330085076
+      },
+      "pc2_leave_one_out_sensitivity": {
+        "ranges": {
+          "pearson_r": [
+            -0.7475428849279631,
+            -0.2982968915235603
+          ],
+          "r2": [
+            0.08898103549261871,
+            0.5588203648064217
+          ],
+          "slope": [
+            -22.422601248444643,
+            -8.261232603387507
+          ]
+        },
+        "records": [
+          {
+            "adjusted_r2": 0.11714701491981683,
+            "held_out_publisher": "aljazeera.com",
+            "pearson": {
+              "p_value": 0.11475930571073033,
+              "r": -0.42450906047520864
+            },
+            "r2": 0.18020794242554417,
+            "slope": -10.963948957823916
+          },
+          {
+            "adjusted_r2": 0.1241955859892856,
+            "held_out_publisher": "bbc.co.uk",
+            "pearson": {
+              "p_value": 0.10768717682367182,
+              "r": -0.4321493308254778
+            },
+            "r2": 0.18675304413290805,
+            "slope": -11.31476083973062
+          },
+          {
+            "adjusted_r2": 0.12304222082564809,
+            "held_out_publisher": "bbc.com",
+            "pearson": {
+              "p_value": 0.1088146537664637,
+              "r": -0.430908415089848
+            },
+            "r2": 0.18568206219524463,
+            "slope": -11.293089176497116
+          },
+          {
+            "adjusted_r2": 0.05450801157547458,
+            "held_out_publisher": "breitbart.com",
+            "pearson": {
+              "p_value": 0.2018451113620125,
+              "r": -0.34934675267676096
+            },
+            "r2": 0.12204315360579787,
+            "slope": -9.539473883056433
+          },
+          {
+            "adjusted_r2": 0.1466058754771159,
+            "held_out_publisher": "cnn.com",
+            "pearson": {
+              "p_value": 0.08789086017187653,
+              "r": -0.4555903847287844
+            },
+            "r2": 0.20756259865732196,
+            "slope": -11.492291748138907
+          },
+          {
+            "adjusted_r2": 0.14161560671803053,
+            "held_out_publisher": "dailymail.co.uk",
+            "pearson": {
+              "p_value": 0.09197082566620265,
+              "r": -0.4504761677011812
+            },
+            "r2": 0.20292877766674267,
+            "slope": -11.451034717391805
+          },
+          {
+            "adjusted_r2": 0.12544106712334624,
+            "held_out_publisher": "express.co.uk",
+            "pearson": {
+              "p_value": 0.10648238470276677,
+              "r": -0.4334853657608542
+            },
+            "r2": 0.1879095623288215,
+            "slope": -11.22256292406726
+          },
+          {
+            "adjusted_r2": 0.08830036949711284,
+            "held_out_publisher": "foxnews.com",
+            "pearson": {
+              "p_value": 0.14877955379108201,
+              "r": -0.39169091344565365
+            },
+            "r2": 0.15342177167589044,
+            "slope": -9.996485609906324
+          },
+          {
+            "adjusted_r2": 0.13287311487613396,
+            "held_out_publisher": "haaretz.com",
+            "pearson": {
+              "p_value": 0.09955976760611349,
+              "r": -0.4413737073363553
+            },
+            "r2": 0.1948107495278386,
+            "slope": -10.849760643285341
+          },
+          {
+            "adjusted_r2": 0.08404265146799161,
+            "held_out_publisher": "middleeasteye.net",
+            "pearson": {
+              "p_value": 0.15458952551143382,
+              "r": -0.3866111436096161
+            },
+            "r2": 0.14946817636313514,
+            "slope": -10.158937360418236
+          },
+          {
+            "adjusted_r2": 0.018902653607435482,
+            "held_out_publisher": "middleeastmonitor.com",
+            "pearson": {
+              "p_value": 0.2801867469567633,
+              "r": -0.2982968915235603
+            },
+            "r2": 0.08898103549261871,
+            "slope": -8.261232603387507
+          },
+          {
+            "adjusted_r2": 0.11260183090216025,
+            "held_out_publisher": "nypost.com",
+            "pearson": {
+              "p_value": 0.11955794875288984,
+              "r": -0.4195085391373445
+            },
+            "r2": 0.17598741440914878,
+            "slope": -11.218798667437293
+          },
+          {
+            "adjusted_r2": 0.524883469791531,
+            "held_out_publisher": "presstv.ir",
+            "pearson": {
+              "p_value": 0.0013561358183941008,
+              "r": -0.7475428849279631
+            },
+            "r2": 0.5588203648064217,
+            "slope": -22.422601248444643
+          },
+          {
+            "adjusted_r2": 0.17943285446867663,
+            "held_out_publisher": "theguardian.com",
+            "pearson": {
+              "p_value": 0.06503385856634257,
+              "r": -0.4878983433413151
+            },
+            "r2": 0.2380447934351997,
+            "slope": -12.43559938347552
+          },
+          {
+            "adjusted_r2": 0.10457495989568222,
+            "held_out_publisher": "townhall.com",
+            "pearson": {
+              "p_value": 0.12851823673226895,
+              "r": -0.4105287947656105
+            },
+            "r2": 0.16853389133170482,
+            "slope": -10.49725237655135
+          },
+          {
+            "adjusted_r2": 0.05965280583499899,
+            "held_out_publisher": "wnd.com",
+            "pearson": {
+              "p_value": 0.19264263341371146,
+              "r": -0.356118607434476
+            },
+            "r2": 0.1268204625610705,
+            "slope": -9.215547768420938
+          }
+        ]
+      },
+      "publisher_order": [
+        "aljazeera.com",
+        "bbc.co.uk",
+        "bbc.com",
+        "breitbart.com",
+        "cnn.com",
+        "dailymail.co.uk",
+        "express.co.uk",
+        "foxnews.com",
+        "haaretz.com",
+        "middleeasteye.net",
+        "middleeastmonitor.com",
+        "nypost.com",
+        "presstv.ir",
+        "theguardian.com",
+        "townhall.com",
+        "wnd.com"
+      ],
+      "two_dimensional_fit": {
+        "adjusted_r2": 0.06723046751792583,
+        "coefficients": [
+          -1.692831908941706,
+          -12.183195251487131
+        ],
+        "intercept": 1.7937500000000008,
+        "n_publishers": 16,
+        "overall_f_test": {
+          "denominator_df": 13,
+          "f_statistic": 1.5405713724833032,
+          "numerator_df": 2,
+          "p_value": 0.25094115615678375
+        },
+        "r2": 0.1915997385155357
+      }
+    },
+    "n_articles": 320,
+    "n_publishers": 16,
+    "pca": {
+      "explained_variance": [
+        0.2635969929542783,
+        0.1054624342729892
+      ],
+      "explained_variance_ratio": [
+        0.557736521696383,
+        0.22314462165072177
+      ],
+      "loadings": [
+        [
+          0.4384737414097305,
+          0.4887311585886579,
+          0.5666873688947004,
+          0.3826973699531947,
+          0.11238971696125451,
+          0.18796357044856515,
+          0.20522888689278135,
+          0.10587791731610542
+        ],
+        [
+          -0.3277159061238773,
+          0.04828134919543832,
+          -0.40988819565389834,
+          0.31886357734566567,
+          0.4255272362150343,
+          0.33063283009721767,
+          0.35238013135394003,
+          0.45390046070396106
+        ]
+      ]
+    },
+    "publisher_centroids": [
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.16711440675803774,
+          -0.20993536663274348,
+          -0.2618128106283841,
+          -0.07435807253664733,
+          0.03213594805605177,
+          -0.01283263594892555,
+          -0.013799391943854817,
+          0.03203271219208033
+        ],
+        "pc1": -0.001954367052580895,
+        "pc2": 0.06347371013222411,
+        "publisher": "aljazeera.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.18769317076733832,
+          -0.34892963547573264,
+          -0.3646239381671999,
+          -0.27581813537402095,
+          0.013850620818250054,
+          -0.07878194949692487,
+          -0.037811937503564326,
+          -0.058564963800393076
+        ],
+        "pc1": -0.24323996074703974,
+        "pc2": -0.03776012494660883,
+        "publisher": "bbc.co.uk"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.1742982593221071,
+          -0.27100421241113976,
+          -0.3457502733292099,
+          -0.2230422094596828,
+          0.08392017101746609,
+          -0.03271735258427266,
+          -0.025419864542512917,
+          0.008925639282464967
+        ],
+        "pc1": -0.14216684714484454,
+        "pc2": 0.05075242839668861,
+        "publisher": "bbc.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          0.011262718113593249,
+          -0.28402962534484,
+          -0.1316605973943719,
+          -0.29588978294483426,
+          -0.09302733493084456,
+          -0.11638719211509599,
+          -0.1619971115929289,
+          -0.09744662539858355
+        ],
+        "pc1": -0.04863184799962335,
+        "pc2": -0.3210385160342571,
+        "publisher": "breitbart.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.11926442403014456,
+          -0.1310347382812572,
+          -0.1860978592897719,
+          -0.07407545562567991,
+          -0.0018426527107495718,
+          -0.0273713568824195,
+          -0.024800257268429066,
+          -0.014631675505308708
+        ],
+        "pc1": 0.08685263396971862,
+        "pc2": -0.0236658820406181,
+        "publisher": "cnn.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          0.05122480031073261,
+          0.029852645750116414,
+          0.034272598382105154,
+          0.06159772168581841,
+          0.06898070436837499,
+          0.08316985840865383,
+          0.07872550775037968,
+          0.06751724104295956
+        ],
+        "pc1": 0.4757230548845996,
+        "pc2": 0.021617608681420326,
+        "publisher": "dailymail.co.uk"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          0.12749323513770183,
+          0.05638052883779922,
+          0.14845168681654924,
+          0.048438644898979324,
+          0.1133732928875288,
+          0.15309006049713328,
+          0.12024912745635727,
+          0.0821088195531045
+        ],
+        "pc1": 0.609996160506274,
+        "pc2": 0.0101708131745098,
+        "publisher": "express.co.uk"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.0709506747034504,
+          -0.1315473727378606,
+          -0.12864247515596922,
+          -0.14448848640339346,
+          -0.04804627475484635,
+          -0.06960374516443218,
+          -0.0678807596686685,
+          -0.09329883384294588
+        ],
+        "pc1": 0.08309732180664613,
+        "pc2": -0.17003833763871462,
+        "publisher": "foxnews.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.0629398800870182,
+          -0.2607506605162619,
+          -0.29922245905002304,
+          -0.12498648099000027,
+          0.05763875682462953,
+          0.019436540591429255,
+          -0.0022724873688993543,
+          0.002870458759182894
+        ],
+        "pc1": -0.013476825797919543,
+        "pc2": 0.03841732841291158,
+        "publisher": "haaretz.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.2477034983478838,
+          -0.29751338021582274,
+          -0.40126146253984973,
+          -0.08239923769953515,
+          0.11607842244789848,
+          -0.0002920060992497225,
+          0.06605192306104149,
+          0.04672652386986818
+        ],
+        "pc1": -0.13245879483755663,
+        "pc2": 0.21492367210680574,
+        "publisher": "middleeasteye.net"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.4762319031889339,
+          -0.4537782013871842,
+          -0.5480656439898286,
+          -0.12212732667285169,
+          0.16045498963356206,
+          0.012162232286633918,
+          0.02095864697915069,
+          0.1473080886786793
+        ],
+        "pc1": -0.3987065604306682,
+        "pc2": 0.38254211158182305,
+        "publisher": "middleeastmonitor.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.07070140347074458,
+          -0.20699586786587393,
+          -0.16035915624010333,
+          -0.19625109622643666,
+          -0.07904358681801853,
+          -0.06460028894041972,
+          -0.05891364481479777,
+          -0.08455318516637705
+        ],
+        "pc1": 0.008772703498821435,
+        "pc2": -0.18167410725257635,
+        "publisher": "nypost.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.5632223831915147,
+          -0.42123388164138653,
+          -0.5548421159121071,
+          -0.12471083749128291,
+          0.14692801992772644,
+          0.06361851574670886,
+          0.04380533203004242,
+          0.137413639635722
+        ],
+        "pc1": -0.41398021185995637,
+        "pc2": 0.42939203306706625,
+        "publisher": "presstv.ir"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.12365247986450481,
+          -0.15089758547299123,
+          -0.23828830206669513,
+          -0.09869994214844892,
+          -0.06331104600607453,
+          -0.09278567996443692,
+          -0.07171564012395629,
+          -0.08549534557028582
+        ],
+        "pc1": -0.00011361118872993403,
+        "pc2": -0.10612815639661469,
+        "publisher": "theguardian.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.04358338696837569,
+          -0.12583893298000165,
+          -0.0397742313790454,
+          -0.05008446068384505,
+          -0.02448802708043545,
+          0.0017344623857694613,
+          -0.007225090849770449,
+          -0.0640357906179529
+        ],
+        "pc1": 0.21597902928397555,
+        "pc2": -0.11678766987300801,
+        "publisher": "townhall.com"
+      },
+      {
+        "n_articles": 20,
+        "observer_polarity": [
+          -0.0975778930555036,
+          -0.33433447298663166,
+          -0.12304111925878589,
+          -0.26518189089482597,
+          -0.06123949641836711,
+          -0.052968767144734155,
+          -0.12307906177266612,
+          -0.14341654306805887
+        ],
+        "pc1": -0.08569187689111768,
+        "pc2": -0.2541969113710515,
+        "publisher": "wnd.com"
+      }
+    ],
+    "shear_quartiles": {
+      "high": {
+        "date_sd_days_population": 77.21856055217556,
+        "n_articles": 80,
+        "publisher_entropy_natural_log": 2.345823910337974
+      },
+      "high_threshold": 0.23698052664854535,
+      "low": {
+        "date_sd_days_population": 75.64438181385317,
+        "n_articles": 80,
+        "publisher_entropy_natural_log": 2.500376512772523
+      },
+      "low_threshold": 0.0352750617002941,
+      "selection_rule": "inclusive empirical 25th/75th percentile thresholds",
+      "shear_definition": "population standard deviation across eight observer polarities"
+    }
+  },
+  "schema": {
+    "name": "belief_transformer.exploratory_internal_structure",
+    "version": "1.1.0"
+  }
+}

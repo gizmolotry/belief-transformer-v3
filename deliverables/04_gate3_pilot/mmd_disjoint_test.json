@@ -1,0 +1,54 @@
+{
+  "condition_1": "corpus_bart_tau050",
+  "condition_2": "corpus_topic_tau050",
+  "sample_size_s1_disjoint": 181,
+  "sample_size_s2_disjoint": 147,
+  "permutation_iterations": 500,
+  "mmd_by_view": {
+    "V1": {
+      "view_label": "Scalar Q0 (8D margin)",
+      "empirical_unbiased_mmd2": 0.001665,
+      "mmd_distance": 0.040804,
+      "null_mean": 6.3e-05,
+      "null_q95": 0.00568,
+      "null_q99": 0.009691,
+      "p_value": 0.20958083832335328
+    },
+    "V2": {
+      "view_label": "Scalar Q1 (8D margin)",
+      "empirical_unbiased_mmd2": 0.000953,
+      "mmd_distance": 0.030873,
+      "null_mean": 2.3e-05,
+      "null_q95": 0.005071,
+      "null_q99": 0.008986,
+      "p_value": 0.25948103792415167
+    },
+    "V3": {
+      "view_label": "Layer 24 CLS Q0 (8x1536)",
+      "empirical_unbiased_mmd2": 0.0062,
+      "mmd_distance": 0.078739,
+      "null_mean": -1.1e-05,
+      "null_q95": 0.001582,
+      "null_q99": 0.002314,
+      "p_value": 0.001996007984031936
+    },
+    "V4": {
+      "view_label": "Layer 24 CLS Q1 (8x1536)",
+      "empirical_unbiased_mmd2": 0.003777,
+      "mmd_distance": 0.06146,
+      "null_mean": -0.0,
+      "null_q95": 0.001548,
+      "null_q99": 0.002671,
+      "p_value": 0.003992015968063872
+    },
+    "V7": {
+      "view_label": "Layer 12 CLS Q0 (8x1536)",
+      "empirical_unbiased_mmd2": 0.007747,
+      "mmd_distance": 0.088015,
+      "null_mean": 3.7e-05,
+      "null_q95": 0.001199,
+      "null_q99": 0.001905,
+      "p_value": 0.001996007984031936
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "topic": "Climate Politics & Energy Transition",
+  "n_articles": 60,
+  "n_publishers": 50,
+  "anisotropy_pc1_evr": 0.6975714564323425,
+  "coherence": {
+    "ideology": 0.09600403376056679,
+    "structural": -0.016267825130073885,
+    "random": -0.012824012049739915
+  },
+  "exact_null": {
+    "total_subsets": 735471,
+    "upper_tail_count_ge_observed": 2332,
+    "exact_upper_tail_probability": 0.003170757242637711,
+    "null_mean": 0.018450899252522922,
+    "null_min": -0.053448108241095076,
+    "null_max": 0.14455476197014963
+  },
+  "dimensionality_gate": {
+    "dataset_label": "Climate Politics & Energy Transition",
+    "n_samples": 60,
+    "n_features": 8,
+    "observed_participation_ratio": 1.4774656295776367,
+    "column_null_mean_participation_ratio": 6.902658103895187,
+    "detected_rank_column_null": 1,
+    "detected_rank_publisher_null": null,
+    "components": [
+      {
+        "component": 1,
+        "observed_eigenvalue": 0.17477717995643616,
+        "observed_variance_ratio": 0.818182647228241,
+        "column_null": {
+          "mean_eigenvalue": 0.0459228159673512,
+          "q95_eigenvalue": 0.05150947719812393,
+          "mean_variance_ratio": 0.21497802037596703,
+          "q95_variance_ratio": 0.2411307841539383,
+          "exceedances": 0,
+          "p_value": 9.999000099990002e-05,
+          "detected": true
+        }
+      },
+      {
+        "component": 2,
+        "observed_eigenvalue": 0.014084010384976864,
+        "observed_variance_ratio": 0.06593133509159088,
+        "column_null": {
+          "mean_eigenvalue": 0.03725801679044962,
+          "q95_eigenvalue": 0.041489917784929276,
+          "mean_variance_ratio": 0.17441558235436677,
+          "q95_variance_ratio": 0.19422635436058044,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 3,
+        "observed_eigenvalue": 0.008028233423829079,
+        "observed_variance_ratio": 0.03758248686790466,
+        "column_null": {
+          "mean_eigenvalue": 0.031669786976836624,
+          "q95_eigenvalue": 0.03493297100067139,
+          "mean_variance_ratio": 0.14825545788258315,
+          "q95_variance_ratio": 0.1635313630104065,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 4,
+        "observed_eigenvalue": 0.006915932055562735,
+        "observed_variance_ratio": 0.032375480979681015,
+        "column_null": {
+          "mean_eigenvalue": 0.027199822269938886,
+          "q95_eigenvalue": 0.030015939846634865,
+          "mean_variance_ratio": 0.12733025670275092,
+          "q95_variance_ratio": 0.1405133157968521,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 5,
+        "observed_eigenvalue": 0.00388429150916636,
+        "observed_variance_ratio": 0.018183493986725807,
+        "column_null": {
+          "mean_eigenvalue": 0.0232414877936244,
+          "q95_eigenvalue": 0.02581726387143135,
+          "mean_variance_ratio": 0.10880014501661062,
+          "q95_variance_ratio": 0.1208581030368805,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 6,
+        "observed_eigenvalue": 0.002680705627426505,
+        "observed_variance_ratio": 0.012549160048365593,
+        "column_null": {
+          "mean_eigenvalue": 0.019632246825285256,
+          "q95_eigenvalue": 0.022145960479974747,
+          "mean_variance_ratio": 0.09190424126312137,
+          "q95_variance_ratio": 0.10367166250944138,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 7,
+        "observed_eigenvalue": 0.001756821176968515,
+        "observed_variance_ratio": 0.008224189281463623,
+        "column_null": {
+          "mean_eigenvalue": 0.016158876125421374,
+          "q95_eigenvalue": 0.018667081370949745,
+          "mean_variance_ratio": 0.07564438561163843,
+          "q95_variance_ratio": 0.08738602697849274,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 8,
+        "observed_eigenvalue": 0.0014891583705320954,
+        "observed_variance_ratio": 0.006971181835979223,
+        "column_null": {
+          "mean_eigenvalue": 0.012533277972228826,
+          "q95_eigenvalue": 0.015078243799507618,
+          "mean_variance_ratio": 0.05867190914787352,
+          "q95_variance_ratio": 0.07058563083410263,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      }
+    ]
+  },
+  "extremes": {
+    "min_article": {
+      "score": -1.590069055557251,
+      "publisher": "nuclear-news.net",
+      "snippet": "US-Funded Group Removes Report Warning of Famine in North Gaza After Complaint From US Ambassador"
+    },
+    "max_article": {
+      "score": 0.966277003288269,
+      "publisher": "thisdaylive.com",
+      "snippet": "Letter to the Year 2024"
+    }
+  }
+}

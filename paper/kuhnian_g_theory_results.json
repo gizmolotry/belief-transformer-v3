@@ -1,0 +1,192 @@
+{
+  "timestamp": "2026-09-17T23:01:08Z",
+  "design": {
+    "n_articles": 120,
+    "n_frameworks": 5,
+    "n_realizations_per_framework": 3,
+    "n_pairs_per_realization": 8,
+    "frameworks": [
+      "geopolitical_conflict",
+      "humanitarian_civilian_welfare",
+      "legal_ihl_accountability",
+      "strategic_security_deterrence",
+      "economic_material_cost"
+    ],
+    "realizations": [
+      "realization_1",
+      "realization_2",
+      "realization_3"
+    ],
+    "total_cell_observations": 1800,
+    "total_pair_observations": 14400
+  },
+  "cell_mean_g_theory_ems": {
+    "grand_mean": 0.018644601341871344,
+    "ss": {
+      "total": 45.96327218701427,
+      "A_article": 4.027906778444749,
+      "P_framework": 8.63201041908612,
+      "B_in_P_wording": 5.057040226302542,
+      "AP_interaction": 18.36564262858588,
+      "ABP_sensitivity": 9.880672134594981
+    },
+    "df": {
+      "total": 1799,
+      "A_article": 119,
+      "P_framework": 4,
+      "B_in_P_wording": 10,
+      "AP_interaction": 476,
+      "ABP_sensitivity": 1190
+    },
+    "ms": {
+      "A_article": 0.03384795612138445,
+      "P_framework": 2.15800260477153,
+      "B_in_P_wording": 0.5057040226302542,
+      "AP_interaction": 0.03858328283316362,
+      "ABP_sensitivity": 0.008303085827390741
+    },
+    "f_stat": {
+      "A_article": 0.8772699893823188,
+      "P_framework": 4.026242799157359,
+      "B_in_P_wording": 60.90555163985009,
+      "AP_interaction": 4.646860653407034
+    },
+    "p_val": {
+      "A_article": 0.8055414954313573,
+      "P_framework": 0.0031962954601347793,
+      "B_in_P_wording": 1.1102230246251565e-16,
+      "AP_interaction": 1.1102230246251565e-16
+    },
+    "variance_components": {
+      "sigma2_A_article": 0.0,
+      "sigma2_P_framework": 0.004505606625376397,
+      "sigma2_B_in_P_wording": 0.004145007806690529,
+      "sigma2_AP_interaction": 0.010093399001924292,
+      "sigma2_ABP_sensitivity": 0.008303085827390741,
+      "sigma2_total": 0.027047099261381956
+    },
+    "variance_percentages": {
+      "pct_A_article": 0.0,
+      "pct_P_framework": 16.658372795671788,
+      "pct_B_in_P_wording": 15.325147316661795,
+      "pct_AP_interaction": 37.31786135134912,
+      "pct_ABP_sensitivity": 30.6986185363173
+    },
+    "generalizability_metrics": {
+      "g_coefficient_relative": 0.0,
+      "dependability_phi_absolute": 0.0
+    }
+  },
+  "bootstrap_95_ci": {
+    "pct_A_article": {
+      "mean": 0.10108306494246992,
+      "std": 0.349121699745086,
+      "ci_95": [
+        0.0,
+        1.2867843389474407
+      ]
+    },
+    "pct_P_framework": {
+      "mean": 16.839575484434295,
+      "std": 2.8444634149139993,
+      "ci_95": [
+        11.245004385966768,
+        22.20464451504695
+      ]
+    },
+    "pct_B_in_P_wording": {
+      "mean": 15.482206171631798,
+      "std": 1.4578013879584333,
+      "ci_95": [
+        12.676908725261363,
+        18.319269972777175
+      ]
+    },
+    "pct_AP_interaction": {
+      "mean": 37.13495413054069,
+      "std": 2.974801742026851,
+      "ci_95": [
+        31.63992482159824,
+        42.922516608149465
+      ]
+    },
+    "pct_ABP_sensitivity": {
+      "mean": 30.44218114845075,
+      "std": 2.02298260485773,
+      "ci_95": [
+        26.617025233415916,
+        34.73955520887616
+      ]
+    },
+    "g_relative": {
+      "mean": 0.009743362151210928,
+      "std": 0.032435124638181496,
+      "ci_95": [
+        0.0,
+        0.12592385366999162
+      ]
+    },
+    "g_absolute": {
+      "mean": 0.0068640092284158166,
+      "std": 0.023174534700815864,
+      "ci_95": [
+        0.0,
+        0.088031869202721
+      ]
+    }
+  },
+  "full_item_level_decomposition": {
+    "n_total_observations": 14400,
+    "ss": {
+      "total": 1094.7635312812654,
+      "A": 32.223254227557995,
+      "P": 69.05608335268896,
+      "B_in_P": 40.456321810420334,
+      "AP": 146.92514102868705,
+      "AB_in_P": 79.04537707675985,
+      "residual_items": 727.057353785151
+    },
+    "df": {
+      "total": 14399,
+      "A": 119,
+      "P": 4,
+      "B_in_P": 10,
+      "AP": 476,
+      "AB_in_P": 1190,
+      "residual_items": 12600
+    },
+    "ms": {
+      "A": 0.2707836489710756,
+      "P": 17.26402083817224,
+      "B_in_P": 4.045632181042033,
+      "AP": 0.30866626266530894,
+      "AB_in_P": 0.06642468661912593,
+      "residual_items": 0.0577029645861231
+    },
+    "variance_components": {
+      "sigma2_A_article": 0.0,
+      "sigma2_P_framework": 0.004505606625376397,
+      "sigma2_B_in_P_wording": 0.004145007806690529,
+      "sigma2_AP_interaction": 0.010093399001924292,
+      "sigma2_AB_in_P_wording_sensitivity": 0.0010902152541253539,
+      "sigma2_residual_items": 0.0577029645861231,
+      "sigma2_total": 0.07753719327423966
+    },
+    "variance_percentages": {
+      "pct_A_article": 0.0,
+      "pct_P_framework": 5.810897241844455,
+      "pct_B_in_P_wording": 5.345831634671296,
+      "pct_AP_interaction": 13.017493380531795,
+      "pct_AB_in_P_wording_sensitivity": 1.406054575988319,
+      "pct_residual_items": 74.41972316696415
+    }
+  },
+  "reml_mixedlm": {
+    "converged": true,
+    "scale": 0.019870678392613455,
+    "group_var": 0.0009319120431028473,
+    "aic": NaN,
+    "bic": NaN
+  },
+  "interpretation": "Replicated Generalizability-Theory (G-Theory) design across 5 conceptual frameworks with 3 independently authored, semantically equivalent probe realizations per framework (15 banks total, N=1,800 cell observations; N=14,400 item observations) rigorously separates true article x framework interaction from probe wording sensitivity and residual noise. Under the cell-mean model: Genuine Article x Framework interaction accounts for 37.32% of variance (95% CI: [31.64%, 42.92%]), Framework main effects account for 16.66% (95% CI: [11.25%, 22.20%]), Probe wording variation within framework accounts for 15.33%, Article x wording sensitivity accounts for 30.70%, and stable article-intrinsic effects account for 0.00% (95% CI: [0.00%, 1.29%]). Crucially, genuine article x framework interaction remains decisive (F=4.65, p < 1e-16) even after wording variation and article-by-wording sensitivity are formally isolated. Relative G-coefficient is 0.0000 and dependability Phi is 0.0000."
+}

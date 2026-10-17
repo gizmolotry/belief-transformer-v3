@@ -1,0 +1,618 @@
+{
+  "disciplinary_paradigms": {
+    "ihl_humanitarian_law": {
+      "name": "International Humanitarian Law",
+      "description": "Evaluates discourse through the formal framework of international humanitarian law, Geneva conventions, proportionality, and civilian distinction.",
+      "pairs": [
+        [
+          "The text emphasizes strict adherence to international humanitarian law and the principle of civilian distinction.",
+          "The text documents severe violations of international humanitarian law and disregard for civilian distinction."
+        ],
+        [
+          "The text frames military strikes as legally proportionate operations targeting verified combatants.",
+          "The text frames military strikes as disproportionate attacks inflicting impermissible collective punishment."
+        ],
+        [
+          "The text details full cooperation with international relief convoys and independent humanitarian observers.",
+          "The text details deliberate obstruction and bombardment of humanitarian relief convoys and medical missions."
+        ],
+        [
+          "The text justifies the detention of individuals under lawful combatant status and military judicial procedure.",
+          "The text condemns arbitrary mass detention, torture, and denial of Geneva Convention protections."
+        ],
+        [
+          "The text describes civilian evacuation orders as precautionary humanitarian measures to preserve life.",
+          "The text describes forced displacement orders as unlawful ethnic cleansing and civilian terrorization."
+        ],
+        [
+          "The text highlights independent legal investigations and accountability mechanisms for operational conduct.",
+          "The text highlights systematic impunity and refusal to cooperate with the International Criminal Court."
+        ],
+        [
+          "The text affirms the inviolable protected legal status of hospitals, schools, and cultural heritage sites.",
+          "The text justifies the destruction of hospitals and schools by alleging systemic enemy exploitation."
+        ],
+        [
+          "The text recognizes the legal obligations of belligerent occupation under the Fourth Geneva Convention.",
+          "The text rejects the applicability of occupation law and asserts sovereign discretion over the territory."
+        ]
+      ]
+    },
+    "strategic_security": {
+      "name": "Strategic Security & Military Operations",
+      "description": "Evaluates discourse through operational military logic, force posture, deterrence, and neutralization of tactical threats.",
+      "pairs": [
+        [
+          "The text analyzes operations as decisive tactical measures necessary to restore military deterrence.",
+          "The text analyzes operations as strategic overreach that undermines long-term military security."
+        ],
+        [
+          "The text focuses on the systematic destruction of enemy tunnel networks, command centers, and rocket arsenals.",
+          "The text emphasizes that underground insurgent networks and command capabilities remain operationally intact."
+        ],
+        [
+          "The text emphasizes preemptive force projection to neutralize imminent cross-border terrorist incursions.",
+          "The text portrays unilateral force projection as destabilizing escalation provoking regional retaliation."
+        ],
+        [
+          "The text highlights superior intelligence surveillance, precision targeting, and electronic warfare dominance.",
+          "The text exposes catastrophic intelligence blindness, tactical surprises, and operational vulnerabilities."
+        ],
+        [
+          "The text frames joint operations as essential to securing national sovereignty and territorial buffer zones.",
+          "The text frames forward deployment as vulnerable quagmires that expose troops to attritional ambushes."
+        ],
+        [
+          "The text underscores the imperative of total military victory and unconditional disarmament of insurgent forces.",
+          "The text underscores the military impossibility of eliminating asymmetric insurgencies through kinetic force alone."
+        ],
+        [
+          "The text validates multi-layered missile defense systems and integrated anti-missile shielding as fully effective.",
+          "The text reports missile defense saturation and vulnerabilities under sustained swarm rocket bombardment."
+        ],
+        [
+          "The text assesses military logistics, weapons resupply, and coalition security cooperation as robust.",
+          "The text reveals acute munitions depletion, troop exhaustion, and strategic friction with foreign allies."
+        ]
+      ]
+    },
+    "peace_conflict_studies": {
+      "name": "Peace & Conflict Studies",
+      "description": "Evaluates discourse through structural violence, trauma cycles, restorative reconciliation, and non-violent de-escalation.",
+      "pairs": [
+        [
+          "The text emphasizes grassroots peacebuilding, intercommunal empathy, and structural reconciliation.",
+          "The text inflames dehumanizing rhetoric, existential enmity, and maximalist eliminationist propaganda."
+        ],
+        [
+          "The text addresses the deep structural root causes of conflict, dispossession, and systemic inequality.",
+          "The text reduces the conflict to sudden unprovoked acts of fanaticism while erasing structural context."
+        ],
+        [
+          "The text champions immediate unconditional ceasefires, diplomatic compromises, and demilitarization.",
+          "The text rejects diplomatic compromises in favor of maximalist military solutions and permanent subjugation."
+        ],
+        [
+          "The text highlights non-violent civil resistance, community solidarity, and unarmed moral courage.",
+          "The text glorifies militarized violence, retributive vengeance, and martial martyrdom."
+        ],
+        [
+          "The text acknowledges historical intergenerational trauma and mutual grief across both communities.",
+          "The text weaponizes selective historical victimhood to justify the ongoing infliction of trauma on others."
+        ],
+        [
+          "The text advocates for joint resource sharing, restorative economic justice, and shared civic institutions.",
+          "The text advocates for total physical segregation, economic blockade, and zero-sum demographic dominance."
+        ],
+        [
+          "The text features independent civil society voices, peace activists, and dissident truth-tellers.",
+          "The text amplifies partisan state spokespersons, militarist warmongers, and corporate defense lobbies."
+        ],
+        [
+          "The text envisions a sustainable peaceful coexistence based on equal human dignity and reciprocal rights.",
+          "The text normalizes perpetual warfare, permanent apartheid, and the inevitability of unending slaughter."
+        ]
+      ]
+    },
+    "realist_international_relations": {
+      "name": "Realist International Relations",
+      "description": "Evaluates discourse through structural realism, great power rivalry, national interest, and balance of power in an anarchic system.",
+      "pairs": [
+        [
+          "The text frames state actions as rational calculations of national interest in an anarchic international system.",
+          "The text criticizes state actions as irrational, ideologically driven blunders contrary to strategic interests."
+        ],
+        [
+          "The text assesses the local conflict as a proxy theater within broader great power balance of power competition.",
+          "The text treats the local conflict as an isolated tribal dispute detached from global multipolar rivalry."
+        ],
+        [
+          "The text emphasizes that sovereign survival depends upon hard military capability and credible power projection.",
+          "The text naively assumes that international norms and moral declarations govern sovereign state behavior."
+        ],
+        [
+          "The text highlights coercive bargaining, deterrence thresholds, and calculated escalatory dominance.",
+          "The text depicts unconstrained escalatory cycles leading toward uncontrollable systemic regional war."
+        ],
+        [
+          "The text frames foreign alliances as transactional security partnerships based on mutual realpolitik utility.",
+          "The text frames foreign alliances as moral obligations rooted in shared values and democratic solidarity."
+        ],
+        [
+          "The text explains geopolitical posture through geographic determinism, energy corridors, and maritime chokepoints.",
+          "The text overlooks geopolitical geography in favor of transient domestic political drama and public sentiment."
+        ],
+        [
+          "The text analyzes the distribution of regional capabilities and the inevitable rise of counter-balancing coalitions.",
+          "The text presumes an unchallenged regional hegemon capable of imposing unilateral order indefinitely."
+        ],
+        [
+          "The text views diplomatic agreements as temporary instruments reflecting the prevailing distribution of power.",
+          "The text regards diplomatic treaties as permanent binding covenants governing future international relations."
+        ]
+      ]
+    },
+    "media_framing_analysis": {
+      "name": "Journalism & Media Framing Analysis",
+      "description": "Evaluates discourse through media criticism, agenda-setting, institutional sourcing bias, and semantic gatekeeping.",
+      "pairs": [
+        [
+          "The text prioritizes independent on-the-ground investigative verification and corroborated primary documents.",
+          "The text uncritically amplifies official military press releases and unverified government talking points."
+        ],
+        [
+          "The text maintains rigorous neutral journalistic tone, balanced contextualization, and transparent sourcing.",
+          "The text employs sensationalist editorial framing, emotional manipulation, and partisan sensationalism."
+        ],
+        [
+          "The text gives equal journalistic agency and human dignity to Palestinian and Israeli civilian casualties.",
+          "The text displays asymmetric linguistic hierarchy, using active voice for one side and passive voice for the other."
+        ],
+        [
+          "The text critically challenges official casualty figures, war narratives, and battlefield propaganda claims.",
+          "The text accepts official military casualty figures while dismissing independent humanitarian documentation."
+        ],
+        [
+          "The text highlights the suppression of press freedom, targeting of journalists, and foreign media blackouts.",
+          "The text rationalizes military restrictions on journalists as necessary censorship to prevent leaks."
+        ],
+        [
+          "The text contextualizes acute breaking developments within decades of documented historical antecedents.",
+          "The text decontextualizes current violence into episodic, ahistorical spectacles devoid of political origins."
+        ],
+        [
+          "The text interrogates the corporate ownership, advertiser pressures, and domestic political biases of news outlets.",
+          "The text presents mainstream editorial consensus as completely objective and immune to institutional bias."
+        ],
+        [
+          "The text exposes rhetorical doublespeak and the systematic sanitization of lethal military violence.",
+          "The text adopts clinical military jargon and euphemisms to obscure mass physical destruction."
+        ]
+      ]
+    }
+  },
+  "absurd_structurally_matched_paradigms": {
+    "meteorology": {
+      "name": "Meteorological Dynamics",
+      "description": "Domain-null baseline matched in syntactic length and polarity contrast using atmospheric science concepts.",
+      "pairs": [
+        [
+          "The text frames atmospheric patterns as stable high-pressure systems producing dry, calm conditions.",
+          "The text frames atmospheric patterns as volatile low-pressure depressions generating severe cyclonic storms."
+        ],
+        [
+          "The text describes the thermal gradient as a steady maritime inversion maintaining moderate equilibrium.",
+          "The text describes the thermal gradient as an extreme baroclinic shear causing violent convective turbulence."
+        ],
+        [
+          "The text emphasizes predictable laminar airflows along the upper tropospheric jet stream path.",
+          "The text emphasizes chaotic mesoscale vortex shedding and turbulent microburst perturbations."
+        ],
+        [
+          "The text highlights gradual moisture condensation and widespread stratiform cloud formation.",
+          "The text highlights rapid supercell updrafts, torrential precipitation, and sudden flash flooding."
+        ],
+        [
+          "The text notes a gradual cooling trend governed by seasonal solar radiation deficits.",
+          "The text notes an abrupt unseasonal heatwave driven by severe subtropical ridge compression."
+        ],
+        [
+          "The text analyzes wind dynamics through steady geostrophic balance and Coriolis force equilibrium.",
+          "The text analyzes wind dynamics through ageostrophic acceleration and destructive cyclonic squall lines."
+        ],
+        [
+          "The text reports uniform relative humidity levels across the entire geographical measurement grid.",
+          "The text reports an intense dryline boundary separating saturated maritime air from arid continental air."
+        ],
+        [
+          "The text models long-term climatological oscillations as periodic, deterministic harmonic cycles.",
+          "The text models long-term climatological oscillations as non-linear, stochastic bifurcation phenomena."
+        ]
+      ]
+    },
+    "culinary_arts": {
+      "name": "Culinary & Gastronomic Arts",
+      "description": "Domain-null baseline matched in syntactic length and polarity contrast using culinary chemistry concepts.",
+      "pairs": [
+        [
+          "The text celebrates refined artisanal preparation, organic local ingredients, and gentle thermal precision.",
+          "The text condemns industrial food processing, synthetic chemical additives, and aggressive mechanical alteration."
+        ],
+        [
+          "The text emphasizes delicate flavor profiles balanced by gentle acidity and aromatic botanical infusions.",
+          "The text emphasizes overwhelming astringency, uncalibrated bitterness, and pungent sulfuric dominance."
+        ],
+        [
+          "The text highlights the slow caramelization of natural sugars through steady indirect convective braising.",
+          "The text highlights the catastrophic scorching and pyrolytic charring caused by uncontrolled direct flames."
+        ],
+        [
+          "The text details a silky stable emulsion achieved through precise mechanical shear and phospholipid bonding.",
+          "The text details a broken, curdled suspension resulting from thermal denaturation and phase separation."
+        ],
+        [
+          "The text promotes rigorous adherence to classical haute cuisine traditions and codified recipes.",
+          "The text promotes radical avant-garde molecular gastronomy, disruptive plating, and sensory deconstruction."
+        ],
+        [
+          "The text preserves crisp textural integrity and vibrant cellular crunch through rapid flash blanching.",
+          "The text decries the mushy, waterlogged degradation resulting from excessive prolonged boiling."
+        ],
+        [
+          "The text honors patient microbial fermentation that yields complex umami depth and digestible nutrients.",
+          "The text warns of putrefactive bacterial contamination, volatile off-odors, and toxic spoilage."
+        ],
+        [
+          "The text champions ethical nose-to-tail butchery, zero kitchen waste, and profound environmental respect.",
+          "The text exposes reckless culinary extravagance, excessive scrap disposal, and unsustainable luxury consumption."
+        ]
+      ]
+    },
+    "botanical_taxonomy": {
+      "name": "Botanical Taxonomy & Plant Physiology",
+      "description": "Domain-null baseline matched in syntactic length and polarity contrast using botanical biology concepts.",
+      "pairs": [
+        [
+          "The text classifies the specimen as a native climax perennial possessing deep mycorrhizal symbiosis.",
+          "The text classifies the specimen as an aggressive invasive ruderal annual displacing native floral biodiversity."
+        ],
+        [
+          "The text describes vigorous vascular xylem transport driven by high atmospheric transpirational pull.",
+          "The text describes lethal vascular cavitation, xylem embolism, and irreversible desiccation under drought."
+        ],
+        [
+          "The text highlights efficient C4 photosynthetic carbon fixation and robust cellular water-use efficiency.",
+          "The text highlights severe photoinhibition, stomatal closure, and metabolic collapse under oxidative stress."
+        ],
+        [
+          "The text details mutualistic entomophilous pollination facilitated by specialized morphological co-adaptation.",
+          "The text details wasteful anemophilous wind dispersal resulting in catastrophic pollen mortality."
+        ],
+        [
+          "The text observes dense lignified secondary cell wall thickening and structural cambium durability.",
+          "The text observes fungal phytopathogen infection, necrotic foliar lesions, and vascular wilt decay."
+        ],
+        [
+          "The text attributes evolutionary fitness to extensive subterranean rhizomatic propagation and clonal resilience.",
+          "The text attributes evolutionary vulnerability to limited seed dormancy and extreme reproductive fragility."
+        ],
+        [
+          "The text documents positive phototropic elongation toward filtered forest canopy gaps.",
+          "The text documents etiolated physiological stunting beneath permanent, light-impenetrable overstories."
+        ],
+        [
+          "The text catalogs endemic speciation within ancient, undisturbed geographical refugia.",
+          "The text catalogs widespread genetic homogenization caused by anthropogenic land fragmentation."
+        ]
+      ]
+    },
+    "sports_tactics": {
+      "name": "Sports Tactics & Athletic Strategy",
+      "description": "Domain-null baseline matched in syntactic length and polarity contrast using competitive athletics concepts.",
+      "pairs": [
+        [
+          "The text praises a disciplined low-block defensive structure, positional compactness, and resolute clearance.",
+          "The text exposes a disorganized defensive breakdown, porous marking, and disastrous tactical vulnerability."
+        ],
+        [
+          "The text emphasizes relentless vertical high pressing, aggressive counter-pressing, and rapid ball recoveries.",
+          "The text observes passive midfield lethargy, surrendered passing lanes, and complete failure to challenge opponents."
+        ],
+        [
+          "The text analyzes precise fluid passing sequences that methodically dismantle the opponent's defensive lines.",
+          "The text laments erratic unforced turnovers, frantic clearances, and complete breakdown of offensive cohesion."
+        ],
+        [
+          "The text highlights lightning-fast transitional counter-attacks that exploit overextended defensive postures.",
+          "The text criticizes sluggish build-up play, sideways possession recycling, and utter lack of penetrating speed."
+        ],
+        [
+          "The text credits superior aerobic conditioning, explosive sprinting endurance, and physical durability.",
+          "The text reveals severe muscular exhaustion, cramping fatigue, and second-half athletic collapse."
+        ],
+        [
+          "The text applauds clinical, ice-cold finishing efficiency inside the final scoring zone.",
+          "The text condemns squandered opportunities, shanked attempts, and historic conversion futility."
+        ],
+        [
+          "The text commends visionary tactical substitutions and adaptive mid-game strategic adjustments.",
+          "The text blames stubborn managerial rigidity, disastrous tactical decisions, and missed strategic windows."
+        ],
+        [
+          "The text celebrates collective team cohesion, selfless work-rate, and unshakable athletic mentality.",
+          "The text decries selfish individual egoism, internal squad dissent, and catastrophic psychological capitulation."
+        ]
+      ]
+    }
+  },
+  "extreme_political_ontologies": {
+    "legal_culpability": {
+      "name": "Strict Legal Culpability & Criminal Jurisdiction",
+      "description": "Evaluates discourse solely through statutory admissibility, individual mens rea, and universal jurisdiction.",
+      "pairs": [
+        [
+          "The text establishes direct chain of command liability and incontrovertible documentary evidence of war crimes.",
+          "The text demonstrates the complete absence of criminal intent, command authorization, or probative evidence."
+        ],
+        [
+          "The text documents deliberate state-level policy establishing statutory culpability for crimes against humanity.",
+          "The text proves actions were isolated rogue infractions strictly subject to prompt internal military tribunal discipline."
+        ],
+        [
+          "The text details prosecutorial evidence meeting the strict beyond-a-reasonable-doubt evidentiary standard.",
+          "The text exposes unsubstantiated partisan hearsay, uncorroborated rumors, and legally inadmissible claims."
+        ],
+        [
+          "The text asserts universal legal jurisdiction and the mandatory duty of foreign states to execute arrest warrants.",
+          "The text rejects foreign judicial overreach as an illegitimate political assault violating sovereign state immunity."
+        ],
+        [
+          "The text identifies specific named military commanders as legally responsible perpetrators of atrocity crimes.",
+          "The text affirms that commanders operated strictly within lawful rules of engagement vetted by legal counsel."
+        ],
+        [
+          "The text invokes formal statutory definitions under the Rome Statute and Genocide Convention tribunals.",
+          "The text dismisses international tribunal mandates as biased, politicized forums lacking lawful authority."
+        ],
+        [
+          "The text emphasizes criminal restitution, victim reparations, and judicial accountability for property destruction.",
+          "The text denies legal liability for incidental wartime property damage incurred during defensive combat operations."
+        ],
+        [
+          "The text highlights independent forensic autopsy documentation verifying unlawful extrajudicial killings.",
+          "The text notes that contested forensic data lacks chain-of-custody verification and independent corroboration."
+        ]
+      ]
+    },
+    "operational_efficacy": {
+      "name": "Kinetic Operational Efficacy & Material Throughput",
+      "description": "Evaluates discourse solely through ammunition expenditure, kill ratios, kinetic efficiency, and weapons systems.",
+      "pairs": [
+        [
+          "The text documents exceptionally high munitions lethality, precision strike efficiency, and target destruction rates.",
+          "The text reveals staggering ordnance waste, missed targets, and catastrophic logistical inefficiency."
+        ],
+        [
+          "The text reports the decisive elimination of high-value enemy combat leadership and frontline battalion cadres.",
+          "The text observes rapid enemy troop reconstitution, intact reserve cadres, and resilient insurgent command."
+        ],
+        [
+          "The text highlights the seamless operational integration of armed drone swarms, loitering munitions, and sensors.",
+          "The text highlights technical vulnerabilities, GPS spoofing, drone intercept attrition, and sensor blindness."
+        ],
+        [
+          "The text measures combat progress by square kilometers cleared, defensive strongpoints seized, and lines held.",
+          "The text measures combat failure by static frontlines, fatal urban ambushes, and inability to consolidate territory."
+        ],
+        [
+          "The text confirms sustained supply chain throughput, artillery barrel longevity, and rapid armored repair.",
+          "The text warns of critical artillery shell shortages, mechanical breakdowns, and logistics bottleneck crises."
+        ],
+        [
+          "The text demonstrates total electromagnetic dominance, radar jamming, and enemy communications blackout.",
+          "The text shows resilient enemy fiber-optic lines, decentralized field couriers, and failed jamming efforts."
+        ],
+        [
+          "The text validates close-air-support coordination with ground armor as tactically flawless and devastating.",
+          "The text documents lethal friendly-fire casualties, coordination friction, and anti-aircraft missile threats."
+        ],
+        [
+          "The text calculates an overwhelmingly favorable attritional loss-exchange ratio against enemy combatants.",
+          "The text calculates an unsustainable, ruinous expenditure of premier weapons systems against low-cost insurgent tactics."
+        ]
+      ]
+    },
+    "humanitarian_welfare": {
+      "name": "Basic Humanitarian Welfare & Biological Survival",
+      "description": "Evaluates discourse solely through physical trauma, daily caloric intake, potable water access, and communicable disease.",
+      "pairs": [
+        [
+          "The text documents catastrophic starvation, acute infant malnutrition, and widespread biological collapse.",
+          "The text claims that humanitarian food shipments and caloric transfers meet minimum biological sustenance."
+        ],
+        [
+          "The text details the total breakdown of clean water sanitation, raw sewage flooding, and cholera epidemics.",
+          "The text highlights operational water desalination pipelines and municipal repair efforts maintaining basic hygiene."
+        ],
+        [
+          "The text reports hospitals functioning without anesthesia, basic antibiotics, or electricity for newborn incubators.",
+          "The text reports field hospitals, medical triage tents, and emergency pharmaceutical supplies arriving regularly."
+        ],
+        [
+          "The text exposes hundreds of thousands of civilians sheltering under freezing, unheated rain in torn plastic sheets.",
+          "The text highlights the delivery of weatherized winter tents, thermal blankets, and protective prefabricated shelters."
+        ],
+        [
+          "The text highlights the mass psychological trauma, catatonic shock, and unending terror of orphaned children.",
+          "The text notes community resilience programs, emergency trauma counselors, and psychiatric aid distributions."
+        ],
+        [
+          "The text warns that unchecked epidemic infectious disease will kill more civilians than kinetic bombardment.",
+          "The text notes rapid emergency mass vaccination campaigns successfully containing polio and infectious outbreaks."
+        ],
+        [
+          "The text describes civilian families subsisting on animal fodder, wild weeds, and contaminated seawater.",
+          "The text describes commercial markets reopening with fresh produce, canned provisions, and staple grains."
+        ],
+        [
+          "The text mourns the irreversible destruction of human life, generational extinction, and societal erasure.",
+          "The text emphasizes civilian endurance, medical survival miracles, and the unstoppable determination to endure."
+        ]
+      ]
+    },
+    "economic_cost": {
+      "name": "Macroeconomic Valuation & Capital Destruction",
+      "description": "Evaluates discourse solely through GDP contraction, insurance premiums, infrastructure capital loss, and sovereign debt.",
+      "pairs": [
+        [
+          "The text details tens of billions of dollars in erased capital assets, destroyed real estate, and municipal debt.",
+          "The text emphasizes insurance compensation pools, sovereign reconstruction guarantees, and asset resilience."
+        ],
+        [
+          "The text warns of catastrophic sovereign debt expansion, foreign investor capital flight, and credit rating downgrades.",
+          "The text highlights robust central bank foreign exchange reserves, treasury bond stability, and liquid currency pegs."
+        ],
+        [
+          "The text documents crippled agricultural output, pulverized manufacturing plants, and permanent commercial insolvency.",
+          "The text highlights swift domestic emergency subsidies, industrial stimulus packages, and corporate tax holidays."
+        ],
+        [
+          "The text analyzes shipping lane closures, soaring container freight premiums, and supply chain trade deficits.",
+          "The text analyzes alternative overland logistical trade routes and maritime naval escorts securing commerce."
+        ],
+        [
+          "The text projects multi-decade economic depression, astronomical unemployment, and generational poverty traps.",
+          "The text projects a rapid post-war Keynesian rebuilding boom driven by massive multinational foreign direct investment."
+        ],
+        [
+          "The text exposes the crippling fiscal opportunity cost of squandering national wealth on perishable armaments.",
+          "The text celebrates the massive technological spin-offs, high-tech defense exports, and military-industrial growth."
+        ],
+        [
+          "The text highlights the complete economic embargo, financial sanctions, and severed international banking access.",
+          "The text highlights shadow banking networks, cryptocurrency settlements, and sanctions-evasion trade mechanisms."
+        ],
+        [
+          "The text details the collapse of municipal tax revenue, bankrupt utility grids, and unpaid public employee wages.",
+          "The text details emergency bilateral treasury grants and multilateral development bank stabilization loans."
+        ]
+      ]
+    },
+    "religious_obligation": {
+      "name": "Eschatological Theology & Sacred Territorial Mandates",
+      "description": "Evaluates discourse solely through divine scripture, sanctified covenant, sacred martyrdom, and holy land theology.",
+      "pairs": [
+        [
+          "The text portrays the struggle as a holy divine command, sacred religious obligation, and sanctified martyrdom.",
+          "The text condemns religious fanaticism, blasphemous extremist heresies, and the perversion of divine faith."
+        ],
+        [
+          "The text asserts an eternal, non-negotiable biblical covenant granting divine title to the ancestral holy land.",
+          "The text rejects theological real estate claims, asserting universal human spiritual equality before God."
+        ],
+        [
+          "The text venerates holy warrior sacrifices as guaranteed celestial rewards in the heavenly paradise.",
+          "The text laments the tragic squandering of mortal lives in pursuit of suicidal religious delusions."
+        ],
+        [
+          "The text proclaims an imminent eschatological battle heralding the messianic redemption of the righteous.",
+          "The text warns that apocalyptic religious prophecy is a dangerous weapon used by tyrants to foment bloodshed."
+        ],
+        [
+          "The text demands the absolute religious purification and defense of sacred shrines, mosques, and sanctuaries.",
+          "The text decries the sacrilegious desecration and political weaponization of sacred houses of worship."
+        ],
+        [
+          "The text frames national enemies as demonic, cursed forces predestined for divine retribution and wrath.",
+          "The text affirms that all human beings are created in the divine image of the Creator and share sacred dignity."
+        ],
+        [
+          "The text invokes unbending religious law and ecclesiastical edicts forbidding any territorial compromise.",
+          "The text invokes pastoral compassion, peaceful rabbinical/Islamic ethics, and the moral duty of preserving life."
+        ],
+        [
+          "The text honors ancient ancestral tombs and sacred burial grounds as the spiritual anchors of identity.",
+          "The text prioritizes the physical survival of living human communities over inert stones and ancient graves."
+        ]
+      ]
+    }
+  },
+  "adversarial_manufacturing_candidates": {
+    "adv_inverted_pc1": {
+      "name": "Adversarially Inverted Polarity Contrast",
+      "description": "Intentionally inverts the side A and side B assignments of Q0 to test if the empirical manifold resists artificial inversion.",
+      "pairs": [
+        [
+          "This article portrays Israeli military actions as disproportionate aggression against civilians.",
+          "This article portrays Israeli military actions as legitimate self-defense against terrorism."
+        ],
+        [
+          "This article portrays Palestinians as violent aggressors and terrorists.",
+          "This article portrays Palestinians as innocent victims of occupation and violence."
+        ],
+        [
+          "This article describes Israeli responses as excessive collective punishment.",
+          "This article describes Israeli responses as proportionate and measured."
+        ],
+        [
+          "This article frames Palestinian armed groups as terrorist organizations.",
+          "This article frames Palestinian armed groups as legitimate resistance movements."
+        ],
+        [
+          "This article frames the situation as Israeli security measures against threats.",
+          "This article frames the situation as Israeli occupation of Palestinian territory."
+        ],
+        [
+          "This article suggests civilian casualties are unintended collateral damage.",
+          "This article suggests Israeli forces deliberately target civilians."
+        ],
+        [
+          "This article frames Israel as the indigenous homeland of the Jewish people.",
+          "This article frames Israel as a colonial settler state."
+        ],
+        [
+          "This article emphasizes Israeli compliance with international law and right to self-defense.",
+          "This article emphasizes Israeli violations of international law."
+        ]
+      ]
+    },
+    "adv_orthogonal_distractors": {
+      "name": "Orthogonal Semantic Distractors",
+      "description": "Syntactically plausible political hypotheses that introduce orthogonal thematic noise unrelated to the primary conflict axes.",
+      "pairs": [
+        [
+          "The text focuses on municipal waste management systems and metropolitan recycling efficiency.",
+          "The text focuses on rural agricultural zoning laws and suburban real estate development permits."
+        ],
+        [
+          "The text analyzes commercial aviation route deregulations and air traffic controller union contracts.",
+          "The text analyzes long-haul freight trucking logistics and interstate highway asphalt maintenance."
+        ],
+        [
+          "The text evaluates public elementary school mathematics curriculum standards and textbook adoption.",
+          "The text evaluates university graduate school endowment investment portfolios and alumni donations."
+        ],
+        [
+          "The text examines coastal marine fisheries conservation quotas and commercial trawling regulations.",
+          "The text examines freshwater hydroelectric dam turbines and riverbed sediment dredging schedules."
+        ],
+        [
+          "The text details public library digital archiving initiatives and municipal broadband fiber networks.",
+          "The text details historical post office architectural preservation and postal stamp printing contracts."
+        ],
+        [
+          "The text reviews consumer electronics battery lifespan warranties and repairability index metrics.",
+          "The text reviews industrial machine tool calibration protocols and factory floor robotics maintenance."
+        ],
+        [
+          "The text investigates retail supermarket supply chain refrigeration and perishable inventory audits.",
+          "The text investigates wholesale dry goods warehousing pallets and forklift operator safety certifications."
+        ],
+        [
+          "The text explores municipal park public fountain plumbing and ornamental horticultural landscaping.",
+          "The text explores civic center parking garage fee structures and automated ticketing kiosk software."
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "topic": "Abortion Rights & Reproductive Healthcare",
+  "n_articles": 60,
+  "n_publishers": 55,
+  "anisotropy_pc1_evr": 0.7088326215744019,
+  "coherence": {
+    "ideology": 0.057621554704383016,
+    "structural": -0.0007297030450510127,
+    "random": 0.0007956794579513371
+  },
+  "exact_null": {
+    "total_subsets": 735471,
+    "upper_tail_count_ge_observed": 4247,
+    "exact_upper_tail_probability": 0.005774530878851784,
+    "null_mean": 0.010161291368116299,
+    "null_min": -0.042227095795429444,
+    "null_max": 0.10220260649553634
+  },
+  "dimensionality_gate": {
+    "dataset_label": "Abortion Rights & Reproductive Healthcare",
+    "n_samples": 60,
+    "n_features": 8,
+    "observed_participation_ratio": 1.629165768623352,
+    "column_null_mean_participation_ratio": 5.99940745472908,
+    "detected_rank_column_null": 1,
+    "detected_rank_publisher_null": null,
+    "components": [
+      {
+        "component": 1,
+        "observed_eigenvalue": 0.20098598301410675,
+        "observed_variance_ratio": 0.7729393243789673,
+        "column_null": {
+          "mean_eigenvalue": 0.07113111949935555,
+          "q95_eigenvalue": 0.07773587107658386,
+          "mean_variance_ratio": 0.2735515814989805,
+          "q95_variance_ratio": 0.2989517152309418,
+          "exceedances": 0,
+          "p_value": 9.999000099990002e-05,
+          "detected": true
+        }
+      },
+      {
+        "component": 2,
+        "observed_eigenvalue": 0.028812726959586143,
+        "observed_variance_ratio": 0.1108061820268631,
+        "column_null": {
+          "mean_eigenvalue": 0.05037550575733185,
+          "q95_eigenvalue": 0.05625617876648903,
+          "mean_variance_ratio": 0.1937309489056468,
+          "q95_variance_ratio": 0.21634647250175476,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 3,
+        "observed_eigenvalue": 0.013539282605051994,
+        "observed_variance_ratio": 0.052068524062633514,
+        "column_null": {
+          "mean_eigenvalue": 0.03706227614376694,
+          "q95_eigenvalue": 0.04194159805774689,
+          "mean_variance_ratio": 0.1425317685008049,
+          "q95_variance_ratio": 0.16129635274410248,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 4,
+        "observed_eigenvalue": 0.008179319091141224,
+        "observed_variance_ratio": 0.03145551308989525,
+        "column_null": {
+          "mean_eigenvalue": 0.03011101357843727,
+          "q95_eigenvalue": 0.03385419398546219,
+          "mean_variance_ratio": 0.11579904050678015,
+          "q95_variance_ratio": 0.13019432127475739,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 5,
+        "observed_eigenvalue": 0.0043678018264472485,
+        "observed_variance_ratio": 0.016797419637441635,
+        "column_null": {
+          "mean_eigenvalue": 0.024107699392177166,
+          "q95_eigenvalue": 0.0272973719984293,
+          "mean_variance_ratio": 0.09271187269240617,
+          "q95_variance_ratio": 0.10497850924730301,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 6,
+        "observed_eigenvalue": 0.0025433700066059828,
+        "observed_variance_ratio": 0.009781133383512497,
+        "column_null": {
+          "mean_eigenvalue": 0.019455607174616307,
+          "q95_eigenvalue": 0.022099491208791733,
+          "mean_variance_ratio": 0.07482114931866526,
+          "q95_variance_ratio": 0.08498883992433548,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 7,
+        "observed_eigenvalue": 0.0009369334438815713,
+        "observed_variance_ratio": 0.00360319996252656,
+        "column_null": {
+          "mean_eigenvalue": 0.015757344421185555,
+          "q95_eigenvalue": 0.018056821078062057,
+          "mean_variance_ratio": 0.06059860322251916,
+          "q95_variance_ratio": 0.0694417953491211,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 8,
+        "observed_eigenvalue": 0.0006627507391385734,
+        "observed_variance_ratio": 0.002548765391111374,
+        "column_null": {
+          "mean_eigenvalue": 0.01202760891392827,
+          "q95_eigenvalue": 0.01450914703309536,
+          "mean_variance_ratio": 0.04625502119418234,
+          "q95_variance_ratio": 0.05579837039113045,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      }
+    ]
+  },
+  "extremes": {
+    "min_article": {
+      "score": -1.219293475151062,
+      "publisher": "charismanews.com",
+      "snippet": "BREAKING: Former US President Jimmy Carter Dead at 100 - Charisma Magazine Online"
+    },
+    "max_article": {
+      "score": 1.6674602031707764,
+      "publisher": "brnow.org",
+      "snippet": "YEAR IN REVIEW: Amicus briefs, ultrasound placements and new resources highlight ERLC\u2019s 2024 \u2022 Biblical Recorder"
+    }
+  }
+}

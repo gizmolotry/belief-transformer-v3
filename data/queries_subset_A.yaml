@@ -1,0 +1,15 @@
+queries:
+  civilian_targeting_vs_collateral:
+    A: This article suggests Israeli forces deliberately target civilians
+    B: This article suggests civilian casualties are unintended collateral damage
+  israeli_defense_vs_aggression:
+    A: This article portrays Israeli military actions as legitimate self-defense against
+      terrorism
+    B: This article portrays Israeli military actions as disproportionate aggression
+      against civilians
+  occupation_vs_security:
+    A: This article frames the situation as Israeli occupation of Palestinian territory
+    B: This article frames the situation as Israeli security measures against threats
+  palestinian_victim_vs_aggressor:
+    A: This article portrays Palestinians as innocent victims of occupation and violence
+    B: This article portrays Palestinians as violent aggressors and terrorists

@@ -1,0 +1,602 @@
+{
+  "geopolitical_conflict": {
+    "name": "Geopolitical Conflict & Territorial Sovereignty",
+    "description": "Evaluates discourse through national sovereignty, border defense, state aggression, and territorial occupation.",
+    "realizations": {
+      "realization_1": {
+        "source": "q0_original_geopolitical",
+        "label": "Original Geopolitical (Q0)",
+        "pairs": [
+          [
+            "This article portrays Israeli military actions as legitimate self-defense against terrorism",
+            "This article portrays Israeli military actions as disproportionate aggression against civilians"
+          ],
+          [
+            "This article portrays Palestinians as innocent victims of occupation and violence",
+            "This article portrays Palestinians as violent aggressors and terrorists"
+          ],
+          [
+            "This article describes Israeli responses as proportionate and measured",
+            "This article describes Israeli responses as excessive collective punishment"
+          ],
+          [
+            "This article frames Palestinian armed groups as legitimate resistance movements",
+            "This article frames Palestinian armed groups as terrorist organizations"
+          ],
+          [
+            "This article frames the situation as Israeli occupation of Palestinian territory",
+            "This article frames the situation as Israeli security measures against threats"
+          ],
+          [
+            "This article suggests Israeli forces deliberately target civilians",
+            "This article suggests civilian casualties are unintended collateral damage"
+          ],
+          [
+            "This article frames Israel as a colonial settler state",
+            "This article frames Israel as the indigenous homeland of the Jewish people"
+          ],
+          [
+            "This article emphasizes Israeli violations of international law",
+            "This article emphasizes Israeli compliance with international law and right to self-defense"
+          ]
+        ]
+      },
+      "realization_2": {
+        "source": "q1_paraphrase_control",
+        "label": "Paraphrase A (Q1)",
+        "pairs": [
+          [
+            "The report presents Israeli military force as justified defensive action against terrorist threats",
+            "The report presents Israeli military force as excessive aggression directed at civilians"
+          ],
+          [
+            "The report depicts Palestinians primarily as civilians harmed by occupation and violence",
+            "The report depicts Palestinians primarily as violent attackers or terrorists"
+          ],
+          [
+            "The report characterizes Israel's response as restrained and proportionate",
+            "The report characterizes Israel's response as excessive collective punishment"
+          ],
+          [
+            "The report describes Palestinian armed factions as legitimate resistance actors",
+            "The report describes Palestinian armed factions as terrorist organizations"
+          ],
+          [
+            "The report frames the conflict through Israeli occupation of Palestinian land",
+            "The report frames the conflict through Israeli security needs against threats"
+          ],
+          [
+            "The report implies Israeli forces intentionally harm civilians",
+            "The report implies civilian deaths are unintended collateral damage"
+          ],
+          [
+            "The report frames Israel as a colonial settler project",
+            "The report frames Israel as the ancestral homeland of the Jewish people"
+          ],
+          [
+            "The report highlights Israeli breaches of international law",
+            "The report highlights Israeli legal compliance and self-defense rights"
+          ]
+        ]
+      },
+      "realization_3": {
+        "source": "q_paraphrase_b",
+        "label": "Paraphrase B (Independent Syntactic Realization)",
+        "pairs": [
+          [
+            "This text treats Israeli operations as lawful self-defense in response to terrorism",
+            "This text treats Israeli operations as disproportionate violence against civilian populations"
+          ],
+          [
+            "This text casts Palestinians as innocent victims of occupation, displacement, or attack",
+            "This text casts Palestinians as aggressors, militants, or terrorists"
+          ],
+          [
+            "This text evaluates Israeli retaliation as calibrated and measured",
+            "This text evaluates Israeli retaliation as excessive punishment of a population"
+          ],
+          [
+            "This text legitimizes Palestinian armed groups as resistance movements",
+            "This text delegitimizes Palestinian armed groups as terrorist groups"
+          ],
+          [
+            "This text understands the situation as Israeli occupation of Palestinian territory",
+            "This text understands the situation as Israeli security policy against hostile threats"
+          ],
+          [
+            "This text suggests civilian harm results from deliberate Israeli targeting",
+            "This text suggests civilian harm results from unintended collateral consequences"
+          ],
+          [
+            "This text situates Israel in a settler-colonial framework",
+            "This text situates Israel in an indigenous Jewish homeland framework"
+          ],
+          [
+            "This text foregrounds violations of international humanitarian or human-rights law by Israel",
+            "This text foregrounds Israel's compliance with law and its right to defend itself"
+          ]
+        ]
+      }
+    }
+  },
+  "humanitarian_civilian_welfare": {
+    "name": "Humanitarian Rights & Civilian Protection",
+    "description": "Evaluates discourse through human suffering, civilian displacement, starvation, medical neutrality, and basic human rights.",
+    "realizations": {
+      "realization_1": {
+        "source": "q2_humanitarian_rights",
+        "label": "Humanitarian Rights (Q2)",
+        "pairs": [
+          [
+            "The text emphasizes catastrophic civilian casualties and humanitarian deprivation as unacceptable violations of human dignity",
+            "The text emphasizes military targets and combat necessity while regretting unavoidable civilian harm"
+          ],
+          [
+            "The text documents systematic denial and destruction of vital medical relief, aid convoys, and essential infrastructure",
+            "The text highlights security checks and tactical protocols to prevent humanitarian shipments from arming combatants"
+          ],
+          [
+            "The text portrays displaced refugees as defenseless populations trapped without safe refuge or basic survival necessities",
+            "The text portrays evacuation orders as legitimate measures to clear combat zones of civilians"
+          ],
+          [
+            "The text demands international criminal prosecution and universal accountability for systematic war crimes",
+            "The text rejects external judicial intervention as politicized lawfare undermining sovereign self-defense"
+          ],
+          [
+            "The text highlights the mass arbitrary detention and mistreatment of civilian detainees without due process",
+            "The text highlights the security detention of suspected militants to disrupt insurgent networks"
+          ],
+          [
+            "The text details the deliberate obliteration of cultural heritage, universities, and civilian community identity",
+            "The text focuses on tactical combat operations against insurgent infrastructure and fortified command posts"
+          ],
+          [
+            "The text frames the blockade and siege as unlawful collective punishment of an entire civilian population",
+            "The text frames supply restrictions as lawful border enforcement and economic sanctions against a hostile governing regime"
+          ],
+          [
+            "The text emphasizes the lethal targeting of independent journalists and human rights monitors to suppress transparency",
+            "The text emphasizes the dangerous realities of front-line combat where combatants disguise themselves among civilian media"
+          ]
+        ]
+      },
+      "realization_2": {
+        "source": "extreme_political_ontologies:humanitarian_welfare",
+        "label": "Humanitarian Welfare & Suffering",
+        "pairs": [
+          [
+            "The text documents catastrophic starvation, acute infant malnutrition, and widespread biological collapse.",
+            "The text claims that humanitarian food shipments and caloric transfers meet minimum biological sustenance."
+          ],
+          [
+            "The text details the total breakdown of clean water sanitation, raw sewage flooding, and cholera epidemics.",
+            "The text highlights operational water desalination pipelines and municipal repair efforts maintaining basic hygiene."
+          ],
+          [
+            "The text reports hospitals functioning without anesthesia, basic antibiotics, or electricity for newborn incubators.",
+            "The text reports field hospitals, medical triage tents, and emergency pharmaceutical supplies arriving regularly."
+          ],
+          [
+            "The text exposes hundreds of thousands of civilians sheltering under freezing, unheated rain in torn plastic sheets.",
+            "The text highlights the delivery of weatherized winter tents, thermal blankets, and protective prefabricated shelters."
+          ],
+          [
+            "The text highlights the mass psychological trauma, catatonic shock, and unending terror of orphaned children.",
+            "The text notes community resilience programs, emergency trauma counselors, and psychiatric aid distributions."
+          ],
+          [
+            "The text warns that unchecked epidemic infectious disease will kill more civilians than kinetic bombardment.",
+            "The text notes rapid emergency mass vaccination campaigns successfully containing polio and infectious outbreaks."
+          ],
+          [
+            "The text describes civilian families subsisting on animal fodder, wild weeds, and contaminated seawater.",
+            "The text describes commercial markets reopening with fresh produce, canned provisions, and staple grains."
+          ],
+          [
+            "The text mourns the irreversible destruction of human life, generational extinction, and societal erasure.",
+            "The text emphasizes civilian endurance, medical survival miracles, and the unstoppable determination to endure."
+          ]
+        ]
+      },
+      "realization_3": {
+        "source": "humanitarian_protection_b3",
+        "label": "Civilian Harm & Relief Logistics (Realization 3)",
+        "pairs": [
+          [
+            "The text details catastrophic civilian death tolls, widespread famine, and the destruction of residential neighborhoods.",
+            "The text emphasizes precise surgical strikes designed to minimize civilian exposure and collateral damage."
+          ],
+          [
+            "The text highlights the total collapse of acute healthcare infrastructure and catastrophic shortages of medical supplies.",
+            "The text highlights operational military field hospitals and ongoing coordination of essential emergency medical transfers."
+          ],
+          [
+            "The text documents severe acute child malnutrition, famine alerts, and the systemic denial of humanitarian food convoys.",
+            "The text documents large-scale international food aid distributions, flour deliveries, and operational bakeries."
+          ],
+          [
+            "The text emphasizes the mass displacement of vulnerable families forced into crowded, unsanitary tent camps.",
+            "The text emphasizes designated civilian safe corridors and temporary evacuation warnings issued for family protection."
+          ],
+          [
+            "The text reports direct artillery and airstrike bombardment impacting designated civilian shelters and schools.",
+            "The text reports that armed insurgent operatives were utilizing designated civilian shelters as operational command outposts."
+          ],
+          [
+            "The text condemns the complete cutoff of municipal drinking water, electrical power grids, and sanitation infrastructure.",
+            "The text notes that secondary utility pipeline repairs and emergency diesel fuel shipments were permitted to proceed."
+          ],
+          [
+            "The text underscores severe psychological trauma, generational grief, and the orphan crisis inflicted on youth.",
+            "The text underscores civil defense rescue efforts, community resilience, and psychological support services."
+          ],
+          [
+            "The text decries unlawful obstructions and lethal strikes against marked humanitarian aid workers and ambulance teams.",
+            "The text states that military convoys implemented strict deconfliction protocols to ensure humanitarian movement."
+          ]
+        ]
+      }
+    }
+  },
+  "legal_ihl_accountability": {
+    "name": "Legal Culpability & International Law",
+    "description": "Evaluates discourse through formal international humanitarian law, Geneva conventions, proportionality, and criminal accountability.",
+    "realizations": {
+      "realization_1": {
+        "source": "disciplinary_paradigms:ihl_humanitarian_law",
+        "label": "International Humanitarian Law (IHL)",
+        "pairs": [
+          [
+            "The text emphasizes strict adherence to international humanitarian law and the principle of civilian distinction.",
+            "The text documents severe violations of international humanitarian law and disregard for civilian distinction."
+          ],
+          [
+            "The text frames military strikes as legally proportionate operations targeting verified combatants.",
+            "The text frames military strikes as disproportionate attacks inflicting impermissible collective punishment."
+          ],
+          [
+            "The text details full cooperation with international relief convoys and independent humanitarian observers.",
+            "The text details deliberate obstruction and bombardment of humanitarian relief convoys and medical missions."
+          ],
+          [
+            "The text justifies the detention of individuals under lawful combatant status and military judicial procedure.",
+            "The text condemns arbitrary mass detention, torture, and denial of Geneva Convention protections."
+          ],
+          [
+            "The text describes civilian evacuation orders as precautionary humanitarian measures to preserve life.",
+            "The text describes forced displacement orders as unlawful ethnic cleansing and civilian terrorization."
+          ],
+          [
+            "The text highlights independent legal investigations and accountability mechanisms for operational conduct.",
+            "The text highlights systematic impunity and refusal to cooperate with the International Criminal Court."
+          ],
+          [
+            "The text affirms the inviolable protected legal status of hospitals, schools, and cultural heritage sites.",
+            "The text justifies the destruction of hospitals and schools by alleging systemic enemy exploitation."
+          ],
+          [
+            "The text recognizes the legal obligations of belligerent occupation under the Fourth Geneva Convention.",
+            "The text rejects the applicability of occupation law and asserts sovereign discretion over the territory."
+          ]
+        ]
+      },
+      "realization_2": {
+        "source": "extreme_political_ontologies:legal_culpability",
+        "label": "Legal Culpability & War Crimes",
+        "pairs": [
+          [
+            "The text establishes direct chain of command liability and incontrovertible documentary evidence of war crimes.",
+            "The text demonstrates the complete absence of criminal intent, command authorization, or probative evidence."
+          ],
+          [
+            "The text documents deliberate state-level policy establishing statutory culpability for crimes against humanity.",
+            "The text proves actions were isolated rogue infractions strictly subject to prompt internal military tribunal discipline."
+          ],
+          [
+            "The text details prosecutorial evidence meeting the strict beyond-a-reasonable-doubt evidentiary standard.",
+            "The text exposes unsubstantiated partisan hearsay, uncorroborated rumors, and legally inadmissible claims."
+          ],
+          [
+            "The text asserts universal legal jurisdiction and the mandatory duty of foreign states to execute arrest warrants.",
+            "The text rejects foreign judicial overreach as an illegitimate political assault violating sovereign state immunity."
+          ],
+          [
+            "The text identifies specific named military commanders as legally responsible perpetrators of atrocity crimes.",
+            "The text affirms that commanders operated strictly within lawful rules of engagement vetted by legal counsel."
+          ],
+          [
+            "The text invokes formal statutory definitions under the Rome Statute and Genocide Convention tribunals.",
+            "The text dismisses international tribunal mandates as biased, politicized forums lacking lawful authority."
+          ],
+          [
+            "The text emphasizes criminal restitution, victim reparations, and judicial accountability for property destruction.",
+            "The text denies legal liability for incidental wartime property damage incurred during defensive combat operations."
+          ],
+          [
+            "The text highlights independent forensic autopsy documentation verifying unlawful extrajudicial killings.",
+            "The text notes that contested forensic data lacks chain-of-custody verification and independent corroboration."
+          ]
+        ]
+      },
+      "realization_3": {
+        "source": "international_criminal_accountability_b3",
+        "label": "Statutory Jurisdiction & Tribunal Accountability (Realization 3)",
+        "pairs": [
+          [
+            "The text establishes credible prima facie evidence of state-directed war crimes and systemic statutory violations.",
+            "The text highlights internal military advocate general reviews and adherence to standard operational rules of engagement."
+          ],
+          [
+            "The text foregrounds binding rulings and provisional protective orders issued by the International Court of Justice.",
+            "The text dismisses international judicial proceedings as politicized lawfare lacking binding sovereign jurisdiction."
+          ],
+          [
+            "The text documents the unlawful use of indiscriminate munitions in densely populated civilian urban zones.",
+            "The text validates that deployed precision guided munitions complied with standard military proportionality doctrines."
+          ],
+          [
+            "The text argues that command hierarchy bears direct individual criminal responsibility for unlawful atrocities.",
+            "The text defends military leadership as issuing lawful operational directives under legitimate defense doctrines."
+          ],
+          [
+            "The text characterizes civilian blockades and collective deprivations as grave breaches of Fourth Geneva Convention obligations.",
+            "The text maintains that maritime and terrestrial security cordons are lawful naval interception measures under warfare codes."
+          ],
+          [
+            "The text highlights universal jurisdiction indictments and arrest warrant applications by international prosecutors.",
+            "The text emphasizes robust domestic civilian judicial oversight that precludes foreign tribunal intervention."
+          ],
+          [
+            "The text condemns systemic extrajudicial executions, detainee mistreatment, and denial of red cross visitation rights.",
+            "The text asserts that all detained combatants are processed under recognized military statutory detainee protections."
+          ],
+          [
+            "The text concludes that sustained operational patterns establish deliberate criminal intent to dismantle civil infrastructure.",
+            "The text concludes that operational collateral damage arose entirely from enemy utilization of protected civilian shields."
+          ]
+        ]
+      }
+    }
+  },
+  "strategic_security_deterrence": {
+    "name": "Strategic Security & Operational Efficacy",
+    "description": "Evaluates discourse through military tactics, force posture, deterrence, weapon systems, and threat neutralization.",
+    "realizations": {
+      "realization_1": {
+        "source": "disciplinary_paradigms:strategic_security",
+        "label": "Strategic Security & Military Operations",
+        "pairs": [
+          [
+            "The text analyzes operations as decisive tactical measures necessary to restore military deterrence.",
+            "The text analyzes operations as strategic overreach that undermines long-term military security."
+          ],
+          [
+            "The text focuses on the systematic destruction of enemy tunnel networks, command centers, and rocket arsenals.",
+            "The text emphasizes that underground insurgent networks and command capabilities remain operationally intact."
+          ],
+          [
+            "The text emphasizes preemptive force projection to neutralize imminent cross-border terrorist incursions.",
+            "The text portrays unilateral force projection as destabilizing escalation provoking regional retaliation."
+          ],
+          [
+            "The text highlights superior intelligence surveillance, precision targeting, and electronic warfare dominance.",
+            "The text exposes catastrophic intelligence blindness, tactical surprises, and operational vulnerabilities."
+          ],
+          [
+            "The text frames joint operations as essential to securing national sovereignty and territorial buffer zones.",
+            "The text frames forward deployment as vulnerable quagmires that expose troops to attritional ambushes."
+          ],
+          [
+            "The text underscores the imperative of total military victory and unconditional disarmament of insurgent forces.",
+            "The text underscores the military impossibility of eliminating asymmetric insurgencies through kinetic force alone."
+          ],
+          [
+            "The text validates multi-layered missile defense systems and integrated anti-missile shielding as fully effective.",
+            "The text reports missile defense saturation and vulnerabilities under sustained swarm rocket bombardment."
+          ],
+          [
+            "The text assesses military logistics, weapons resupply, and coalition security cooperation as robust.",
+            "The text reveals acute munitions depletion, troop exhaustion, and strategic friction with foreign allies."
+          ]
+        ]
+      },
+      "realization_2": {
+        "source": "extreme_political_ontologies:operational_efficacy",
+        "label": "Operational Efficacy & Force Posture",
+        "pairs": [
+          [
+            "The text documents exceptionally high munitions lethality, precision strike efficiency, and target destruction rates.",
+            "The text reveals staggering ordnance waste, missed targets, and catastrophic logistical inefficiency."
+          ],
+          [
+            "The text reports the decisive elimination of high-value enemy combat leadership and frontline battalion cadres.",
+            "The text observes rapid enemy troop reconstitution, intact reserve cadres, and resilient insurgent command."
+          ],
+          [
+            "The text highlights the seamless operational integration of armed drone swarms, loitering munitions, and sensors.",
+            "The text highlights technical vulnerabilities, GPS spoofing, drone intercept attrition, and sensor blindness."
+          ],
+          [
+            "The text measures combat progress by square kilometers cleared, defensive strongpoints seized, and lines held.",
+            "The text measures combat failure by static frontlines, fatal urban ambushes, and inability to consolidate territory."
+          ],
+          [
+            "The text confirms sustained supply chain throughput, artillery barrel longevity, and rapid armored repair.",
+            "The text warns of critical artillery shell shortages, mechanical breakdowns, and logistics bottleneck crises."
+          ],
+          [
+            "The text demonstrates total electromagnetic dominance, radar jamming, and enemy communications blackout.",
+            "The text shows resilient enemy fiber-optic lines, decentralized field couriers, and failed jamming efforts."
+          ],
+          [
+            "The text validates close-air-support coordination with ground armor as tactically flawless and devastating.",
+            "The text documents lethal friendly-fire casualties, coordination friction, and anti-aircraft missile threats."
+          ],
+          [
+            "The text calculates an overwhelmingly favorable attritional loss-exchange ratio against enemy combatants.",
+            "The text calculates an unsustainable, ruinous expenditure of premier weapons systems against low-cost insurgent tactics."
+          ]
+        ]
+      },
+      "realization_3": {
+        "source": "tactical_force_posture_b3",
+        "label": "Deterrence Dominance & Tactical Posture (Realization 3)",
+        "pairs": [
+          [
+            "The text evaluates the combat operation as a decisive tactical triumph dismantling hostile paramilitary formations.",
+            "The text characterizes the operation as an attritional strategic quagmire failing to achieve core military objectives."
+          ],
+          [
+            "The text underscores air defense missile interception rates, radar telemetry dominance, and total airspace control.",
+            "The text emphasizes that sustained hostile rocket barrages successfully breached defensive missile envelopes."
+          ],
+          [
+            "The text analyzes targeted kinetic strikes that successfully neutralized high-ranking insurgent military commanders.",
+            "The text notes that decentralized insurgent tactical command cells continued coordinated guerrilla counter-attacks."
+          ],
+          [
+            "The text highlights aggressive forward ground maneuvers securing strategic buffer zones and perimeter corridors.",
+            "The text details severe combat armor attrition, ambushes, and escalating military casualty rates in urban terrain."
+          ],
+          [
+            "The text demonstrates that the military campaign successfully restored credible regional deterrence against hostile adversaries.",
+            "The text argues that operational deterrence has catastrophically degraded, inviting multi-front regional escalation."
+          ],
+          [
+            "The text emphasizes the systematic detection and demolition of reinforced subterranean tunnel complexes and arms caches.",
+            "The text reveals that extensive underground logistical tunnel infrastructure remains fully operational across key sectors."
+          ],
+          [
+            "The text portrays frontline ground forces as demonstrating exemplary unit discipline, morale, and tactical superiority.",
+            "The text reports acute battlefield exhaustion, severe munitions expenditure constraints, and mounting logistical strain."
+          ],
+          [
+            "The text frames preemptive cross-border kinetic containment as mandatory to protect interior civilian population centers.",
+            "The text criticizes reactive forward military deployments as exposing vulnerable troop concentrations to insurgent fire."
+          ]
+        ]
+      }
+    }
+  },
+  "economic_material_cost": {
+    "name": "Economic Cost & Material Impact",
+    "description": "Evaluates discourse through capital destruction, trade disruptions, fiscal deficits, inflation, and reconstruction costs.",
+    "realizations": {
+      "realization_1": {
+        "source": "extreme_political_ontologies:economic_cost",
+        "label": "Macroeconomic Valuation & Capital Destruction",
+        "pairs": [
+          [
+            "The text details tens of billions of dollars in erased capital assets, destroyed real estate, and municipal debt.",
+            "The text emphasizes insurance compensation pools, sovereign reconstruction guarantees, and asset resilience."
+          ],
+          [
+            "The text warns of catastrophic sovereign debt expansion, foreign investor capital flight, and credit rating downgrades.",
+            "The text highlights robust central bank foreign exchange reserves, treasury bond stability, and liquid currency pegs."
+          ],
+          [
+            "The text documents crippled agricultural output, pulverized manufacturing plants, and permanent commercial insolvency.",
+            "The text highlights swift domestic emergency subsidies, industrial stimulus packages, and corporate tax holidays."
+          ],
+          [
+            "The text analyzes shipping lane closures, soaring container freight premiums, and supply chain trade deficits.",
+            "The text analyzes alternative overland logistical trade routes and maritime naval escorts securing commerce."
+          ],
+          [
+            "The text projects multi-decade economic depression, astronomical unemployment, and generational poverty traps.",
+            "The text projects a rapid post-war Keynesian rebuilding boom driven by massive multinational foreign direct investment."
+          ],
+          [
+            "The text exposes the crippling fiscal opportunity cost of squandering national wealth on perishable armaments.",
+            "The text celebrates the massive technological spin-offs, high-tech defense exports, and military-industrial growth."
+          ],
+          [
+            "The text highlights the complete economic embargo, financial sanctions, and severed international banking access.",
+            "The text highlights shadow banking networks, cryptocurrency settlements, and sanctions-evasion trade mechanisms."
+          ],
+          [
+            "The text details the collapse of municipal tax revenue, bankrupt utility grids, and unpaid public employee wages.",
+            "The text details emergency bilateral treasury grants and multilateral development bank stabilization loans."
+          ]
+        ]
+      },
+      "realization_2": {
+        "source": "infrastructure_trade_disruption_b2",
+        "label": "Infrastructure & Trade Logistics Disruption (Realization 2)",
+        "pairs": [
+          [
+            "The text details the complete paralysis of maritime shipping lanes, commercial ports, and freight container traffic.",
+            "The text highlights active maritime security patrols and resilient commercial container rerouting agreements."
+          ],
+          [
+            "The text documents the physical pulverization of industrial manufacturing hubs, telecommunication towers, and power stations.",
+            "The text highlights emergency grid restoration, decentralized solar backup generators, and rapid infrastructure repair."
+          ],
+          [
+            "The text emphasizes astronomical increases in marine insurance war-risk premiums and global freight transport surcharges.",
+            "The text points to sovereign maritime insurance guarantees and government freight subsidies mitigating shipping costs."
+          ],
+          [
+            "The text reports the complete destruction of agricultural farmland, irrigation networks, and harvest processing plants.",
+            "The text highlights emergency agricultural relief imports and sovereign farming price stabilization funds."
+          ],
+          [
+            "The text highlights the total disruption of regional overland transport corridors and severed commercial supply chains.",
+            "The text emphasizes bilateral cross-border trade agreements maintaining continuous logistical supply flows."
+          ],
+          [
+            "The text analyzes widespread commercial enterprise liquidations, corporate bankruptcies, and private sector insolvencies.",
+            "The text analyzes emergency liquidity loans and central bank credit lines preventing private corporate defaults."
+          ],
+          [
+            "The text documents the physical destruction of water desalination plants, aqueducts, and municipal sewage infrastructure.",
+            "The text notes the arrival of modular foreign desalination barges and international water purification convoys."
+          ],
+          [
+            "The text forecasts long-term structural de-industrialization and the permanent loss of international trade market share.",
+            "The text forecasts substantial post-conflict industrial revitalization driven by multilateral infrastructure investment."
+          ]
+        ]
+      },
+      "realization_3": {
+        "source": "fiscal_strain_reconstruction_b3",
+        "label": "Fiscal Deficits & Financial Strain (Realization 3)",
+        "pairs": [
+          [
+            "The text warns of catastrophic national budget deficits driven by unsustainable wartime mobilization expenditures.",
+            "The text highlights disciplined treasury fiscal management, sovereign contingency reserves, and spending reallocation."
+          ],
+          [
+            "The text details steep credit rating downgrades, sovereign debt devaluation, and skyrocketing government borrowing yields.",
+            "The text highlights stable sovereign bond auctions, central bank reserve liquidity, and strong currency stabilization pegs."
+          ],
+          [
+            "The text exposes uncontrollable domestic inflation rates, soaring staple consumer costs, and purchasing power collapse.",
+            "The text highlights effective central bank monetary tightening and government statutory consumer price controls."
+          ],
+          [
+            "The text documents severe capital flight, sudden disinvestment by foreign corporations, and equity market sell-offs.",
+            "The text documents patriotic domestic bond purchases, diaspora capital inflows, and sovereign investment fund support."
+          ],
+          [
+            "The text estimates astronomical multi-billion dollar reconstruction liabilities that far exceed domestic sovereign capacity.",
+            "The text outlines preliminary international donor reconstruction conferences and multilateral grant commitments."
+          ],
+          [
+            "The text highlights the draining of national welfare pension reserves and emergency budget cuts to health and education.",
+            "The text affirms that essential domestic social safety nets and public welfare expenditures remain fully funded."
+          ],
+          [
+            "The text details severe foreign exchange reserve depletion threatening sovereign default on international debt obligations.",
+            "The text highlights substantial bilateral foreign exchange swap lines and international monetary fund stabilization loans."
+          ],
+          [
+            "The text concludes that economic recovery will require decades of punitive austerity, taxation, and living standard declines.",
+            "The text concludes that post-war capital revitalization will trigger rapid economic rebound and wage modernization."
+          ]
+        ]
+      }
+    }
+  }
+}

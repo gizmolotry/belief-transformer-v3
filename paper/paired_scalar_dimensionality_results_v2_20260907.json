@@ -1,0 +1,4329 @@
+{
+  "analysis": {
+    "bootstrap_replicates_per_bank": 10000,
+    "child_seed_spawn_keys": {
+      "q0_article_sensitivity_null": [
+        2
+      ],
+      "q0_primary_publisher_block_null": [
+        0
+      ],
+      "q0_publisher_bootstrap": [
+        4
+      ],
+      "q1_article_sensitivity_null": [
+        3
+      ],
+      "q1_primary_publisher_block_null": [
+        1
+      ],
+      "q1_publisher_bootstrap": [
+        5
+      ]
+    },
+    "lopo_folds": 16,
+    "n_articles": 320,
+    "ppca_candidates": [
+      1,
+      2,
+      3
+    ],
+    "primary_permutations_per_bank": 10000,
+    "publisher_counts": {
+      "aljazeera.com": 20,
+      "bbc.co.uk": 20,
+      "bbc.com": 20,
+      "breitbart.com": 20,
+      "cnn.com": 20,
+      "dailymail.co.uk": 20,
+      "express.co.uk": 20,
+      "foxnews.com": 20,
+      "haaretz.com": 20,
+      "middleeasteye.net": 20,
+      "middleeastmonitor.com": 20,
+      "nypost.com": 20,
+      "presstv.ir": 20,
+      "theguardian.com": 20,
+      "townhall.com": 20,
+      "wnd.com": 20
+    },
+    "root_seed": 20260907,
+    "sensitivity_permutations_per_bank": 10000
+  },
+  "claim_boundaries": {
+    "measurement": "paired scalar c=s_A-s_B only",
+    "no_component_names_or_manuscript_changes_authorized": true,
+    "non_detection_is_not_absence_or_equivalence": true,
+    "not_confirmatory": true,
+    "not_independent_replication": true,
+    "not_preregistered": true
+  },
+  "cross_bank_summary": {
+    "interpretation": "phrasing stability only; not independent replication",
+    "outcome": "paraphrase_stable_pc2_not_detected_under_cluster_null",
+    "q0_verdict": "pc2_not_detected_under_cluster_null",
+    "q1_verdict": "pc2_not_detected_under_cluster_null"
+  },
+  "provenance": {
+    "article_ids_exactly_match_corpus_order": true,
+    "input_paths": {
+      "checkpoint": "D:\\belief-transformer\\V3\\outputs\\fresh_scalar_structure_run\\extraction_checkpoint.jsonl",
+      "contextual_paired_scalar_result": "D:\\belief-transformer\\V3\\paper\\paired_scalar_structure_results_20260906.json",
+      "corpus": "D:\\belief-transformer\\V3\\data\\controlled_N_dense_corpus.jsonl",
+      "q0": "D:\\belief-transformer\\V3\\config\\framing_queries.yaml",
+      "q1": "D:\\belief-transformer\\V3\\config\\prompt_banks\\probe_hypotheses_paraphrase_a.json",
+      "v1_protocol": "D:\\belief-transformer\\V3\\paper\\paired_scalar_dimensionality_protocol_20260907.md",
+      "v1_result": "D:\\belief-transformer\\V3\\paper\\paired_scalar_dimensionality_results_20260907.json"
+    },
+    "input_sha256": {
+      "checkpoint": "6d9a266aefeb88dd5a45b2ea03f160d295ba60ff3adb33fcb4d8c5a7edf5333f",
+      "contextual_paired_scalar_result": "d085c7ab09c635eb2c72bda25ffc44ad6ff61ead3c479d1d4e1d7b7d4e167065",
+      "corpus": "3b16c0355c8896a1025235e1d07265a9606bd937f1f8b50bf86bbb2e879899c9",
+      "q0": "7e85fcb306be36c50687d19defa3c8be249b82e7eb5be399cf7a82ef75b30c81",
+      "q1": "5a281bfde1784749d6e437d51a13949cd3603e8ee472011e4b4e927bf3bbd236",
+      "v1_protocol": "4b909ea50f7f4dfcad67b29696bff3c509e77b2b70e553842d3d3a58d5610d93",
+      "v1_result": "07959c80190231f5a0e5f05d99b74de73ad0d918e05b33518e67f56b2889d3d4"
+    },
+    "runtime": {
+      "numpy": "2.3.3",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "python": "3.13.2",
+      "python_implementation": "CPython"
+    },
+    "source_paths": {
+      "imported_v1_runner": "D:\\belief-transformer\\V3\\scripts\\paired_scalar_dimensionality.py",
+      "paired_scalar_scoring_runner": "D:\\belief-transformer\\V3\\scripts\\paired_scalar_structure.py",
+      "v2_frozen_protocol": "D:\\belief-transformer\\V3\\paper\\paired_scalar_dimensionality_protocol_v2_20260907.md",
+      "v2_runner": "D:\\belief-transformer\\V3\\scripts\\paired_scalar_dimensionality_v2_20260907.py"
+    },
+    "source_sha256": {
+      "imported_v1_runner": "d8911826ecc715b6ebda7e4860312f87a148e449801159fb74ed95e60ca93f0e",
+      "paired_scalar_scoring_runner": "363ee015c4fafe8a240ffeb882d596e7c78cfeeee6a696a20822160beb0b43e9",
+      "v2_frozen_protocol": "e7036cceadf140a5bf220f1deaee8589fdcf44729039891c40faa5bf35f9ce76",
+      "v2_runner": "82474d35aa222aa519b6d4ca5e6e197cc6b447146ed0611fc7a93bfa327383de"
+    }
+  },
+  "results": {
+    "q0": {
+      "article_level_eigenvalue_null_sensitivity": {
+        "alpha": 0.05,
+        "components": {
+          "pc2": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.12494863459067271,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.11918785552757122,
+            "observed_eigenvalue": 0.08563679342937401,
+            "observed_explained_variance_ratio": 0.1488540048713104,
+            "plus_one_p_value": 1.0
+          },
+          "pc3": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.10730529864198658,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.10346479947370107,
+            "observed_eigenvalue": 0.04905667690224222,
+            "observed_explained_variance_ratio": 0.08527039056639794,
+            "plus_one_p_value": 1.0
+          }
+        },
+        "full_observed_eigenvalues": [
+          0.34591579332968986,
+          0.08563679342937401,
+          0.04905667690224222,
+          0.027597708946985496,
+          0.02125507499972624,
+          0.019528282404932068,
+          0.015597558656586043,
+          0.010719396501663052
+        ],
+        "full_observed_explained_variance_ratio": [
+          0.6012713592297946,
+          0.1488540048713104,
+          0.08527039056639794,
+          0.04797037975761599,
+          0.03694560376269387,
+          0.03394409024234914,
+          0.027111700231545906,
+          0.018632471338292184
+        ],
+        "null_scheme": "independently permute article rows within each score column and refit covariance PCA",
+        "permutations": 10000,
+        "role": "article_level_sensitivity_only_not_used_for_primary_verdict"
+      },
+      "decision_inputs": {
+        "pc2_loading_stability_passes": false,
+        "pc2_primary_status": "pc2_not_detected_under_cluster_null",
+        "pc3_primary_status": "pc3_not_detected",
+        "ppca_selected_k": 1
+      },
+      "dimensionality_verdict": "pc2_not_detected_under_cluster_null",
+      "interpretation_boundary": "bootstrap instability is not evidence that PC2 is absent",
+      "ppca_leave_one_publisher_out": {
+        "best_mean_nll_k": 3,
+        "candidate_summaries": {
+          "1": {
+            "mean_publisher_nll": -0.8493906965346121,
+            "publisher_mean_nll_values": [
+              -2.309619814342901,
+              -0.19521898797778917,
+              0.49924056401711764,
+              1.8613801496852767,
+              -3.2510307747262943,
+              -3.9415145646891245,
+              -3.465967816484904,
+              -2.335011437969797,
+              -1.8756575271899618,
+              -0.47592349844306536,
+              3.90937098836294,
+              -1.288392706153896,
+              3.09105807995064,
+              -2.7496160690878324,
+              -3.2217437134921405,
+              2.15839598398794
+            ],
+            "publisher_nll_distribution": {
+              "mean": -0.8493906965346121,
+              "median": -1.5820251166719288,
+              "q025": -3.763184534112542,
+              "q975": 3.6025036477083274
+            },
+            "standard_error_across_publishers": 0.6256796768471385
+          },
+          "2": {
+            "mean_publisher_nll": -1.2302120308149516,
+            "publisher_mean_nll_values": [
+              -2.547791320515592,
+              -0.6319309083190552,
+              0.8951543767263429,
+              0.28233547124502845,
+              -3.3916942734667073,
+              -4.4297698922982915,
+              -3.9351239735061982,
+              -2.9948568641537507,
+              -2.0355917679132096,
+              -0.33047609580697274,
+              5.117048884644782,
+              -2.829191039741447,
+              3.3756351866197933,
+              -2.891146732729013,
+              -3.6268080563152743,
+              0.29081451249034007
+            ],
+            "publisher_nll_distribution": {
+              "mean": -1.2302120308149516,
+              "median": -2.291691544214401,
+              "q025": -4.244277672751257,
+              "q975": 4.464018747885412
+            },
+            "standard_error_across_publishers": 0.678757986451289
+          },
+          "3": {
+            "mean_publisher_nll": -1.4063980770066953,
+            "publisher_mean_nll_values": [
+              -3.019560143947544,
+              -0.9742593909911175,
+              0.591097093392926,
+              -0.6280714961024934,
+              -3.8256378848126653,
+              -4.575370836812613,
+              -4.063653846475227,
+              -3.2554912352602527,
+              -2.0162816628172564,
+              -0.34408289205455544,
+              5.784685010085772,
+              -2.9304149027888884,
+              3.490139192671369,
+              -2.9307333900737733,
+              -3.6798347262840565,
+              -0.12489811983674803
+            ],
+            "publisher_nll_distribution": {
+              "mean": -1.4063980770066953,
+              "median": -2.473348282803072,
+              "q025": -4.383476965436094,
+              "q975": 4.924230328555371
+            },
+            "standard_error_across_publishers": 0.714158259662171
+          }
+        },
+        "folds": [
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.3535705844044494,
+                  0.03329964222823347,
+                  0.03329964222823347,
+                  0.03329964222823347,
+                  0.03329964222823347,
+                  0.03329964222823347,
+                  0.03329964222823347,
+                  0.03329964222823347
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3535705844044494
+                ],
+                "floored_sigma2": 0.03329964222823347,
+                "held_out_mean_nll_per_article": -2.309619814342901,
+                "numeric_floor": 3.535705844044494e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753,
+                  0.04845343508771077,
+                  0.028025242294879505,
+                  0.021496306026522374,
+                  0.020155171701429983,
+                  0.016051591214222605,
+                  0.010947511752481506
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3535705844044494
+                ],
+                "raw_sigma2": 0.03329964222823347
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753,
+                  0.024188209679541123,
+                  0.024188209679541123,
+                  0.024188209679541123,
+                  0.024188209679541123,
+                  0.024188209679541123,
+                  0.024188209679541123
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753
+                ],
+                "floored_sigma2": 0.024188209679541123,
+                "held_out_mean_nll_per_article": -2.547791320515592,
+                "numeric_floor": 3.535705844044494e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753,
+                  0.04845343508771077,
+                  0.028025242294879505,
+                  0.021496306026522374,
+                  0.020155171701429983,
+                  0.016051591214222605,
+                  0.010947511752481506
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753
+                ],
+                "raw_sigma2": 0.024188209679541123
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753,
+                  0.04845343508771077,
+                  0.01933516459790719,
+                  0.01933516459790719,
+                  0.01933516459790719,
+                  0.01933516459790719,
+                  0.01933516459790719
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753,
+                  0.04845343508771077
+                ],
+                "floored_sigma2": 0.01933516459790719,
+                "held_out_mean_nll_per_article": -3.019560143947544,
+                "numeric_floor": 3.535705844044494e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753,
+                  0.04845343508771077,
+                  0.028025242294879505,
+                  0.021496306026522374,
+                  0.020155171701429983,
+                  0.016051591214222605,
+                  0.010947511752481506
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3535705844044494,
+                  0.08796823752038753,
+                  0.04845343508771077
+                ],
+                "raw_sigma2": 0.01933516459790719
+              }
+            },
+            "held_out_publisher": "aljazeera.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.3525704111748707,
+                  0.03201611348112752,
+                  0.03201611348112752,
+                  0.03201611348112752,
+                  0.03201611348112752,
+                  0.03201611348112752,
+                  0.03201611348112752,
+                  0.03201611348112752
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3525704111748707
+                ],
+                "floored_sigma2": 0.03201611348112752,
+                "held_out_mean_nll_per_article": -0.19521898797778917,
+                "numeric_floor": 3.525704111748707e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992,
+                  0.04752302547868627,
+                  0.026982206745079656,
+                  0.021247272182496696,
+                  0.018439179373371892,
+                  0.015280050713665071,
+                  0.011061602493783117
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3525704111748707
+                ],
+                "raw_sigma2": 0.03201611348112752
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992,
+                  0.02342222283118045,
+                  0.02342222283118045,
+                  0.02342222283118045,
+                  0.02342222283118045,
+                  0.02342222283118045,
+                  0.02342222283118045
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992
+                ],
+                "floored_sigma2": 0.02342222283118045,
+                "held_out_mean_nll_per_article": -0.6319309083190552,
+                "numeric_floor": 3.525704111748707e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992,
+                  0.04752302547868627,
+                  0.026982206745079656,
+                  0.021247272182496696,
+                  0.018439179373371892,
+                  0.015280050713665071,
+                  0.011061602493783117
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992
+                ],
+                "raw_sigma2": 0.02342222283118045
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992,
+                  0.04752302547868627,
+                  0.018602062301679288,
+                  0.018602062301679288,
+                  0.018602062301679288,
+                  0.018602062301679288,
+                  0.018602062301679288
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992,
+                  0.04752302547868627
+                ],
+                "floored_sigma2": 0.018602062301679288,
+                "held_out_mean_nll_per_article": -0.9742593909911175,
+                "numeric_floor": 3.525704111748707e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992,
+                  0.04752302547868627,
+                  0.026982206745079656,
+                  0.021247272182496696,
+                  0.018439179373371892,
+                  0.015280050713665071,
+                  0.011061602493783117
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3525704111748707,
+                  0.08357945738080992,
+                  0.04752302547868627
+                ],
+                "raw_sigma2": 0.018602062301679288
+              }
+            },
+            "held_out_publisher": "bbc.co.uk",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.34432777333678055,
+                  0.031721755227403184,
+                  0.031721755227403184,
+                  0.031721755227403184,
+                  0.031721755227403184,
+                  0.031721755227403184,
+                  0.031721755227403184,
+                  0.031721755227403184
+                ],
+                "floored_retained_eigenvalues": [
+                  0.34432777333678055
+                ],
+                "floored_sigma2": 0.031721755227403184,
+                "held_out_mean_nll_per_article": 0.49924056401711764,
+                "numeric_floor": 3.4432777333678055e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344,
+                  0.04591905683577141,
+                  0.027245450131159595,
+                  0.020548954077763776,
+                  0.017470653893737968,
+                  0.014002238019816564,
+                  0.010645265865749506
+                ],
+                "raw_retained_eigenvalues": [
+                  0.34432777333678055
+                ],
+                "raw_sigma2": 0.031721755227403184
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344,
+                  0.022638603137333138,
+                  0.022638603137333138,
+                  0.022638603137333138,
+                  0.022638603137333138,
+                  0.022638603137333138,
+                  0.022638603137333138
+                ],
+                "floored_retained_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344
+                ],
+                "floored_sigma2": 0.022638603137333138,
+                "held_out_mean_nll_per_article": 0.8951543767263429,
+                "numeric_floor": 3.4432777333678055e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344,
+                  0.04591905683577141,
+                  0.027245450131159595,
+                  0.020548954077763776,
+                  0.017470653893737968,
+                  0.014002238019816564,
+                  0.010645265865749506
+                ],
+                "raw_retained_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344
+                ],
+                "raw_sigma2": 0.022638603137333138
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344,
+                  0.04591905683577141,
+                  0.01798251239764548,
+                  0.01798251239764548,
+                  0.01798251239764548,
+                  0.01798251239764548,
+                  0.01798251239764548
+                ],
+                "floored_retained_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344,
+                  0.04591905683577141
+                ],
+                "floored_sigma2": 0.01798251239764548,
+                "held_out_mean_nll_per_article": 0.591097093392926,
+                "numeric_floor": 3.4432777333678055e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344,
+                  0.04591905683577141,
+                  0.027245450131159595,
+                  0.020548954077763776,
+                  0.017470653893737968,
+                  0.014002238019816564,
+                  0.010645265865749506
+                ],
+                "raw_retained_eigenvalues": [
+                  0.34432777333678055,
+                  0.08622066776782344,
+                  0.04591905683577141
+                ],
+                "raw_sigma2": 0.01798251239764548
+              }
+            },
+            "held_out_publisher": "bbc.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.35183866194631314,
+                  0.03092838437163236,
+                  0.03092838437163236,
+                  0.03092838437163236,
+                  0.03092838437163236,
+                  0.03092838437163236,
+                  0.03092838437163236,
+                  0.03092838437163236
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35183866194631314
+                ],
+                "floored_sigma2": 0.03092838437163236,
+                "held_out_mean_nll_per_article": 1.8613801496852767,
+                "numeric_floor": 3.518386619463131e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241,
+                  0.04564112063977927,
+                  0.02817578485213551,
+                  0.021468975376831914,
+                  0.0197113335156034,
+                  0.015508458872340128,
+                  0.010795742453843864
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35183866194631314
+                ],
+                "raw_sigma2": 0.03092838437163236
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241,
+                  0.02355023595175568,
+                  0.02355023595175568,
+                  0.02355023595175568,
+                  0.02355023595175568,
+                  0.02355023595175568,
+                  0.02355023595175568
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241
+                ],
+                "floored_sigma2": 0.02355023595175568,
+                "held_out_mean_nll_per_article": 0.28233547124502845,
+                "numeric_floor": 3.518386619463131e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241,
+                  0.04564112063977927,
+                  0.02817578485213551,
+                  0.021468975376831914,
+                  0.0197113335156034,
+                  0.015508458872340128,
+                  0.010795742453843864
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241
+                ],
+                "raw_sigma2": 0.02355023595175568
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241,
+                  0.04564112063977927,
+                  0.019132059014150965,
+                  0.019132059014150965,
+                  0.019132059014150965,
+                  0.019132059014150965,
+                  0.019132059014150965
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241,
+                  0.04564112063977927
+                ],
+                "floored_sigma2": 0.019132059014150965,
+                "held_out_mean_nll_per_article": -0.6280714961024934,
+                "numeric_floor": 3.518386619463131e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241,
+                  0.04564112063977927,
+                  0.02817578485213551,
+                  0.021468975376831914,
+                  0.0197113335156034,
+                  0.015508458872340128,
+                  0.010795742453843864
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35183866194631314,
+                  0.07519727489089241,
+                  0.04564112063977927
+                ],
+                "raw_sigma2": 0.019132059014150965
+              }
+            },
+            "held_out_publisher": "breitbart.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.3551106758998811,
+                  0.03389482347679713,
+                  0.03389482347679713,
+                  0.03389482347679713,
+                  0.03389482347679713,
+                  0.03389482347679713,
+                  0.03389482347679713,
+                  0.03389482347679713
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3551106758998811
+                ],
+                "floored_sigma2": 0.03389482347679713,
+                "held_out_mean_nll_per_article": -3.2510307747262943,
+                "numeric_floor": 3.551106758998811e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257,
+                  0.04929230093267773,
+                  0.02829221587390204,
+                  0.022170353019414876,
+                  0.02006590397891867,
+                  0.016209185978578084,
+                  0.011154376430605944
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3551106758998811
+                ],
+                "raw_sigma2": 0.03389482347679713
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257,
+                  0.02453072270234956,
+                  0.02453072270234956,
+                  0.02453072270234956,
+                  0.02453072270234956,
+                  0.02453072270234956,
+                  0.02453072270234956
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257
+                ],
+                "floored_sigma2": 0.02453072270234956,
+                "held_out_mean_nll_per_article": -3.3916942734667073,
+                "numeric_floor": 3.551106758998811e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257,
+                  0.04929230093267773,
+                  0.02829221587390204,
+                  0.022170353019414876,
+                  0.02006590397891867,
+                  0.016209185978578084,
+                  0.011154376430605944
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257
+                ],
+                "raw_sigma2": 0.02453072270234956
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257,
+                  0.04929230093267773,
+                  0.019578407056283924,
+                  0.019578407056283924,
+                  0.019578407056283924,
+                  0.019578407056283924,
+                  0.019578407056283924
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257,
+                  0.04929230093267773
+                ],
+                "floored_sigma2": 0.019578407056283924,
+                "held_out_mean_nll_per_article": -3.8256378848126653,
+                "numeric_floor": 3.551106758998811e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257,
+                  0.04929230093267773,
+                  0.02829221587390204,
+                  0.022170353019414876,
+                  0.02006590397891867,
+                  0.016209185978578084,
+                  0.011154376430605944
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3551106758998811,
+                  0.09007942812348257,
+                  0.04929230093267773
+                ],
+                "raw_sigma2": 0.019578407056283924
+              }
+            },
+            "held_out_publisher": "cnn.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.3614183197973195,
+                  0.03429153396418024,
+                  0.03429153396418024,
+                  0.03429153396418024,
+                  0.03429153396418024,
+                  0.03429153396418024,
+                  0.03429153396418024,
+                  0.03429153396418024
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3614183197973195
+                ],
+                "floored_sigma2": 0.03429153396418024,
+                "held_out_mean_nll_per_article": -3.9415145646891245,
+                "numeric_floor": 3.614183197973195e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786,
+                  0.0517206872418774,
+                  0.029087393441755545,
+                  0.022204789566168025,
+                  0.020557039392345714,
+                  0.015958239815548503,
+                  0.010977725107768652
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3614183197973195
+                ],
+                "raw_sigma2": 0.03429153396418024
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786,
+                  0.025084312427577304,
+                  0.025084312427577304,
+                  0.025084312427577304,
+                  0.025084312427577304,
+                  0.025084312427577304,
+                  0.025084312427577304
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786
+                ],
+                "floored_sigma2": 0.025084312427577304,
+                "held_out_mean_nll_per_article": -4.4297698922982915,
+                "numeric_floor": 3.614183197973195e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786,
+                  0.0517206872418774,
+                  0.029087393441755545,
+                  0.022204789566168025,
+                  0.020557039392345714,
+                  0.015958239815548503,
+                  0.010977725107768652
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786
+                ],
+                "raw_sigma2": 0.025084312427577304
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786,
+                  0.0517206872418774,
+                  0.019757037464717287,
+                  0.019757037464717287,
+                  0.019757037464717287,
+                  0.019757037464717287,
+                  0.019757037464717287
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786,
+                  0.0517206872418774
+                ],
+                "floored_sigma2": 0.019757037464717287,
+                "held_out_mean_nll_per_article": -4.575370836812613,
+                "numeric_floor": 3.614183197973195e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786,
+                  0.0517206872418774,
+                  0.029087393441755545,
+                  0.022204789566168025,
+                  0.020557039392345714,
+                  0.015958239815548503,
+                  0.010977725107768652
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3614183197973195,
+                  0.08953486318379786,
+                  0.0517206872418774
+                ],
+                "raw_sigma2": 0.019757037464717287
+              }
+            },
+            "held_out_publisher": "dailymail.co.uk",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.3592339159837253,
+                  0.0339926012034568,
+                  0.0339926012034568,
+                  0.0339926012034568,
+                  0.0339926012034568,
+                  0.0339926012034568,
+                  0.0339926012034568,
+                  0.0339926012034568
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3592339159837253
+                ],
+                "floored_sigma2": 0.0339926012034568,
+                "held_out_mean_nll_per_article": -3.465967816484904,
+                "numeric_floor": 3.592339159837253e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723,
+                  0.0513235444355843,
+                  0.02879327757592423,
+                  0.0214466319574633,
+                  0.02020257408276439,
+                  0.01630705312720522,
+                  0.011092076984998927
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3592339159837253
+                ],
+                "raw_sigma2": 0.0339926012034568
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723,
+                  0.024860859693990062,
+                  0.024860859693990062,
+                  0.024860859693990062,
+                  0.024860859693990062,
+                  0.024860859693990062,
+                  0.024860859693990062
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723
+                ],
+                "floored_sigma2": 0.024860859693990062,
+                "held_out_mean_nll_per_article": -3.9351239735061982,
+                "numeric_floor": 3.592339159837253e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723,
+                  0.0513235444355843,
+                  0.02879327757592423,
+                  0.0214466319574633,
+                  0.02020257408276439,
+                  0.01630705312720522,
+                  0.011092076984998927
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723
+                ],
+                "raw_sigma2": 0.024860859693990062
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723,
+                  0.0513235444355843,
+                  0.01956832274567121,
+                  0.01956832274567121,
+                  0.01956832274567121,
+                  0.01956832274567121,
+                  0.01956832274567121
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723,
+                  0.0513235444355843
+                ],
+                "floored_sigma2": 0.01956832274567121,
+                "held_out_mean_nll_per_article": -4.063653846475227,
+                "numeric_floor": 3.592339159837253e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723,
+                  0.0513235444355843,
+                  0.02879327757592423,
+                  0.0214466319574633,
+                  0.02020257408276439,
+                  0.01630705312720522,
+                  0.011092076984998927
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3592339159837253,
+                  0.08878305026025723,
+                  0.0513235444355843
+                ],
+                "raw_sigma2": 0.01956832274567121
+              }
+            },
+            "held_out_publisher": "express.co.uk",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.35529475248353887,
+                  0.03329082695344572,
+                  0.03329082695344572,
+                  0.03329082695344572,
+                  0.03329082695344572,
+                  0.03329082695344572,
+                  0.03329082695344572,
+                  0.03329082695344572
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35529475248353887
+                ],
+                "floored_sigma2": 0.03329082695344572,
+                "held_out_mean_nll_per_article": -2.335011437969797,
+                "numeric_floor": 3.5529475248353886e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356,
+                  0.0500401969975214,
+                  0.0290223177538639,
+                  0.021177456726252715,
+                  0.020156082967918158,
+                  0.01565208206002892,
+                  0.011060104838441427
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35529475248353887
+                ],
+                "raw_sigma2": 0.03329082695344572
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356,
+                  0.024518040224004417,
+                  0.024518040224004417,
+                  0.024518040224004417,
+                  0.024518040224004417,
+                  0.024518040224004417,
+                  0.024518040224004417
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356
+                ],
+                "floored_sigma2": 0.024518040224004417,
+                "held_out_mean_nll_per_article": -2.9948568641537507,
+                "numeric_floor": 3.5529475248353886e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356,
+                  0.0500401969975214,
+                  0.0290223177538639,
+                  0.021177456726252715,
+                  0.020156082967918158,
+                  0.01565208206002892,
+                  0.011060104838441427
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356
+                ],
+                "raw_sigma2": 0.024518040224004417
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356,
+                  0.0500401969975214,
+                  0.019413608869301026,
+                  0.019413608869301026,
+                  0.019413608869301026,
+                  0.019413608869301026,
+                  0.019413608869301026
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356,
+                  0.0500401969975214
+                ],
+                "floored_sigma2": 0.019413608869301026,
+                "held_out_mean_nll_per_article": -3.2554912352602527,
+                "numeric_floor": 3.5529475248353886e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356,
+                  0.0500401969975214,
+                  0.0290223177538639,
+                  0.021177456726252715,
+                  0.020156082967918158,
+                  0.01565208206002892,
+                  0.011060104838441427
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35529475248353887,
+                  0.08592754733009356,
+                  0.0500401969975214
+                ],
+                "raw_sigma2": 0.019413608869301026
+              }
+            },
+            "held_out_publisher": "foxnews.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.3605266844733705,
+                  0.032934697033496003,
+                  0.032934697033496003,
+                  0.032934697033496003,
+                  0.032934697033496003,
+                  0.032934697033496003,
+                  0.032934697033496003,
+                  0.032934697033496003
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3605266844733705
+                ],
+                "floored_sigma2": 0.032934697033496003,
+                "held_out_mean_nll_per_article": -1.8756575271899618,
+                "numeric_floor": 3.605266844733705e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314,
+                  0.04968589736757428,
+                  0.02617253500732757,
+                  0.02175783914507964,
+                  0.019644831209221357,
+                  0.015175400224696772,
+                  0.010797274330299266
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3605266844733705
+                ],
+                "raw_sigma2": 0.032934697033496003
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314,
+                  0.023872296214033143,
+                  0.023872296214033143,
+                  0.023872296214033143,
+                  0.023872296214033143,
+                  0.023872296214033143,
+                  0.023872296214033143
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314
+                ],
+                "floored_sigma2": 0.023872296214033143,
+                "held_out_mean_nll_per_article": -2.0355917679132096,
+                "numeric_floor": 3.605266844733705e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314,
+                  0.04968589736757428,
+                  0.02617253500732757,
+                  0.02175783914507964,
+                  0.019644831209221357,
+                  0.015175400224696772,
+                  0.010797274330299266
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314
+                ],
+                "raw_sigma2": 0.023872296214033143
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314,
+                  0.04968589736757428,
+                  0.01870957598332492,
+                  0.01870957598332492,
+                  0.01870957598332492,
+                  0.01870957598332492,
+                  0.01870957598332492
+                ],
+                "floored_retained_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314,
+                  0.04968589736757428
+                ],
+                "floored_sigma2": 0.01870957598332492,
+                "held_out_mean_nll_per_article": -2.0162816628172564,
+                "numeric_floor": 3.605266844733705e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314,
+                  0.04968589736757428,
+                  0.02617253500732757,
+                  0.02175783914507964,
+                  0.019644831209221357,
+                  0.015175400224696772,
+                  0.010797274330299266
+                ],
+                "raw_retained_eigenvalues": [
+                  0.3605266844733705,
+                  0.08730910195027314,
+                  0.04968589736757428
+                ],
+                "raw_sigma2": 0.01870957598332492
+              }
+            },
+            "held_out_publisher": "haaretz.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.34077747077120957,
+                  0.03235582213079051,
+                  0.03235582213079051,
+                  0.03235582213079051,
+                  0.03235582213079051,
+                  0.03235582213079051,
+                  0.03235582213079051,
+                  0.03235582213079051
+                ],
+                "floored_retained_eigenvalues": [
+                  0.34077747077120957
+                ],
+                "floored_sigma2": 0.03235582213079051,
+                "held_out_mean_nll_per_article": -0.47592349844306536,
+                "numeric_floor": 3.4077747077120956e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641,
+                  0.048217445290766194,
+                  0.02561277025683281,
+                  0.020961846302527468,
+                  0.019128245060111602,
+                  0.015147316692287242,
+                  0.010464293033344159
+                ],
+                "raw_retained_eigenvalues": [
+                  0.34077747077120957
+                ],
+                "raw_sigma2": 0.03235582213079051
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641,
+                  0.023255319439311573,
+                  0.023255319439311573,
+                  0.023255319439311573,
+                  0.023255319439311573,
+                  0.023255319439311573,
+                  0.023255319439311573
+                ],
+                "floored_retained_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641
+                ],
+                "floored_sigma2": 0.023255319439311573,
+                "held_out_mean_nll_per_article": -0.33047609580697274,
+                "numeric_floor": 3.4077747077120956e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641,
+                  0.048217445290766194,
+                  0.02561277025683281,
+                  0.020961846302527468,
+                  0.019128245060111602,
+                  0.015147316692287242,
+                  0.010464293033344159
+                ],
+                "raw_retained_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641
+                ],
+                "raw_sigma2": 0.023255319439311573
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641,
+                  0.048217445290766194,
+                  0.018262894269020655,
+                  0.018262894269020655,
+                  0.018262894269020655,
+                  0.018262894269020655,
+                  0.018262894269020655
+                ],
+                "floored_retained_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641,
+                  0.048217445290766194
+                ],
+                "floored_sigma2": 0.018262894269020655,
+                "held_out_mean_nll_per_article": -0.34408289205455544,
+                "numeric_floor": 3.4077747077120956e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641,
+                  0.048217445290766194,
+                  0.02561277025683281,
+                  0.020961846302527468,
+                  0.019128245060111602,
+                  0.015147316692287242,
+                  0.010464293033344159
+                ],
+                "raw_retained_eigenvalues": [
+                  0.34077747077120957,
+                  0.0869588382796641,
+                  0.048217445290766194
+                ],
+                "raw_sigma2": 0.018262894269020655
+              }
+            },
+            "held_out_publisher": "middleeasteye.net",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.27142178461041483,
+                  0.03106844300685181,
+                  0.03106844300685181,
+                  0.03106844300685181,
+                  0.03106844300685181,
+                  0.03106844300685181,
+                  0.03106844300685181,
+                  0.03106844300685181
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27142178461041483
+                ],
+                "floored_sigma2": 0.03106844300685181,
+                "held_out_mean_nll_per_article": 3.90937098836294,
+                "numeric_floor": 2.714217846104148e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295,
+                  0.046860204921950664,
+                  0.023934968038737445,
+                  0.018350800114162395,
+                  0.017389479274117447,
+                  0.014686359488801308,
+                  0.0093441447613639
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27142178461041483
+                ],
+                "raw_sigma2": 0.03106844300685181
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295,
+                  0.02176099276652219,
+                  0.02176099276652219,
+                  0.02176099276652219,
+                  0.02176099276652219,
+                  0.02176099276652219,
+                  0.02176099276652219
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295
+                ],
+                "floored_sigma2": 0.02176099276652219,
+                "held_out_mean_nll_per_article": 5.117048884644782,
+                "numeric_floor": 2.714217846104148e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295,
+                  0.046860204921950664,
+                  0.023934968038737445,
+                  0.018350800114162395,
+                  0.017389479274117447,
+                  0.014686359488801308,
+                  0.0093441447613639
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295
+                ],
+                "raw_sigma2": 0.02176099276652219
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295,
+                  0.046860204921950664,
+                  0.016741150335436498,
+                  0.016741150335436498,
+                  0.016741150335436498,
+                  0.016741150335436498,
+                  0.016741150335436498
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295,
+                  0.046860204921950664
+                ],
+                "floored_sigma2": 0.016741150335436498,
+                "held_out_mean_nll_per_article": 5.784685010085772,
+                "numeric_floor": 2.714217846104148e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295,
+                  0.046860204921950664,
+                  0.023934968038737445,
+                  0.018350800114162395,
+                  0.017389479274117447,
+                  0.014686359488801308,
+                  0.0093441447613639
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27142178461041483,
+                  0.0869131444488295,
+                  0.046860204921950664
+                ],
+                "raw_sigma2": 0.016741150335436498
+              }
+            },
+            "held_out_publisher": "middleeastmonitor.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.359816810240576,
+                  0.03257013929518978,
+                  0.03257013929518978,
+                  0.03257013929518978,
+                  0.03257013929518978,
+                  0.03257013929518978,
+                  0.03257013929518978,
+                  0.03257013929518978
+                ],
+                "floored_retained_eigenvalues": [
+                  0.359816810240576
+                ],
+                "floored_sigma2": 0.03257013929518978,
+                "held_out_mean_nll_per_article": -1.288392706153896,
+                "numeric_floor": 3.59816810240576e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153,
+                  0.05104651627033968,
+                  0.027936555052477666,
+                  0.022231080526084045,
+                  0.019847585569487163,
+                  0.016016718121664473,
+                  0.011043115845823891
+                ],
+                "raw_retained_eigenvalues": [
+                  0.359816810240576
+                ],
+                "raw_sigma2": 0.03257013929518978
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153,
+                  0.024686928564312826,
+                  0.024686928564312826,
+                  0.024686928564312826,
+                  0.024686928564312826,
+                  0.024686928564312826,
+                  0.024686928564312826
+                ],
+                "floored_retained_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153
+                ],
+                "floored_sigma2": 0.024686928564312826,
+                "held_out_mean_nll_per_article": -2.829191039741447,
+                "numeric_floor": 3.59816810240576e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153,
+                  0.05104651627033968,
+                  0.027936555052477666,
+                  0.022231080526084045,
+                  0.019847585569487163,
+                  0.016016718121664473,
+                  0.011043115845823891
+                ],
+                "raw_retained_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153
+                ],
+                "raw_sigma2": 0.024686928564312826
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153,
+                  0.05104651627033968,
+                  0.01941501102310745,
+                  0.01941501102310745,
+                  0.01941501102310745,
+                  0.01941501102310745,
+                  0.01941501102310745
+                ],
+                "floored_retained_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153,
+                  0.05104651627033968
+                ],
+                "floored_sigma2": 0.01941501102310745,
+                "held_out_mean_nll_per_article": -2.9304149027888884,
+                "numeric_floor": 3.59816810240576e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153,
+                  0.05104651627033968,
+                  0.027936555052477666,
+                  0.022231080526084045,
+                  0.019847585569487163,
+                  0.016016718121664473,
+                  0.011043115845823891
+                ],
+                "raw_retained_eigenvalues": [
+                  0.359816810240576,
+                  0.07986940368045153,
+                  0.05104651627033968
+                ],
+                "raw_sigma2": 0.01941501102310745
+              }
+            },
+            "held_out_publisher": "nypost.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.2780236682844659,
+                  0.03147232072802399,
+                  0.03147232072802399,
+                  0.03147232072802399,
+                  0.03147232072802399,
+                  0.03147232072802399,
+                  0.03147232072802399,
+                  0.03147232072802399
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2780236682844659
+                ],
+                "floored_sigma2": 0.03147232072802399,
+                "held_out_mean_nll_per_article": 3.09105807995064,
+                "numeric_floor": 2.780236682844659e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187,
+                  0.04726184281759438,
+                  0.026770795619061354,
+                  0.020360621652295883,
+                  0.01827117434624999,
+                  0.014351464986381368,
+                  0.008168746964603105
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2780236682844659
+                ],
+                "raw_sigma2": 0.03147232072802399
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187,
+                  0.02253077439769768,
+                  0.02253077439769768,
+                  0.02253077439769768,
+                  0.02253077439769768,
+                  0.02253077439769768,
+                  0.02253077439769768
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187
+                ],
+                "floored_sigma2": 0.02253077439769768,
+                "held_out_mean_nll_per_article": 3.3756351866197933,
+                "numeric_floor": 2.780236682844659e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187,
+                  0.04726184281759438,
+                  0.026770795619061354,
+                  0.020360621652295883,
+                  0.01827117434624999,
+                  0.014351464986381368,
+                  0.008168746964603105
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187
+                ],
+                "raw_sigma2": 0.02253077439769768
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187,
+                  0.04726184281759438,
+                  0.01758456071371834,
+                  0.01758456071371834,
+                  0.01758456071371834,
+                  0.01758456071371834,
+                  0.01758456071371834
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187,
+                  0.04726184281759438
+                ],
+                "floored_sigma2": 0.01758456071371834,
+                "held_out_mean_nll_per_article": 3.490139192671369,
+                "numeric_floor": 2.780236682844659e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187,
+                  0.04726184281759438,
+                  0.026770795619061354,
+                  0.020360621652295883,
+                  0.01827117434624999,
+                  0.014351464986381368,
+                  0.008168746964603105
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2780236682844659,
+                  0.08512159870998187,
+                  0.04726184281759438
+                ],
+                "raw_sigma2": 0.01758456071371834
+              }
+            },
+            "held_out_publisher": "presstv.ir",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.35433831053825093,
+                  0.03358094734483228,
+                  0.03358094734483228,
+                  0.03358094734483228,
+                  0.03358094734483228,
+                  0.03358094734483228,
+                  0.03358094734483228,
+                  0.03358094734483228
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35433831053825093
+                ],
+                "floored_sigma2": 0.03358094734483228,
+                "held_out_mean_nll_per_article": -2.7496160690878324,
+                "numeric_floor": 3.543383105382509e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427,
+                  0.05043607923867958,
+                  0.026107042796332747,
+                  0.02205509463462105,
+                  0.020098345597754738,
+                  0.01619913397599236,
+                  0.01092325699030277
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35433831053825093
+                ],
+                "raw_sigma2": 0.03358094734483228
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427,
+                  0.02430315887228054,
+                  0.02430315887228054,
+                  0.02430315887228054,
+                  0.02430315887228054,
+                  0.02430315887228054,
+                  0.02430315887228054
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427
+                ],
+                "floored_sigma2": 0.02430315887228054,
+                "held_out_mean_nll_per_article": -2.891146732729013,
+                "numeric_floor": 3.543383105382509e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427,
+                  0.05043607923867958,
+                  0.026107042796332747,
+                  0.02205509463462105,
+                  0.020098345597754738,
+                  0.01619913397599236,
+                  0.01092325699030277
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427
+                ],
+                "raw_sigma2": 0.02430315887228054
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427,
+                  0.05043607923867958,
+                  0.019076574799000733,
+                  0.019076574799000733,
+                  0.019076574799000733,
+                  0.019076574799000733,
+                  0.019076574799000733
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427,
+                  0.05043607923867958
+                ],
+                "floored_sigma2": 0.019076574799000733,
+                "held_out_mean_nll_per_article": -2.9307333900737733,
+                "numeric_floor": 3.543383105382509e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427,
+                  0.05043607923867958,
+                  0.026107042796332747,
+                  0.02205509463462105,
+                  0.020098345597754738,
+                  0.01619913397599236,
+                  0.01092325699030277
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35433831053825093,
+                  0.0892476781801427,
+                  0.05043607923867958
+                ],
+                "raw_sigma2": 0.019076574799000733
+              }
+            },
+            "held_out_publisher": "theguardian.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.35851808040608346,
+                  0.0338317565408839,
+                  0.0338317565408839,
+                  0.0338317565408839,
+                  0.0338317565408839,
+                  0.0338317565408839,
+                  0.0338317565408839,
+                  0.0338317565408839
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35851808040608346
+                ],
+                "floored_sigma2": 0.0338317565408839,
+                "held_out_mean_nll_per_article": -3.2217437134921405,
+                "numeric_floor": 3.5851808040608344e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261,
+                  0.05129489041584519,
+                  0.02918478838567372,
+                  0.021834480736604198,
+                  0.019597794990569593,
+                  0.015462355987680922,
+                  0.010804289626661032
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35851808040608346
+                ],
+                "raw_sigma2": 0.0338317565408839
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261,
+                  0.024696433357172438,
+                  0.024696433357172438,
+                  0.024696433357172438,
+                  0.024696433357172438,
+                  0.024696433357172438,
+                  0.024696433357172438
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261
+                ],
+                "floored_sigma2": 0.024696433357172438,
+                "held_out_mean_nll_per_article": -3.6268080563152743,
+                "numeric_floor": 3.5851808040608344e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261,
+                  0.05129489041584519,
+                  0.02918478838567372,
+                  0.021834480736604198,
+                  0.019597794990569593,
+                  0.015462355987680922,
+                  0.010804289626661032
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261
+                ],
+                "raw_sigma2": 0.024696433357172438
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261,
+                  0.05129489041584519,
+                  0.019376741945437894,
+                  0.019376741945437894,
+                  0.019376741945437894,
+                  0.019376741945437894,
+                  0.019376741945437894
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261,
+                  0.05129489041584519
+                ],
+                "floored_sigma2": 0.019376741945437894,
+                "held_out_mean_nll_per_article": -3.6798347262840565,
+                "numeric_floor": 3.5851808040608344e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261,
+                  0.05129489041584519,
+                  0.02918478838567372,
+                  0.021834480736604198,
+                  0.019597794990569593,
+                  0.015462355987680922,
+                  0.010804289626661032
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35851808040608346,
+                  0.08864369564315261,
+                  0.05129489041584519
+                ],
+                "raw_sigma2": 0.019376741945437894
+              }
+            },
+            "held_out_publisher": "townhall.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.35205310684017316,
+                  0.030740226036007453,
+                  0.030740226036007453,
+                  0.030740226036007453,
+                  0.030740226036007453,
+                  0.030740226036007453,
+                  0.030740226036007453,
+                  0.030740226036007453
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35205310684017316
+                ],
+                "floored_sigma2": 0.030740226036007453,
+                "held_out_mean_nll_per_article": 2.15839598398794,
+                "numeric_floor": 3.5205310684017315e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457,
+                  0.04728773183542305,
+                  0.02857679071271831,
+                  0.020978347422062983,
+                  0.019285923959256306,
+                  0.014489374079589022,
+                  0.010362140361256798
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35205310684017316
+                ],
+                "raw_sigma2": 0.030740226036007453
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457,
+                  0.023496718061717742,
+                  0.023496718061717742,
+                  0.023496718061717742,
+                  0.023496718061717742,
+                  0.023496718061717742,
+                  0.023496718061717742
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457
+                ],
+                "floored_sigma2": 0.023496718061717742,
+                "held_out_mean_nll_per_article": 0.29081451249034007,
+                "numeric_floor": 3.5205310684017315e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457,
+                  0.04728773183542305,
+                  0.02857679071271831,
+                  0.020978347422062983,
+                  0.019285923959256306,
+                  0.014489374079589022,
+                  0.010362140361256798
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457
+                ],
+                "raw_sigma2": 0.023496718061717742
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457,
+                  0.04728773183542305,
+                  0.018738515306976684,
+                  0.018738515306976684,
+                  0.018738515306976684,
+                  0.018738515306976684,
+                  0.018738515306976684
+                ],
+                "floored_retained_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457,
+                  0.04728773183542305
+                ],
+                "floored_sigma2": 0.018738515306976684,
+                "held_out_mean_nll_per_article": -0.12489811983674803,
+                "numeric_floor": 3.5205310684017315e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457,
+                  0.04728773183542305,
+                  0.02857679071271831,
+                  0.020978347422062983,
+                  0.019285923959256306,
+                  0.014489374079589022,
+                  0.010362140361256798
+                ],
+                "raw_retained_eigenvalues": [
+                  0.35205310684017316,
+                  0.0742012738817457,
+                  0.04728773183542305
+                ],
+                "raw_sigma2": 0.018738515306976684
+              }
+            },
+            "held_out_publisher": "wnd.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          }
+        ],
+        "one_standard_error_threshold": -0.6922398173445243,
+        "selected_k": 1,
+        "selection_rule": "smallest k within one standard error of best mean publisher-level held-out PPCA NLL",
+        "selection_scope": "descriptive_model_selection_not_a_hypothesis_test"
+      },
+      "primary_publisher_block_eigenvalue_null": {
+        "components": {
+          "pc2": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.13136851882946318,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.11945840786602807,
+            "observed_eigenvalue": 0.08563679342937401,
+            "observed_explained_variance_ratio": 0.1488540048713104,
+            "plus_one_p_value": 1.0,
+            "status": "pc2_not_detected_under_cluster_null"
+          },
+          "pc3": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.10699665885349903,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.09791873898529968,
+            "observed_eigenvalue": 0.04905667690224222,
+            "observed_explained_variance_ratio": 0.08527039056639794,
+            "plus_one_p_value": 1.0,
+            "status": "pc3_not_detected"
+          }
+        },
+        "full_observed_eigenvalues": [
+          0.34591579332968986,
+          0.08563679342937401,
+          0.04905667690224222,
+          0.027597708946985496,
+          0.02125507499972624,
+          0.019528282404932068,
+          0.015597558656586043,
+          0.010719396501663052
+        ],
+        "full_observed_explained_variance_ratio": [
+          0.6012713592297946,
+          0.1488540048713104,
+          0.08527039056639794,
+          0.04797037975761599,
+          0.03694560376269387,
+          0.03394409024234914,
+          0.027111700231545906,
+          0.018632471338292184
+        ],
+        "permutations": 10000,
+        "role": "primary_cluster_aware_null",
+        "scheme": "independently reassign complete 20-value publisher blocks per column, then independently permute row order inside every assigned block"
+      },
+      "publisher_cluster_bootstrap": {
+        "direct_abs_cosine": {
+          "fraction_at_or_above_threshold": 0.9196,
+          "mean": 0.9654198178280793,
+          "median": 0.98522833589677,
+          "q025": 0.7835960467739588,
+          "q975": 0.9975394355438225,
+          "required_fraction": 0.95,
+          "threshold": 0.9
+        },
+        "failed_replicates": 0,
+        "failure_rate": 0.0,
+        "failure_reasons": {},
+        "pc2_pc3_subspace_principal_cosines": {
+          "larger_cosine_smaller_angle": {
+            "mean": 0.9936082140955957,
+            "median": 0.9953437636668323,
+            "q025": 0.9775284386170922,
+            "q975": 0.9992822081080578
+          },
+          "smaller_cosine_larger_angle": {
+            "mean": 0.9648489612735656,
+            "median": 0.9773395257707722,
+            "q025": 0.8553367708545813,
+            "q975": 0.9955601056834725
+          }
+        },
+        "reference_eigenvalues": [
+          0.34591579332968986,
+          0.08563679342937401,
+          0.04905667690224222,
+          0.027597708946985496,
+          0.02125507499972624,
+          0.019528282404932068,
+          0.015597558656586043,
+          0.010719396501663052
+        ],
+        "reference_pc2_in_replicate_pc2_pc3_subspace": {
+          "mean": 0.9874138820442575,
+          "median": 0.9928250342974803,
+          "q025": 0.942992547307413,
+          "q975": 0.9986600259233489
+        },
+        "reference_pc2_loadings": [
+          -0.15308515319159996,
+          0.6482754747747265,
+          0.0755930678280124,
+          0.7227893347662157,
+          0.07669757619686443,
+          -0.022512501256049755,
+          0.14202639868052402,
+          0.04005348290762978
+        ],
+        "reference_pc3_loadings": [
+          -0.16045089413261943,
+          -0.24103307938883578,
+          0.42833919774284007,
+          0.04514143721980418,
+          0.8034556153573875,
+          0.06375848681290663,
+          0.11872154124846754,
+          -0.2587382319811417
+        ],
+        "relative_pc2_pc3_eigenvalue_gap": {
+          "mean": 0.41897021809721646,
+          "median": 0.4246357656139881,
+          "q025": 0.21635116062115423,
+          "q975": 0.5948664870027814
+        },
+        "replicate_pc2_in_reference_pc2_pc3_subspace": {
+          "mean": 0.9898815440247168,
+          "median": 0.9930812312605781,
+          "q025": 0.9646522718876454,
+          "q975": 0.9986587847006505
+        },
+        "requested_replicates": 10000,
+        "rotational_ambiguity_pattern": true,
+        "sign_aligned_pc2_loading_percentile_intervals": [
+          {
+            "coordinate": 0,
+            "median": -0.14493952770640794,
+            "q025": -0.2414452798290221,
+            "q975": -0.04333968820805202,
+            "reference_loading": -0.15308515319159996
+          },
+          {
+            "coordinate": 1,
+            "median": 0.6413373803848567,
+            "q025": 0.5430031760506442,
+            "q975": 0.7483717858309088,
+            "reference_loading": 0.6482754747747265
+          },
+          {
+            "coordinate": 2,
+            "median": 0.06289541745154434,
+            "q025": -0.18054668339417354,
+            "q975": 0.21273891960659796,
+            "reference_loading": 0.0755930678280124
+          },
+          {
+            "coordinate": 3,
+            "median": 0.7058221375202398,
+            "q025": 0.5062775556529268,
+            "q975": 0.7774661905990932,
+            "reference_loading": 0.7227893347662157
+          },
+          {
+            "coordinate": 4,
+            "median": 0.06607689698446946,
+            "q025": -0.4339277870557352,
+            "q975": 0.2430959253236209,
+            "reference_loading": 0.07669757619686443
+          },
+          {
+            "coordinate": 5,
+            "median": -0.023528571115211713,
+            "q025": -0.1216971721624427,
+            "q975": 0.050521663079514605,
+            "reference_loading": -0.022512501256049755
+          },
+          {
+            "coordinate": 6,
+            "median": 0.12961284319709854,
+            "q025": 0.01083004176110449,
+            "q975": 0.204961363015873,
+            "reference_loading": 0.14202639868052402
+          },
+          {
+            "coordinate": 7,
+            "median": 0.056069341533238254,
+            "q025": -0.12562084965368134,
+            "q975": 0.25594594106103097,
+            "reference_loading": 0.04005348290762978
+          }
+        ],
+        "stability_conditions": {
+          "direct_cosine_fraction": false,
+          "failure_rate": true,
+          "reference_pc2_swap_rate": true,
+          "replicate_pc2_swap_rate": true
+        },
+        "stability_passes": false,
+        "swap_diagnostics": {
+          "reference_pc2_closer_to_replicate_pc3_count": 60,
+          "reference_pc2_closer_to_replicate_pc3_rate": 0.006,
+          "replicate_pc2_closer_to_reference_pc3_count": 94,
+          "replicate_pc2_closer_to_reference_pc3_rate": 0.0094
+        },
+        "valid_replicates": 10000
+      }
+    },
+    "q1": {
+      "article_level_eigenvalue_null_sensitivity": {
+        "alpha": 0.05,
+        "components": {
+          "pc2": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.1060813905918238,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.1019495289441449,
+            "observed_eigenvalue": 0.05006616594508089,
+            "observed_explained_variance_ratio": 0.11034739799678824,
+            "plus_one_p_value": 1.0
+          },
+          "pc3": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.07734116872609255,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.07530040380957738,
+            "observed_eigenvalue": 0.03781676419874546,
+            "observed_explained_variance_ratio": 0.0833493328521926,
+            "plus_one_p_value": 1.0
+          }
+        },
+        "full_observed_eigenvalues": [
+          0.27792926442640475,
+          0.05006616594508089,
+          0.03781676419874546,
+          0.02830597482639267,
+          0.0221441964448333,
+          0.018365740557790115,
+          0.010421777916034929,
+          0.00866417558976532
+        ],
+        "full_observed_explained_variance_ratio": [
+          0.6125648045479775,
+          0.11034739799678824,
+          0.0833493328521926,
+          0.062387255163123,
+          0.048806502600927996,
+          0.04047866747094782,
+          0.022969924974808983,
+          0.0190961143932338
+        ],
+        "null_scheme": "independently permute article rows within each score column and refit covariance PCA",
+        "permutations": 10000,
+        "role": "article_level_sensitivity_only_not_used_for_primary_verdict"
+      },
+      "decision_inputs": {
+        "pc2_loading_stability_passes": false,
+        "pc2_primary_status": "pc2_not_detected_under_cluster_null",
+        "pc3_primary_status": "pc3_not_detected",
+        "ppca_selected_k": 1
+      },
+      "dimensionality_verdict": "pc2_not_detected_under_cluster_null",
+      "interpretation_boundary": "bootstrap instability is not evidence that PC2 is absent",
+      "ppca_leave_one_publisher_out": {
+        "best_mean_nll_k": 3,
+        "candidate_summaries": {
+          "1": {
+            "mean_publisher_nll": -1.863616444569427,
+            "publisher_mean_nll_values": [
+              -2.6755091477302093,
+              -1.768872141715646,
+              -1.2601068858957383,
+              2.450520829090923,
+              -4.451508755413696,
+              -4.733344120676668,
+              -4.31851251038352,
+              -3.742589642643286,
+              -3.933631529263534,
+              -1.8524134852171392,
+              2.56934431145011,
+              -2.680753716287712,
+              5.752127251146101,
+              -3.5717611503884816,
+              -4.082905907506075,
+              -1.5179465116762625
+            ],
+            "publisher_nll_distribution": {
+              "mean": -1.863616444569427,
+              "median": -2.6781314320089606,
+              "q025": -4.627655858703053,
+              "q975": 4.558583648760104
+            },
+            "standard_error_across_publishers": 0.7491654109418293
+          },
+          "2": {
+            "mean_publisher_nll": -1.9393761056280372,
+            "publisher_mean_nll_values": [
+              -2.5219439342112144,
+              -1.8913785881463006,
+              -1.4322894217843392,
+              1.9895938655019658,
+              -4.664964910744314,
+              -4.938910473320875,
+              -4.384005788248539,
+              -4.026308705281899,
+              -3.935371648779064,
+              -1.5298395644546843,
+              3.0081364333904745,
+              -3.452313851318631,
+              6.5541101258970444,
+              -3.6980149885682514,
+              -4.149183056030927,
+              -1.957333183949041
+            ],
+            "publisher_nll_distribution": {
+              "mean": -1.9393761056280372,
+              "median": -2.9871288927649227,
+              "q025": -4.836180887354665,
+              "q975": 5.22436999120708
+            },
+            "standard_error_across_publishers": 0.8005920760263207
+          },
+          "3": {
+            "mean_publisher_nll": -2.028196108404303,
+            "publisher_mean_nll_values": [
+              -2.8178330573609496,
+              -1.9584364651423762,
+              -1.5703868811483237,
+              1.5362893591922397,
+              -4.707352195561552,
+              -5.105795563831306,
+              -4.559637302679566,
+              -4.018991787297253,
+              -4.042595408741771,
+              -1.4590605345907306,
+              3.4125995898659505,
+              -3.588822027577133,
+              6.641827102553283,
+              -3.841689674206896,
+              -4.302040663249143,
+              -2.0692122246933256
+            ],
+            "publisher_nll_distribution": {
+              "mean": -2.028196108404303,
+              "median": -3.203327542469041,
+              "q025": -4.956379300730148,
+              "q975": 5.4308667852955335
+            },
+            "standard_error_across_publishers": 0.818062090819049
+          }
+        },
+        "folds": [
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.28456051250656844,
+                  0.025191727117113642,
+                  0.025191727117113642,
+                  0.025191727117113642,
+                  0.025191727117113642,
+                  0.025191727117113642,
+                  0.025191727117113642,
+                  0.025191727117113642
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28456051250656844
+                ],
+                "floored_sigma2": 0.025191727117113642,
+                "held_out_mean_nll_per_article": -2.6755091477302093,
+                "numeric_floor": 2.845605125065684e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708,
+                  0.036748726898030167,
+                  0.029553044690612835,
+                  0.021662004092549935,
+                  0.01743727791889181,
+                  0.010626966261298306,
+                  0.008524905368775341
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28456051250656844
+                ],
+                "raw_sigma2": 0.025191727117113642
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708,
+                  0.020758820871693066,
+                  0.020758820871693066,
+                  0.020758820871693066,
+                  0.020758820871693066,
+                  0.020758820871693066,
+                  0.020758820871693066
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708
+                ],
+                "floored_sigma2": 0.020758820871693066,
+                "held_out_mean_nll_per_article": -2.5219439342112144,
+                "numeric_floor": 2.845605125065684e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708,
+                  0.036748726898030167,
+                  0.029553044690612835,
+                  0.021662004092549935,
+                  0.01743727791889181,
+                  0.010626966261298306,
+                  0.008524905368775341
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708
+                ],
+                "raw_sigma2": 0.020758820871693066
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708,
+                  0.036748726898030167,
+                  0.017560839666425646,
+                  0.017560839666425646,
+                  0.017560839666425646,
+                  0.017560839666425646,
+                  0.017560839666425646
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708,
+                  0.036748726898030167
+                ],
+                "floored_sigma2": 0.017560839666425646,
+                "held_out_mean_nll_per_article": -2.8178330573609496,
+                "numeric_floor": 2.845605125065684e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708,
+                  0.036748726898030167,
+                  0.029553044690612835,
+                  0.021662004092549935,
+                  0.01743727791889181,
+                  0.010626966261298306,
+                  0.008524905368775341
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28456051250656844,
+                  0.05178916458963708,
+                  0.036748726898030167
+                ],
+                "raw_sigma2": 0.017560839666425646
+              }
+            },
+            "held_out_publisher": "aljazeera.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.28306832757097783,
+                  0.02477588907872971,
+                  0.02477588907872971,
+                  0.02477588907872971,
+                  0.02477588907872971,
+                  0.02477588907872971,
+                  0.02477588907872971,
+                  0.02477588907872971
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28306832757097783
+                ],
+                "floored_sigma2": 0.02477588907872971,
+                "held_out_mean_nll_per_article": -1.768872141715646,
+                "numeric_floor": 2.8306832757097783e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699,
+                  0.03755419554579169,
+                  0.02831860305576307,
+                  0.02056958273707856,
+                  0.01881925956108413,
+                  0.010529805784175863,
+                  0.00818097263372765
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28306832757097783
+                ],
+                "raw_sigma2": 0.02477588907872971
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699,
+                  0.020662069886270163,
+                  0.020662069886270163,
+                  0.020662069886270163,
+                  0.020662069886270163,
+                  0.020662069886270163,
+                  0.020662069886270163
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699
+                ],
+                "floored_sigma2": 0.020662069886270163,
+                "held_out_mean_nll_per_article": -1.8913785881463006,
+                "numeric_floor": 2.8306832757097783e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699,
+                  0.03755419554579169,
+                  0.02831860305576307,
+                  0.02056958273707856,
+                  0.01881925956108413,
+                  0.010529805784175863,
+                  0.00818097263372765
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699
+                ],
+                "raw_sigma2": 0.020662069886270163
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699,
+                  0.03755419554579169,
+                  0.017283644754365855,
+                  0.017283644754365855,
+                  0.017283644754365855,
+                  0.017283644754365855,
+                  0.017283644754365855
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699,
+                  0.03755419554579169
+                ],
+                "floored_sigma2": 0.017283644754365855,
+                "held_out_mean_nll_per_article": -1.9584364651423762,
+                "numeric_floor": 2.8306832757097783e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699,
+                  0.03755419554579169,
+                  0.02831860305576307,
+                  0.02056958273707856,
+                  0.01881925956108413,
+                  0.010529805784175863,
+                  0.00818097263372765
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28306832757097783,
+                  0.04945880423348699,
+                  0.03755419554579169
+                ],
+                "raw_sigma2": 0.017283644754365855
+              }
+            },
+            "held_out_publisher": "bbc.co.uk",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.2795146696905792,
+                  0.02459397399091176,
+                  0.02459397399091176,
+                  0.02459397399091176,
+                  0.02459397399091176,
+                  0.02459397399091176,
+                  0.02459397399091176,
+                  0.02459397399091176
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2795146696905792
+                ],
+                "floored_sigma2": 0.02459397399091176,
+                "held_out_mean_nll_per_article": -1.2601068858957383,
+                "numeric_floor": 2.795146696905792e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055,
+                  0.03726003468470264,
+                  0.02674019775794532,
+                  0.021804892155253903,
+                  0.018523617698881865,
+                  0.010664780902916695,
+                  0.00836861901649137
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2795146696905792
+                ],
+                "raw_sigma2": 0.02459397399091176
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055,
+                  0.020560357036031967,
+                  0.020560357036031967,
+                  0.020560357036031967,
+                  0.020560357036031967,
+                  0.020560357036031967,
+                  0.020560357036031967
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055
+                ],
+                "floored_sigma2": 0.020560357036031967,
+                "held_out_mean_nll_per_article": -1.4322894217843392,
+                "numeric_floor": 2.795146696905792e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055,
+                  0.03726003468470264,
+                  0.02674019775794532,
+                  0.021804892155253903,
+                  0.018523617698881865,
+                  0.010664780902916695,
+                  0.00836861901649137
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055
+                ],
+                "raw_sigma2": 0.020560357036031967
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055,
+                  0.03726003468470264,
+                  0.01722042150629783,
+                  0.01722042150629783,
+                  0.01722042150629783,
+                  0.01722042150629783,
+                  0.01722042150629783
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055,
+                  0.03726003468470264
+                ],
+                "floored_sigma2": 0.01722042150629783,
+                "held_out_mean_nll_per_article": -1.5703868811483237,
+                "numeric_floor": 2.795146696905792e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055,
+                  0.03726003468470264,
+                  0.02674019775794532,
+                  0.021804892155253903,
+                  0.018523617698881865,
+                  0.010664780902916695,
+                  0.00836861901649137
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2795146696905792,
+                  0.04879567572019055,
+                  0.03726003468470264
+                ],
+                "raw_sigma2": 0.01722042150629783
+              }
+            },
+            "held_out_publisher": "bbc.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.27500010880205056,
+                  0.023166486040369447,
+                  0.023166486040369447,
+                  0.023166486040369447,
+                  0.023166486040369447,
+                  0.023166486040369447,
+                  0.023166486040369447,
+                  0.023166486040369447
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27500010880205056
+                ],
+                "floored_sigma2": 0.023166486040369447,
+                "held_out_mean_nll_per_article": 2.450520829090923,
+                "numeric_floor": 2.7500010880205055e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654,
+                  0.033806274319359716,
+                  0.027671036884594546,
+                  0.021445081682038424,
+                  0.017355231265699843,
+                  0.01028002293801962,
+                  0.008570839954602349
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27500010880205056
+                ],
+                "raw_sigma2": 0.023166486040369447
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654,
+                  0.019854747840719084,
+                  0.019854747840719084,
+                  0.019854747840719084,
+                  0.019854747840719084,
+                  0.019854747840719084,
+                  0.019854747840719084
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654
+                ],
+                "floored_sigma2": 0.019854747840719084,
+                "held_out_mean_nll_per_article": 1.9895938655019658,
+                "numeric_floor": 2.7500010880205055e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654,
+                  0.033806274319359716,
+                  0.027671036884594546,
+                  0.021445081682038424,
+                  0.017355231265699843,
+                  0.01028002293801962,
+                  0.008570839954602349
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654
+                ],
+                "raw_sigma2": 0.019854747840719084
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654,
+                  0.033806274319359716,
+                  0.017064442544990958,
+                  0.017064442544990958,
+                  0.017064442544990958,
+                  0.017064442544990958,
+                  0.017064442544990958
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654,
+                  0.033806274319359716
+                ],
+                "floored_sigma2": 0.017064442544990958,
+                "held_out_mean_nll_per_article": 1.5362893591922397,
+                "numeric_floor": 2.7500010880205055e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654,
+                  0.033806274319359716,
+                  0.027671036884594546,
+                  0.021445081682038424,
+                  0.017355231265699843,
+                  0.01028002293801962,
+                  0.008570839954602349
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27500010880205056,
+                  0.043036915238271654,
+                  0.033806274319359716
+                ],
+                "raw_sigma2": 0.017064442544990958
+              }
+            },
+            "held_out_publisher": "breitbart.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.27800958807326626,
+                  0.02615656868462146,
+                  0.02615656868462146,
+                  0.02615656868462146,
+                  0.02615656868462146,
+                  0.02615656868462146,
+                  0.02615656868462146,
+                  0.02615656868462146
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27800958807326626
+                ],
+                "floored_sigma2": 0.02615656868462146,
+                "held_out_mean_nll_per_article": -4.451508755413696,
+                "numeric_floor": 2.7800958807326626e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686,
+                  0.039873386170548385,
+                  0.029231527111439202,
+                  0.023182063466303023,
+                  0.018752103027211413,
+                  0.01089912456292383,
+                  0.00907572188182066
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27800958807326626
+                ],
+                "raw_sigma2": 0.02615656868462146
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686,
+                  0.021835654370041088,
+                  0.021835654370041088,
+                  0.021835654370041088,
+                  0.021835654370041088,
+                  0.021835654370041088,
+                  0.021835654370041088
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686
+                ],
+                "floored_sigma2": 0.021835654370041088,
+                "held_out_mean_nll_per_article": -4.664964910744314,
+                "numeric_floor": 2.7800958807326626e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686,
+                  0.039873386170548385,
+                  0.029231527111439202,
+                  0.023182063466303023,
+                  0.018752103027211413,
+                  0.01089912456292383,
+                  0.00907572188182066
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686
+                ],
+                "raw_sigma2": 0.021835654370041088
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686,
+                  0.039873386170548385,
+                  0.018228108009939625,
+                  0.018228108009939625,
+                  0.018228108009939625,
+                  0.018228108009939625,
+                  0.018228108009939625
+                ],
+                "floored_retained_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686,
+                  0.039873386170548385
+                ],
+                "floored_sigma2": 0.018228108009939625,
+                "held_out_mean_nll_per_article": -4.707352195561552,
+                "numeric_floor": 2.7800958807326626e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686,
+                  0.039873386170548385,
+                  0.029231527111439202,
+                  0.023182063466303023,
+                  0.018752103027211413,
+                  0.01089912456292383,
+                  0.00907572188182066
+                ],
+                "raw_retained_eigenvalues": [
+                  0.27800958807326626,
+                  0.052082054572103686,
+                  0.039873386170548385
+                ],
+                "raw_sigma2": 0.018228108009939625
+              }
+            },
+            "held_out_publisher": "cnn.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.29003171868132793,
+                  0.026147081213228767,
+                  0.026147081213228767,
+                  0.026147081213228767,
+                  0.026147081213228767,
+                  0.026147081213228767,
+                  0.026147081213228767,
+                  0.026147081213228767
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29003171868132793
+                ],
+                "floored_sigma2": 0.026147081213228767,
+                "held_out_mean_nll_per_article": -4.733344120676668,
+                "numeric_floor": 2.900317186813279e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526,
+                  0.0392470221284907,
+                  0.029612108597678263,
+                  0.023474321790347145,
+                  0.019213553763220037,
+                  0.010893484456248223,
+                  0.00847887082772651
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29003171868132793
+                ],
+                "raw_sigma2": 0.026147081213228767
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526,
+                  0.02181989359395181,
+                  0.02181989359395181,
+                  0.02181989359395181,
+                  0.02181989359395181,
+                  0.02181989359395181,
+                  0.02181989359395181
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526
+                ],
+                "floored_sigma2": 0.02181989359395181,
+                "held_out_mean_nll_per_article": -4.938910473320875,
+                "numeric_floor": 2.900317186813279e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526,
+                  0.0392470221284907,
+                  0.029612108597678263,
+                  0.023474321790347145,
+                  0.019213553763220037,
+                  0.010893484456248223,
+                  0.00847887082772651
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526
+                ],
+                "raw_sigma2": 0.02181989359395181
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526,
+                  0.0392470221284907,
+                  0.018334467887044036,
+                  0.018334467887044036,
+                  0.018334467887044036,
+                  0.018334467887044036,
+                  0.018334467887044036
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526,
+                  0.0392470221284907
+                ],
+                "floored_sigma2": 0.018334467887044036,
+                "held_out_mean_nll_per_article": -5.105795563831306,
+                "numeric_floor": 2.900317186813279e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526,
+                  0.0392470221284907,
+                  0.029612108597678263,
+                  0.023474321790347145,
+                  0.019213553763220037,
+                  0.010893484456248223,
+                  0.00847887082772651
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29003171868132793,
+                  0.052110206928890526,
+                  0.0392470221284907
+                ],
+                "raw_sigma2": 0.018334467887044036
+              }
+            },
+            "held_out_publisher": "dailymail.co.uk",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.29036091351529936,
+                  0.025933992236270804,
+                  0.025933992236270804,
+                  0.025933992236270804,
+                  0.025933992236270804,
+                  0.025933992236270804,
+                  0.025933992236270804,
+                  0.025933992236270804
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29036091351529936
+                ],
+                "floored_sigma2": 0.025933992236270804,
+                "held_out_mean_nll_per_article": -4.31851251038352,
+                "numeric_floor": 2.9036091351529933e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965,
+                  0.038495137355453686,
+                  0.028455601752574763,
+                  0.0232277558140029,
+                  0.019297887087298994,
+                  0.010826106109373445,
+                  0.00887339161622588
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29036091351529936
+                ],
+                "raw_sigma2": 0.025933992236270804
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965,
+                  0.021529313289154944,
+                  0.021529313289154944,
+                  0.021529313289154944,
+                  0.021529313289154944,
+                  0.021529313289154944,
+                  0.021529313289154944
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965
+                ],
+                "floored_sigma2": 0.021529313289154944,
+                "held_out_mean_nll_per_article": -4.384005788248539,
+                "numeric_floor": 2.9036091351529933e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965,
+                  0.038495137355453686,
+                  0.028455601752574763,
+                  0.0232277558140029,
+                  0.019297887087298994,
+                  0.010826106109373445,
+                  0.00887339161622588
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965
+                ],
+                "raw_sigma2": 0.021529313289154944
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965,
+                  0.038495137355453686,
+                  0.018136148475895196,
+                  0.018136148475895196,
+                  0.018136148475895196,
+                  0.018136148475895196,
+                  0.018136148475895196
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965,
+                  0.038495137355453686
+                ],
+                "floored_sigma2": 0.018136148475895196,
+                "held_out_mean_nll_per_article": -4.559637302679566,
+                "numeric_floor": 2.9036091351529933e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965,
+                  0.038495137355453686,
+                  0.028455601752574763,
+                  0.0232277558140029,
+                  0.019297887087298994,
+                  0.010826106109373445,
+                  0.00887339161622588
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29036091351529936,
+                  0.052362065918965965,
+                  0.038495137355453686
+                ],
+                "raw_sigma2": 0.018136148475895196
+              }
+            },
+            "held_out_publisher": "express.co.uk",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.2846265353467076,
+                  0.025708980228319026,
+                  0.025708980228319026,
+                  0.025708980228319026,
+                  0.025708980228319026,
+                  0.025708980228319026,
+                  0.025708980228319026,
+                  0.025708980228319026
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2846265353467076
+                ],
+                "floored_sigma2": 0.025708980228319026,
+                "held_out_mean_nll_per_article": -3.742589642643286,
+                "numeric_floor": 2.846265353467076e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824,
+                  0.03952157881043179,
+                  0.028555787245933602,
+                  0.02299803081686576,
+                  0.018551064528367987,
+                  0.010682548883651971,
+                  0.008881181577469234
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2846265353467076
+                ],
+                "raw_sigma2": 0.025708980228319026
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824,
+                  0.021531698643786724,
+                  0.021531698643786724,
+                  0.021531698643786724,
+                  0.021531698643786724,
+                  0.021531698643786724,
+                  0.021531698643786724
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824
+                ],
+                "floored_sigma2": 0.021531698643786724,
+                "held_out_mean_nll_per_article": -4.026308705281899,
+                "numeric_floor": 2.846265353467076e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824,
+                  0.03952157881043179,
+                  0.028555787245933602,
+                  0.02299803081686576,
+                  0.018551064528367987,
+                  0.010682548883651971,
+                  0.008881181577469234
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824
+                ],
+                "raw_sigma2": 0.021531698643786724
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824,
+                  0.03952157881043179,
+                  0.017933722610457708,
+                  0.017933722610457708,
+                  0.017933722610457708,
+                  0.017933722610457708,
+                  0.017933722610457708
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824,
+                  0.03952157881043179
+                ],
+                "floored_sigma2": 0.017933722610457708,
+                "held_out_mean_nll_per_article": -4.018991787297253,
+                "numeric_floor": 2.846265353467076e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824,
+                  0.03952157881043179,
+                  0.028555787245933602,
+                  0.02299803081686576,
+                  0.018551064528367987,
+                  0.010682548883651971,
+                  0.008881181577469234
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2846265353467076,
+                  0.050772669735512824,
+                  0.03952157881043179
+                ],
+                "raw_sigma2": 0.017933722610457708
+              }
+            },
+            "held_out_publisher": "foxnews.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.28754259366193813,
+                  0.025769135303363725,
+                  0.025769135303363725,
+                  0.025769135303363725,
+                  0.025769135303363725,
+                  0.025769135303363725,
+                  0.025769135303363725,
+                  0.025769135303363725
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28754259366193813
+                ],
+                "floored_sigma2": 0.025769135303363725,
+                "held_out_mean_nll_per_article": -3.933631529263534,
+                "numeric_floor": 2.875425936619381e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066,
+                  0.03866713311883611,
+                  0.02926162723204048,
+                  0.022168499869432857,
+                  0.018522588661683742,
+                  0.01055010875719322,
+                  0.0089184050617176
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28754259366193813
+                ],
+                "raw_sigma2": 0.025769135303363725
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066,
+                  0.021348060450150665,
+                  0.021348060450150665,
+                  0.021348060450150665,
+                  0.021348060450150665,
+                  0.021348060450150665,
+                  0.021348060450150665
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066
+                ],
+                "floored_sigma2": 0.021348060450150665,
+                "held_out_mean_nll_per_article": -3.935371648779064,
+                "numeric_floor": 2.875425936619381e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066,
+                  0.03866713311883611,
+                  0.02926162723204048,
+                  0.022168499869432857,
+                  0.018522588661683742,
+                  0.01055010875719322,
+                  0.0089184050617176
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066
+                ],
+                "raw_sigma2": 0.021348060450150665
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066,
+                  0.03866713311883611,
+                  0.017884245916413577,
+                  0.017884245916413577,
+                  0.017884245916413577,
+                  0.017884245916413577,
+                  0.017884245916413577
+                ],
+                "floored_retained_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066,
+                  0.03866713311883611
+                ],
+                "floored_sigma2": 0.017884245916413577,
+                "held_out_mean_nll_per_article": -4.042595408741771,
+                "numeric_floor": 2.875425936619381e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066,
+                  0.03866713311883611,
+                  0.02926162723204048,
+                  0.022168499869432857,
+                  0.018522588661683742,
+                  0.01055010875719322,
+                  0.0089184050617176
+                ],
+                "raw_retained_eigenvalues": [
+                  0.28754259366193813,
+                  0.052295584422642066,
+                  0.03866713311883611
+                ],
+                "raw_sigma2": 0.017884245916413577
+              }
+            },
+            "held_out_publisher": "haaretz.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.2743877307881195,
+                  0.02495614494793255,
+                  0.02495614494793255,
+                  0.02495614494793255,
+                  0.02495614494793255,
+                  0.02495614494793255,
+                  0.02495614494793255,
+                  0.02495614494793255
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2743877307881195
+                ],
+                "floored_sigma2": 0.02495614494793255,
+                "held_out_mean_nll_per_article": -1.8524134852171392,
+                "numeric_floor": 2.743877307881195e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944,
+                  0.0377110550898672,
+                  0.02878442139413016,
+                  0.02039575346641355,
+                  0.0172741180240123,
+                  0.010041851005831019,
+                  0.008507233190674205
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2743877307881195
+                ],
+                "raw_sigma2": 0.02495614494793255
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944,
+                  0.020452405361821403,
+                  0.020452405361821403,
+                  0.020452405361821403,
+                  0.020452405361821403,
+                  0.020452405361821403,
+                  0.020452405361821403
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944
+                ],
+                "floored_sigma2": 0.020452405361821403,
+                "held_out_mean_nll_per_article": -1.5298395644546843,
+                "numeric_floor": 2.743877307881195e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944,
+                  0.0377110550898672,
+                  0.02878442139413016,
+                  0.02039575346641355,
+                  0.0172741180240123,
+                  0.010041851005831019,
+                  0.008507233190674205
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944
+                ],
+                "raw_sigma2": 0.020452405361821403
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944,
+                  0.0377110550898672,
+                  0.017000675416212245,
+                  0.017000675416212245,
+                  0.017000675416212245,
+                  0.017000675416212245,
+                  0.017000675416212245
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944,
+                  0.0377110550898672
+                ],
+                "floored_sigma2": 0.017000675416212245,
+                "held_out_mean_nll_per_article": -1.4590605345907306,
+                "numeric_floor": 2.743877307881195e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944,
+                  0.0377110550898672,
+                  0.02878442139413016,
+                  0.02039575346641355,
+                  0.0172741180240123,
+                  0.010041851005831019,
+                  0.008507233190674205
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2743877307881195,
+                  0.05197858246459944,
+                  0.0377110550898672
+                ],
+                "raw_sigma2": 0.017000675416212245
+              }
+            },
+            "held_out_publisher": "middleeasteye.net",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.2322232014140996,
+                  0.023643541251659437,
+                  0.023643541251659437,
+                  0.023643541251659437,
+                  0.023643541251659437,
+                  0.023643541251659437,
+                  0.023643541251659437,
+                  0.023643541251659437
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2322232014140996
+                ],
+                "floored_sigma2": 0.023643541251659437,
+                "held_out_mean_nll_per_article": 2.56934431145011,
+                "numeric_floor": 2.322232014140996e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462,
+                  0.036346733668619555,
+                  0.02508771520062134,
+                  0.021382206629267365,
+                  0.01588428018761821,
+                  0.009213833140736103,
+                  0.00820467081660732
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2322232014140996
+                ],
+                "raw_sigma2": 0.023643541251659437
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462,
+                  0.019353239940578314,
+                  0.019353239940578314,
+                  0.019353239940578314,
+                  0.019353239940578314,
+                  0.019353239940578314,
+                  0.019353239940578314
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462
+                ],
+                "floored_sigma2": 0.019353239940578314,
+                "held_out_mean_nll_per_article": 3.0081364333904745,
+                "numeric_floor": 2.322232014140996e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462,
+                  0.036346733668619555,
+                  0.02508771520062134,
+                  0.021382206629267365,
+                  0.01588428018761821,
+                  0.009213833140736103,
+                  0.00820467081660732
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462
+                ],
+                "raw_sigma2": 0.019353239940578314
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462,
+                  0.036346733668619555,
+                  0.015954541194970067,
+                  0.015954541194970067,
+                  0.015954541194970067,
+                  0.015954541194970067,
+                  0.015954541194970067
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462,
+                  0.036346733668619555
+                ],
+                "floored_sigma2": 0.015954541194970067,
+                "held_out_mean_nll_per_article": 3.4125995898659505,
+                "numeric_floor": 2.322232014140996e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462,
+                  0.036346733668619555,
+                  0.02508771520062134,
+                  0.021382206629267365,
+                  0.01588428018761821,
+                  0.009213833140736103,
+                  0.00820467081660732
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2322232014140996,
+                  0.0493853491181462,
+                  0.036346733668619555
+                ],
+                "raw_sigma2": 0.015954541194970067
+              }
+            },
+            "held_out_publisher": "middleeastmonitor.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.29036980822755043,
+                  0.025111986262019444,
+                  0.025111986262019444,
+                  0.025111986262019444,
+                  0.025111986262019444,
+                  0.025111986262019444,
+                  0.025111986262019444,
+                  0.025111986262019444
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29036980822755043
+                ],
+                "floored_sigma2": 0.025111986262019444,
+                "held_out_mean_nll_per_article": -2.680753716287712,
+                "numeric_floor": 2.9036980822755044e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065,
+                  0.03893491517614155,
+                  0.029800758359391607,
+                  0.02265222129584765,
+                  0.018518821481247876,
+                  0.010527743850300196,
+                  0.008628485257686164
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29036980822755043
+                ],
+                "raw_sigma2": 0.025111986262019444
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065,
+                  0.021510490903435844,
+                  0.021510490903435844,
+                  0.021510490903435844,
+                  0.021510490903435844,
+                  0.021510490903435844,
+                  0.021510490903435844
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065
+                ],
+                "floored_sigma2": 0.021510490903435844,
+                "held_out_mean_nll_per_article": -3.452313851318631,
+                "numeric_floor": 2.9036980822755044e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065,
+                  0.03893491517614155,
+                  0.029800758359391607,
+                  0.02265222129584765,
+                  0.018518821481247876,
+                  0.010527743850300196,
+                  0.008628485257686164
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065
+                ],
+                "raw_sigma2": 0.021510490903435844
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065,
+                  0.03893491517614155,
+                  0.0180256060488947,
+                  0.0180256060488947,
+                  0.0180256060488947,
+                  0.0180256060488947,
+                  0.0180256060488947
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065,
+                  0.03893491517614155
+                ],
+                "floored_sigma2": 0.0180256060488947,
+                "held_out_mean_nll_per_article": -3.588822027577133,
+                "numeric_floor": 2.9036980822755044e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065,
+                  0.03893491517614155,
+                  0.029800758359391607,
+                  0.02265222129584765,
+                  0.018518821481247876,
+                  0.010527743850300196,
+                  0.008628485257686164
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29036980822755043,
+                  0.046720958413521065,
+                  0.03893491517614155
+                ],
+                "raw_sigma2": 0.0180256060488947
+              }
+            },
+            "held_out_publisher": "nypost.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.22003302500465835,
+                  0.022701446637699692,
+                  0.022701446637699692,
+                  0.022701446637699692,
+                  0.022701446637699692,
+                  0.022701446637699692,
+                  0.022701446637699692,
+                  0.022701446637699692
+                ],
+                "floored_retained_eigenvalues": [
+                  0.22003302500465835
+                ],
+                "floored_sigma2": 0.022701446637699692,
+                "held_out_mean_nll_per_article": 5.752127251146101,
+                "numeric_floor": 2.2003302500465835e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714,
+                  0.034020154921390745,
+                  0.02352212629092775,
+                  0.01853886489407613,
+                  0.016372039182981288,
+                  0.009821555659888542,
+                  0.008162518544486269
+                ],
+                "raw_retained_eigenvalues": [
+                  0.22003302500465835
+                ],
+                "raw_sigma2": 0.022701446637699692
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714,
+                  0.01840620991562512,
+                  0.01840620991562512,
+                  0.01840620991562512,
+                  0.01840620991562512,
+                  0.01840620991562512,
+                  0.01840620991562512
+                ],
+                "floored_retained_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714
+                ],
+                "floored_sigma2": 0.01840620991562512,
+                "held_out_mean_nll_per_article": 6.5541101258970444,
+                "numeric_floor": 2.2003302500465835e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714,
+                  0.034020154921390745,
+                  0.02352212629092775,
+                  0.01853886489407613,
+                  0.016372039182981288,
+                  0.009821555659888542,
+                  0.008162518544486269
+                ],
+                "raw_retained_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714
+                ],
+                "raw_sigma2": 0.01840620991562512
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714,
+                  0.034020154921390745,
+                  0.015283420914471995,
+                  0.015283420914471995,
+                  0.015283420914471995,
+                  0.015283420914471995,
+                  0.015283420914471995
+                ],
+                "floored_retained_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714,
+                  0.034020154921390745
+                ],
+                "floored_sigma2": 0.015283420914471995,
+                "held_out_mean_nll_per_article": 6.641827102553283,
+                "numeric_floor": 2.2003302500465835e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714,
+                  0.034020154921390745,
+                  0.02352212629092775,
+                  0.01853886489407613,
+                  0.016372039182981288,
+                  0.009821555659888542,
+                  0.008162518544486269
+                ],
+                "raw_retained_eigenvalues": [
+                  0.22003302500465835,
+                  0.04847286697014714,
+                  0.034020154921390745
+                ],
+                "raw_sigma2": 0.015283420914471995
+              }
+            },
+            "held_out_publisher": "presstv.ir",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.2831343385389124,
+                  0.025640974340538098,
+                  0.025640974340538098,
+                  0.025640974340538098,
+                  0.025640974340538098,
+                  0.025640974340538098,
+                  0.025640974340538098,
+                  0.025640974340538098
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2831343385389124
+                ],
+                "floored_sigma2": 0.025640974340538098,
+                "held_out_mean_nll_per_article": -3.5717611503884816,
+                "numeric_floor": 2.831343385389124e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636,
+                  0.038439141933358914,
+                  0.029301894740389852,
+                  0.022544237937847503,
+                  0.01889761251438557,
+                  0.010585399714211075,
+                  0.008251585836507386
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2831343385389124
+                ],
+                "raw_sigma2": 0.025640974340538098
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636,
+                  0.021336645446116718,
+                  0.021336645446116718,
+                  0.021336645446116718,
+                  0.021336645446116718,
+                  0.021336645446116718,
+                  0.021336645446116718
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636
+                ],
+                "floored_sigma2": 0.021336645446116718,
+                "held_out_mean_nll_per_article": -3.6980149885682514,
+                "numeric_floor": 2.831343385389124e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636,
+                  0.038439141933358914,
+                  0.029301894740389852,
+                  0.022544237937847503,
+                  0.01889761251438557,
+                  0.010585399714211075,
+                  0.008251585836507386
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636
+                ],
+                "raw_sigma2": 0.021336645446116718
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636,
+                  0.038439141933358914,
+                  0.017916146148668276,
+                  0.017916146148668276,
+                  0.017916146148668276,
+                  0.017916146148668276,
+                  0.017916146148668276
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636,
+                  0.038439141933358914
+                ],
+                "floored_sigma2": 0.017916146148668276,
+                "held_out_mean_nll_per_article": -3.841689674206896,
+                "numeric_floor": 2.831343385389124e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636,
+                  0.038439141933358914,
+                  0.029301894740389852,
+                  0.022544237937847503,
+                  0.01889761251438557,
+                  0.010585399714211075,
+                  0.008251585836507386
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2831343385389124,
+                  0.05146694770706636,
+                  0.038439141933358914
+                ],
+                "raw_sigma2": 0.017916146148668276
+              }
+            },
+            "held_out_publisher": "theguardian.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.29014343859056013,
+                  0.02581003077297164,
+                  0.02581003077297164,
+                  0.02581003077297164,
+                  0.02581003077297164,
+                  0.02581003077297164,
+                  0.02581003077297164,
+                  0.02581003077297164
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29014343859056013
+                ],
+                "floored_sigma2": 0.02581003077297164,
+                "held_out_mean_nll_per_article": -4.082905907506075,
+                "numeric_floor": 2.901434385905601e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746,
+                  0.03842211970707133,
+                  0.028772948451399896,
+                  0.022710220432690307,
+                  0.019299802773431105,
+                  0.01046897236786818,
+                  0.008874895556024921
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29014343859056013
+                ],
+                "raw_sigma2": 0.02581003077297164
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746,
+                  0.021424826548080953,
+                  0.021424826548080953,
+                  0.021424826548080953,
+                  0.021424826548080953,
+                  0.021424826548080953,
+                  0.021424826548080953
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746
+                ],
+                "floored_sigma2": 0.021424826548080953,
+                "held_out_mean_nll_per_article": -4.149183056030927,
+                "numeric_floor": 2.901434385905601e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746,
+                  0.03842211970707133,
+                  0.028772948451399896,
+                  0.022710220432690307,
+                  0.019299802773431105,
+                  0.01046897236786818,
+                  0.008874895556024921
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746
+                ],
+                "raw_sigma2": 0.021424826548080953
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746,
+                  0.03842211970707133,
+                  0.01802536791628288,
+                  0.01802536791628288,
+                  0.01802536791628288,
+                  0.01802536791628288,
+                  0.01802536791628288
+                ],
+                "floored_retained_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746,
+                  0.03842211970707133
+                ],
+                "floored_sigma2": 0.01802536791628288,
+                "held_out_mean_nll_per_article": -4.302040663249143,
+                "numeric_floor": 2.901434385905601e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746,
+                  0.03842211970707133,
+                  0.028772948451399896,
+                  0.022710220432690307,
+                  0.019299802773431105,
+                  0.01046897236786818,
+                  0.008874895556024921
+                ],
+                "raw_retained_eigenvalues": [
+                  0.29014343859056013,
+                  0.052121256122315746,
+                  0.03842211970707133
+                ],
+                "raw_sigma2": 0.01802536791628288
+              }
+            },
+            "held_out_publisher": "townhall.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          },
+          {
+            "candidates": {
+              "1": {
+                "covariance_eigenvalues": [
+                  0.2847737275217058,
+                  0.02464507894155356,
+                  0.02464507894155356,
+                  0.02464507894155356,
+                  0.02464507894155356,
+                  0.02464507894155356,
+                  0.02464507894155356,
+                  0.02464507894155356
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2847737275217058
+                ],
+                "floored_sigma2": 0.02464507894155356,
+                "held_out_mean_nll_per_article": -1.5179465116762625,
+                "numeric_floor": 2.8477372752170583e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692,
+                  0.03753467173582437,
+                  0.027911803644192972,
+                  0.02288601183897553,
+                  0.018367216773347243,
+                  0.009674519498159558,
+                  0.00830102373405834
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2847737275217058
+                ],
+                "raw_sigma2": 0.02464507894155356
+              },
+              "2": {
+                "covariance_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692,
+                  0.020779207870759667,
+                  0.020779207870759667,
+                  0.020779207870759667,
+                  0.020779207870759667,
+                  0.020779207870759667,
+                  0.020779207870759667
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692
+                ],
+                "floored_sigma2": 0.020779207870759667,
+                "held_out_mean_nll_per_article": -1.957333183949041,
+                "numeric_floor": 2.8477372752170583e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692,
+                  0.03753467173582437,
+                  0.027911803644192972,
+                  0.02288601183897553,
+                  0.018367216773347243,
+                  0.009674519498159558,
+                  0.00830102373405834
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692
+                ],
+                "raw_sigma2": 0.020779207870759667
+              },
+              "3": {
+                "covariance_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692,
+                  0.03753467173582437,
+                  0.01742811509774673,
+                  0.01742811509774673,
+                  0.01742811509774673,
+                  0.01742811509774673,
+                  0.01742811509774673
+                ],
+                "floored_retained_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692,
+                  0.03753467173582437
+                ],
+                "floored_sigma2": 0.01742811509774673,
+                "held_out_mean_nll_per_article": -2.0692122246933256,
+                "numeric_floor": 2.8477372752170583e-13,
+                "raw_full_mle_covariance_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692,
+                  0.03753467173582437,
+                  0.027911803644192972,
+                  0.02288601183897553,
+                  0.018367216773347243,
+                  0.009674519498159558,
+                  0.00830102373405834
+                ],
+                "raw_retained_eigenvalues": [
+                  0.2847737275217058,
+                  0.04784030536631692,
+                  0.03753467173582437
+                ],
+                "raw_sigma2": 0.01742811509774673
+              }
+            },
+            "held_out_publisher": "wnd.com",
+            "n_test_articles": 20,
+            "n_train_articles": 300,
+            "n_train_publishers": 15
+          }
+        ],
+        "one_standard_error_threshold": -1.2101340175852542,
+        "selected_k": 1,
+        "selection_rule": "smallest k within one standard error of best mean publisher-level held-out PPCA NLL",
+        "selection_scope": "descriptive_model_selection_not_a_hypothesis_test"
+      },
+      "primary_publisher_block_eigenvalue_null": {
+        "components": {
+          "pc2": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.10770931642655414,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.0998091859239035,
+            "observed_eigenvalue": 0.05006616594508089,
+            "observed_explained_variance_ratio": 0.11034739799678824,
+            "plus_one_p_value": 1.0,
+            "status": "pc2_not_detected_under_cluster_null"
+          },
+          "pc3": {
+            "detected": false,
+            "null_95th_percentile_method_higher": 0.07785620006717985,
+            "null_exceedances_greater_or_equal": 10000,
+            "null_mean": 0.07336090018568261,
+            "observed_eigenvalue": 0.03781676419874546,
+            "observed_explained_variance_ratio": 0.0833493328521926,
+            "plus_one_p_value": 1.0,
+            "status": "pc3_not_detected"
+          }
+        },
+        "full_observed_eigenvalues": [
+          0.27792926442640475,
+          0.05006616594508089,
+          0.03781676419874546,
+          0.02830597482639267,
+          0.0221441964448333,
+          0.018365740557790115,
+          0.010421777916034929,
+          0.00866417558976532
+        ],
+        "full_observed_explained_variance_ratio": [
+          0.6125648045479775,
+          0.11034739799678824,
+          0.0833493328521926,
+          0.062387255163123,
+          0.048806502600927996,
+          0.04047866747094782,
+          0.022969924974808983,
+          0.0190961143932338
+        ],
+        "permutations": 10000,
+        "role": "primary_cluster_aware_null",
+        "scheme": "independently reassign complete 20-value publisher blocks per column, then independently permute row order inside every assigned block"
+      },
+      "publisher_cluster_bootstrap": {
+        "direct_abs_cosine": {
+          "fraction_at_or_above_threshold": 0.6445,
+          "mean": 0.8821431695029576,
+          "median": 0.9368679701043472,
+          "q025": 0.41988732351109165,
+          "q975": 0.9947560416061447,
+          "required_fraction": 0.95,
+          "threshold": 0.9
+        },
+        "failed_replicates": 0,
+        "failure_rate": 0.0,
+        "failure_reasons": {},
+        "pc2_pc3_subspace_principal_cosines": {
+          "larger_cosine_smaller_angle": {
+            "mean": 0.986596456744296,
+            "median": 0.9913267684554296,
+            "q025": 0.9436992838102827,
+            "q975": 0.9989655390468252
+          },
+          "smaller_cosine_larger_angle": {
+            "mean": 0.8839986782715283,
+            "median": 0.9236973923743919,
+            "q025": 0.510329300393468,
+            "q975": 0.9881461971591287
+          }
+        },
+        "reference_eigenvalues": [
+          0.27792926442640475,
+          0.05006616594508089,
+          0.03781676419874546,
+          0.02830597482639267,
+          0.0221441964448333,
+          0.018365740557790115,
+          0.010421777916034929,
+          0.00866417558976532
+        ],
+        "reference_pc2_in_replicate_pc2_pc3_subspace": {
+          "mean": 0.9566338438518047,
+          "median": 0.9777236303202818,
+          "q025": 0.7699331222133942,
+          "q975": 0.9975357680728741
+        },
+        "reference_pc2_loadings": [
+          -0.2935766694782303,
+          0.35247576356757826,
+          0.24844685638955677,
+          0.8041446045033485,
+          0.18233246098562572,
+          0.0655872612590801,
+          0.167509949008869,
+          -0.12487110013260996
+        ],
+        "reference_pc3_loadings": [
+          -0.397570222513612,
+          -0.3980839034939726,
+          0.5406465925465209,
+          -0.31292077361294973,
+          0.45294695322623635,
+          0.18806812340143123,
+          0.2155299068998093,
+          -0.07915347821720564
+        ],
+        "relative_pc2_pc3_eigenvalue_gap": {
+          "mean": 0.2715055230792802,
+          "median": 0.2732917958997435,
+          "q025": 0.07838437052739738,
+          "q975": 0.4599608485786625
+        },
+        "replicate_pc2_in_reference_pc2_pc3_subspace": {
+          "mean": 0.9639409707950043,
+          "median": 0.9809674720233813,
+          "q025": 0.8250587611610235,
+          "q975": 0.9976304987727175
+        },
+        "requested_replicates": 10000,
+        "rotational_ambiguity_pattern": true,
+        "sign_aligned_pc2_loading_percentile_intervals": [
+          {
+            "coordinate": 0,
+            "median": -0.27552688227748345,
+            "q025": -0.47542762265743943,
+            "q975": 0.11721272992305952,
+            "reference_loading": -0.2935766694782303
+          },
+          {
+            "coordinate": 1,
+            "median": 0.33443453456225075,
+            "q025": -0.04653369962369657,
+            "q975": 0.6291666531606784,
+            "reference_loading": 0.35247576356757826
+          },
+          {
+            "coordinate": 2,
+            "median": 0.22755563013721844,
+            "q025": -0.23659635425693804,
+            "q975": 0.5808141551432274,
+            "reference_loading": 0.24844685638955677
+          },
+          {
+            "coordinate": 3,
+            "median": 0.7696831584850219,
+            "q025": 0.20272993328590233,
+            "q975": 0.8983568548216909,
+            "reference_loading": 0.8041446045033485
+          },
+          {
+            "coordinate": 4,
+            "median": 0.16919113020864499,
+            "q025": -0.2084999524456705,
+            "q975": 0.5028971835732897,
+            "reference_loading": 0.18233246098562572
+          },
+          {
+            "coordinate": 5,
+            "median": 0.02722777957371787,
+            "q025": -0.42171732431522,
+            "q975": 0.27202979819058654,
+            "reference_loading": 0.0655872612590801
+          },
+          {
+            "coordinate": 6,
+            "median": 0.1499322958547753,
+            "q025": -0.07580413782235518,
+            "q975": 0.36784853376289434,
+            "reference_loading": 0.167509949008869
+          },
+          {
+            "coordinate": 7,
+            "median": -0.10321522754969692,
+            "q025": -0.3099538340742967,
+            "q975": 0.16103752802291987,
+            "reference_loading": -0.12487110013260996
+          }
+        ],
+        "stability_conditions": {
+          "direct_cosine_fraction": false,
+          "failure_rate": true,
+          "reference_pc2_swap_rate": false,
+          "replicate_pc2_swap_rate": false
+        },
+        "stability_passes": false,
+        "swap_diagnostics": {
+          "reference_pc2_closer_to_replicate_pc3_count": 621,
+          "reference_pc2_closer_to_replicate_pc3_rate": 0.0621,
+          "replicate_pc2_closer_to_reference_pc3_count": 692,
+          "replicate_pc2_closer_to_reference_pc3_rate": 0.0692
+        },
+        "valid_replicates": 10000
+      }
+    }
+  },
+  "schema": {
+    "name": "belief_transformer.paired_scalar_dimensionality_selection_v2",
+    "version": "2.0.0"
+  },
+  "status": "post_review_corrected_exploratory_reanalysis_of_inspected_data"
+}

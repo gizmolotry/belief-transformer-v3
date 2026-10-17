@@ -1,0 +1,40 @@
+﻿queries:
+  border_enforcement_vs_humanitarian:
+    A: "The text frames strict border enforcement and physical barriers as essential national security protections"
+    B: "The text frames strict border enforcement as inhumane militarization that endangers vulnerable migrants"
+    description: "Border enforcement vs humanitarian relief"
+
+  economic_asset_vs_fiscal_strain:
+    A: "The text emphasizes immigrant labor and entrepreneurship as vital economic assets driving growth"
+    B: "The text emphasizes immigration as a fiscal drain that suppresses domestic wages and strains public infrastructure"
+    description: "Economic contribution vs fiscal cost"
+
+  rule_of_law_vs_human_rights:
+    A: "The text prioritizes sovereign rule of law, legal quotas, and orderly statutory immigration procedures"
+    B: "The text prioritizes universal human rights and international asylum obligations over border restrictions"
+    description: "Sovereign legality vs universal human rights"
+
+  asylum_legitimacy_vs_system_abuse:
+    A: "The text portrays asylum seekers as legitimate refugees fleeing violence, persecution, and political terror"
+    B: "The text portrays asylum claims as widespread economic opportunism and systemic abuse of legal loopholes"
+    description: "Asylum legitimacy vs opportunism"
+
+  security_screening_vs_unjust_criminalization:
+    A: "The text treats migrant vetting as necessary protection against transnational crime, gangs, and drug trafficking"
+    B: "The text treats aggressive enforcement as unjust criminalization and xenophobic scapegoating of civilian families"
+    description: "Criminality screening vs scapegoating"
+
+  cultural_integration_vs_social_cohesion:
+    A: "The text celebrates diverse cultural integration and multiculturalism as enriching national identity"
+    B: "The text warns of unassimilated mass migration threatening national identity, social cohesion, and security"
+    description: "Multicultural enrichment vs cultural cohesion"
+
+  detention_deterrence_vs_civil_liberties:
+    A: "The text defends expedited removal and detention centers as necessary deterrence against unauthorized entry"
+    B: "The text denounces detention conditions, family separation, and mass deportation as cruel civil rights abuses"
+    description: "Detention deterrence vs human rights"
+
+  state_enforcement_vs_federal_authority:
+    A: "The text supports state-level border crackdowns and aggressive local law enforcement intervention"
+    B: "The text condemns unilateral state border actions as dangerous vigilante posturing that violates federal preemption"
+    description: "State border enforcement vs federal preemption"

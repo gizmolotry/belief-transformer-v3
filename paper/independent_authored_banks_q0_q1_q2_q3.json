@@ -1,0 +1,567 @@
+{
+  "dataset": "fresh_unseen_120_corpus",
+  "n_articles": 120,
+  "model": "microsoft/deberta-v2-xlarge-mnli",
+  "banks": {
+    "Q0_Military_Conflict": "Original Geopolitical / Military Conflict Framing",
+    "Q1_Paraphrase": "Lexical / Syntactic Paraphrase Bank",
+    "Q2_Humanitarian_Rights": "Humanitarian / Human Rights & International Law Framework",
+    "Q3_Realpolitik_Statecraft": "Geopolitical Realpolitik & Sovereign Statecraft Framework"
+  },
+  "bank_gates": {
+    "Q0_Military_Conflict": {
+      "dataset_label": "Q0_Military_Conflict (Fresh N=120)",
+      "n_samples": 120,
+      "n_features": 8,
+      "observed_participation_ratio": 2.0588910579681396,
+      "column_null_mean_participation_ratio": 6.073421926355362,
+      "detected_rank_column_null": 1,
+      "detected_rank_publisher_null": null,
+      "components": [
+        {
+          "component": 1,
+          "observed_eigenvalue": 0.2488548457622528,
+          "observed_variance_ratio": 0.6691423058509827,
+          "column_null": {
+            "mean_eigenvalue": 0.09897292190641165,
+            "q95_eigenvalue": 0.1049199029803276,
+            "mean_variance_ratio": 0.26612689931988714,
+            "q95_variance_ratio": 0.282117635011673,
+            "exceedances": 0,
+            "p_value": 9.999000099990002e-05,
+            "detected": true
+          }
+        },
+        {
+          "component": 2,
+          "observed_eigenvalue": 0.0664442852139473,
+          "observed_variance_ratio": 0.17866109311580658,
+          "column_null": {
+            "mean_eigenvalue": 0.07338591192997992,
+            "q95_eigenvalue": 0.07842426002025604,
+            "mean_variance_ratio": 0.1973263476639986,
+            "q95_variance_ratio": 0.21087390184402466,
+            "exceedances": 9703,
+            "p_value": 0.9703029697030296,
+            "detected": false
+          }
+        },
+        {
+          "component": 3,
+          "observed_eigenvalue": 0.02179848589003086,
+          "observed_variance_ratio": 0.05861363932490349,
+          "column_null": {
+            "mean_eigenvalue": 0.05348212933316827,
+            "q95_eigenvalue": 0.05862447991967201,
+            "mean_variance_ratio": 0.14380734614357352,
+            "q95_variance_ratio": 0.15763454139232635,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 4,
+          "observed_eigenvalue": 0.015748200938105583,
+          "observed_variance_ratio": 0.042345114052295685,
+          "column_null": {
+            "mean_eigenvalue": 0.045597901351749896,
+            "q95_eigenvalue": 0.04958285763859749,
+            "mean_variance_ratio": 0.12260755635201931,
+            "q95_variance_ratio": 0.13332265615463257,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 5,
+          "observed_eigenvalue": 0.0075338114984333515,
+          "observed_variance_ratio": 0.020257558673620224,
+          "column_null": {
+            "mean_eigenvalue": 0.031843328477069735,
+            "q95_eigenvalue": 0.0351993627846241,
+            "mean_variance_ratio": 0.0856230786189437,
+            "q95_variance_ratio": 0.09464707970619202,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 6,
+          "observed_eigenvalue": 0.006117620971053839,
+          "observed_variance_ratio": 0.0164495836943388,
+          "column_null": {
+            "mean_eigenvalue": 0.026627254297211765,
+            "q95_eigenvalue": 0.029189646244049072,
+            "mean_variance_ratio": 0.07159765000380576,
+            "q95_variance_ratio": 0.07848763465881348,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 7,
+          "observed_eigenvalue": 0.003610659157857299,
+          "observed_variance_ratio": 0.009708650410175323,
+          "column_null": {
+            "mean_eigenvalue": 0.022915230613574384,
+            "q95_eigenvalue": 0.02504628896713257,
+            "mean_variance_ratio": 0.061616441683098676,
+            "q95_variance_ratio": 0.06734661757946014,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 8,
+          "observed_eigenvalue": 0.0017933413619175553,
+          "observed_variance_ratio": 0.004822090268135071,
+          "column_null": {
+            "mean_eigenvalue": 0.019076554944738745,
+            "q95_eigenvalue": 0.021335087716579437,
+            "mean_variance_ratio": 0.05129468057304621,
+            "q95_variance_ratio": 0.05736761912703514,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        }
+      ]
+    },
+    "Q1_Paraphrase": {
+      "dataset_label": "Q1_Paraphrase (Fresh N=120)",
+      "n_samples": 120,
+      "n_features": 8,
+      "observed_participation_ratio": 2.4664690494537354,
+      "column_null_mean_participation_ratio": 6.073405153799057,
+      "detected_rank_column_null": 1,
+      "detected_rank_publisher_null": null,
+      "components": [
+        {
+          "component": 1,
+          "observed_eigenvalue": 0.18080829083919525,
+          "observed_variance_ratio": 0.6011496782302856,
+          "column_null": {
+            "mean_eigenvalue": 0.0827075382605195,
+            "q95_eigenvalue": 0.08680302649736404,
+            "mean_variance_ratio": 0.27498519985079767,
+            "q95_variance_ratio": 0.2886018455028534,
+            "exceedances": 0,
+            "p_value": 9.999000099990002e-05,
+            "detected": true
+          }
+        },
+        {
+          "component": 2,
+          "observed_eigenvalue": 0.053888097405433655,
+          "observed_variance_ratio": 0.17916662991046906,
+          "column_null": {
+            "mean_eigenvalue": 0.056744154368713495,
+            "q95_eigenvalue": 0.060599248856306076,
+            "mean_variance_ratio": 0.18866239960044623,
+            "q95_variance_ratio": 0.20147977769374847,
+            "exceedances": 9076,
+            "p_value": 0.9076092390760924,
+            "detected": false
+          }
+        },
+        {
+          "component": 3,
+          "observed_eigenvalue": 0.021989349275827408,
+          "observed_variance_ratio": 0.07310997694730759,
+          "column_null": {
+            "mean_eigenvalue": 0.040600643369928004,
+            "q95_eigenvalue": 0.044733524322509766,
+            "mean_variance_ratio": 0.13498861497864126,
+            "q95_variance_ratio": 0.1487295925617218,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 4,
+          "observed_eigenvalue": 0.019257163628935814,
+          "observed_variance_ratio": 0.06402602791786194,
+          "column_null": {
+            "mean_eigenvalue": 0.03499600707162172,
+            "q95_eigenvalue": 0.03782682865858078,
+            "mean_variance_ratio": 0.11635437591224909,
+            "q95_variance_ratio": 0.12576626241207123,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 5,
+          "observed_eigenvalue": 0.012955338694155216,
+          "observed_variance_ratio": 0.043073784559965134,
+          "column_null": {
+            "mean_eigenvalue": 0.02887277717050165,
+            "q95_eigenvalue": 0.031625859439373016,
+            "mean_variance_ratio": 0.09599592212513089,
+            "q95_variance_ratio": 0.10514934360980988,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 6,
+          "observed_eigenvalue": 0.005909129977226257,
+          "observed_variance_ratio": 0.019646618515253067,
+          "column_null": {
+            "mean_eigenvalue": 0.022488746047019958,
+            "q95_eigenvalue": 0.02490350604057312,
+            "mean_variance_ratio": 0.07477035900056363,
+            "q95_variance_ratio": 0.08279892802238464,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 7,
+          "observed_eigenvalue": 0.004811374004930258,
+          "observed_variance_ratio": 0.015996810048818588,
+          "column_null": {
+            "mean_eigenvalue": 0.019135328738577664,
+            "q95_eigenvalue": 0.02107343077659607,
+            "mean_variance_ratio": 0.0636209504969418,
+            "q95_variance_ratio": 0.0700647234916687,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 8,
+          "observed_eigenvalue": 0.001152115873992443,
+          "observed_variance_ratio": 0.0038305437192320824,
+          "column_null": {
+            "mean_eigenvalue": 0.01522567589841783,
+            "q95_eigenvalue": 0.01682901941239834,
+            "mean_variance_ratio": 0.050622175655514,
+            "q95_variance_ratio": 0.055952947586774826,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        }
+      ]
+    },
+    "Q2_Humanitarian_Rights": {
+      "dataset_label": "Q2_Humanitarian_Rights (Fresh N=120)",
+      "n_samples": 120,
+      "n_features": 8,
+      "observed_participation_ratio": 1.458653450012207,
+      "column_null_mean_participation_ratio": 7.106983296585083,
+      "detected_rank_column_null": 1,
+      "detected_rank_publisher_null": null,
+      "components": [
+        {
+          "component": 1,
+          "observed_eigenvalue": 0.1913186013698578,
+          "observed_variance_ratio": 0.8241510391235352,
+          "column_null": {
+            "mean_eigenvalue": 0.04706986931487918,
+            "q95_eigenvalue": 0.05160064250230789,
+            "mean_variance_ratio": 0.20276482164859772,
+            "q95_variance_ratio": 0.22228221595287323,
+            "exceedances": 0,
+            "p_value": 9.999000099990002e-05,
+            "detected": true
+          }
+        },
+        {
+          "component": 2,
+          "observed_eigenvalue": 0.013242156244814396,
+          "observed_variance_ratio": 0.057043783366680145,
+          "column_null": {
+            "mean_eigenvalue": 0.04074988015927374,
+            "q95_eigenvalue": 0.043753452599048615,
+            "mean_variance_ratio": 0.17553994310796261,
+            "q95_variance_ratio": 0.18847857415676117,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 3,
+          "observed_eigenvalue": 0.008924256078898907,
+          "observed_variance_ratio": 0.03844338655471802,
+          "column_null": {
+            "mean_eigenvalue": 0.03404026155471802,
+            "q95_eigenvalue": 0.037145089358091354,
+            "mean_variance_ratio": 0.14663664177656174,
+            "q95_variance_ratio": 0.1600114107131958,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 4,
+          "observed_eigenvalue": 0.006165565922856331,
+          "observed_variance_ratio": 0.02655966393649578,
+          "column_null": {
+            "mean_eigenvalue": 0.028641833130642773,
+            "q95_eigenvalue": 0.031392063945531845,
+            "mean_variance_ratio": 0.12338160850331187,
+            "q95_variance_ratio": 0.13522888720035553,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 5,
+          "observed_eigenvalue": 0.004938850644975901,
+          "observed_variance_ratio": 0.021275291219353676,
+          "column_null": {
+            "mean_eigenvalue": 0.024741965165175496,
+            "q95_eigenvalue": 0.026955632492899895,
+            "mean_variance_ratio": 0.10658198607638478,
+            "q95_variance_ratio": 0.11611789464950562,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 6,
+          "observed_eigenvalue": 0.0042926776222884655,
+          "observed_variance_ratio": 0.018491744995117188,
+          "column_null": {
+            "mean_eigenvalue": 0.02171708915065974,
+            "q95_eigenvalue": 0.02358355186879635,
+            "mean_variance_ratio": 0.09355160260796547,
+            "q95_variance_ratio": 0.10159185528755188,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 7,
+          "observed_eigenvalue": 0.0021073019597679377,
+          "observed_variance_ratio": 0.009077711962163448,
+          "column_null": {
+            "mean_eigenvalue": 0.019046825856436043,
+            "q95_eigenvalue": 0.020807618275284767,
+            "mean_variance_ratio": 0.08204879904277623,
+            "q95_variance_ratio": 0.08963382989168167,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 8,
+          "observed_eigenvalue": 0.001150794792920351,
+          "observed_variance_ratio": 0.0049573262222111225,
+          "column_null": {
+            "mean_eigenvalue": 0.016132490946352482,
+            "q95_eigenvalue": 0.018248561769723892,
+            "mean_variance_ratio": 0.06949459811747075,
+            "q95_variance_ratio": 0.07861008495092392,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        }
+      ]
+    },
+    "Q3_Realpolitik_Statecraft": {
+      "dataset_label": "Q3_Realpolitik_Statecraft (Fresh N=120)",
+      "n_samples": 120,
+      "n_features": 8,
+      "observed_participation_ratio": 2.092484712600708,
+      "column_null_mean_participation_ratio": 6.157390629816056,
+      "detected_rank_column_null": 2,
+      "detected_rank_publisher_null": null,
+      "components": [
+        {
+          "component": 1,
+          "observed_eigenvalue": 0.14597944915294647,
+          "observed_variance_ratio": 0.658915638923645,
+          "column_null": {
+            "mean_eigenvalue": 0.06067896569855511,
+            "q95_eigenvalue": 0.06337106972932816,
+            "mean_variance_ratio": 0.27389005883932116,
+            "q95_variance_ratio": 0.2860415577888489,
+            "exceedances": 0,
+            "p_value": 9.999000099990002e-05,
+            "detected": true
+          }
+        },
+        {
+          "component": 2,
+          "observed_eigenvalue": 0.04314620420336723,
+          "observed_variance_ratio": 0.19475144147872925,
+          "column_null": {
+            "mean_eigenvalue": 0.03706263960730284,
+            "q95_eigenvalue": 0.040791675448417664,
+            "mean_variance_ratio": 0.16729172002226114,
+            "q95_variance_ratio": 0.1841236650943756,
+            "exceedances": 70,
+            "p_value": 0.007099290070992901,
+            "detected": true
+          }
+        },
+        {
+          "component": 3,
+          "observed_eigenvalue": 0.013923471793532372,
+          "observed_variance_ratio": 0.06284715235233307,
+          "column_null": {
+            "mean_eigenvalue": 0.0321817625163123,
+            "q95_eigenvalue": 0.0345773808658123,
+            "mean_variance_ratio": 0.14526063067391515,
+            "q95_variance_ratio": 0.15607386827468872,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 4,
+          "observed_eigenvalue": 0.006915067322552204,
+          "observed_variance_ratio": 0.031212927773594856,
+          "column_null": {
+            "mean_eigenvalue": 0.027403069069981575,
+            "q95_eigenvalue": 0.02992832288146019,
+            "mean_variance_ratio": 0.12369077339470387,
+            "q95_variance_ratio": 0.13508915901184082,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 5,
+          "observed_eigenvalue": 0.005353881046175957,
+          "observed_variance_ratio": 0.024166112765669823,
+          "column_null": {
+            "mean_eigenvalue": 0.022746159016340972,
+            "q95_eigenvalue": 0.024925347417593002,
+            "mean_variance_ratio": 0.1026706167049706,
+            "q95_variance_ratio": 0.1125069335103035,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 6,
+          "observed_eigenvalue": 0.003000896191224456,
+          "observed_variance_ratio": 0.01354531291872263,
+          "column_null": {
+            "mean_eigenvalue": 0.01763238317919895,
+            "q95_eigenvalue": 0.01929183304309845,
+            "mean_variance_ratio": 0.07958827923387289,
+            "q95_variance_ratio": 0.08707863092422485,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 7,
+          "observed_eigenvalue": 0.001973317004740238,
+          "observed_variance_ratio": 0.008907071314752102,
+          "column_null": {
+            "mean_eigenvalue": 0.013045268912427127,
+            "q95_eigenvalue": 0.014362636022269726,
+            "mean_variance_ratio": 0.05888316368237138,
+            "q95_variance_ratio": 0.06482943892478943,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        },
+        {
+          "component": 8,
+          "observed_eigenvalue": 0.001252679037861526,
+          "observed_variance_ratio": 0.005654287524521351,
+          "column_null": {
+            "mean_eigenvalue": 0.010794724953314289,
+            "q95_eigenvalue": 0.01190412137657404,
+            "mean_variance_ratio": 0.04872475687302649,
+            "q95_variance_ratio": 0.05373230576515198,
+            "exceedances": 10000,
+            "p_value": 1.0,
+            "detected": false
+          }
+        }
+      ]
+    }
+  },
+  "pairwise_alignments": {
+    "Q0_Military_Conflict__vs__Q1_Paraphrase": {
+      "lens_1": "Q0_Military_Conflict",
+      "lens_2": "Q1_Paraphrase",
+      "pearson_r": 0.9191598296165466,
+      "pearson_p": 1.4274838377066785e-49,
+      "spearman_rho": 0.8986804639211056,
+      "spearman_p": 4.733421047130704e-44,
+      "procrustes_disparity_2pc": 0.17026561136583682,
+      "subspace_angle_pc1_deg": 15.281917572021484
+    },
+    "Q0_Military_Conflict__vs__Q2_Humanitarian_Rights": {
+      "lens_1": "Q0_Military_Conflict",
+      "lens_2": "Q2_Humanitarian_Rights",
+      "pearson_r": 0.5342476963996887,
+      "pearson_p": 3.2936666830201283e-10,
+      "spearman_rho": 0.6017917910966039,
+      "spearman_p": 3.6118793632146823e-13,
+      "procrustes_disparity_2pc": 0.7380724121195585,
+      "subspace_angle_pc1_deg": 26.358726501464844
+    },
+    "Q0_Military_Conflict__vs__Q3_Realpolitik_Statecraft": {
+      "lens_1": "Q0_Military_Conflict",
+      "lens_2": "Q3_Realpolitik_Statecraft",
+      "pearson_r": 0.7241049408912659,
+      "pearson_p": 9.187707150095852e-21,
+      "spearman_rho": 0.7760747274116256,
+      "spearman_p": 2.223890780986397e-25,
+      "procrustes_disparity_2pc": 0.6165527646781532,
+      "subspace_angle_pc1_deg": 16.607099533081055
+    },
+    "Q1_Paraphrase__vs__Q2_Humanitarian_Rights": {
+      "lens_1": "Q1_Paraphrase",
+      "lens_2": "Q2_Humanitarian_Rights",
+      "pearson_r": 0.5655632019042969,
+      "pearson_p": 1.692180137834099e-11,
+      "spearman_rho": 0.6328633932912007,
+      "spearman_p": 8.858975060453183e-15,
+      "procrustes_disparity_2pc": 0.7258076393114024,
+      "subspace_angle_pc1_deg": 20.816097259521484
+    },
+    "Q1_Paraphrase__vs__Q3_Realpolitik_Statecraft": {
+      "lens_1": "Q1_Paraphrase",
+      "lens_2": "Q3_Realpolitik_Statecraft",
+      "pearson_r": 0.6960451602935791,
+      "pearson_p": 1.0995447101125976e-18,
+      "spearman_rho": 0.771956385860129,
+      "spearman_p": 5.712824458828472e-25,
+      "procrustes_disparity_2pc": 0.6380876788410546,
+      "subspace_angle_pc1_deg": 15.23021125793457
+    },
+    "Q2_Humanitarian_Rights__vs__Q3_Realpolitik_Statecraft": {
+      "lens_1": "Q2_Humanitarian_Rights",
+      "lens_2": "Q3_Realpolitik_Statecraft",
+      "pearson_r": 0.7907972931861877,
+      "pearson_p": 6.4281800906386764e-27,
+      "spearman_rho": 0.7462115424682269,
+      "spearman_p": 1.3706815117216592e-22,
+      "procrustes_disparity_2pc": 0.508331572764385,
+      "subspace_angle_pc1_deg": 16.480817794799805
+    }
+  }
+}

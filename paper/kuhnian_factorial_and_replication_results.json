@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-09-17T23:09:49Z",
+  "point_9_factorial_hypothesis_operator": {
+    "n_articles": 120,
+    "n_frameworks": 4,
+    "n_operators": 3,
+    "total_cells": 1440,
+    "variance_components_fraction": {
+      "sigma2_article_main": 0.09984330609188327,
+      "sigma2_framework_main": 0.10177892355611828,
+      "sigma2_operator_main": 0.0929707827709821,
+      "sigma2_framework_x_operator": 0.1395626151137811,
+      "sigma2_article_x_framework": 0.16670872596850528,
+      "sigma2_article_x_operator": 0.2086662477574207,
+      "sigma2_residual_error": 0.19046939874130925
+    }
+  },
+  "point_10_cross_model_replication": {
+    "model_architectures": {
+      "DeBERTa-v2-xlarge": {
+        "pc1_variance_explained": 0.40700185524679894,
+        "participation_ratio": 4.21072639326549,
+        "publisher_anova_f": 3.2842360920821507
+      },
+      "BART-large-MNLI": {
+        "pc1_variance_explained": 0.5256243409052571,
+        "participation_ratio": 2.9324356920741894,
+        "publisher_anova_f": 3.192150631974646
+      },
+      "RoBERTa-large-MNLI": {
+        "pc1_variance_explained": 0.6007641080791734,
+        "participation_ratio": 2.4674569057757356,
+        "publisher_anova_f": 0.5100342064465216
+      }
+    },
+    "cross_model_translations": {
+      "DeBERTa_to_BART": {
+        "heldout_r2_mean": -0.060855610705784914,
+        "heldout_r_mean": 0.418137827633971
+      },
+      "DeBERTa_to_RoBERTa": {
+        "heldout_r2_mean": -0.5203770812981114,
+        "heldout_r_mean": 0.4688657692840982
+      },
+      "BART_to_RoBERTa": {
+        "heldout_r2_mean": -0.5099821970796775,
+        "heldout_r_mean": 0.5414184853021778
+      }
+    }
+  },
+  "point_11_cross_topic_replication": {
+    "n_articles": 60,
+    "pc1_variance_explained": 0.2691651406894542,
+    "participation_ratio": 5.718767331326608,
+    "splithalf_reliability_heldout_r2": -0.25904870718993067,
+    "splithalf_reliability_heldout_r": 0.5113678150892479,
+    "publisher_anova_f": 0.0,
+    "publisher_anova_p": 1.0
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "topic": "US Immigration & Border Policy",
+  "dataset": "immigration_N60_corpus",
+  "n_articles": 60,
+  "model": "microsoft/deberta-v2-xlarge-mnli",
+  "anisotropy_pc1_evr": 0.7258221507072449,
+  "coherence": {
+    "ideology": 0.06517242387469326,
+    "structural": 0.008842699462547898,
+    "random": 0.003253389258004193
+  },
+  "exact_null": {
+    "total_subsets": 735471,
+    "upper_tail_count_ge_observed": 370,
+    "exact_upper_tail_probability": 0.0005030789793207347,
+    "null_mean": 0.009235103615366462,
+    "null_min": -0.03805264939520774,
+    "null_max": 0.08809909148008696
+  },
+  "dimensionality_gate": {
+    "dataset_label": "US Immigration (N=60)",
+    "n_samples": 60,
+    "n_features": 8,
+    "observed_participation_ratio": 2.6184234619140625,
+    "column_null_mean_participation_ratio": 6.259501736974716,
+    "detected_rank_column_null": 2,
+    "detected_rank_publisher_null": null,
+    "components": [
+      {
+        "component": 1,
+        "observed_eigenvalue": 0.22409655153751373,
+        "observed_variance_ratio": 0.5489810705184937,
+        "column_null": {
+          "mean_eigenvalue": 0.09893295279815793,
+          "q95_eigenvalue": 0.11099229007959366,
+          "mean_variance_ratio": 0.2423612159743905,
+          "q95_variance_ratio": 0.2719036340713501,
+          "exceedances": 0,
+          "p_value": 9.999000099990002e-05,
+          "detected": true
+        }
+      },
+      {
+        "component": 2,
+        "observed_eigenvalue": 0.11026382446289062,
+        "observed_variance_ratio": 0.2701190710067749,
+        "column_null": {
+          "mean_eigenvalue": 0.07917051110379397,
+          "q95_eigenvalue": 0.08821127563714981,
+          "mean_variance_ratio": 0.1939481315985322,
+          "q95_variance_ratio": 0.21609576046466827,
+          "exceedances": 0,
+          "p_value": 9.999000099990002e-05,
+          "detected": true
+        }
+      },
+      {
+        "component": 3,
+        "observed_eigenvalue": 0.024241600185632706,
+        "observed_variance_ratio": 0.05938591808080673,
+        "column_null": {
+          "mean_eigenvalue": 0.06245134304091334,
+          "q95_eigenvalue": 0.07033649832010269,
+          "mean_variance_ratio": 0.15299031334519386,
+          "q95_variance_ratio": 0.17230696976184845,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 4,
+        "observed_eigenvalue": 0.018122073262929916,
+        "observed_variance_ratio": 0.044394589960575104,
+        "column_null": {
+          "mean_eigenvalue": 0.05226314748004079,
+          "q95_eigenvalue": 0.057925786823034286,
+          "mean_variance_ratio": 0.12803175910934805,
+          "q95_variance_ratio": 0.141903817653656,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 5,
+        "observed_eigenvalue": 0.015819605439901352,
+        "observed_variance_ratio": 0.038754116743803024,
+        "column_null": {
+          "mean_eigenvalue": 0.043652779971063135,
+          "q95_eigenvalue": 0.04914632439613342,
+          "mean_variance_ratio": 0.10693849258348345,
+          "q95_variance_ratio": 0.12039632350206375,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 6,
+        "observed_eigenvalue": 0.007834765128791332,
+        "observed_variance_ratio": 0.01919323392212391,
+        "column_null": {
+          "mean_eigenvalue": 0.03480591624043882,
+          "q95_eigenvalue": 0.04110170528292656,
+          "mean_variance_ratio": 0.08526586891524493,
+          "q95_variance_ratio": 0.10068899393081665,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 7,
+        "observed_eigenvalue": 0.004958014469593763,
+        "observed_variance_ratio": 0.012145907618105412,
+        "column_null": {
+          "mean_eigenvalue": 0.021301524779759346,
+          "q95_eigenvalue": 0.024487771093845367,
+          "mean_variance_ratio": 0.05218345661275089,
+          "q95_variance_ratio": 0.059988971799612045,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 8,
+        "observed_eigenvalue": 0.0028681117109954357,
+        "observed_variance_ratio": 0.007026163395494223,
+        "column_null": {
+          "mean_eigenvalue": 0.01562638114253059,
+          "q95_eigenvalue": 0.018204404041171074,
+          "mean_variance_ratio": 0.03828076115231961,
+          "q95_variance_ratio": 0.04459627717733383,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      }
+    ]
+  },
+  "extremes": {
+    "min_article": {
+      "score": -1.0419609546661377,
+      "publisher": "odnako.org",
+      "snippet": "Sympathizer of the far-right AfD, follower of conspiracy theorists, paranoid and delusional in his posts on X: The complex personality of the perpetrator of the attack on the Magdeburg Christmas marke"
+    },
+    "max_article": {
+      "score": 1.287400245666504,
+      "publisher": "timesofindia.indiatimes.com",
+      "snippet": "- News - India News - Election year 2024: Countries which wrote fresh scripts in politics Trending In 2024, global political landscapes saw dramatic changes with pivotal elections in prominent countri"
+    }
+  }
+}

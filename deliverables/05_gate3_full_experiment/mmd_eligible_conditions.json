@@ -1,0 +1,161 @@
+[
+  {
+    "condition_1": "corpus_bart_tau050",
+    "condition_2": "corpus_topic_tau050",
+    "s1_disjoint_size": 2361,
+    "s2_disjoint_size": 1566,
+    "views": {
+      "V1": {
+        "view_label": "Scalar Q0 (8D margin)",
+        "empirical_unbiased_mmd2": 0.008344,
+        "mmd_distance": 0.091348,
+        "null_mean": 0.0,
+        "null_q95": 0.000457,
+        "null_q99": 0.000864,
+        "p_value": 0.001996007984031936
+      },
+      "V2": {
+        "view_label": "Scalar Q1 (8D margin)",
+        "empirical_unbiased_mmd2": 0.008751,
+        "mmd_distance": 0.093546,
+        "null_mean": -3e-06,
+        "null_q95": 0.000469,
+        "null_q99": 0.000894,
+        "p_value": 0.001996007984031936
+      },
+      "V3": {
+        "view_label": "Layer 24 CLS Q0 (8x1536)",
+        "empirical_unbiased_mmd2": 0.006583,
+        "mmd_distance": 0.081135,
+        "null_mean": -1e-06,
+        "null_q95": 0.000131,
+        "null_q99": 0.000248,
+        "p_value": 0.001996007984031936
+      },
+      "V4": {
+        "view_label": "Layer 24 CLS Q1 (8x1536)",
+        "empirical_unbiased_mmd2": 0.004888,
+        "mmd_distance": 0.069911,
+        "null_mean": 3e-06,
+        "null_q95": 0.000134,
+        "null_q99": 0.000229,
+        "p_value": 0.001996007984031936
+      },
+      "V7": {
+        "view_label": "Layer 12 CLS Q0 (8x1536)",
+        "empirical_unbiased_mmd2": 0.007042,
+        "mmd_distance": 0.083916,
+        "null_mean": 1e-06,
+        "null_q95": 9.8e-05,
+        "null_q99": 0.00018,
+        "p_value": 0.001996007984031936
+      }
+    }
+  },
+  {
+    "condition_1": "corpus_bart_tau050",
+    "condition_2": "corpus_bge_tau050",
+    "s1_disjoint_size": 2213,
+    "s2_disjoint_size": 2245,
+    "views": {
+      "V1": {
+        "view_label": "Scalar Q0 (8D margin)",
+        "empirical_unbiased_mmd2": 0.024354,
+        "mmd_distance": 0.156059,
+        "null_mean": -6e-06,
+        "null_q95": 0.000427,
+        "null_q99": 0.000683,
+        "p_value": 0.001996007984031936
+      },
+      "V2": {
+        "view_label": "Scalar Q1 (8D margin)",
+        "empirical_unbiased_mmd2": 0.018216,
+        "mmd_distance": 0.134967,
+        "null_mean": -1.9e-05,
+        "null_q95": 0.000299,
+        "null_q99": 0.000651,
+        "p_value": 0.001996007984031936
+      },
+      "V3": {
+        "view_label": "Layer 24 CLS Q0 (8x1536)",
+        "empirical_unbiased_mmd2": 0.00624,
+        "mmd_distance": 0.078996,
+        "null_mean": -1e-06,
+        "null_q95": 9.9e-05,
+        "null_q99": 0.000166,
+        "p_value": 0.001996007984031936
+      },
+      "V4": {
+        "view_label": "Layer 24 CLS Q1 (8x1536)",
+        "empirical_unbiased_mmd2": 0.005809,
+        "mmd_distance": 0.076214,
+        "null_mean": 1e-06,
+        "null_q95": 0.000109,
+        "null_q99": 0.000176,
+        "p_value": 0.001996007984031936
+      },
+      "V7": {
+        "view_label": "Layer 12 CLS Q0 (8x1536)",
+        "empirical_unbiased_mmd2": 0.005076,
+        "mmd_distance": 0.071248,
+        "null_mean": -0.0,
+        "null_q95": 7.6e-05,
+        "null_q99": 0.000119,
+        "p_value": 0.001996007984031936
+      }
+    }
+  },
+  {
+    "condition_1": "corpus_consensus_tau050",
+    "condition_2": "corpus_bart_tau050",
+    "s1_disjoint_size": 120,
+    "s2_disjoint_size": 2049,
+    "views": {
+      "V1": {
+        "view_label": "Scalar Q0 (8D margin)",
+        "empirical_unbiased_mmd2": 0.08138,
+        "mmd_distance": 0.285271,
+        "null_mean": 3.4e-05,
+        "null_q95": 0.003633,
+        "null_q99": 0.007895,
+        "p_value": 0.001996007984031936
+      },
+      "V2": {
+        "view_label": "Scalar Q1 (8D margin)",
+        "empirical_unbiased_mmd2": 0.08742,
+        "mmd_distance": 0.295669,
+        "null_mean": 6.1e-05,
+        "null_q95": 0.003409,
+        "null_q99": 0.007445,
+        "p_value": 0.001996007984031936
+      },
+      "V3": {
+        "view_label": "Layer 24 CLS Q0 (8x1536)",
+        "empirical_unbiased_mmd2": 0.038594,
+        "mmd_distance": 0.196454,
+        "null_mean": 1.6e-05,
+        "null_q95": 0.000952,
+        "null_q99": 0.001709,
+        "p_value": 0.001996007984031936
+      },
+      "V4": {
+        "view_label": "Layer 24 CLS Q1 (8x1536)",
+        "empirical_unbiased_mmd2": 0.040385,
+        "mmd_distance": 0.200961,
+        "null_mean": 3.6e-05,
+        "null_q95": 0.001099,
+        "null_q99": 0.001605,
+        "p_value": 0.001996007984031936
+      },
+      "V7": {
+        "view_label": "Layer 12 CLS Q0 (8x1536)",
+        "empirical_unbiased_mmd2": 0.014539,
+        "mmd_distance": 0.120577,
+        "null_mean": -8e-06,
+        "null_q95": 0.000747,
+        "null_q99": 0.001334,
+        "p_value": 0.001996007984031936
+      }
+    }
+  }
+]

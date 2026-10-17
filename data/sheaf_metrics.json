@@ -1,0 +1,8 @@
+{
+  "mean_cocycle_residual": 1.1225010830175581,
+  "std_cocycle_residual": 0.429060063752489,
+  "min_cocycle_residual": 0.09485056777713115,
+  "max_cocycle_residual": 1.9899898434909782,
+  "is_sheaf_like": false,
+  "n_triples_evaluated": 336
+}

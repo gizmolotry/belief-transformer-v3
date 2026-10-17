@@ -1,0 +1,21 @@
+{
+  "n_pilot": 512,
+  "pilot_pdist_sec": 0.4024,
+  "pilot_linear_kernel_sec": 0.0151,
+  "pilot_single_matrix_ram_mb": 1.0,
+  "pilot_all_8_matrices_ram_mb": 8.0,
+  "projections_independent_families_6248": {
+    "n": 6248,
+    "single_dense_matrix_ram_mb": 148.92,
+    "all_8_matrices_ram_gb": 1.16,
+    "projected_pdist_time_sec": 59.93,
+    "projected_linear_kernel_time_sec": 2.25
+  },
+  "projections_full_union_7986": {
+    "n": 7986,
+    "single_dense_matrix_ram_mb": 243.29,
+    "all_8_matrices_ram_gb": 1.9,
+    "projected_pdist_time_sec": 97.9,
+    "projected_linear_kernel_time_sec": 3.68
+  }
+}

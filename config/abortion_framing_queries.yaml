@@ -1,0 +1,33 @@
+queries:
+  pair_01:
+    theme: "Bodily Autonomy vs Sanctity of Life"
+    A: "This article defends abortion as an essential healthcare right rooted in bodily autonomy and personal privacy."
+    B: "This article views abortion as the termination of human life and a violation of the moral rights of the unborn."
+  pair_02:
+    theme: "Reproductive Freedom vs Protection of Unborn"
+    A: "This article emphasizes the fundamental right of pregnant individuals to make their own medical decisions."
+    B: "This article emphasizes society's moral duty to protect vulnerable unborn children from harm."
+  pair_03:
+    theme: "Healthcare Access vs Legal Restrictions"
+    A: "This article highlights the dangers of restricted access to reproductive healthcare and maternity care."
+    B: "This article supports legal prohibitions and statutory restrictions on abortion procedures."
+  pair_04:
+    theme: "Constitutional Precedent vs State Regulation"
+    A: "This article argues that reproductive freedom should be federally protected as a constitutional right."
+    B: "This article argues that abortion regulations should be democratically decided by state legislatures and voters."
+  pair_05:
+    theme: "Medical Exceptions vs Comprehensive Bans"
+    A: "This article highlights severe medical emergencies where abortion care is necessary to save a patient's life or health."
+    B: "This article advocates for strict bans on abortion without exceptions or with very narrow legal exemptions."
+  pair_06:
+    theme: "Socioeconomic Disparities vs Family Support"
+    A: "This article points out that abortion bans disproportionately harm low-income women and marginalized communities."
+    B: "This article promotes adoption, pregnancy support centers, and social support for vulnerable mothers."
+  pair_07:
+    theme: "Care Obligations vs Conscience Protections"
+    A: "This article argues that healthcare providers have a legal and ethical duty to provide comprehensive abortion care."
+    B: "This article defends the religious conscience rights of medical providers and institutions to refuse to perform abortions."
+  pair_08:
+    theme: "Punitive Attack vs Human Dignity"
+    A: "This article characterizes anti-abortion legislation as an extreme, punitive attack on women's fundamental liberties."
+    B: "This article portrays the pro-life movement as a compassionate, morally principled defense of human dignity."

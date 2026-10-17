@@ -1,0 +1,250 @@
+\section{Methodology}
+
+This section details the empirical pipeline used to measure framing geometry from text without external supervision. The methodology is organized around ten core components: (1)~authored contrastive hypothesis pairs and the audited paired NLI operator; (2)~corpus construction, prospective sampling protocols, and syndication sensitivity; (3)~non-parametric dimensionality gating and disjoint-bank stability; (4)~cross-model and cross-topic replication; (5)~the matched sentence-level semantic projection baseline; (6)~minimal compositional controls; (7)~standardized PCA and representation anisotropy ablations; (8)~canonical correlation analysis with strictly fold-local cross-validation; (9)~publisher differentiation ANOVA and sentiment nuisance controls; and (10)~methodological scope and developmental audit of excluded machinery.
+
+\subsection{Contrastive Hypothesis Measurement and the Audited Paired Operator}
+\label{sec:meth_paired_operator}
+
+The primary measurement apparatus evaluates an article $x \in \mathcal{X}$ against a bank of authored contrastive hypothesis pairs, $\mathcal{H} = \{(h_A^{(k)}, h_B^{(k)})\}_{k=1}^K$ ($K=8$), using a frozen natural language inference (NLI) cross-encoder. In our primary implementation, we employ \texttt{DeBERTa-v2-xlarge-mnli} \citep{he2021deberta}, which processes document $x$ and hypothesis $h$ simultaneously through 24 layers of disentangled self-attention.
+
+For each forward pass, the model outputs three unnormalized logits $(z_E, z_N, z_C) \in \mathbb{R}^3$, corresponding to entailment, neutral, and contradiction. Softmax normalization yields probability scores:
+\begin{equation}
+    P(c \mid x, h) = \frac{\exp(z_c)}{\sum_{c' \in \{E, N, C\}} \exp(z_{c'})}, \quad c \in \{E, N, C\}.
+\end{equation}
+We define the directional polarity score of document $x$ with respect to hypothesis $h$ as the entailment-minus-contradiction margin:
+\begin{equation}
+    s(x, h) = P(\text{entailment} \mid x, h) - P(\text{contradiction} \mid x, h) \in [-1, 1].
+\end{equation}
+
+When evaluating opposing framing propositions $(h_A^{(k)}, h_B^{(k)})$, two distinct measurement operators can be constructed:
+\begin{enumerate}
+    \item \textbf{Single-Side Margin ($s_A$)}: Evaluates document polarity exclusively against the primary hypothesis pole:
+    \begin{equation}
+        s_A^{(k)}(x) = s(x, h_A^{(k)}).
+    \end{equation}
+    \item \textbf{Audited Paired Contrast Operator ($s_A - s_B$)}: Evaluates the differential displacement between opposing propositions:
+    \begin{equation}
+        M_k(x) = s_A^{(k)}(x) - s_B^{(k)}(x) = \left[P(E \mid x, h_A^{(k)}) - P(C \mid x, h_A^{(k)})\right] - \left[P(E \mid x, h_B^{(k)}) - P(C \mid x, h_B^{(k)})\right].
+    \end{equation}
+\end{enumerate}
+The paired contrast operator ($s_A - s_B$) removes response components shared between the opposing hypotheses ($s_A + s_B$). Whether those shared components reflect general topical salience, shared vocabulary compatibility, or baseline probability mass, subtracting $s_B$ from $s_A$ ensures that the resulting score isolates differential stance rather than common-mode activation. For an $N$-document corpus, evaluating $K$ contrastive pairs yields the audited response matrix $M \in \mathbb{R}^{N \times K}$.
+
+\subsection{Corpora Construction, Prospective Protocol, and Syndication Sensitivity}
+\label{sec:meth_corpora}
+
+The empirical evaluation encompasses six distinct corpus configurations across foreign conflict, domestic policy, and synthetic factorial designs:
+\begin{enumerate}
+    \item \textbf{Prospective Confirmatory Corpus ($N=120$, 70 publishers)}: To prevent post-hoc sample optimization, 120 news articles on the Israel--Palestine conflict published between August and September 2024 were sampled prospectively under a frozen exact-fingerprint exclusion registry (registry hash \texttt{03be740c}). Every prospective candidate URL, title string, and SHA-256 text hash was filtered against a quarantine database of 1,290 historical project texts, ensuring zero collisions. The resulting corpus represents 70 unique publishing outlets.
+    \item \textbf{Syndication Sensitivity Subset ($N=83$)}: To assess wire syndication artifacts, all 120 prospective articles were subjected to a pairwise 5-token shingle Jaccard similarity audit. While exact deduplication succeeded, 37 articles exhibited high content overlap ($\text{Jaccard} \ge 0.50$) due to syndicated wire republication across different regional outlets (e.g., identical Reuters or AP copy republished under local mastheads). The clean non-syndicated subset ($N=83$) strictly excludes all syndicated duplicates.
+    \item \textbf{Clean Deduplicated Ukraine Corpus ($N=60$, 54 publishers)}: Foreign conflict reporting on the Russia--Ukraine war collected across 54 independent publishers, filtered to ensure all pairwise 5-token Jaccard similarities remain strictly $\le 0.35$, resolving syndication clustering present in early exploratory pilots.
+    \item \textbf{Multi-Domain Domestic Policy Corpora ($N=60$ each)}: Three independent US policy domains evaluated under matched contrastive hypothesis banks: US Immigration \& Border Policy (51 publishers), Climate Politics (51 publishers), and Abortion Rights (55 publishers).
+    \item \textbf{Controlled Balanced Corpus ($N=60$, 12 publishers $\times$ 5 articles)}: A balanced sample of 12 distinct international and domestic news outlets with exactly 5 articles per outlet, constructed specifically to evaluate publisher stance differentiation.
+    \item \textbf{Synthetic Factorial Positive Control ($N=60$)}: A controlled $2 \times 2$ factorial corpus crossing two orthogonal generating factors: \emph{Security Threat} (high vs.\ low) $\times$ \emph{Civilian Harm} (high vs.\ low), with 15 balanced articles per quadrant, generated with known generating factors to verify apparatus resolving power for higher-dimensional structure ($k=2$).
+\end{enumerate}
+
+\subsection{Non-Parametric Dimensionality Gating and Disjoint-Bank Stability}
+\label{sec:meth_dimensionality}
+
+To determine whether the $N \times K$ article response matrix $M$ reflects low-dimensional framing structure or high-dimensional noise, we decompose the column-centered matrix $M - \mathbf{1}\mu^\top$ via Singular Value Decomposition (SVD):
+\begin{equation}
+    M - \mathbf{1}\mu^\top = U \Sigma V^\top.
+\end{equation}
+The eigenvalues $\lambda_j = \frac{\sigma_j^2}{N-1}$ quantify variance along principal axis $j$. The explained variance ratio ($\mathrm{EVR}$) and participation ratio ($\mathrm{PR}$) are:
+\begin{equation}
+    \mathrm{EVR}_j = \frac{\lambda_j}{\sum_{i=1}^K \lambda_i}, \qquad \mathrm{PR} = \frac{\left(\sum_{i=1}^K \lambda_i\right)^2}{\sum_{i=1}^K \lambda_i^2}.
+\end{equation}
+
+To establish the statistical significance of each component without making distributional assumptions, we evaluate eigenvalues against non-parametric permutation null models:
+\begin{itemize}
+    \item \textbf{Column Permutation Null (10,000 draws)}: For each draw $b \in \{1, \ldots, 10000\}$, the entries of each column of $M$ are permuted independently. This preserves the exact marginal distribution of each probe pair while destroying inter-axis covariance.
+    \item \textbf{Publisher-Block Permutation Null (10,000 draws)}: On corpora with publisher clustering, whole publisher blocks are permuted, preserving within-outlet correlation.
+\end{itemize}
+For each principal component $j$, the empirical null distribution yields a 95th-percentile threshold ($q_{95}$). We compute plus-one Monte Carlo $p$-values:
+\begin{equation}
+    p_j = \frac{1 + \sum_{b=1}^{B} \mathbb{I}\left(\lambda_{j,\text{null}}^{(b)} \ge \lambda_{j,\text{obs}}\right)}{1 + B}.
+\end{equation}
+The detected dimensionality (effective rank $k$) is defined strictly as the number of consecutive components clearing the permutation gate ($p_j \le 0.05$ and $\lambda_{j,\text{obs}} > q_{95}$).
+
+To ensure that recovered stance coordinates reflect a distributed property of the discourse rather than an artifact of a single dominant prompt pair, we execute a \textbf{Complementary Disjoint-Bank Stability Analysis}. We evaluate all $\binom{8}{4}/2 = 35$ unique complementary 4-vs-4 partitions ($S \subset \{1, \ldots, 8\}, |S|=4$, with $S \cap S^c = \emptyset$). For each split, we fit PCA independently on sub-matrix $M_S$ and sub-matrix $M_{S^c}$, project documents onto their respective first principal components ($\mathrm{PC1}_S$ and $\mathrm{PC1}_{S^c}$), and record the cross-partition Pearson correlation $r(S, S^c)$. Because the two sub-banks share zero variables, this eliminates the part-whole correlation inflation inherent in leave-one-axis-out diagnostics.
+
+\subsection{Cross-Model and Cross-Topic Replication}
+\label{sec:meth_cross_model}
+
+To evaluate whether the observed rank-1 compression reflects the semantic relation between text and hypotheses or an architecture-specific artifact of DeBERTa's decoupled embeddings, we benchmark three distinct transformer cross-encoders on the balanced $N=60$ corpus:
+\begin{itemize}
+    \item \texttt{microsoft/deberta-v2-xlarge-mnli} (900M parameters, disentangled attention);
+    \item \texttt{facebook/bart-large-mnli} (406M parameters, sequence-to-sequence encoder-decoder);
+    \item \texttt{roberta-large-mnli} (355M parameters, bidirectional transformer encoder).
+\end{itemize}
+For each model, we extract the audited paired matrix $M$, evaluate 10,000-draw permutation null gates, and compute pairwise article stance correlations ($r, \rho$) and principal subspace angles between models.
+
+To evaluate cross-topic generalization, the identical paired operator and permutation gating battery are deployed across US Immigration, Climate Politics, Abortion Rights, and Clean Ukraine. Additionally, exploratory conceptual-lens tests ($Q_2$ Humanitarian Rights and $Q_3$ Realpolitik Statecraft) authored in the same AI-assisted development session are evaluated as secondary vocabulary sensitivity checks, with confirmatory claims restricted to the primary $Q_0$ and $Q_1$ banks.
+
+\subsection{Matched FrameAxis-Style Semantic Projection Baseline}
+\label{sec:meth_frameaxis}
+
+To test whether proposition-level NLI is redundant with existing vector-space methods, we construct a matched \textbf{FrameAxis-style sentence-level semantic projection baseline} \citep{kwak2021frameaxis}. Whereas original FrameAxis aggregated word- and token-level embeddings, our baseline directly embeds whole propositions and whole documents using modern sentence encoders, providing a strictly stronger comparator.
+
+Let $e(\cdot) \in \mathbb{S}^{d-1}$ denote an $L_2$-normalized embedding encoder ($\|e\|_2 = 1$). For document $x$ and contrastive hypothesis pair $k$ with poles $(h_A^{(k)}, h_B^{(k)})$, we compute two projection operators:
+\begin{enumerate}
+    \item \textbf{Primary FrameAxis Cosine Difference ($F_k$)}:
+    \begin{equation}
+        F_k(x) = \cos(e(x), e(h_A^{(k)})) - \cos(e(x), e(h_B^{(k)})) = \langle e(x),\, e(h_A^{(k)}) - e(h_B^{(k)}) \rangle.
+    \end{equation}
+    \item \textbf{Normalized Vector Projection ($P_k$)}: Let $v_k = e(h_A^{(k)}) - e(h_B^{(k)})$ define the semantic axis. The normalized projection onto $v_k$ is:
+    \begin{equation}
+        P_k(x) = \frac{\langle e(x), v_k \rangle}{\|e(x)\|_2 \|v_k\|_2} = \frac{F_k(x)}{\|v_k\|_2}.
+    \end{equation}
+\end{enumerate}
+Because $\|v_k\|_2$ is a strictly positive constant for each axis $k$, $P_k(x)$ is an exact positive column rescaling of $F_k(x)$. Under column-standardized PCA ($Z_{ik} = \frac{M_{ik} - \mu_k}{\sigma_k}$), $Z(P)$ and $Z(F)$ are mathematically identical:
+\begin{equation}
+    Z_{ik}(P) \equiv Z_{ik}(F).
+\end{equation}
+We evaluate FrameAxis projections under both DeBERTa-v2-xlarge sequence embeddings and a dedicated sentence encoder (\texttt{sentence-transformers/all-MiniLM-L6-v2}).
+
+\subsection{Minimal Compositional Controls Diagnostic Benchmark}
+\label{sec:meth_compositional}
+
+To diagnose why joint cross-encoding and vector-space projection diverge, we construct a diagnostic benchmark of 16 minimal sentence pairs across four perturbation categories ($N=4$ pairs per category):
+\begin{enumerate}
+    \item \textbf{Polarity Negation}: Direct negation of the main verb or predicate (e.g., ``Forces ceased fire'' $\leftrightarrow$ ``Forces did not cease fire'');
+    \item \textbf{Quantifier Inversion}: Inversion of universal/existential quantifiers (e.g., ``All civilian corridors were opened'' $\leftrightarrow$ ``No civilian corridors were opened'');
+    \item \textbf{Causal Direction Reversal}: Inversion of antecedent and consequence (e.g., ``Airstrikes caused the collapse of talks'' $\leftrightarrow$ ``The collapse of talks caused airstrikes'');
+    \item \textbf{Agent--Patient Role Reversal}: Syntactic subject-object swapping (e.g., ``Militants ambushed the patrol'' $\leftrightarrow$ ``The patrol ambushed militants'').
+\end{enumerate}
+For each minimal pair $(x, x')$ and relevant contrastive pair $k$, we specify the expected direction of stance change ($\operatorname{expected\_sign} \in \{+1, -1\}$) and evaluate two metrics:
+\begin{itemize}
+    \item \textbf{Directional Concordance}: Proportion of pairs where the observed shift matches the expected sign:
+    \begin{equation}
+        \operatorname{sgn}(M_k(x) - M_k(x')) = \operatorname{expected\_sign}.
+    \end{equation}
+    \item \textbf{Zero-Crossing Sign Inversion}: Proportion of pairs where the perturbation flips the sign of the stance score:
+    \begin{equation}
+        M_k(x) \cdot M_k(x') < 0.
+    \end{equation}
+\end{itemize}
+
+\subsection{Standardized PCA and Representation Anisotropy Ablations}
+\label{sec:meth_anisotropy}
+
+Because raw covariance PCA is sensitive to scale heterogeneity across axes, we report both raw covariance PCA ($M_{\text{raw}}$) and column-standardized correlation PCA ($Z(M)$) across all corpora.
+
+To examine whether dense FrameAxis PC1 reflects genuine political discourse or representation geometry, we compute correlation diagnostics between document projection scores and known signatures of embedding anisotropy:
+\begin{itemize}
+    \item Correlation with raw hidden-state sequence embedding $L_2$ norm ($\|e(x)\|_2$);
+    \item Correlation with cosine similarity to the global mean embedding ($\cos(e(x), \bar{e})$).
+\end{itemize}
+We then apply anisotropy-removal transformations to embedding space prior to FrameAxis projection \citep{mu2018allbutthetop}:
+\begin{enumerate}
+    \item \textbf{Mean Centering}: Centering representations by subtracting the global mean: $e \to e - \bar{e}$.
+    \item \textbf{Top-1 PC Removal (Primary Confirmatory Diagnostic)}: Projecting out the dominant principal component of the embedding space:
+    \begin{equation}
+        e \to e - \langle e, u_1 \rangle u_1.
+    \end{equation}
+    \item \textbf{Top-2 PC Removal (Exploratory Follow-Up)}: Projecting out the top two principal components:
+    \begin{equation}
+        e \to e - \sum_{j=1}^2 \langle e, u_j \rangle u_j.
+    \end{equation}
+\end{enumerate}
+
+\subsection{Canonical Correlation Analysis with Strict Fold-Local Cross-Validation}
+\label{sec:meth_cca}
+
+To test whether the 8D NLI response matrix $X \in \mathbb{R}^{N \times 8}$ and the 8D FrameAxis projection matrix $Y \in \mathbb{R}^{N \times 8}$ share a multivariate semantic subspace despite divergent dominant axes, we evaluate Canonical Correlation Analysis (CCA). CCA finds linear combinations $w_x, w_y \in \mathbb{R}^8$ that maximize the correlation between canonical variates:
+\begin{equation}
+    r_{\mathrm{canon}} = \max_{w_x, w_y} \operatorname{corr}(X w_x,\, Y w_y).
+\end{equation}
+
+Because in-sample CCA optimizes linear weights and can exhibit upward sample bias, we evaluate statistical validity using two protocols with train-fitted preprocessing:
+\begin{enumerate}
+    \item \textbf{Monte Carlo Permutation Null (1,000 draws)}: Permuting document rows of $Y$ relative to $X$, generating an empirical null distribution for leading canonical correlation.
+    \item \textbf{Strictly Fold-Local Repeated 5-Fold Cross-Validation}: To eliminate preprocessing leakage, column standardizers ($\mu_{\text{train}}, \sigma_{\text{train}}$) and canonical projection weights $(W_X, W_Y)$ are fit exclusively on training observations ($4/5$ split). Held-out test folds ($1/5$ split) are transformed out-of-sample and evaluated for test correlation. We execute 50 random 5-fold CV repeats (250 distinct test folds), reporting pooled out-of-sample correlation ($r_{\mathrm{canon,test}}$) and mean within-fold test correlation.
+\end{enumerate}
+
+\subsection{Publisher Differentiation ANOVA and Sentiment Nuisance Controls}
+\label{sec:meth_anova}
+
+To establish whether recovered coordinates carry external journalistic signal, we evaluate one-way Analysis of Variance (ANOVA) across publishers on the balanced Controlled $N=60$ corpus (12 publishers $\times$ 5 articles):
+\begin{equation}
+    F = \frac{\mathrm{MS}_{\text{between}}}{\mathrm{MS}_{\text{within}}}, \qquad \eta^2 = \frac{\mathrm{SS}_{\text{between}}}{\mathrm{SS}_{\text{total}}}.
+\end{equation}
+Non-parametric Kruskal--Wallis $H$-tests are evaluated in parallel.
+
+Because political stance correlates with emotional valence, we implement a \textbf{Collinear Sentiment Nuisance Control}. We extract VADER sentiment scores (positive, negative, and compound valence) for each article. Because compound valence is mathematically derived from positive and negative valence, multivariate sentiment regression ($PC1_i = \beta_0 + \beta^\top \mathbf{s}_i + \epsilon_i$) serves as a nuisance sensitivity control rather than an orthogonal decomposition of affect. We then evaluate whether residual publisher separation on $\epsilon_i$ remains statistically significant. We emphasize that publisher separation demonstrates systematic outlet differentiation (reflecting editorial stance, topic selection, and sourcing) rather than external ideological ground truth.
+
+\subsection{Methodological Scope and Developmental Audit of Excluded Machinery}
+\label{sec:meth_excluded}
+
+A key methodological contribution of this study is the adversarial audit that identified and quarantined uncalibrated constructs developed during early exploratory iterations:
+\begin{itemize}
+    \item \textbf{Random Kitchen Sinks (RKS)}: Explored as an explicit kernel approximation in earlier drafts; ablation testing demonstrated that raw representations perform equivalently or superiorly to RKS expansions. Kernels function as similarity metrics, not independent epistemological observers.
+    \item \textbf{Dirichlet Simplex Annealing}: Originally motivated by Homotopy Type Theory (HoTT) analogies of path obstruction; audit revealed that legacy tests treated non-independent article dyads as independent samples. Dirichlet cooling represents a finite-dimensional optimization over mixture weights, not a topological invariant.
+    \item \textbf{Sheaf Cocycle Holonomy}: Quarantined after algebraic audit revealed that legacy code inverted composition order ($R_{jk}R_{ij}$ vs.\ $R_{ij}R_{jk}$) and lacked an empirical null distribution.
+    \item \textbf{Continuous Third-Party Benchmarks (MBFC)}: Evaluated on small publisher samples ($N=11, N=16$); demonstrated acute sensitivity to single publisher exclusions (e.g., Press TV), leading to its demotion from primary validation to an issue-specific divergence flagger.
+\end{itemize}
+By pruning this uncalibrated machinery, the resulting empirical apparatus rests strictly on reproducible, non-parametric statistical tests and controlled experimental comparisons.
+
+\subsection{Adversarial Falsification Protocol and Empirical Claim Gates}
+\label{sec:meth_claim_gates}
+
+To guard against confirmation bias and prevent post-hoc reinterpretation of philosophical constructs, we subject the Kuhnian interpretive framework to an explicit adversarial follow-up with pre-specified falsification gates (\path{scripts/exp_adversarial_kuhnian_battery.py}, \path{paper/adversarial_kuhnian_audit_results.json}). Rather than seeking unconstrained defense of ``incommensurability'' or ``world change,'' this protocol constructs the strongest empirical alternatives to explain the findings away, assigning each theoretical claim an explicit, quantitative disqualification condition.
+
+\subsubsection{The Six-Agent Adversarial Protocol}
+The campaign organizes six interlocking methodological audits:
+\begin{enumerate}
+    \item \textbf{Agent A (Provenance and Fail-Closed Hash Manifest)}: Computes SHA-256 hashes for all corpora, hypothesis banks, scripts, and model checkpoints, generating an immutable registry (\path{paper/experiment_manifest.json}). It strictly audits margin formulations, ensuring paired contrast ($s_A - s_B$) and single-side margins ($s_A$) are never conflated, and verifies zero exact collisions under the frozen registry across the audited corpora, with known post-hoc syndication overlap sensitivity.
+    \item \textbf{Agent B (Within-Paradigm Reliability Noise Floor)}: Before evaluating cross-paradigm divergence, Agent~B establishes how much the \emph{same paradigm diverges from itself} under measurement resampling. For both $P_{\mathrm{NLI}}$ ($Q_0$) and $P_{\mathrm{FA}}$, we execute 1,000 bootstrap draws ($N=120$ with replacement), including out-of-bag evaluation, and 1,000 independent 50/50 split-half draws ($N_1=N_2=60$). Each scaler and PCA is fitted on its own resample; full-sample concordance and held-out reconstruction are reported separately. We compute within-paradigm stability for PC1 correlation ($r_{\text{same}}$), 2D Procrustes disparity ($\mathcal{D}_{\text{same}}$), neighborhood overlap ($J_{k,\text{same}}$), and anomaly scores ($r(A_{\text{same}}^{(1)}, A_{\text{same}}^{(2)})$). For any cross-paradigm comparison, we evaluate the \emph{excess disparity}:
+    \begin{equation}
+        \Delta \mathcal{D}(P_A, P_B) = \mathcal{D}(P_A, P_B) - \frac{1}{2}\left[\mathcal{D}_{\text{same}}(P_A) + \mathcal{D}_{\text{same}}(P_B)\right].
+    \end{equation}
+    \emph{Kill Condition}: If cross-paradigm divergence is within the resampling noise floor ($\Delta \mathcal{D} \le 0$ or $J_{\text{cross}} \ge J_{\text{same}}$), the divergence claim is falsified as measurement instability.
+    \item \textbf{Agent C (14-Level Translation Ladder)}: Tests whether divergent paradigm geometries can be mapped into one another by systematic functional transformations. We construct an ordered hierarchy of 14 models spanning increasing capacity ($T_0$ Sign Flip, $T_1$ Orthogonal Procrustes, $T_2$ Similarity Transform, $T_3$ Anisotropic Scaling, $T_4$ Affine OLS, $T_5$ RidgeCV, $T_6$ PLS-2, $T_7$ CCA, $T_8$ Degree-2 Poly-Ridge, $T_9$ Kernel Ridge RBF, $T_{10}$ Shallow MLP, $T_{11}$ Optimal Transport Barycentric Map, $T_{12}$ Piecewise Linear Charts, and $T_{13}$ $k$-NN Regressor). All models use five outer held-out folds with train-fitted preprocessing. Hyperparameters are fixed except where an estimator explicitly uses inner training-fold selection; the entire ladder is therefore not uniformly nested CV. Complexity is the ordered rung index $c$, with $c^\star(\tau)=\min\{c:Q(c)\geq\tau\}$, $Q(c)=R^2_{\mathrm{test}}$, and $\tau\in\{0.10,0.30,0.50\}$. An unattained threshold is reported explicitly.
+    \emph{Kill Condition}: If low-capacity mappings ($T_0$--$T_5$) predict held-out cross-paradigm geometry with high fidelity ($R^2_{\text{test}} > 0.70$ and $J_{10,\text{test}} > 0.40$), incommensurability is falsified as trivial linear coordinate rotation.
+    \item \textbf{Agent D (Calibrated Neighborhood Curves and Whitening Sensitivity)}: Sweeps $k \in \{3, 5, 10, 15, 20, 30, 50\}$ against eight reference null models (hypergeometric random subsets, permutation null, same-paradigm bootstrap, paraphrase control, Gaussian embeddings, anisotropic spectrum-matched synthetic null, TF-IDF lexical overlap, and publisher overlap). To test whether neighborhood dissolution is an artifact of transformer representation anisotropy, both response matrices are transformed via Zero-phase Component Analysis (ZCA) whitening ($W = U \Lambda^{-1/2} U^\top$) prior to nearest-neighbor graph construction.
+    \emph{Kill Condition}: If cross-paradigm neighborhood dissolution vanishes under ZCA whitening, the finding is downgraded to a representation-geometry artifact.
+    \item \textbf{Agent E (Multi-Definition Anomaly Relativity Battery)}: Formalizes six distinct mathematical anomaly definitions: $A_1$ (Rank-1 PCA subspace residual), $A_2$ (Rank-2 PCA residual), $A_3$ (Local Outlier Factor), $A_4$ (Mahalanobis distance), $A_5$ (Isolation Forest score), and $A_6$ (Minimum Covariance Determinant robust distance). It evaluates the full $6 \times 6$ anomaly transfer matrix $R_{ij} = r(A_{P_i}, A_{P_j})$.
+    \emph{Kill Condition}: If cross-paradigm anomaly correlation is within resampling noise ($r_{\text{cross}} \approx r_{\text{same}}$) or if same-paradigm reliability is near zero ($r_{\text{same}} \approx 0$), anomaly relativity is falsified as estimation noise.
+    \item \textbf{Agent F: AI-Authored Disciplinary-Bank Controls}: Uses AI-authored controls representing five disciplinary vocabularies under a frozen protocol (\path{config/prompt_banks/adversarial_and_disciplinary_banks.json}): International Humanitarian Law ($H_{\text{IHL}}$), Strategic Security ($H_{\text{Sec}}$), Peace \& Conflict Studies ($H_{\text{Peace}}$), Realist International Relations ($H_{\text{Real}}$), and Media Framing Analysis ($H_{\text{Journ}}$). True independent, blind human disciplinary authoring remains undone; these controls cannot establish human perspectival invariance.
+\end{enumerate}
+
+\subsubsection{Three Extreme Reductio Stress Tests}
+To subject the framework to destructive limits, we formulate three extreme stress tests:
+\begin{enumerate}
+    \item \textbf{Reductio 1 (Absurd Structurally-Matched Paradigms)}: Evaluates four domain-null prompt banks matched in sentence length, syntax, and polarity contrast: Meteorology, Culinary Arts, Botanical Taxonomy, and Sports Tactics. For these four banks and $Q_0$, 10,000 independent column permutations calibrate eigenvalue thresholds and participation ratios. Publisher ANOVA is reported with raw, Benjamini--Hochberg FDR, and Bonferroni $p$-values across the four absurd-bank tests.
+    \item \textbf{Reductio 2 (Maximally Distant Political Ontologies)}: Evaluates five radically disparate ontologies of the same conflict: Legal Culpability, Operational Efficacy, Humanitarian Welfare, Macroeconomic Cost, and Religious Obligation. We fit both standardizers and CCA exclusively on each training fold and measure canonical correlation on five held-out folds. A 1,000-draw row-permutation test refits the complete procedure; $p=(1+b)/(1001)$ is a Monte Carlo permutation value, not exhaustive enumeration. Empirical fold and null intervals are distinguished from population confidence intervals.
+    \item \textbf{Reductio 3 (Adversarial Geometry Manufacturing \& Observer Pushback)}: Tests whether an observer can deliberately force arbitrary target geometries (e.g., inverted PC1 ordering, orthogonal distractors) onto corpus $C$, searching a finite registry of semantically constrained hypothesis contrast pairs for three explicit targets: inverted publisher ordering, forced publisher clustering, and an orthogonal distractor projection. The objective is $H^\star=\arg\min_H d(\mathcal{G}_H(C),G^\star)$. Failure within this candidate set does not establish impossibility over all plausible hypotheses.
+\end{enumerate}
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Pre-Specified Falsification Gates for Adversarial Follow-Up. These gates bound the empirical interpretation; they are not a retrospective preregistration claim.}
+\label{tab:claim_gates}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{3.4cm}p{4.5cm}p{5.2cm}c}
+\toprule
+\textbf{Theoretical Claim} & \textbf{Operational Requirement} & \textbf{Disqualification / Kill Condition} & \textbf{Audit Status} \\
+\midrule
+\textbf{Measurement-Conditioned Geometry} & Divergent $(H, O, M)$ yield distinct, reproducible geometries. & Divergence within within-paradigm noise floor ($\Delta \mathcal{D} \le 0$). & \textbf{Supported within tested scope} \\
+\addlinespace[3pt]
+\textbf{Framework-Dependent Neighborhoods} & Cross-paradigm $J_k \ll J_{k,\text{same}}$, persisting across $k \in [3, 50]$. & $J_{\text{cross}} \approx J_{\text{same}}$ or effect disappears under ZCA whitening. & \textbf{Supported within tested scope} \\
+\addlinespace[3pt]
+\textbf{Bounded Incommensurability} & $c^\star(\tau)=\min\{c:Q(c)\geq\tau\}$, where $Q(c)=R^2_{\mathrm{test}}$. & Low-capacity maps ($T_0$--$T_5$) achieve held-out $R^2 > 0.70, J_{10} > 0.40$. & \textbf{Supported within tested scope} \\
+\addlinespace[3pt]
+\textbf{Anomaly Relativity} & High within-paradigm reliability ($r_{\text{same}} > 0.60$), low cross-paradigm agreement. & Same-paradigm reliability near zero ($r_{\text{same}} \approx 0$) or $r_{\text{cross}} \approx r_{\text{same}}$. & \textbf{Supported within tested scope} \\
+\addlinespace[3pt]
+\textbf{Perspectival Invariants} & Compression ($\mathrm{PR} \approx 2$) persists across political ontologies. & Independent human authoring remains undone. & \textbf{Unconfirmed (Human test undone)} \\
+\addlinespace[3pt]
+\textbf{Structural Realism} & Shared subspace generalizes under train-standardized CCA. & Held-out correlation matches the permutation null or generic floor. & \textbf{Unsupported Above Generic Floor} \\
+\addlinespace[3pt]
+\textbf{Relational Stance Model} & Two-way ANOVA and 5-fold CV compare intrinsic features with framework indicators and interactions. & No positive held-out $\Delta R^2$ or negligible interaction variance. & \textbf{Confirmed Relational Interaction} \\
+\addlinespace[3pt]
+\textbf{Ontological Relationalism} & Textual/social ontology is inherently non-intrinsic. & Unfalsifiable from language models alone; asserted as metaphysical fact. & \textbf{Hypothesis Only} \\
+\addlinespace[3pt]
+\textbf{Objective Truth Inaccessibility} & Language model geometry disproves external objective truth. & Beyond empirical scope of text embeddings; claimed as geometric proof. & \textbf{Excluded} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+

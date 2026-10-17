@@ -1,0 +1,14 @@
+queries:
+  colonialism_vs_indigenous:
+    A: This article frames Israel as a colonial settler state
+    B: This article frames Israel as the indigenous homeland of the Jewish people
+  proportionate_vs_disproportionate:
+    A: This article describes Israeli responses as proportionate and measured
+    B: This article describes Israeli responses as excessive collective punishment
+  resistance_vs_terrorism:
+    A: This article frames Palestinian armed groups as legitimate resistance movements
+    B: This article frames Palestinian armed groups as terrorist organizations
+  violations_vs_compliance:
+    A: This article emphasizes Israeli violations of international law
+    B: This article emphasizes Israeli compliance with international law and right
+      to self-defense

@@ -1,0 +1,327 @@
+{
+  "anisotropy_ablations_prospective_n120": [
+    {
+      "label": "Baseline (Raw Normalized)",
+      "pc1_evr": 0.7373893387360994,
+      "pc2_evr": 0.14257162810458954,
+      "participation_ratio": 1.7375975412416935,
+      "r_with_nli_pc1": 0.12672684313024127,
+      "rho_with_nli_pc1": 0.07899854156538647,
+      "r_with_raw_norm": -0.8755050215686865,
+      "p_with_raw_norm": 4.463325051844762e-39,
+      "r_with_mean_cos": -0.6904325082553032,
+      "p_with_mean_cos": 2.68230437874796e-18,
+      "anova_f": 0.8167103969838404,
+      "anova_p": 0.6873329754117473,
+      "eta2": 0.1624940309935714
+    },
+    {
+      "label": "Centering (Mean Subtraction)",
+      "pc1_evr": 0.6994465601076061,
+      "pc2_evr": 0.16079145985462753,
+      "participation_ratio": 1.9055727977850927,
+      "r_with_nli_pc1": 0.1309023262189117,
+      "rho_with_nli_pc1": 0.15201055628863114,
+      "r_with_raw_norm": -0.8740525057025937,
+      "p_with_raw_norm": 8.467128219134544e-39,
+      "r_with_mean_cos": -0.2798170049464093,
+      "p_with_mean_cos": 0.001966578435236144,
+      "anova_f": 1.3307031985873403,
+      "anova_p": 0.2017554951089681,
+      "eta2": 0.29290926959190594
+    },
+    {
+      "label": "Top-1 PC Removal",
+      "pc1_evr": 0.34515484500238675,
+      "pc2_evr": 0.21932898123422198,
+      "participation_ratio": 4.582775980560191,
+      "r_with_nli_pc1": 0.2057455854213005,
+      "rho_with_nli_pc1": 0.2100076394194041,
+      "r_with_raw_norm": -0.11099283927110974,
+      "p_with_raw_norm": 0.2274813532962805,
+      "r_with_mean_cos": 0.047268953827154146,
+      "p_with_mean_cos": 0.608180546845748,
+      "anova_f": 1.3809992024123463,
+      "anova_p": 0.1738091209521281,
+      "eta2": 0.5166294325333147
+    },
+    {
+      "label": "Top-2 PC Removal",
+      "pc1_evr": 0.37570410363392903,
+      "pc2_evr": 0.2194278077506081,
+      "participation_ratio": 4.209646148886707,
+      "r_with_nli_pc1": 0.3954784904590716,
+      "rho_with_nli_pc1": 0.3702270991041044,
+      "r_with_raw_norm": -0.12091627963761342,
+      "p_with_raw_norm": 0.18832854878985905,
+      "r_with_mean_cos": 0.11278390097867023,
+      "p_with_mean_cos": 0.22002130306495293,
+      "anova_f": 2.117916642358784,
+      "anova_p": 0.015357059108900265,
+      "eta2": 0.6629448854026593
+    },
+    {
+      "label": "Top-3 PC Removal",
+      "pc1_evr": 0.45724089331044404,
+      "pc2_evr": 0.19714821282643072,
+      "participation_ratio": 3.5838188788609906,
+      "r_with_nli_pc1": 0.5124131529306675,
+      "rho_with_nli_pc1": 0.46595596916452525,
+      "r_with_raw_norm": -0.13138128546500635,
+      "p_with_raw_norm": 0.15261551377141086,
+      "r_with_mean_cos": -0.06262220323351872,
+      "p_with_mean_cos": 0.49683442963983865,
+      "anova_f": 1.478831232915647,
+      "anova_p": 0.1288511259155951,
+      "eta2": 0.6208023272882612
+    },
+    {
+      "label": "ZCA Whitening",
+      "pc1_evr": 0.39409065853290526,
+      "pc2_evr": 0.1996006770428487,
+      "participation_ratio": 4.3535040371800475,
+      "r_with_nli_pc1": -0.062466041424567804,
+      "rho_with_nli_pc1": 0.1297312313355094,
+      "r_with_raw_norm": -0.060881817449888256,
+      "p_with_raw_norm": 0.5088949346122461,
+      "r_with_mean_cos": -0.05036864371449723,
+      "p_with_mean_cos": 0.5848373496697231,
+      "anova_f": 1.3778360342634457,
+      "anova_p": 0.17546458724202754,
+      "eta2": 0.3132986937743296
+    }
+  ],
+  "anisotropy_ablations_controlled_n60": [
+    {
+      "label": "Baseline (Raw Normalized)",
+      "pc1_evr": 0.732388949991754,
+      "pc2_evr": 0.1437339206641977,
+      "participation_ratio": 1.758576037650785,
+      "r_with_nli_pc1": 0.2335380025269927,
+      "rho_with_nli_pc1": 0.41089191442067247,
+      "r_with_raw_norm": -0.8708179267196914,
+      "p_with_raw_norm": 1.548560580386345e-19,
+      "r_with_mean_cos": -0.14396060174138733,
+      "p_with_mean_cos": 0.27247325411036605,
+      "anova_f": 0.8570340805682609,
+      "anova_p": 0.5863492095613736,
+      "eta2": 0.16416168952392687
+    },
+    {
+      "label": "Centering",
+      "pc1_evr": 0.7092763157703943,
+      "pc2_evr": 0.14240440575880345,
+      "participation_ratio": 1.8699980215424696,
+      "r_with_nli_pc1": 0.3771196922710874,
+      "rho_with_nli_pc1": 0.5128646846346208,
+      "r_with_raw_norm": -0.8418005804182366,
+      "p_with_raw_norm": 3.624044836762726e-17,
+      "r_with_mean_cos": 0.0798779082045659,
+      "p_with_mean_cos": 0.544058899216197,
+      "anova_f": 1.3602616596339645,
+      "anova_p": 0.2225112131674625,
+      "eta2": 0.23764603319343972
+    },
+    {
+      "label": "Top-1 PC Removal",
+      "pc1_evr": 0.29246727241043136,
+      "pc2_evr": 0.24482779720392767,
+      "participation_ratio": 4.972074708037089,
+      "r_with_nli_pc1": -0.23064064566091616,
+      "rho_with_nli_pc1": 0.20200055570991945,
+      "r_with_raw_norm": -0.18607678604707215,
+      "p_with_raw_norm": 0.15459401213938484,
+      "r_with_mean_cos": -0.011846352780315282,
+      "p_with_mean_cos": 0.9284189132976503,
+      "anova_f": 1.3522791366276772,
+      "anova_p": 0.22643051376603152,
+      "eta2": 0.23658137293408382
+    },
+    {
+      "label": "Top-2 PC Removal",
+      "pc1_evr": 0.3043533229626532,
+      "pc2_evr": 0.27365140782199365,
+      "participation_ratio": 4.628046831755502,
+      "r_with_nli_pc1": 0.39021701292302613,
+      "rho_with_nli_pc1": 0.4367879966657406,
+      "r_with_raw_norm": -0.09795899579720767,
+      "p_with_raw_norm": 0.45650216483705275,
+      "r_with_mean_cos": 0.26540633396379876,
+      "p_with_mean_cos": 0.040413518453932755,
+      "anova_f": 2.7033300491053374,
+      "anova_p": 0.008579791745089745,
+      "eta2": 0.3825304793059789
+    }
+  ],
+  "sentiment_controlled_publisher_separation": {
+    "controlled_balanced_n60_nli": [
+      {
+        "name": "Raw PC1",
+        "f_stat": 2.917972034457694,
+        "p_val": 0.0050349329362446215,
+        "kw_h": 22.277377049180387,
+        "kw_p": 0.022310302065051135,
+        "eta2": 0.40073179920269614
+      },
+      {
+        "name": "Residual after Compound Sentiment",
+        "f_stat": 2.4780462439614905,
+        "p_val": 0.015047467364468017,
+        "kw_h": 15.430163934426218,
+        "kw_p": 0.1636383897731046,
+        "eta2": 0.3621983634858417,
+        "r2_sentiment": 0.14811179713838818
+      },
+      {
+        "name": "Residual after Negative Sentiment",
+        "f_stat": 1.8803182523036854,
+        "p_val": 0.06612023935496229,
+        "kw_h": 15.201967213114784,
+        "kw_p": 0.17343623861272053,
+        "eta2": 0.3011422036129897,
+        "r2_sentiment": 0.25538041115824084
+      },
+      {
+        "name": "Residual after All Sentiment (Pos+Neg+Comp)",
+        "f_stat": 2.3248445058316753,
+        "p_val": 0.022052056567864135,
+        "kw_h": 18.594754098360625,
+        "kw_p": 0.06876712245298222,
+        "eta2": 0.34758931829262735,
+        "r2_sentiment": 0.33940900711199695
+      }
+    ],
+    "controlled_balanced_n60_fa_deberta": [
+      {
+        "name": "Raw PC1",
+        "f_stat": 0.8570340805682609,
+        "p_val": 0.5863492095613736,
+        "kw_h": 10.105573770491787,
+        "kw_p": 0.5209164949018875,
+        "eta2": 0.16416168952392687
+      },
+      {
+        "name": "Residual after Compound Sentiment",
+        "f_stat": 0.6503186656977851,
+        "p_val": 0.7765557388494603,
+        "kw_h": 9.283278688524575,
+        "kw_p": 0.5957622555669844,
+        "eta2": 0.12970173483668973,
+        "r2_sentiment": 0.06174894103289641
+      },
+      {
+        "name": "Residual after Negative Sentiment",
+        "f_stat": 0.7186141911345157,
+        "p_val": 0.7150366898807585,
+        "kw_h": 9.751475409836075,
+        "kw_p": 0.552871070201449,
+        "eta2": 0.14139684444717673,
+        "r2_sentiment": 0.03020022019569435
+      },
+      {
+        "name": "Residual after All Sentiment (Pos+Neg+Comp)",
+        "f_stat": 0.6865045709365462,
+        "p_val": 0.7443409350258987,
+        "kw_h": 9.33442622950821,
+        "kw_p": 0.5910531155386844,
+        "eta2": 0.13593770546813538,
+        "r2_sentiment": 0.06372236094396622
+      }
+    ],
+    "prospective_n120_nli": [
+      {
+        "name": "Raw PC1",
+        "f_stat": 2.5522449283444417,
+        "p_val": 0.0034295882760235936,
+        "kw_h": 32.50570776255711,
+        "kw_p": 0.05199359352972554,
+        "eta2": 0.5173612098455148
+      },
+      {
+        "name": "Residual after Compound Sentiment",
+        "f_stat": 2.1025554485246776,
+        "p_val": 0.016191057947900253,
+        "kw_h": 31.63211567732111,
+        "kw_p": 0.06376225329731627,
+        "eta2": 0.46895322334474704,
+        "r2_sentiment": 0.12953448490550112
+      },
+      {
+        "name": "Residual after Negative Sentiment",
+        "f_stat": 1.9290083197812284,
+        "p_val": 0.02933546408118562,
+        "kw_h": 30.283751902587483,
+        "kw_p": 0.0864326217950892,
+        "eta2": 0.4475698164609454,
+        "r2_sentiment": 0.19956944237404484
+      },
+      {
+        "name": "Residual after All Sentiment (Pos+Neg+Comp)",
+        "f_stat": 1.836521100752133,
+        "p_val": 0.04012693617358032,
+        "kw_h": 29.140867579908644,
+        "kw_p": 0.11066039510188473,
+        "eta2": 0.43545528115802,
+        "r2_sentiment": 0.2532167532753202
+      }
+    ]
+  },
+  "validated_cca": {
+    "prospective_n120_deberta": {
+      "label": "Prospective N=120 (DeBERTa)",
+      "in_sample_r_canon": 0.63051,
+      "perm_null_mean": 0.445884,
+      "perm_null_q95": 0.526966,
+      "perm_p_value": 0.000999000999000999,
+      "out_of_sample_cv_mean_r": 0.364353,
+      "out_of_sample_cv_std_r": 0.080295,
+      "out_of_sample_cv_95ci": [
+        0.211547,
+        0.487818
+      ],
+      "within_fold_test_mean_r": 0.395324
+    },
+    "controlled_n60_deberta": {
+      "label": "Controlled Balanced N=60 (DeBERTa)",
+      "in_sample_r_canon": 0.698233,
+      "perm_null_mean": 0.621512,
+      "perm_null_q95": 0.720194,
+      "perm_p_value": 0.113886,
+      "out_of_sample_cv_mean_r": 0.272553,
+      "out_of_sample_cv_std_r": 0.08422,
+      "out_of_sample_cv_95ci": [
+        0.105258,
+        0.432078
+      ],
+      "within_fold_test_mean_r": 0.284856
+    },
+    "clean_n83_deberta": {
+      "label": "Clean N=83 (DeBERTa)",
+      "in_sample_r_canon": 0.638364,
+      "perm_null_mean": 0.530036,
+      "perm_null_q95": 0.61965,
+      "perm_p_value": 0.024975,
+      "out_of_sample_cv_mean_r": 0.104851,
+      "out_of_sample_cv_std_r": 0.099164,
+      "out_of_sample_cv_95ci": [
+        -0.05366,
+        0.288811
+      ],
+      "within_fold_test_mean_r": 0.12316
+    },
+    "prospective_n120_minilm": {
+      "label": "Prospective N=120 (MiniLM)",
+      "in_sample_r_canon": 0.638335,
+      "perm_null_mean": 0.44454,
+      "perm_null_q95": 0.522023,
+      "perm_p_value": 0.000999000999000999,
+      "out_of_sample_cv_mean_r": 0.456353,
+      "out_of_sample_cv_std_r": 0.036662,
+      "out_of_sample_cv_95ci": [
+        0.381213,
+        0.504336
+      ],
+      "within_fold_test_mean_r": 0.476027
+    }
+  }
+}

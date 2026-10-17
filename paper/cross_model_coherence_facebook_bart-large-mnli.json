@@ -1,0 +1,25 @@
+{
+  "model_name": "facebook/bart-large-mnli",
+  "corpus_path": "D:\\belief-transformer\\V3\\data\\controlled_N60_corpus.jsonl",
+  "embedding_shape": [
+    60,
+    8,
+    1024
+  ],
+  "results": {
+    "pc1_explained_variance_ratio": 0.09895698726177216,
+    "observed_coherence": {
+      "ideology": 0.1013675249206634,
+      "structure": 0.02633869439263695,
+      "random": -0.024284370218603208
+    },
+    "exact_null": {
+      "total_subsets": 735471,
+      "upper_tail_count_ge_observed": 10,
+      "exact_upper_tail_probability": 1.3596729170830664e-05,
+      "null_mean": 0.0034138982728240917,
+      "null_min": -0.05852550341348563,
+      "null_max": 0.11250491333859307
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "n_articles": 60,
+  "n_observers": 8,
+  "embedding_dim": 1536,
+  "mean_inter_observer_dispersion": 183.26394653320312,
+  "total_var_raw": 197.80279541015625,
+  "total_var_consensus": 14.538853645324707,
+  "observer_collapse_pct": 92.64982604980469,
+  "var_1d": 11.782448768615723,
+  "projection_collapse_pct": 18.958885192871094,
+  "cumulative_collapsed_pct": 94.0433349609375,
+  "cumulative_retained_pct": 5.956664085388184
+}

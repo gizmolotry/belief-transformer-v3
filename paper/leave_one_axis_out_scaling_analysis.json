@@ -1,0 +1,248 @@
+{
+  "fresh_unseen_N120": {
+    "dataset": "Fresh_Unseen_N120",
+    "n_samples": 120,
+    "full_8_axis_pc1_evr": 0.6691423058509827,
+    "full_8_axis_pc2_evr": 0.17866109311580658,
+    "diagnostic_conclusion": "BANK-LEVEL LATENT CONSTRUCT",
+    "loao_summary": {
+      "min_r": 0.9682831764221191,
+      "mean_r": 0.9919322729110718,
+      "std_r": 0.009501671321161502,
+      "min_rho": 0.9559483297451211,
+      "mean_rho": 0.9899020765330925,
+      "max_rank_shift": 45
+    },
+    "ltao_summary": {
+      "min_r": 0.8981663584709167,
+      "mean_r": 0.9814278270517077,
+      "std_r": 0.020503887668452587
+    },
+    "half_split_summary": {
+      "min_r": 0.7181706428527832,
+      "mean_r": 0.9478293240070343,
+      "std_r": 0.04814374870211962
+    },
+    "loao_per_axis": [
+      {
+        "dropped_axis_index": 0,
+        "dropped_axis_label": "1_Israeli_Actions",
+        "pc1_evr_without_axis": 0.6770288944244385,
+        "delta_pc1_evr": 0.00788658857345581,
+        "pearson_r_with_full": 0.9938350319862366,
+        "pearson_p": 1.430703258877162e-114,
+        "spearman_rho_with_full": 0.9940620876449752,
+        "spearman_p": 1.5725236971237626e-115,
+        "max_rank_shift": 17,
+        "subspace_angle_deg": 21.228694348506323
+      },
+      {
+        "dropped_axis_index": 1,
+        "dropped_axis_label": "2_Palestinian_Framing",
+        "pc1_evr_without_axis": 0.6441073417663574,
+        "delta_pc1_evr": -0.025034964084625244,
+        "pearson_r_with_full": 0.988295316696167,
+        "pearson_p": 3.263614739453021e-98,
+        "spearman_rho_with_full": 0.9870685464268351,
+        "spearman_p": 1.1282041159454469e-95,
+        "max_rank_shift": 27,
+        "subspace_angle_deg": 29.402163576906922
+      },
+      {
+        "dropped_axis_index": 2,
+        "dropped_axis_label": "3_Proportionality",
+        "pc1_evr_without_axis": 0.6769999265670776,
+        "delta_pc1_evr": 0.00785762071609497,
+        "pearson_r_with_full": 0.9682831764221191,
+        "pearson_p": 6.398742956928288e-73,
+        "spearman_rho_with_full": 0.9559483297451211,
+        "spearman_p": 1.1699563231937707e-64,
+        "max_rank_shift": 45,
+        "subspace_angle_deg": 32.6570532540052
+      },
+      {
+        "dropped_axis_index": 3,
+        "dropped_axis_label": "4_Resistance_vs_Terrorism",
+        "pc1_evr_without_axis": 0.6669420003890991,
+        "delta_pc1_evr": -0.002200305461883545,
+        "pearson_r_with_full": 0.993358314037323,
+        "pearson_p": 1.1419684212192454e-112,
+        "spearman_rho_with_full": 0.9905271199388846,
+        "spearman_p": 1.3203868050826326e-103,
+        "max_rank_shift": 23,
+        "subspace_angle_deg": 22.844197871765406
+      },
+      {
+        "dropped_axis_index": 4,
+        "dropped_axis_label": "5_Occupation",
+        "pc1_evr_without_axis": 0.702909529209137,
+        "delta_pc1_evr": 0.0337672233581543,
+        "pearson_r_with_full": 0.9973369240760803,
+        "pearson_p": 4.909624982906448e-136,
+        "spearman_rho_with_full": 0.996965067018543,
+        "spearman_p": 1.084006179841838e-132,
+        "max_rank_shift": 19,
+        "subspace_angle_deg": 12.031209298206571
+      },
+      {
+        "dropped_axis_index": 5,
+        "dropped_axis_label": "6_Civilian_Casualties",
+        "pc1_evr_without_axis": 0.6757945418357849,
+        "delta_pc1_evr": 0.006652235984802246,
+        "pearson_r_with_full": 0.9983599185943604,
+        "pearson_p": 1.916848178097538e-148,
+        "spearman_rho_with_full": 0.9982846030974372,
+        "spearman_p": 2.704630802134488e-147,
+        "max_rank_shift": 8,
+        "subspace_angle_deg": 13.586285216168323
+      },
+      {
+        "dropped_axis_index": 6,
+        "dropped_axis_label": "7_Historical_Context",
+        "pc1_evr_without_axis": 0.6742201447486877,
+        "delta_pc1_evr": 0.005077838897705078,
+        "pearson_r_with_full": 0.9978206753730774,
+        "pearson_p": 3.6352814674138496e-141,
+        "spearman_rho_with_full": 0.9979304118341549,
+        "spearman_p": 1.7272562759489955e-142,
+        "max_rank_shift": 9,
+        "subspace_angle_deg": 14.905013792600414
+      },
+      {
+        "dropped_axis_index": 7,
+        "dropped_axis_label": "8_International_Law",
+        "pc1_evr_without_axis": 0.7001500129699707,
+        "delta_pc1_evr": 0.031007707118988037,
+        "pearson_r_with_full": 0.9981688261032104,
+        "pearson_p": 1.2711768517154702e-145,
+        "spearman_rho_with_full": 0.9984304465587887,
+        "spearman_p": 1.436128534170856e-149,
+        "max_rank_shift": 7,
+        "subspace_angle_deg": 10.461402241957737
+      }
+    ]
+  },
+  "controlled_canonical_N60": {
+    "dataset": "Controlled_Canonical_N60",
+    "n_samples": 60,
+    "full_8_axis_pc1_evr": 0.5791386961936951,
+    "full_8_axis_pc2_evr": 0.20171846449375153,
+    "diagnostic_conclusion": "ITEM-DRIVEN CONSTRUCT",
+    "loao_summary": {
+      "min_r": 0.9459483623504639,
+      "mean_r": 0.9874502047896385,
+      "std_r": 0.016571330685927543,
+      "min_rho": 0.9333703806612949,
+      "mean_rho": 0.9850375104195612,
+      "max_rank_shift": 19
+    },
+    "ltao_summary": {
+      "min_r": 0.8814244270324707,
+      "mean_r": 0.9710131138563156,
+      "std_r": 0.028465423207998528
+    },
+    "half_split_summary": {
+      "min_r": 0.5842926502227783,
+      "mean_r": 0.9180850071566445,
+      "std_r": 0.0646027450231768
+    },
+    "loao_per_axis": [
+      {
+        "dropped_axis_index": 0,
+        "dropped_axis_label": "1_Israeli_Actions",
+        "pc1_evr_without_axis": 0.5647563934326172,
+        "delta_pc1_evr": -0.01438230276107788,
+        "pearson_r_with_full": 0.991367757320404,
+        "pearson_p": 6.996559641441247e-53,
+        "spearman_rho_with_full": 0.9884412336760213,
+        "spearman_p": 3.1954815483779697e-49,
+        "max_rank_shift": 11,
+        "subspace_angle_deg": 24.184657457245965
+      },
+      {
+        "dropped_axis_index": 1,
+        "dropped_axis_label": "2_Palestinian_Framing",
+        "pc1_evr_without_axis": 0.5564033389091492,
+        "delta_pc1_evr": -0.0227353572845459,
+        "pearson_r_with_full": 0.9876102209091187,
+        "pearson_p": 2.3661093056329913e-48,
+        "spearman_rho_with_full": 0.9843845512642403,
+        "spearman_p": 1.8586050881787104e-45,
+        "max_rank_shift": 10,
+        "subspace_angle_deg": 27.483668383731164
+      },
+      {
+        "dropped_axis_index": 2,
+        "dropped_axis_label": "3_Proportionality",
+        "pc1_evr_without_axis": 0.6148343086242676,
+        "delta_pc1_evr": 0.03569561243057251,
+        "pearson_r_with_full": 0.9459483623504639,
+        "pearson_p": 4.763265611467981e-30,
+        "spearman_rho_with_full": 0.9333703806612949,
+        "spearman_p": 1.724747580135868e-27,
+        "max_rank_shift": 19,
+        "subspace_angle_deg": 33.33989169645124
+      },
+      {
+        "dropped_axis_index": 3,
+        "dropped_axis_label": "4_Resistance_vs_Terrorism",
+        "pc1_evr_without_axis": 0.5743361115455627,
+        "delta_pc1_evr": -0.004802584648132324,
+        "pearson_r_with_full": 0.9830151200294495,
+        "pearson_p": 2.0885872867773773e-44,
+        "spearman_rho_with_full": 0.9838288413448182,
+        "spearman_p": 5.0852213127692216e-45,
+        "max_rank_shift": 13,
+        "subspace_angle_deg": 26.190511495134263
+      },
+      {
+        "dropped_axis_index": 4,
+        "dropped_axis_label": "5_Occupation",
+        "pc1_evr_without_axis": 0.6217365860939026,
+        "delta_pc1_evr": 0.04259788990020752,
+        "pearson_r_with_full": 0.9984284043312073,
+        "pearson_p": 2.712344616734281e-74,
+        "spearman_rho_with_full": 0.9975548763545431,
+        "spearman_p": 9.87571782338573e-69,
+        "max_rank_shift": 6,
+        "subspace_angle_deg": 7.85054377891309
+      },
+      {
+        "dropped_axis_index": 5,
+        "dropped_axis_label": "6_Civilian_Casualties",
+        "pc1_evr_without_axis": 0.5930913090705872,
+        "delta_pc1_evr": 0.01395261287689209,
+        "pearson_r_with_full": 0.9974112510681152,
+        "pearson_p": 5.159500201539416e-68,
+        "spearman_rho_with_full": 0.9974437343706587,
+        "spearman_p": 3.5790204076854924e-68,
+        "max_rank_shift": 5,
+        "subspace_angle_deg": 12.391106998822467
+      },
+      {
+        "dropped_axis_index": 6,
+        "dropped_axis_label": "7_Historical_Context",
+        "pc1_evr_without_axis": 0.5843178629875183,
+        "delta_pc1_evr": 0.005179166793823242,
+        "pearson_r_with_full": 0.9972555041313171,
+        "pearson_p": 2.800430022906557e-67,
+        "spearman_rho_with_full": 0.9976660183384275,
+        "spearman_p": 2.566400552615227e-69,
+        "max_rank_shift": 5,
+        "subspace_angle_deg": 14.03787503546211
+      },
+      {
+        "dropped_axis_index": 7,
+        "dropped_axis_label": "8_International_Law",
+        "pc1_evr_without_axis": 0.6165568232536316,
+        "delta_pc1_evr": 0.03741812705993652,
+        "pearson_r_with_full": 0.9985650181770325,
+        "pearson_p": 1.944713235610692e-75,
+        "spearman_rho_with_full": 0.9976104473464854,
+        "spearman_p": 5.074032592424273e-69,
+        "max_rank_shift": 7,
+        "subspace_angle_deg": 7.579209878530061
+      }
+    ]
+  }
+}

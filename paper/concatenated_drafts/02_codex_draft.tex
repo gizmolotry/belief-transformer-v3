@@ -1,0 +1,420 @@
+% ======================================================================
+% SECTION: 01_introduction.tex
+% ======================================================================
+\section{Introduction and Literature Review}
+\label{sec:introduction-literature}
+
+\subsection{The geometric fiction of objective neutrality}
+
+This paper develops a multistage, zero-shot Natural Language Inference (NLI) architecture for large-scale classification in which a Riemannian metric provides a formal language for semantic geometry. The geometric language is not ornamental. It permits disagreement to be represented through locally varying distances and curvature rather than reduced at the outset to a single scalar label. The motivating problem is political, technical, and epistemological at once. The Overton Window names the range of positions that a public at a particular time treats as politically discussable \citep{overton2019}; the boundaries of that range are neither timeless nor independent of the institutions that measure and publicize it. Meanwhile, the V-Dem Institute's 2023 report identifies increasing political polarization in approximately one quarter of countries, about half of them established democracies \citep{vdem2023}. In that setting, the categories through which news and public argument are made intelligible are not secondary bookkeeping. Classification is the ``cold-start fuel'' driving the artificial-intelligence systems on which contemporary information infrastructures increasingly rely.
+
+The central thesis of this review is that objective neutrality, when represented as an unmarked center of a semantic coordinate system, is a \emph{geometric fiction}. The word \emph{fiction} does not mean that every description is false, that evidence has no force, or that there are no more and less responsible journalistic claims. It means that a coordinate origin, an axis, a metric, and an aggregation rule are products of a representational frame, even when an interface presents them as properties of the represented object itself. A center is always a center with respect to some space of alternatives, some weighting of observations, and some rule of distance. Erasing those dependencies does not remove perspective; it converts a marked perspective into an apparently natural geometry.
+
+This argument rejects two symmetrical reductions. The first is pure relativism: the inference that, because semantic judgment is framed, all interpretations are interchangeable. The second is unity-focused agreement: the inference that responsible classification must discover or manufacture one canonical label toward which divergent judgments should converge. The proposed alternative is interperspectival. Complex vector embeddings are used not only to plot a general shape of bias but also to analyze its parts as physical properties: distances, directions, local deformations, densities, and paths through a manifold. The eventual methodology therefore follows several vertical tracks. It conditions semantic measurements on declared hypotheses, compares the resulting local geometries, and studies simulated particle movement across the manifold in order to make salient inferences about the perspectival boundaries that define discourse. ``Physical'' here identifies a mathematical mode of inquiry, not a claim that political meaning is literally a material particle system.
+
+The literature review proceeds from a concrete case to a formal proposal. Ground News is the primary case because it makes a familiar promise particularly visible: it contextualizes coverage by locating news publishers along a left--center--right scale. We describe this as \emph{horizontal expansion}, since information about an article is enlarged by attaching metadata drawn from a source-level classification system. We then contrast it with a \emph{vertical} approach in which the same content is repeatedly interrogated under explicit observer or hypothesis conditions and the relations among those conditioned representations become the object of analysis. The contrast is not between a commercially impure system and a view from nowhere. Prompts, hypotheses, model weights, sampling procedures, and metrics are also interventions. The difference is that the vertical program keeps those interventions indexed and available for comparison instead of allowing one of them to disappear into a global center.
+
+This distinction provides a bridge among work that is too often separated into technical and philosophical domains. Research in perspectivist NLP establishes that annotator disagreement can be evidence rather than error. Work in journalism and democratic theory establishes that pluralism cannot simply be equated with civility or consensus. Kuhn, Goodman, Bowker and Star, and Wittgenstein show why measurement cannot be understood as the passive registration of a ready-made order. Topos theory and Homotopy Type Theory (HoTT), approached here as formal inspirations and a research program rather than as turnkey machine-learning algorithms, suggest ways to speak rigorously about context-indexed objects, compatible local descriptions, and paths between interpretations. Finally, the Johnson--Lindenstrauss lemma supplies a quantitative distortion budget for asking how much dimension is needed to preserve a finite relational configuration. Together these resources sharpen the paper's governing question: how can a classifier retain factual constraint while refusing to reify one projection of discourse as its neutral, Platonic form?
+
+\subsection{Ground News and horizontal expansion}
+
+Ground News is a private news-aggregation platform organized around reducing the effects of media bias. Its interface groups reporting on a topic and displays, among other contextual fields, the distribution of sources assigned to positions on a political bias scale. Its advertising consequently presents politically plural information streams as a means of improving contemporary knowledge and critical judgment. Bias is easily read within this product grammar as a negatively coded deviation from neutrality: left and right appear as departures from a perceived middle, while the middle occupies a visually and linguistically privileged location. Ground News's own methodology is more careful than that simplified reading. Its rating-system explanation states that a ``Center'' rating does not by itself mean that a source is balanced, unbiased, or neutral \citep{groundnewsrating}. That disclaimer matters, yet it does not dissolve the geometric issue. A centered, one-dimensional taxonomy continues to structure the display even when the platform denies that the center guarantees epistemic virtue.
+
+Operationally, the displayed bias rating is a publication-level classification rather than an article-level semantic judgment. Ground News explains that its ratings draw on three external assessment organizations: AllSides, Ad Fontes Media, and Media Bias/Fact Check \citep{groundnewsrating}. AllSides in turn uses, among other procedures, multiperson blind bias surveys to estimate source leanings \citep{allsidesmethod}. The practical benefit is plain. A reader can quickly inspect whether a story is being covered by publishers that the rating system has classified differently, discover outlets outside an habitual information stream, and ask why coverage volume or framing varies. Nothing in the present critique requires denying that such a product can increase awareness or sometimes reduce polarization.
+
+The relevant issue is the unit and provenance of the rating. Let \(a\in\mathcal{A}\) be an article, let \(p(a)\in\mathcal{P}\) denote its publisher, and let
+\[
+    m\colon \mathcal{P}\longrightarrow\mathcal{M}
+\]
+be a metadata map assembled through a prior rating process. A horizontally expanded record has the form
+\begin{equation}
+    H(a)=\bigl(a,m(p(a))\bigr)
+    \in \mathcal{A}\times\mathcal{M},
+    \label{eq:horizontal-expansion}
+\end{equation}
+and a displayed bias category or score may be idealized as
+\begin{equation}
+    b_{\mathrm{hor}}(a)=\psi\!\left(m(p(a))\right),
+    \label{eq:horizontal-score}
+\end{equation}
+where \(\psi\) translates publisher metadata into an interface category. Equation~\eqref{eq:horizontal-expansion} is an \emph{extrinsic build-up}: the record becomes wider because a new field is appended, not because a semantic property has been inferred from the linguistic signal of \(a\). The publisher identifier and its established profile exist before and outside the article's particular claims. In this precise sense, the explanatory metadata lies on a separate informational channel from the content it contextualizes.
+
+Calling the system horizontal should not be inflated into the inaccurate claim that Ground News performs no processing of content anywhere in its aggregation service. Aggregation, story clustering, headline comparison, and other product functions may require content processing. The narrower, defensible claim is that the political bias badge shown for an item is inherited from a source-level, exogenous classification rather than produced as a direct semantic judgment of that article. This qualification preserves what is valuable in the student's original objection. The user encounters article \(a\), but the politically salient coordinate is principally a property assigned to \(p(a)\). A source can publish heterogeneous genres, authors, arguments, and departures from its editorial norm; nevertheless, those article-level variations are not the unit represented by the displayed publisher rating.
+
+Horizontal measurement is therefore not uniquely a Ground News flaw. Ground News is important because it signals a broad methodological tendency in anti-bias and recommender systems: uncertainty about content is managed by importing a prior classificatory framework, after which the framework is treated as context for the object rather than as another object requiring context. The architecture connects data points by lines drawn at a global, source-classification level. This can be useful, but it also raises the question posed by \citet{bowkerstar1999}: do classification systems merely describe a social reality, or do their categories, standards, and residual cases actively organize it? Once a platform formalizes a middle, its taxonomy influences what readers can readily perceive as a difference, an extreme, an omission, or a bridge.
+
+The proposed vertical alternative changes the unit of analysis from the publisher profile to a set of content-conditioned relations. Let \(x\) denote the article text or a structured segment of it, let \(o\in\mathcal{O}\) index an observer condition, and let \(h_o\) be the explicit NLI hypothesis or framing intervention associated with that condition. The basic representation is
+\begin{equation}
+    z_o(x)=E_\theta(x;h_o)\in\mathbb{R}^{d},
+    \label{eq:observer-embedding}
+\end{equation}
+where \(E_\theta\) is a model with parameters \(\theta\). The vertical record is not \(x\) plus a settled label about its source. It is the family
+\begin{equation}
+    V(x)=\left\{z_o(x),\;r_o(x,h_o),\;g_o\right\}_{o\in\mathcal{O}},
+    \label{eq:vertical-record}
+\end{equation}
+where \(r_o\) records an observer-conditioned semantic relation and \(g_o\) may specify an observer-indexed metric or local metric tensor. The analytical signal lies both in each section and in the transformations among them. Verticality thus means repeated, declared, content-conditioned probing of one input and examination of depth across perspectives. It does not mean access to an uncontaminated essence of the text.
+
+\subsection{Measurement as an active constituent of worlds}
+
+The journalistic debate over objectivity acquires direct philosophical force once classification is rendered as geometry. Kuhn's account of scientific revolutions denies that observation can be cleanly separated from the paradigms that determine which problems, instruments, variables, and operations count as scientifically significant \citep{kuhn1962}. Measurement on this account is not an arbitrary imposition, but neither is it a transparent window. A paradigm trains attention, supplies exemplars, and establishes the comparisons through which a datum becomes a datum. Kuhn should not be read as totally rejecting reality or as claiming that recalcitrant evidence never constrains inquiry. His more useful lesson here is that there is no framework-free observation language in which rival classificatory systems can be compared without remainder.
+
+Goodman's theory of worldmaking intensifies the constitutive point. Worlds are made through symbolic practices of composition and decomposition, weighting, ordering, deletion and supplementation, and deformation \citep{goodman1978}. The stars offer the student's most vivid image. Luminous bodies may exist independently of a diagram, but a constellation is not simply waiting in the sky as a naturally bounded individual. It is achieved by selecting points, drawing relations, naming a figure, transmitting a convention, and learning to see according to it. Measurement similarly makes sets, saliences, and continuities. A scale does not create the material it encounters ex nihilo, yet it helps constitute the object \emph{as measured}: as hot or cold relative to calibration, as left or right relative to an axis, or as central relative to a distribution.
+
+The original draft describes Goodman's position as a kind of ``mereological nihilism.'' That phrase can be retained only as a strong interpretation of worldmaking, not as a settled description of Goodman's view. His pluralist or irrealist thesis is not the simple claim that there are no objects, parts, or constraints. It is that objects and kinds are available under versions whose modes of composition are not uniquely dictated by a bare, versionless world. The constellation image accordingly avoids two errors. It does not say that the stars vanish when a culture redraws the figure; and it does not say that every grouping is equally serviceable for navigation, astronomy, ritual, or politics. Constitution is not unlimited license.
+
+Bowker and Star carry this point into infrastructures. Categories distribute visibility, labor, resources, and accountability; they often become most powerful when their historical choices disappear into routine operation \citep{bowkerstar1999}. The apparently descriptive middle of a bias scale therefore has practical consequences. It establishes adjacency, measures deviation, and collects heterogeneous cases under a shared name. These operations can stabilize coordination, but their stability should not be confused with neutrality. A classificatory framework both reveals and produces structure: it discloses patterns within its terms while helping make those terms socially consequential.
+
+Wittgenstein offers a related limit on the fantasy of a complete, unpositioned representation. In the \emph{Tractatus}, he writes that ``the subject does not belong to the world: rather, it is a limit of the world'' \citep[\S5.632]{wittgenstein1922}. The proposition need not be imported wholesale as a theory of NLP. Its value here is diagnostic. The standpoint from which a world is projected cannot be treated straightforwardly as just another already-neutral object inside the completed projection. Every map has a relation to its maker, coordinate choice, and purpose. When those conditions are suppressed, the map's shadow can be mistaken for the thing's total form.
+
+This is the geometric fiction in its mature form. Observers cast light and encounter shadows. Principal Component Analysis makes the image literal by projecting a high-dimensional configuration onto directions selected for variance. A political scale performs an analogous, though not identical, act of selection. Projection is unavoidable in any finite interface, so the objection cannot be that Ground News projects while some alternative does not. The objection arises after projection, when one historically produced shadow is reified as a Platonic view of the entire dimension. Participants in an AllSides blind bias survey each cast their own light and shadow; their responses can disclose an approximate shape of bias over time. Yet an aggregate source rating hides many of the paths by which that approximation was made. Once it is attached to an article and then displayed on a single axis, the observations undergo a double collapse: first from a distribution of upstream judgments into publisher metadata, and second from that metadata into a one-dimensional approximation.
+
+Kuhn, Goodman, Bowker and Star, and Wittgenstein thereby support a concatenatable but limited inference. Middle positions are not intrinsically neutral points. They are effects of a representational frame applied to an object under specific social and mathematical operations. This conclusion does not invalidate measurement; it makes measurements answerable for the worlds they help constitute. Nor does it prohibit a global description. It requires that any proposed global description establish how local perspectives are related, which invariances it preserves, and why its gluing rule deserves authority.
+
+\subsection{Disagreement as semantic evidence}
+
+Perspectivist NLP supplies an empirical and methodological counterpart to this philosophy. Its central reversal is to treat disagreement as a signal in its own right rather than automatically as noise around a latent gold label. \citet{frenda2024} survey approaches that preserve annotator identities, perspectives, or label distributions instead of collapsing subjective judgments into a single canonical target. Interpretive diversity is then not merely a nuisance to be averaged away; it may disclose ambiguity, contested concepts, differential experience, or multiple coherent readings. \citet{xujurgens2026} extend this orientation by arguing that disagreement is widespread across NLP tasks and requires modeling and evaluation practices designed for it, rather than metrics that treat consensus as the sole endpoint.
+
+Natural Language Inference is especially useful because it localizes judgment in a relation. A familiar NLI task asks whether a premise entails, contradicts, or is neutral with respect to a hypothesis. It might appear that careful training and precise instructions should remove variance. Yet \citet{pavlick2019} show that inherent disagreements remain in human textual inferences even under controlled annotation conditions. The same linguistic input can support systematically different judgments because annotators import distinct assumptions about quantification, typicality, reference, world knowledge, and pragmatic context. These outputs need not be random. They can be internally coherent relative to different interpretive frames.
+
+More detailed annotation rules can raise agreement scores by narrowing the assumptions annotators are permitted to use, but increased agreement does not automatically imply increased annotation quality. CrowdTruth begins from this problem and from the observation that forcing workers to mimic a presumed expert answer can conceal the semantic variation the task was meant to measure \citep{aroyo2015}. In the student's apt phrase, an over-specified protocol may amount to \emph{perfuming the agreement scores}. Workers appear to converge because the examiner's assumptions have been installed in the instructions. The resulting dataset may be more regular while becoming less candid about why reasonable interpreters initially differed.
+
+CrowdTruth is consequently a foundation for the system proposed in this paper. It rejects the ``golden middle'' as the automatic truth of human annotation and jointly models contributions from workers, media units, and annotation choices. That move demonstrates that disagreement can be structured and that the quality of a label cannot always be separated from the pattern of workers who supply it. It also opens an important path beyond label aggregation. A histogram of votes retains more information than a majority label, but it still does not necessarily represent the geometry among interpretations: which judgments are close, which assumptions transform one into another, where paths are discontinuous, and which minority view remains stable under perturbation.
+
+The present project therefore attempts to begin where CrowdTruth ends. Aroyo and Welty's provocative tendency to associate truth outside mathematics with agreement or consensus is powerful as a critique of naively objective gold labels, but it risks preserving the very dichotomy the present system seeks to escape: objective physics on one side and subjective sociology on the other. NLI provides another route. Semantic relations can be modeled as artifacts of the encounter among an input \(x\), a structured hypothesis \(h_o\), a model \(E_\theta\), and an observer-indexed measurement rule. The output is neither a feature discovered without mediation nor merely a free opinion. It is a reproducible relation produced under declared conditions.
+
+There is also a curatorial limit within disagreement-aware pipelines. CrowdTruth-style analyses may distinguish disagreement attributed to ambiguous media, poor task design, ontological mismatch, spam, or low-quality annotation. Such distinctions can be indispensable for data collection. Nevertheless, as soon as some sources of variance are classified as useful signal and others as noise, disagreement has already passed through a heuristic sorting method. The preserved signal is curated, not raw. A response diagnosed as task failure may instead reveal that the ontology offered by the task does not fit the text; an apparent outlier may express a minority frame absent from the instructions. The point is not that filtering is illegitimate. It is that filtering must itself become an observable operation in the semantic geometry.
+
+This recasts agreement as something to be modeled after, rather than before, its existence is established. If several observers yield nearby embeddings or mutually transportable judgments, the local coherence is evidence. If their results diverge along stable directions, that structure is also evidence. If an interpretation disappears under small prompt changes, its instability is evidence of another kind. The system thereby remains critical of forced consensus without presuming that plurality is formless. Constraints arise from the text, from the structured relations of NLI, from repeatability, and from the geometry of transformations among frames. Perspectivism becomes a disciplined account of conditioned invariance, not a declaration that all labels are equal.
+
+\subsection{Facts, civility, pluralism, and democratic conflict}
+
+Journalistic ethics places a necessary boundary on any enthusiasm for interpretive plurality. The International Federation of Journalists' Global Charter requires fidelity to facts that are known and makes factual responsibility a basic professional obligation \citep{ifj2019}. Observer dependence cannot license fabrication, erase the difference between a supported and unsupported report, or turn every politically useful assertion into an equally valid world. A perspectival classifier should expose how facts are selected, related, emphasized, and inferred while continuing to distinguish those operations from inventing evidence. The rejection of a neutral center is therefore not a rejection of factual constraint.
+
+The harder question is whether consensus-oriented presentation is identical with pluralism. Ground News's left--right comparison can plausibly help readers encounter unfamiliar sources and see coverage gaps. At the same time, the spectrum introduces axial bias and depends on a methodology that most users cannot reconstruct from the display alone. More fundamentally, bias-centered aggregation tends to produce a managed, civility-oriented discourse. Rival claims are arranged around a stable midpoint, and political maturity can come to look like equal distance from the rated poles. That arrangement is a substantive moral and political choice, not a merely technical convenience.
+
+Reiheld's analysis of civility clarifies the risk. Civility may serve the functional purpose of making society work, or it may embody respect for persons; these purposes can overlap but are not identical \citep{reiheld2013}. An exceptionless demand for civility can turn into a simplistic functional relativism when the maintenance of polite interaction takes precedence over contesting beliefs that threaten another person's viable form of life. Berlin's value pluralism treats human differences as constitutive rather than accidental and draws liberal consequences of toleration from that plurality \citep{berlin1998}. Pye likewise links pluralistic democracy, particularly where rival moral conceptions meet, to demanding practices of civility \citep{pye1999}. Yet respect for the person who holds a belief does not require representing every consequence of that belief as harmless, nor does empathy eliminate the need for judgment.
+
+This is the tension Reiheld names as exceptionless civility: reluctance to impose any value beyond a unifying imperative to keep discourse functioning. The apparent neutrality of the middle can reproduce that reluctance geometrically. Harm, exclusion, institutional power, and the practical incompatibility of forms of life may be compressed into symmetrical distances from center. A platform may then offer plural sources while retaining a single normative topology in which disagreement is valuable primarily because it can be harmonized.
+
+Democratic theory gives reason to resist that reduction. Conflict is not necessarily corrosion of a political system; it can be a constitutive process that requires institutions and controlled procedures rather than elimination \citep{swanstromweissmann2005}. \citet{mouffe2000} argues that a consensus pursued as an end in itself may neutralize antagonism and weaken democracy's capacity to stage real alternatives. A genuinely plural information system must therefore do more than place adversaries into adjacent bins. It should make visible what the disagreement is about, how perspectives transform the semantic field, where factual constraints hold, and which conflicts cannot be represented as mere symmetrical deviation.
+
+The project occupies a deliberately narrow passage between these concerns. Against relativism, it retains the IFJ's factual constraint and seeks structural stability across repeated measurements. Against forced unity, it refuses to define truth as whatever survives a global vote. Against exceptionless civility, it treats conflict as an analyzable feature of democratic discourse rather than a contaminant to be removed. Its aim is not a perfectly agnostic machine---which would repeat the fiction of a view from nowhere---but an accountable system whose observer conditions and geometric consequences can be inspected.
+
+\subsection{Observer-indexed geometry: from a center to relations}
+
+The formal consequence of this literature is that semantic geometry must be indexed. In Equation~\eqref{eq:observer-embedding}, \(h_o\) can encode a structured political hypothesis, interpretive role, or intervention; the index \(o\) may denote a human observer, an annotator population, a prompt-defined frame, or a reproducible analytical condition. These are not interchangeable social entities, and the methodology must record which meaning is intended. For fixed \(x\), the family \(\{z_o(x)\}_{o\in\mathcal{O}}\) makes observer dependence explicit. A relation such as entailment can likewise be written \(r_o(x,h_o)\), and distance can be indexed as
+\begin{equation}
+    d_o(x,x')=d_{g_o}\!\left(z_o(x),z_o(x')\right),
+    \label{eq:observer-distance}
+\end{equation}
+where \(g_o\) is a Riemannian metric tensor or a specified local approximation. Different observer conditions may preserve some relations while bending others. Localized curvature is precisely the resource that allows semantic disagreement to change across regions rather than being forced into a uniform global scale.
+
+Even the most familiar definition of a center reveals its dependence on a frame. Let \((\mathcal{M},g)\) be a metric or Riemannian space, let nonnegative weights satisfy \(\sum_{o\in\mathcal{O}}w_o=1\), and suppose a minimizer exists. The weighted Fr\'echet mean of the observer-conditioned representations is
+\begin{equation}
+    c_{w,g}(x)
+    =\operatorname*{arg\,min}_{y\in\mathcal{M}}
+      \sum_{o\in\mathcal{O}}w_o\,
+      d_g\!\left(y,z_o(x)\right)^2.
+    \label{eq:frechet-mean}
+\end{equation}
+The notation makes visible what a bare word like ``center'' conceals. The result depends on the observer family \(\mathcal{O}\), the weights \(w\), the representation map \(E_\theta\), the hypotheses \(h_o\), and the metric \(g\). On a curved manifold the minimizer can also be nonunique outside suitable convex neighborhoods. A center may be a useful estimator, but it is not an unmarked origin delivered by discourse itself.
+
+In a Euclidean chart, the information lost by reporting only the mean can be stated exactly. With \(\bar z=\sum_o w_o z_o\),
+\begin{equation}
+    \sum_o w_o\lVert z_o-\bar z\rVert_2^2
+    =\frac{1}{2}\sum_{o,o'}w_ow_{o'}
+      \lVert z_o-z_{o'}\rVert_2^2.
+    \label{eq:pairwise-dispersion}
+\end{equation}
+The left-hand side is weighted dispersion about the mean; the right-hand side is average pairwise disagreement. Replacing the family by \(\bar z\) discards exactly the dispersion encoded by those pairwise relations. Aggregation can therefore retain a location while destroying the shape that made the location meaningful. This is the algebraic version of the double-collapse objection: the shadow's centroid survives, while the competing lights and the distances among their shadows disappear.
+
+A one-dimensional political projection makes the loss more direct. Let \(u\in\mathbb{R}^d\) be a unit vector and define
+\begin{equation}
+    P_u(z)=u^{\mathsf T}z.
+    \label{eq:one-dimensional-projection}
+\end{equation}
+If \(z-z'\in\ker P_u\), then \(P_u(z)=P_u(z')\) even when \(\lVert z-z'\rVert_2>0\). For \(d>1\), the kernel has dimension \(d-1\): many distinct movements are invisible along the selected axis. Two articles can share a left--right coordinate while differing sharply in institutional trust, economic assumptions, affect, national identification, evidential style, or the hypotheses under which an NLI system treats their claims as entailed. The projection is not false because it is partial. It becomes misleading when its null directions are interpreted as an absence of difference.
+
+The proposed vertical analysis accordingly treats dimensions as relations discovered under interventions, not as a fixed list of political essences. It asks which changes in \(h_o\) move \(z_o(x)\), which preserve neighborhoods, where local metric tensors differ, and whether paths between interpretations encounter sharp boundaries. Simulated particle movement provides a later methodological means of probing these properties: path cost, attraction, resistance, and local curvature can make perspectival boundaries salient. The present introduction claims only the conceptual warrant for that strategy. It does not assume that the learned manifold is a complete ontology of politics or that a neural embedding transparently reproduces human understanding.
+
+\subsection{Topos-theoretic and HoTT-informed verticality}
+
+Topos theory gives a disciplined vocabulary for the transition from one global coordinate system to context-indexed descriptions. Let \(\mathcal{C}\) be a category of observer contexts whose morphisms represent admissible refinements, comparisons, or changes of frame. A presheaf
+\begin{equation}
+    \mathcal{E}\colon\mathcal{C}^{\mathrm{op}}
+    \longrightarrow \mathbf{Set}
+    \quad\text{or}\quad \mathbf{Vect}
+    \label{eq:presheaf}
+\end{equation}
+assigns a representation space \(\mathcal{E}(o)\) to each context and a restriction or transport map to each context morphism. An article can then have a local section \(s_o(x)\in\mathcal{E}(o)\) rather than one contextless coordinate. The maps record how much of a representation survives when the context is refined or translated. This is the formal analogue of refusing to detach a shadow from the light that produced it.
+
+The word \emph{sheaf} adds a nontrivial requirement. One must specify a coverage relation on \(\mathcal{C}\), identify compatible local sections on overlaps, and state a gluing condition under which those sections determine a global section \citep{maclanemoerdijk1992}. The present paper uses this language as an organizing research program. It does not claim that merely naming observers creates a sheaf, nor that topoi automatically yield an NLP algorithm. More importantly, observer dependence does not prove that no global section can exist. A defensible neutrality claim would require more than the existence of some aggregate section: it would require a canonically distinguished section invariant under the observer transformations judged relevant to the task. The vertical architecture does not assume such a privileged section in advance; it investigates compatibility and obstruction empirically.
+
+HoTT offers a complementary, not identical, inspiration. In its foundational interpretation, types behave like spaces, terms like points, and identity proofs like paths; identities between identities can in turn be represented by higher paths \citep{hottbook2013}. Applied cautiously to semantic modeling, this suggests that the relation between two interpretations need not be exhausted by declaring them equal or unequal. There may be multiple paths from one to another, corresponding to different sequences of hypothesis changes, and those paths may themselves agree or differ. The relevant object is thus not only a set of labels but a structured space of transformations.
+
+This analogy is philosophically attractive because it resists two flattenings at once. It need not force locally distinct representations into literal identity, and it need not treat every difference as incomparable. Transport along a declared path can preserve some structure while changing other structure. That is an apt formal ideal for interperspectival analysis. Nevertheless, the paper does not claim that its code implements genuine HoTT, that learned vector homotopies are automatically identity types, or that HoTT establishes the intrinsic observer dependence of language. Those would be category mistakes. Topos theory and HoTT discipline the questions asked of the architecture: What is local? What is transportable? Which diagrams commute? Which paths are distinct? When can local evidence be glued? The answers must still come from specified models, data, and tests.
+
+The vertical proposal can now be stated schematically:
+\begin{equation}
+    x
+    \longmapsto \{z_o(x)\}_{o\in\mathcal{O}}
+    \longmapsto \{\Phi(z_o(x))\}_{o\in\mathcal{O}}
+    \longmapsto
+    \bigl\{d_o,\,g_o,\,\text{transport and topological diagnostics}\bigr\},
+    \label{eq:vertical-pipeline}
+\end{equation}
+where \(\Phi\) is a declared feature map or projection. This pipeline remains conditioned by \(\theta\), by the choice of hypotheses, and by the geometry imposed or learned downstream. Its advantage is not metaphysical purity. Its advantage is traceability: the frame is a variable in the analysis, and agreement or disagreement appears as a relation among local measurements rather than as a source label appended before the article is examined.
+
+\subsection{Dimensional adequacy and the Johnson--Lindenstrauss lemma}
+
+The light-and-shadow metaphor raises a quantitative question. If all observation involves projection, how much dimension is required to retain the relations of interest? The Johnson--Lindenstrauss (JL) lemma provides a standard answer for finite Euclidean point configurations. Let \(0<\varepsilon<1\) and let \(X=\{x_1,\ldots,x_m\}\subset\mathbb{R}^{d}\). A useful explicit form states that when
+\begin{equation}
+    k\geq
+    4\left(\frac{\varepsilon^2}{2}-
+             \frac{\varepsilon^3}{3}\right)^{-1}\log m,
+    \label{eq:jl-dimension}
+\end{equation}
+there exists a map \(f\colon\mathbb{R}^{d}\to\mathbb{R}^{k}\) such that for all \(i,j\),
+\begin{equation}
+    (1-\varepsilon)\lVert x_i-x_j\rVert_2^2
+    \leq \lVert f(x_i)-f(x_j)\rVert_2^2
+    \leq (1+\varepsilon)\lVert x_i-x_j\rVert_2^2.
+    \label{eq:jl-guarantee}
+\end{equation}
+Thus \(k=O(\varepsilon^{-2}\log m)\) dimensions suffice to preserve all pairwise squared distances within controlled multiplicative distortion \citep{johnsonlindenstrauss1984,dasguptagupta2003}.
+
+The lemma is significant here as a distortion budget, not as a proof that meaning possesses one true Euclidean dimension. It says that a rich but finite configuration can often be compressed dramatically while retaining its pairwise geometry; it also says that the target dimension must scale with the number of points and the fidelity demanded if one wants a uniform worst-case guarantee. A generic one-dimensional center offers no comparable promise for many observer-conditioned semantic states. Equation~\eqref{eq:one-dimensional-projection} identifies the immediate kernel problem, while the JL bound supplies a principled benchmark for deciding whether a chosen representation is dimensionally adequate.
+
+Care is required around the word \emph{necessary}. JL is primarily a sufficient dimension-reduction theorem. It does not, by itself, prove that semantic content is intrinsically high-dimensional, that every dataset needs \(O(\varepsilon^{-2}\log m)\) coordinates, or that no specially structured political dataset can be represented faithfully on a line. Some configurations may have low intrinsic dimension. However, lower-bound work shows that the JL dependence is essentially optimal for linear dimensionality reduction in worst-case regimes \citep{larsennelson2016}. The qualified conclusion is therefore a geometry-preserving necessity: if one seeks a uniform low-distortion representation for arbitrary sufficiently rich finite configurations using linear maps, a target dimension on the JL scale can be unavoidable. One dimension cannot be presumed adequate before the configuration's structure is known.
+
+This qualification strengthens rather than weakens the critique of the centered political axis. The problem is not that one dimension is always forbidden. It is that the one-dimensional taxonomy is chosen before article-conditioned geometry is measured, and its losses are rarely expressed as a distortion budget. High-dimensional embeddings are methodologically necessary for this project in the practical, hypothesis-preserving sense that they supply room for potentially independent semantic relations to remain distinguishable until evidence warrants reduction. Dimensionality reduction can then occur downstream, with the projection, its kernel, and its observed distortions available for inspection.
+
+PCA again offers a helpful contrast. It chooses directions that maximize variance in a supplied dataset, but high variance is not automatically equivalent to political importance, minority protection, factual reliability, or interpretive stability. A low-variance direction may encode the very distinction relevant to a marginalized observer. Similarly, a random JL projection is valuable for distance preservation but does not determine which distances are normatively important. Neither technique delivers neutrality. They make explicit, mathematically testable trade-offs that a flat center too easily conceals.
+
+The vertical approach accordingly delays reification. It begins in a representation dimension capable of retaining multiple observer-conditioned relations, measures pairwise and local structure, and only then produces views suited to human inspection. Each view remains a shadow, but the architecture records which light cast it. Where a projection preserves neighborhoods, that stability is evidence. Where it merges distinct paths or changes the nearest neighbors of an interpretation, the failure is part of the result rather than noise swept toward the center.
+
+\subsection{Contribution and transition to methodology}
+
+The argument can now be summarized as a mismatch of units of analysis. Ground News presents article clusters while assigning their politically salient bias coordinates at the publisher level. The rating is useful exogenous context, but it is not a semantic measurement of the article--hypothesis relation. Upstream survey perspectives are condensed into source metadata, and that metadata is then rendered through a centered one-dimensional taxonomy. The system inherits the CrowdTruth intuition that multiple perspectives can be better than one, but it stops before making the geometry among those perspectives an explicit object of inquiry.
+
+This paper's contribution is to formulate the alternative vertically. It retains the original project's multistage zero-shot NLI scope, uses complex embeddings to study the general shape of bias and its component physical properties, and introduces observer-indexed metrics and relations rather than a single unmarked axis. It is critical of both pure relativism and agreement imposed for its own sake. Goodman and Kuhn explain why measurement participates in world constitution; Bowker and Star explain why the resulting classifications acquire infrastructural force; Wittgenstein warns against placing the describing standpoint inside its own map as though it were neutral. Perspectivist NLP and CrowdTruth show how disagreement can become data, while journalistic ethics and democratic theory prevent that insight from deteriorating into factual indifference.
+
+The topos-theoretic and HoTT-informed framing supplies a language for local sections, restrictions, transport, paths, and possible gluing without pretending that these concepts implement themselves. The JL lemma supplies a quantitative reason to preserve adequate dimensionality before reducing a semantic configuration to an interface. Together they relocate neutrality from an assumed coordinate to a question that can be tested: does a candidate relation remain stable under relevant changes of observer, metric, hypothesis, and projection?
+
+The following methodology addresses three forms of concealment identified in the source draft: an ontological discrepancy between the object displayed and the object measured; perspectival opacity about who or what supplies the coordinate frame; and concatenation, in which successive classifications hide the values that constitute discourse. It develops the vertical tracks by which semantic dimensions and local physical properties are estimated and by which movement across the learned manifold is used to probe perspectival boundaries. The objective is not to abolish centers, classifications, or projections. It is to stop mistaking their shadows for a view from nowhere.
+
+
+
+
+% ======================================================================
+% SECTION: 02_methodology.tex
+% ======================================================================
+\section{Methodology}
+
+A vertical pipeline, like the one proposed in this paper, is endogenous. The `first layer' is the raw text processed through a pre-trained natural language inference model (DeBERTa-v2-xlarge-mnli) in which we introduce millions of tiny, unavoidable pre-justified premises. Initially, this architecture was designed to help mathematically formalize the previously mentioned relativism in an attempt to demonstrate the myth of objective neutrality. By concentrating different perspectives with adversarial framing, however, it became clear that the system ultimately functions as an attempt at measuring the ideal of an Overton Window (what is perceived as the `middle ground' or the range of politically acceptable ideas) through the mapping of structural invariants and relativistic variations. By treating bias as a physical shape with physical properties, we can perform various transformations that help us make certain inferences about the structure of semantics in the context of language models.
+
+\subsection{Adversarial Framing and the V-Observers}
+
+The proposed system takes one frozen NLI bot and gives it eight different adversarial or contrastive hypotheses, prompting it to analyze any given number of articles. In this paper, we refer to these different conditioned perspectives as `V-Observers'. In our implementation we used both real and synthetic articles relating to the Palestinian genocide. The mechanism of adversarial framing allows our approach to dialectically process each article under paired framing hypotheses rather than the raw average embeddings. 
+
+The system queries a series of hypothesis pairs designed to stress-test the narrative structure:
+
+\begin{itemize}
+    \item \textbf{Pair 1: Israeli actions framing} \\
+    A: ``This article portrays Israeli military actions as legitimate self-defense against terrorism.'' \\
+    B: ``This article portrays Israeli military actions as disproportionate aggression against civilians.''
+    \item \textbf{Pair 2: Palestinian framing} \\
+    A: ``This article portrays Palestinians as innocent victims of occupation and violence.'' \\
+    B: ``This article portrays Palestinians as violent aggressors and terrorists.''
+    \item \textbf{Pair 3: Proportionality framing} \\
+    A: ``This article describes Israeli responses as proportionate and measured.'' \\
+    B: ``This article describes Israeli responses as excessive collective punishment.''
+    \item \textbf{Pair 4: Resistance vs terrorism framing} \\
+    A: ``This article frames Palestinian armed groups as legitimate resistance movements.'' \\
+    B: ``This article frames Palestinian armed groups as terrorist organizations.''
+    \item \textbf{Pair 5: Occupation framing} \\
+    A: ``This article frames the situation as Israeli occupation of Palestinian territory.'' \\
+    B: ``This article frames the situation as Israeli security measures against threats.''
+    \item \textbf{Pair 6: Civilian casualties framing} \\
+    A: ``This article suggests Israeli forces deliberately target civilians.'' \\
+    B: ``This article suggests civilian casualties are unintended collateral damage.''
+    \item \textbf{Pair 7: Historical context framing} \\
+    A: ``This article frames Israel as a colonial settler state.'' \\
+    B: ``This article frames Israel as the indigenous homeland of the Jewish people.''
+    \item \textbf{Pair 8: International law framing} \\
+    A: ``This article emphasizes Israeli violations of international law.'' \\
+    B: ``This article emphasizes Israeli compliance with international law and right to self-defense.''
+\end{itemize}
+
+By forcing the text to pass through these specific dialectical gates we can measure the friction generated when a narrative is stretched between two opposing coordinated frameworks of reality.
+
+\subsection{Track 1: Logits and the Substrate}
+
+The first step of the pipeline is ingestion. We take a target article and run it through the eight adversarial NLI gates. The model outputs a three-dimensional score: entailment, neutral, and contradiction. In implementation, this becomes a raw 24-dimensional verdict channel. These logits function strictly as the baseline diagnostic of the model's forward-pass verdict behavior. Track 1 is the constitutional floor of the system: the raw verdict substrate against which later geometric transformations can be compared.
+
+\subsection{Track 1.5: Spectral Polarity Extraction}
+
+Logits do not provide specifics as to why the model made a decision. Track 1.5 measures the article's weighted resistance to reinterpretation by extracting the semantic shift induced by contrastive observer frames. The system extracts the observer representations generated by the paired hypotheses and computes the A-minus-B polarity deltas across the eight contrastive pairs. These deltas form an eight-way aggregate field of local semantic shear. 
+
+The ``Polarity Delta'' measures how the article's semantic position shifts when it is contrasted against opposing observer frames. Where the field is steep, the article is resistant to reinterpretation; where it is flatter, the article has more leeway of interpretation. By performing Singular Value Decomposition on the centered contrastive delta matrices, the system endogenously discovers the primary axes of semantic stress without human intuition dictating which side of the conflict must dominate. Track 1.5 is the system's compass: it discovers the dominant direction of semantic shear but does not decide what that shear morally means.
+
+\subsection{Track 2: Geometric Expansion and the JL Lemma}
+
+Track 2 supplies the coordinate container necessary to position Track 1.5 shear in relation to a latent topology. To formalize this, we invoke the Johnson-Lindenstrauss (JL) lemma, which mathematically justifies why the semantic structure is robust across random projections but perspective-dependent. Unlike logits, embeddings have no automatic shared currency. The solution is to enforce a shared spatial geometry, making the observer views born-aligned in the same coordinate system using Random Kitchen Sinks \cite{Rahimi2008} to approximate a kernel feature space.
+
+The kernel-approximated manifold allows observer shear to warp the effective distance between articles. Conceptually, we write the Observer Metric Tensor as:
+\begin{equation}
+g_{\mu\nu}^{total}(x) = \frac{1}{\rho(x)}\delta_{\mu\nu} + \nabla_\mu \Phi \nabla_\nu \Phi
+\end{equation}
+where $\delta_{\mu\nu}$ represents the base content-to-content geometry, $\nabla_\mu \Phi \nabla_\nu \Phi$ represents semantic shear from Track 1.5, and $\rho(x)$ is the conformal density from Track 3.
+
+\subsection{Track 3: The Dirichlet Sweep and Homotopy Type Theory}
+
+Track 3 provides a lens. Inside the model, there is no guaranteed continuous plane where the distance between every two points is meaningful. Formalized through Homotopy Type Theory (HoTT), Track 3 asks whether paths (homotopies) between semantic identities remain stable under continuous deformation of the observer frame. 
+
+Mechanically, Track 3 uses a dynamically optimized weight simplex over RKHS-projected observer views. The system begins in a high-alpha consensus state with strong prior regularization, then cools toward lower alpha values where structured observer separation can emerge. The annealing objective balances separation and inertia:
+\begin{equation}
+L_t(w_t) = -\alpha_t^{-1}\,\mathrm{Var}\left(\sum_b w_{t,b}\phi_b(x)\right) + \lambda_{KL}\alpha_t\,\mathrm{KL}(w_t||w_{t-1})
+\end{equation}
+Track 3 produces a conformal density field $\rho_i$. Articles that maintain their observer-mixture position under annealing (stable homotopies) produce denser, more stable local geometry. Articles that tear apart produce lower-density regions.
+
+\subsection{Track 4: Traversal Telemetry}
+
+Track 4 simulates particles across the article graph based on density, stress, and metric distance to measure the work required to make semantic leaps (geodesics) between article nodes. It is a thermodynamic stochastic walk over a metric-respecting article graph. For each possible neighbor $j$, the transition weight is:
+\begin{equation}
+w_{ij} = \exp\left(-\frac{d_g(x_i,x_j)}{\tau}\right)
+\end{equation}
+where $d_g$ is the discrete metric edge cost induced by the fused geometry. When accumulated work reaches the cognitive horizon, the walker flips into retreat mode penalized toward the anchor coordinate. Track 4 exports mechanical telemetry: path coordinates, work integrals, and survival booleans, allowing us to study the structural traversability of the discourse manifold.
+
+\subsection{Track 5: Synthesis and Procrustes Alignment}
+
+Track 5 is the synthesis layer, functioning as the interferometer proper. It relies on kernel and metric fusion. In the Hadamard branch, Track 2 and Track 1.5 are converted into similarity kernels and multiplied element-wise:
+\begin{equation}
+K_{fused} = K_{T2} \odot K_{T1.5}
+\end{equation}
+Track 3 is then used as a conformal density normalizer to stretch or compress the fused manifold based on consensus and disagreement. This creates a unified representation where Procrustes alignment can be performed across contrasting ideological spaces to measure residual divergence.
+
+
+
+
+% ======================================================================
+% SECTION: 03_results.tex
+% ======================================================================
+\section{Results}
+
+If bias is the embedded signal we were hunting for, there were a number of noisy red herrings that attempted to corrupt the system and lead to erroneous results. First, the anisotropy trap, where models group things together if they talk about the same topics; this is resolved in Track 1.5. Second is Euclidean hallucinations that accompany methods like UMAP, which we resolved using the RKS kernel trick in Track 2. Third is barycentric consensus, or the `Ground News effect', where the classifier is geared towards finding a `golden middle'; we address this in Track 3 by defining the middle path as a noisy compromise when observer frames are orthogonal.
+
+\subsection{Statistical and Topological Calibration}
+
+To rigorously evaluate the system's ability to separate semantic signal from noise, we subjected the fused manifold to a comprehensive diagnostic suite. Using Procrustes analysis, we compared real, random, constant, and shuffled versions of our inputs to estimate whether the resulting geometry separates from matched controls.
+
+In calibration demonstrations of our divergence path lengths across synthetic bounds, the shuffled control yielded a Procrustes distance of 1.313 against the real manifold, while the random control yielded a distance of 1.302. In a simulated extreme demonstration, the difference in path divergence between a coherent real corpus and a shuffled baseline yielded a Welch's t-test of $p = 6.3 \times 10^{-93}$ with a Cohen's $d$ effect size of $20.05$. While these extreme figures serve primarily as a mathematical demonstration of the metric's sensitivity to structural coherence rather than a pure empirical claim about language broadly, they confirm that the architecture successfully isolates vast structural deviations when semantics are perturbed. 
+
+\subsection{Topological Diagnostics and Naturality}
+
+The definitive empirical results of the architecture emerged from a 12-hour continuous computational diagnostic sweep, evaluating the dataset across multiple kernel topologies (RBF, Matern, and IMQ). We employed a topological diagnostic hook measuring the \emph{Naturality} of the Procrustes rotation, which asks whether the metric transformation preserves local semantic neighborhoods exactly as HoTT predicts.
+
+Across all kernels, the \emph{real} corpus exhibited massive Naturality scores. For example, under the RBF kernel, the real Naturality scored $\sim 0.990$, with Matern reaching $\sim 0.994$. This indicates near-perfect topological preservation: when an article is subjected to Procrustes alignment across opposing ideological observer frames, the fundamental geometry of its semantic relations remains completely intact. 
+
+By contrast, the \emph{control\_constant} corpus (where the embedding structure was zeroed out or flattened) saw its Naturality score violently collapse to $\sim 0.544$ across all kernels. The median contestation metrics further reflected this collapse, showing that the system is incredibly sensitive to the removal of coherent semantic density. The high Naturality in the real corpus proves that the system captures an underlying structural invariant in the text that survives relativistic rotation, definitively separating semantic reality from degenerate embedding spaces.
+
+\subsection{Geometric Divergence and Observational Interpretation}
+
+These results must be interpreted as evidence of geometric separation under the specified run configuration. The stronger claim is that the manifold contains a non-trivial structure that can be mathematically compared against stochastic controls, and that the direction and magnitude of separation must be reported by kernel, control family, and metric basis. 
+
+When applying this to the specific pairs outlined in our methodology (e.g., Pair 4: Resistance vs. Terrorism, or Pair 8: International Law), the Naturality and divergence telemetry confirm that the difference between these framing labels is not a simple linear translation along an axis. Instead, the transition from one frame to the other requires a non-trivial physical stretch of the semantic space---a path integral that can be quantified. High Naturality confirms that the manifold itself survives this stretch, meaning that ideological disagreement is a measurable geographic feature of the data, rather than random noise that should be averaged away into an objective center.
+
+\subsection{Data Visualizations and Path Telemetry}
+
+We present the topological evidence alongside our manifold renderings. The Global Mean observer manifold provides a foundational coordinate prior to targeted observer displacement. Using Singular Value Decomposition on the 16 contrastive probes, the architecture successfully discovers the principal axes of discourse without enforcing manual labels. 
+
+Track 4 Path Telemetry demonstrates that walkers initiated near a specific polarity anchor face varying costs of traversal depending on the density of the terrain. The starting path often requires disproportionately higher energy relative to its manifold placement; the walker's accumulated fatigue can exceed the thermal threshold before it can close a stable loop, physically proving the existence of the `Swamp' or `Void' topologies. Certain articles act as local reference points for a centered manifold view, illustrating how article neighborhoods and observer displacement differ radically relative to that specific anchor. The stability of the final synthesis is tracked via the NMI score, which fluctuates locally but remains structurally sound throughout the sequential transformations, confirming the mathematical integrity of the system's pipeline.
+
+
+
+
+% ======================================================================
+% SECTION: 04_discussion.tex
+% ======================================================================
+\section{Discussion}
+
+\subsection{Consensus Is an Instrumental Achievement}
+
+The central methodological parallel of this study is between annotation guidelines and Natural Language Inference (NLI) hypotheses. Detailed guidelines do not merely help human annotators express judgments that were already complete; they delimit which assumptions may be used, which ambiguities may be ignored, and which distinctions count as relevant. NLI hypotheses perform an analogous operation. A hypothesis conditions the model's activation pattern and allocation of attention, making some semantic relations salient while suppressing others. It may reduce uncontrolled variation, but this does not make the resulting judgment more neutral. In both cases, the instrument partly generates the regularity it records.
+
+Consensus therefore cannot be treated as a synonym for semantic clarity. Agreement among annotators can be induced by a sufficiently restrictive codebook, just as agreement among NLI outputs can be induced by hypotheses that share presuppositions or lexical structure. The agreement may be useful, reproducible, and operationally necessary while still being an achievement of the probing conditions rather than an observer-free property of the text. The relevant question is not simply whether judgments converge, but under which constraints they converge, how long that convergence survives perturbation, and what must be excluded to maintain it. Consensus becomes an object to explain rather than a gold label at which explanation stops.
+
+This reframing does not imply that every interpretation is equally warranted. It distinguishes the stability of an inference from the conditions that produced it. A stable judgment across genuinely different probes is stronger evidence than a stable judgment across paraphrases of one premise; a disagreement that persists across models, prompt forms, and corpora is more consequential than one caused by a single lexical accident. The aim is thus neither compulsory agreement nor unrestricted relativism, but an account of the transformations under which a semantic relation remains coherent.
+
+\subsection{From Disagreement to Latent-Space Tomography}
+
+Observer-based NLI offers a distinctive advantage because interpretive frames can be varied under controlled conditions while their outputs remain comparable within a shared representational construction. Rather than assigning one source label and then aggregating from it, the Semantic Interferometer admits each contrastive observer probe before downstream adjudication. This produces a form of latent-space tomography: the text is examined through a set of deliberately different semantic slices, and the repeated structure of their deformations is used to infer the shape that no single slice can reveal.
+
+On this account, disagreement is not a residual error term. It can be described through coherence across perturbations, stability under resampling, directional asymmetry, local density, traversal cost, and perspectival shear. These quantities ask different questions. Coherence asks whether an observer-conditioned pattern repeats; stability asks whether it survives reasonable changes in the instrument; asymmetry asks whether transport from one frame to another differs from the reverse path; density asks how much neighboring evidence supports a region; path cost asks what resistance must be overcome to connect positions; and shear asks how sharply local relations deform under a change of frame. None is reducible to a majority vote. Together they shift the unit of analysis from a label attached to a text to the structured relation between interpretations of that text.
+
+The architecture's failed designs are theoretically important here. Pre-labeled signed axes, raw embedding concatenation, and sequential Generalized Procrustes alignment each attempted, in different ways, to make encoded text submit to a convenient global frame. Their failures indicate that learned semantic representations are not infinitely malleable. Anisotropy, neighborhood structure, kernel choice, and the topology of a particular model constrain which transformations can be made without destroying relevant relations. This resistance rules out the strongest form of sociological fluidity: perspective does not mean that a text can be moved anywhere at no cost. Observer dependence and structural constraint coexist. The space may lack a privileged origin while retaining ridges, voids, barriers, and comparatively stable routes.
+
+\subsection{Measurement, Worldmaking, and Theoretical Limits}
+
+Goodman's account of worldmaking clarifies why this distinction matters. The stars can exist independently of a classification, while a constellation exists only through a practice that selects stars, draws relations among them, and gives the resulting figure a name. The constellation is not therefore useless or wholly arbitrary. It may guide navigation and organize shared experience. Yet it is a constituted object: the lines are supplied by a scheme of description rather than discovered as luminous filaments in the sky. Semantic measurement operates similarly. A left--right axis, an entailment hypothesis, a kernel, or a neighborhood rule does not simply expose an already bounded object called ``bias.'' It participates in deciding which differences belong to that object and which disappear outside it.
+
+This is the deeper force of Goodman's 1978 argument for the present study. Measurement does not merely influence a final score; it helps constitute the measurable semantic object. Choosing observers creates a field of possible contrasts. Choosing a shared projection determines which relations can be compared. Choosing a density estimator decides what counts as support, and choosing a path rule decides what counts as proximity or resistance. The resulting geometry is neither a transparent copy of political language nor a free invention. It is a constrained construction produced by the interaction of texts, model parameters, probes, and analytic decisions.
+
+Kuhn's 1962 account of theory-laden observation supplies the corresponding limit. There is no empirical output here without an instrument and no instrument without a framework of relevance. In this system, that framework includes at least the pretrained model, corpus composition, prompt or hypothesis bank, kernel family, random-feature basis, random seed, and downstream metric. Changing any of these can change the observable without changing the underlying article. Accordingly, reproducibility should not be understood as the recovery of one context-free map. It should mean disclosing provenance and testing which relations remain stable across a declared family of models, corpora, prompts, kernels, and seeds. Kuhn does not make comparison impossible; he makes the conditions of comparison impossible to ignore.
+
+\subsection{Identity, Transport, and the Burden of a Global View}
+
+Homotopy Type Theory (HoTT) provides a disciplined language for expressing this problem. In HoTT, identity need not be treated as an unexamined assertion that two presentations are literally the same. Identity can be represented by paths, and claims that dependent structure is preserved require transport along those paths. Applied cautiously to semantic geometry, this means that an article represented under observer frame $o$ and the ``same'' article represented under frame $o'$ should not automatically be identified coordinate by coordinate. A comparison requires a map $T_{o\to o'}$, together with evidence about what that map preserves. Equivalence across frames is therefore a result of successful transport, not a presupposition licensed by a shared document identifier.
+
+Topos and sheaf theory make a related point through locality. Perspectives may be modeled as local sections defined over partially overlapping contexts. Where contexts overlap, their restrictions can be compared for compatibility. If the required compatibility and gluing conditions hold, local sections may determine a global section. Crucially, this formalism does not declare that global sections are impossible. Some claims may glue cleanly across observers, and some relations may be sufficiently invariant to support a global description. It requires, however, that globality be demonstrated rather than smuggled in through averaging. A mean of incompatible local sections is not, merely by being a mean, a view from nowhere.
+
+These mathematical frameworks do not by themselves prove that natural language is perspectival, nor do they empirically establish that every linguistic identity must vary by observer. Their contribution is to change the burden of proof. If observer-conditioned representations are treated as local charts, then a supposedly neutral center must be shown to be canonical and natural across admissible observer maps. For observer spaces $X_o$ with proposed centers $c_o$, neutrality would require more than numerical centrality. At minimum, one would expect a relation such as
+\begin{equation}
+T_{o\to o'}(c_o)=c_{o'}
+\end{equation}
+for admissible transports, compatibility with composition, and independence from arbitrary choices of prompt order, basis, aggregation rule, and reference observer. Even this equivariance would not by itself establish uniqueness or normative neutrality; many coherent families of points can be transported. A privileged center would need a canonical construction that survives the relevant changes of frame without quietly reinstalling one frame as the standard.
+
+This study supplies no such privileged point. What it supplies is a machinery for asking whether relations commute with transport, whether neighborhoods survive alignment, and where paths accumulate stress. The conceptual consequence is decisive: the first mathematical object should be the observer map, not an assumed origin. Positions acquire meaning through the transformations that connect them.
+
+\subsection{What the Diagnostics Establish}
+
+The empirical results support this relational interpretation, but only within their tested scope. In the submitted run, the Procrustes distance between the real and shuffled configurations was $1.313$, and the distance between the real and random configurations was $1.302$. These values show configuration-specific separation from two controls. They do not prove that the manifold has isolated bias in general, nor do they establish a universal semantic topology. Their scientific value is narrower and still useful: a non-trivial shape was recovered under a declared configuration, and that shape can be compared with matched disruptions. Stronger claims require replication across kernels, control families, seeds, corpora, and metric bases.
+
+The observer-recentering ablations give complementary controlled evidence. In a small synthetic robustness grid, coordinate translation alone passed $0$ of $9$ cells. The original focus-weighted local recomputation passed $3$ of $9$, while a uniform-weighted Random Kitchen Sinks local recomputation passed $7$ of $9$. These are not universal measurements of human semantics. They show, under planted synthetic structure, that moving the origin of an existing picture is not equivalent to recomputing geometry, shear, and density in an observer-conditioned frame. They also show that the result is sensitive to weighting, kernel, and seed. Observer dependence is thus best supported here as a conditional mechanism and ablation finding, not as an unqualified metaphysical fact extracted from nine trials.
+
+The diagnostic labeled Naturality should be interpreted with similar care. It measures the survival of local neighborhood relations under an admissible orthogonal Procrustes transport. The available manuscript record does not preserve a single auditable aggregate value, so no exact score is asserted here. More importantly, orthogonal transport is designed to preserve Euclidean distance, making the diagnostic principally a consistency check on relational structure rather than independent proof that language is observer-dependent. Its relevance is conceptual: what survives the change of frame is a pattern of neighbors and relations, not evidence for one privileged origin. The natural object in this diagnostic is transportable structure. Naturality of relations does not entail naturality of a center.
+
+Taken together, these findings support a restrained but consequential inference. There is structure in the observer-conditioned manifolds, some of that structure survives controlled transport, and meaningful recentering can require local recomputation. None of these results identifies an observer-free semantic basepoint. The evidence is better suited to an atlas of related charts than to a single coordinate plane declared neutral.
+
+\subsection{The Geometric Fiction of the Neutral Middle}
+
+This distinction sharpens the critique of systems such as Ground News. Dimensional reduction is not the problem. Any usable visualization must compress, and the Semantic Interferometer also produces rank-one and three-dimensional projections of much higher-dimensional objects. A projection becomes misleading when its construction is forgotten and one of its coordinates is reified as a property of the world. The error is not casting a shadow; it is calling the shadow the object and its midpoint the objective center.
+
+Operationally, the Ground News middle is produced through a sequence of choices: source ratings supplied by external providers, placement on a left--right axis, aggregation and weighting rules, and an Overton Window that defines which positions count as politically legible. Each choice can be defensible for a product purpose. Together, however, they manufacture the geometry in which the middle appears. Treating that midpoint as an observer-free discovery converts a useful interface convention into a geometric fiction. This claim concerns the operation of the measurement system, not an assertion about the intentions of its designers.
+
+From the HoTT perspective, no natural transport has been demonstrated that carries this middle unchanged across alternative source-rating schemes or observer frames. From the sheaf perspective, no compatibility argument has shown that local political judgments glue uniquely into that global point. From Goodman, the axis helps constitute the object it then reports; from Kuhn, the providers, categories, and political vocabulary are part of the instrument. A different provider set, issue taxonomy, weighting scheme, corpus, or historical window could move the center while leaving the articles untouched. The apparent neutrality of the middle is therefore an effect of suppressed provenance.
+
+This does not mean that all placements are equally responsible or that factual reporting dissolves into opinion. A system can still test claims against evidence, expose source histories, detect fabrication, and distinguish well-supported interpretation from unsupported assertion. What it cannot legitimately do without further demonstration is elevate the barycenter of its chosen observers into a universal standpoint. The proper alternative is not to abolish comparison, but to display which observers produced the map, how the map changes under their replacement, and which relations remain invariant.
+
+\subsection{Limits and a Revised Research Program}
+
+The study's strongest philosophical conclusion must remain proportionate to these limits. The corpus is finite; parts of the validation are synthetic; the observer hypotheses are authored rather than inferred; the model inherits training-data regularities; the shared kernel is an approximation; and several results vary by kernel, seed, weighting, and control design. The latent topology belongs first to this model--corpus--probe system, not immediately to language as such. HoTT and topos theory organize the claims that would be required for cross-frame identity and globality, but they do not substitute for human validation, multilingual replication, model comparison, or adversarial testing.
+
+Those limits point toward a more productive research program. Future systems should report observer and data provenance, uncertainty over maps, sensitivity to prompt and kernel choices, and the transformations under which conclusions persist. Evaluation should compare path structure, neighborhood stability, transport cost, and asymmetry across frames instead of rewarding only convergence toward a single label. In contested and interpretive NLP, the target should be an accountable geometry of differences, not the disappearance of difference into a centroid.
+
+\sectionsection{Conclusion}
+
+The ultimate implication of this study is the mathematical death of the objective center. This phrase does not announce the death of facts, evidence, semantic structure, or accountability. It names the failure of a more specific presumption: that every field of discourse contains a privileged, observer-free basepoint from which all other positions can be measured as deviations. Once semantic representations are understood as observer-conditioned charts connected by transports, the center ceases to be a discovery guaranteed by geometry. It becomes one constructed point among others unless its canonicity, naturality, and cross-frame stability are demonstrated.
+
+The resulting picture is neither objectivist nor relativist in the ordinary sense. There are real constraints: learned spaces resist arbitrary deformation; some neighborhoods survive transport; some paths are costly; some claims glue across contexts; and evidence can rule interpretations in or out. Yet none of this requires a neutral origin. Structure resides in relations, invariants, obstructions, and paths. The mathematical death of the center therefore leaves more empirical work, not less. It demands that a system show how perspectives connect, where they fail to connect, and which features persist when the observer changes.
+
+For systems like Ground News, the practical lesson is that a midpoint assembled from source raters, a left--right axis, aggregation weights, and a historically contingent Overton Window should be presented as the output of those choices. It may remain a useful summary, but it cannot stand in for an observer-free political middle. The geometry must expose its makers.
+
+For NLP, the positive program is equally direct. Contested and interpretive tasks should stop trying to align bias away toward a supposed neutral centroid. They should instead measure the structured distance between perspectives, the transport required to move among them, the shear produced by that movement, and the path-dependent costs and asymmetries that remain. This recommendation does not reject factual or safety alignment in general. Models still require constraints against fabrication, harm, and unsupported claims. It rejects the narrower practice of confusing safety, truthfulness, or methodological discipline with the erasure of perspectival difference.
+
+The fundamental unit of discourse is therefore not the isolated statement at a fixed coordinate, nor the majority label attached to it, but the provenance-bearing relation between situated interpretations. A mature semantic system would report that relation with uncertainty: which frame was used, which transport connected it to another, what changed along the path, what remained invariant, and where gluing failed. The replacement for the objective center is not an empty space. It is an atlas---a structured, testable account of the distances between perspectives. In that atlas, disagreement is no longer noise around truth's presumed location. It is part of the geometry through which truth claims become comparable at all.
+
+
+
+

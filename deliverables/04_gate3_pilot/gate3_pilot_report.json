@@ -1,0 +1,39 @@
+{
+  "status": "GATE3_PILOT_COMPLETE",
+  "timestamp_utc": "2026-10-15 13:57:15",
+  "panel_size": 512,
+  "independent_story_families": 512,
+  "views_evaluated": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8"
+  ],
+  "key_findings": {
+    "cka_agreement": {
+      "max_cross_view_cka_rbf": 0.9302,
+      "min_cross_view_cka_rbf": 0.1321,
+      "mean_cross_view_cka_rbf": 0.4707
+    },
+    "knn_overlap_k10": {
+      "max_jaccard": 0.4054,
+      "min_jaccard": 0.0245,
+      "mean_jaccard": 0.0983,
+      "random_baseline": 0.00988
+    },
+    "disjoint_population_divergence": {
+      "all_views_distinguish_selectors": false
+    }
+  },
+  "deliverables": {
+    "specification": "D:\\belief-transformer\\V3\\deliverables\\04_gate3_pilot\\gate3_protocol_and_metric_definitions.md",
+    "cka_matrix": "D:\\belief-transformer\\V3\\deliverables\\04_gate3_pilot\\cka_similarity_matrix.json",
+    "knn_matrix": "D:\\belief-transformer\\V3\\deliverables\\04_gate3_pilot\\knn_overlap_matrix.json",
+    "mmd_test": "D:\\belief-transformer\\V3\\deliverables\\04_gate3_pilot\\mmd_disjoint_test.json",
+    "benchmark": "D:\\belief-transformer\\V3\\deliverables\\04_gate3_pilot\\runtime_memory_benchmark.json"
+  }
+}

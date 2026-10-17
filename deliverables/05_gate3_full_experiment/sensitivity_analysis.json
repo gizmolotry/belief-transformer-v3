@@ -1,0 +1,29 @@
+{
+  "n_union": 7986,
+  "n_independent_families": 6248,
+  "syndicated_copies_count": 1738,
+  "comparison_table": {
+    "V1_vs_V2_Scalar": {
+      "independent_6248_cka": 0.749,
+      "full_union_7986_cka": 0.741,
+      "independent_6248_jaccard10": 0.0326,
+      "full_union_7986_jaccard10": 0.1308
+    },
+    "V3_vs_V4_Final_CLS": {
+      "independent_6248_cka": 0.777,
+      "full_union_7986_cka": 0.8178,
+      "independent_6248_jaccard10": 0.1462,
+      "full_union_7986_jaccard10": 0.2456
+    },
+    "V7_vs_V8_Mid_CLS": {
+      "independent_6248_cka": 0.9131,
+      "full_union_7986_cka": 0.9281,
+      "independent_6248_jaccard10": 0.3297,
+      "full_union_7986_jaccard10": 0.4056
+    },
+    "V1_vs_V3_Scalar_vs_Final_CLS": {
+      "independent_6248_cka": 0.5437,
+      "full_union_7986_cka": 0.5426
+    }
+  }
+}

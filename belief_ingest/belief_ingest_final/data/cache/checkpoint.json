@@ -1,0 +1,11 @@
+{
+  "current_date": "2025-03-25T08:15:24.002979",
+  "batch_num": 15,
+  "stats": {
+    "articles_fetched": 406296,
+    "articles_extracted": 196436,
+    "articles_failed": 84457,
+    "batches_complete": 8,
+    "total_batches": 53
+  }
+}

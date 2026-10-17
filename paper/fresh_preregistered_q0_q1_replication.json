@@ -1,0 +1,287 @@
+{
+  "dataset": "fresh_unseen_120_corpus",
+  "n_articles": 120,
+  "model": "microsoft/deberta-v2-xlarge-mnli",
+  "q0_coherence": {
+    "coherence_ideology": -0.007055784442595073,
+    "coherence_structural": 0.018542864671742012,
+    "coherence_random": -0.014717856022928442,
+    "global_pc1_evr": 0.7098512649536133,
+    "exact_null": {
+      "total_subsets": 735471,
+      "upper_tail_count_ge_observed": 556863,
+      "exact_upper_tail_probability": 0.7571515396256276,
+      "null_mean": 0.0038488248301654093,
+      "null_min": -0.04855188122019172,
+      "null_max": 0.10023354050437254
+    }
+  },
+  "q1_coherence": {
+    "coherence_ideology": -0.018003975122285607,
+    "coherence_structural": 0.017535758824253986,
+    "coherence_random": -0.014635955914855003,
+    "global_pc1_evr": 0.6947739720344543,
+    "exact_null": {
+      "total_subsets": 735471,
+      "upper_tail_count_ge_observed": 697576,
+      "exact_upper_tail_probability": 0.9484751948071372,
+      "null_mean": 0.0045847185204932585,
+      "null_min": -0.04232661335429709,
+      "null_max": 0.09123939496930689
+    }
+  },
+  "q0_dimensionality_gate": {
+    "dataset_label": "Q0 Canonical (Fresh N=120)",
+    "n_samples": 120,
+    "n_features": 8,
+    "observed_participation_ratio": 2.0588910579681396,
+    "column_null_mean_participation_ratio": 6.073421926355362,
+    "detected_rank_column_null": 1,
+    "detected_rank_publisher_null": null,
+    "components": [
+      {
+        "component": 1,
+        "observed_eigenvalue": 0.2488548457622528,
+        "observed_variance_ratio": 0.6691423058509827,
+        "column_null": {
+          "mean_eigenvalue": 0.09897292190641165,
+          "q95_eigenvalue": 0.1049199029803276,
+          "mean_variance_ratio": 0.26612689931988714,
+          "q95_variance_ratio": 0.282117635011673,
+          "exceedances": 0,
+          "p_value": 9.999000099990002e-05,
+          "detected": true
+        }
+      },
+      {
+        "component": 2,
+        "observed_eigenvalue": 0.0664442852139473,
+        "observed_variance_ratio": 0.17866109311580658,
+        "column_null": {
+          "mean_eigenvalue": 0.07338591192997992,
+          "q95_eigenvalue": 0.07842426002025604,
+          "mean_variance_ratio": 0.1973263476639986,
+          "q95_variance_ratio": 0.21087390184402466,
+          "exceedances": 9703,
+          "p_value": 0.9703029697030296,
+          "detected": false
+        }
+      },
+      {
+        "component": 3,
+        "observed_eigenvalue": 0.02179848589003086,
+        "observed_variance_ratio": 0.05861363932490349,
+        "column_null": {
+          "mean_eigenvalue": 0.05348212933316827,
+          "q95_eigenvalue": 0.05862447991967201,
+          "mean_variance_ratio": 0.14380734614357352,
+          "q95_variance_ratio": 0.15763454139232635,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 4,
+        "observed_eigenvalue": 0.015748200938105583,
+        "observed_variance_ratio": 0.042345114052295685,
+        "column_null": {
+          "mean_eigenvalue": 0.045597901351749896,
+          "q95_eigenvalue": 0.04958285763859749,
+          "mean_variance_ratio": 0.12260755635201931,
+          "q95_variance_ratio": 0.13332265615463257,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 5,
+        "observed_eigenvalue": 0.0075338114984333515,
+        "observed_variance_ratio": 0.020257558673620224,
+        "column_null": {
+          "mean_eigenvalue": 0.031843328477069735,
+          "q95_eigenvalue": 0.0351993627846241,
+          "mean_variance_ratio": 0.0856230786189437,
+          "q95_variance_ratio": 0.09464707970619202,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 6,
+        "observed_eigenvalue": 0.006117620971053839,
+        "observed_variance_ratio": 0.0164495836943388,
+        "column_null": {
+          "mean_eigenvalue": 0.026627254297211765,
+          "q95_eigenvalue": 0.029189646244049072,
+          "mean_variance_ratio": 0.07159765000380576,
+          "q95_variance_ratio": 0.07848763465881348,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 7,
+        "observed_eigenvalue": 0.003610659157857299,
+        "observed_variance_ratio": 0.009708650410175323,
+        "column_null": {
+          "mean_eigenvalue": 0.022915230613574384,
+          "q95_eigenvalue": 0.02504628896713257,
+          "mean_variance_ratio": 0.061616441683098676,
+          "q95_variance_ratio": 0.06734661757946014,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 8,
+        "observed_eigenvalue": 0.0017933413619175553,
+        "observed_variance_ratio": 0.004822090268135071,
+        "column_null": {
+          "mean_eigenvalue": 0.019076554944738745,
+          "q95_eigenvalue": 0.021335087716579437,
+          "mean_variance_ratio": 0.05129468057304621,
+          "q95_variance_ratio": 0.05736761912703514,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      }
+    ]
+  },
+  "q1_dimensionality_gate": {
+    "dataset_label": "Q1 Paraphrase (Fresh N=120)",
+    "n_samples": 120,
+    "n_features": 8,
+    "observed_participation_ratio": 2.4664690494537354,
+    "column_null_mean_participation_ratio": 6.073405153799057,
+    "detected_rank_column_null": 1,
+    "detected_rank_publisher_null": null,
+    "components": [
+      {
+        "component": 1,
+        "observed_eigenvalue": 0.18080829083919525,
+        "observed_variance_ratio": 0.6011496782302856,
+        "column_null": {
+          "mean_eigenvalue": 0.0827075382605195,
+          "q95_eigenvalue": 0.08680302649736404,
+          "mean_variance_ratio": 0.27498519985079767,
+          "q95_variance_ratio": 0.2886018455028534,
+          "exceedances": 0,
+          "p_value": 9.999000099990002e-05,
+          "detected": true
+        }
+      },
+      {
+        "component": 2,
+        "observed_eigenvalue": 0.053888097405433655,
+        "observed_variance_ratio": 0.17916662991046906,
+        "column_null": {
+          "mean_eigenvalue": 0.056744154368713495,
+          "q95_eigenvalue": 0.060599248856306076,
+          "mean_variance_ratio": 0.18866239960044623,
+          "q95_variance_ratio": 0.20147977769374847,
+          "exceedances": 9076,
+          "p_value": 0.9076092390760924,
+          "detected": false
+        }
+      },
+      {
+        "component": 3,
+        "observed_eigenvalue": 0.021989349275827408,
+        "observed_variance_ratio": 0.07310997694730759,
+        "column_null": {
+          "mean_eigenvalue": 0.040600643369928004,
+          "q95_eigenvalue": 0.044733524322509766,
+          "mean_variance_ratio": 0.13498861497864126,
+          "q95_variance_ratio": 0.1487295925617218,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 4,
+        "observed_eigenvalue": 0.019257163628935814,
+        "observed_variance_ratio": 0.06402602791786194,
+        "column_null": {
+          "mean_eigenvalue": 0.03499600707162172,
+          "q95_eigenvalue": 0.03782682865858078,
+          "mean_variance_ratio": 0.11635437591224909,
+          "q95_variance_ratio": 0.12576626241207123,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 5,
+        "observed_eigenvalue": 0.012955338694155216,
+        "observed_variance_ratio": 0.043073784559965134,
+        "column_null": {
+          "mean_eigenvalue": 0.02887277717050165,
+          "q95_eigenvalue": 0.031625859439373016,
+          "mean_variance_ratio": 0.09599592212513089,
+          "q95_variance_ratio": 0.10514934360980988,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 6,
+        "observed_eigenvalue": 0.005909129977226257,
+        "observed_variance_ratio": 0.019646618515253067,
+        "column_null": {
+          "mean_eigenvalue": 0.022488746047019958,
+          "q95_eigenvalue": 0.02490350604057312,
+          "mean_variance_ratio": 0.07477035900056363,
+          "q95_variance_ratio": 0.08279892802238464,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 7,
+        "observed_eigenvalue": 0.004811374004930258,
+        "observed_variance_ratio": 0.015996810048818588,
+        "column_null": {
+          "mean_eigenvalue": 0.019135328738577664,
+          "q95_eigenvalue": 0.02107343077659607,
+          "mean_variance_ratio": 0.0636209504969418,
+          "q95_variance_ratio": 0.0700647234916687,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      },
+      {
+        "component": 8,
+        "observed_eigenvalue": 0.001152115873992443,
+        "observed_variance_ratio": 0.0038305437192320824,
+        "column_null": {
+          "mean_eigenvalue": 0.01522567589841783,
+          "q95_eigenvalue": 0.01682901941239834,
+          "mean_variance_ratio": 0.050622175655514,
+          "q95_variance_ratio": 0.055952947586774826,
+          "exceedances": 10000,
+          "p_value": 1.0,
+          "detected": false
+        }
+      }
+    ]
+  },
+  "cross_bank_stability": {
+    "pearson_r_pc1": 0.9191598296165466,
+    "pearson_p": 1.4274838377066785e-49,
+    "spearman_rho_pc1": 0.8986804639211056,
+    "spearman_p": 4.733421047130704e-44,
+    "procrustes_disparity_2pc": 0.17026561136583682,
+    "subspace_angle_pc1_deg": 15.281917572021484
+  }
+}

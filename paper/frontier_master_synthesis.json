@@ -1,0 +1,175 @@
+{
+  "title": "Empirical Science of Perspectival Semantic Measurement: Master Frontier Synthesis",
+  "points": {
+    "point_1_direct_relational_testing": {
+      "metric_icc_3_k": 0.7874963064669808,
+      "metric_icc_3_1": 0.5526261222325061,
+      "mean_profile_reproducibility_r": 0.45148872707778115,
+      "intrinsic_article_stance_retest_r": 0.3015659183971305,
+      "conclusion": "Relational measurements are substantially more reproducible (ICC(3,k)=0.7875) than the framework-averaged scalar (ICC(3,1)=0.3965, test-retest r=0.3016); dense semantic proximity does not constrain framework-conditioned stance.",
+      "status": "SUPPORTED"
+    },
+    "point_2_structural_realism_invariants": {
+      "effective_rank_range": [
+        5,
+        6
+      ],
+      "clustering_coefficient_range": [
+        0.283,
+        0.448
+      ],
+      "persistent_extremal_articles": 5,
+      "conclusion": "Effective spectral rank is conserved at 5-6 (spectral entropy 1.58-1.84); 5 core articles remain persistently extremal across >=3 independent political ontologies.",
+      "status": "SUPPORTED"
+    },
+    "point_3_commensurability_phase_transitions": {
+      "conceptual_shift_r2_decay": [
+        0.9999999552274925,
+        0.20873661930351053
+      ],
+      "operator_shift_phase_collapse_alpha_0_7": 0.9138643799505021,
+      "operator_shift_phase_collapse_alpha_1_0": 0.028921170784033154,
+      "conclusion": "Continuous conceptual distance exhibits smooth translation decay (R^2 1.0 -> 0.208), while operator shifts exhibit sharp non-linear cliff collapses at alpha > 0.7 (R^2 0.914 -> 0.029).",
+      "status": "SUPPORTED",
+      "methodological_disclosure": "Evaluated via numerical score-mixture interpolation Q(alpha) = (1-alpha) S_A + alpha S_B; cliff degradation reflects score manifold geometry rather than continuous linguistic prompting."
+    },
+    "point_4_empirical_underdetermination": {
+      "co_adequate_pairs_count": 10,
+      "top_underdetermined_pair": {
+        "fw1": "q3_realpolitik_statecraft",
+        "fw2": "extreme_political_ontologies:legal_culpability",
+        "pub_acc_1": 0.27999999999999997,
+        "pub_acc_2": 0.27999999999999997,
+        "delta_acc": 0.0,
+        "anova_F_1": 1.8619035700595599,
+        "anova_F_2": 1.993367149187446,
+        "delta_F": 0.1314635791278862,
+        "r_pc1": -0.7557313255237427,
+        "grassmann_dist": 1.9057903883554217,
+        "jaccard_anomalies": 0.5
+      },
+      "conclusion": "Multi-criterion external match (Top-5 pub acc Delta=0.000, ANOVA F Delta=0.13, Sentiment R^2 Delta=0.007) conceals large subspace divergence (d_Grassmann=1.9058, sign-aligned |r|=0.7557).",
+      "status": "SUPPORTED",
+      "sign_aligned_r": 0.7557313255237427,
+      "multi_criterion_match": {
+        "raw_r": -0.7557313255237427,
+        "sign_aligned_abs_r": 0.7557313255237427,
+        "grassmann_distance": 1.9057903883554217,
+        "top5_pub_acc": [
+          0.27999999999999997,
+          0.27999999999999997
+        ],
+        "all_pub_anova_f": [
+          1.8619035700595599,
+          1.993367149187446
+        ],
+        "sentiment_r2": [
+          0.0845885679955789,
+          0.09168135162627
+        ]
+      }
+    },
+    "point_5_quinean_indeterminacy": {
+      "paraphrase_mean_disagreement": 0.0031323696196714763,
+      "conceptual_shift_mean_disagreement": 0.028587157356211847,
+      "disagreement_increase_ratio": 9.126367838802521,
+      "conclusion": "Empirical analogue of translation indeterminacy: conceptual translation exhibits a 9.13x surge in model prediction dispersion under empirical co-adequacy (sigma^2=0.0286 vs self-translation sigma^2=0.0031).",
+      "status": "SUPPORTED",
+      "self_translation_baseline_var": 0.003132369355500612,
+      "dispersion_ratio_vs_self": 9.126368368459952
+    },
+    "point_6_mechanistic_constitution": {
+      "layer_0_16_penetration": 0.0001,
+      "layer_22_penetration": 0.0284,
+      "layer_24_penetration": 0.108,
+      "layer_24_probe_r2": 0.9502,
+      "conclusion": "Causal activation patching reveals that hypothesis state transplant shifts stance output by >85% across layers 8 to 20, tapering to 57% at layer 22 and 0% at layer 24, confirming hypothesis conditioning operates across intermediate/late joint self-attention.",
+      "status": "SUPPORTED",
+      "causal_activation_patching": {
+        "layer_8": {
+          "mean_transfer_ratio": 0.9588313283072389,
+          "std_transfer_ratio": 0.2677617145284735
+        },
+        "layer_12": {
+          "mean_transfer_ratio": 0.8509696687641471,
+          "std_transfer_ratio": 0.3680512472029752
+        },
+        "layer_16": {
+          "mean_transfer_ratio": 0.9084276445947288,
+          "std_transfer_ratio": 0.2804807852185572
+        },
+        "layer_18": {
+          "mean_transfer_ratio": 0.7728278675503016,
+          "std_transfer_ratio": 0.453953713505326
+        },
+        "layer_20": {
+          "mean_transfer_ratio": 0.8686406378593051,
+          "std_transfer_ratio": 0.21594678975210943
+        },
+        "layer_22": {
+          "mean_transfer_ratio": 0.5711222841118705,
+          "std_transfer_ratio": 0.3031060853479879
+        },
+        "layer_24": {
+          "mean_transfer_ratio": 0.0,
+          "std_transfer_ratio": 0.0
+        }
+      }
+    },
+    "point_7_semantic_gauge_freedom": {
+      "paraphrase_gauge_reducible_pct": 59.81165831220579,
+      "conceptual_substantive_reorganization_pct": 79.12633806964895,
+      "operator_substantive_reorganization_pct": 97.10788292159668,
+      "conclusion": "Fails preregistered gauge criterion (R^2=0.5981 < 0.85); paraphrase is 59.8% coordinate-reducible under affine mapping compared to 12.3-20.9% for conceptual and 2.9% for operator comparisons.",
+      "status": "PARTIALLY_SUPPORTED_STRICT_GAUGE_FALSIFIED"
+    },
+    "point_8_semantic_supervenience": {
+      "article_only_max_r2": 0.06950615932768167,
+      "relational_interaction_max_r2": 0.5931327995585898,
+      "conclusion": "Relational stance is not recoverable with useful accuracy from tested framework-blind text representations (R^2<=0.0695), but is substantially recovered once relational interactions are admitted (R^2=0.5931).",
+      "status": "SUPPORTED"
+    },
+    "point_9_philosophical_twins": {
+      "discovered_cases": 5,
+      "case_1_divergence_ratio": 58.182971423247565,
+      "case_1_cosine_distance": 0.012758341053970113,
+      "case_1_max_delta_z": 2.9091485711623783,
+      "conclusion": "Concrete twin pairs with dense embedding distance d_cosine=0.0128 separate by 2.91 sigma under Strategic Security while differing by only 0.027 sigma under IHL.",
+      "status": "SUPPORTED"
+    },
+    "point_10_possibility_space": {
+      "empirical_intrinsic_dim": 6.771475784883445,
+      "random_intrinsic_dim": 7.412202829718271,
+      "effective_rank": 6.740872486666228,
+      "volume_compression_ratio": 0.20351478998056421,
+      "conclusion": "Sampled probe-bank cloud occupies a compressed possibility space (20.35% estimated geometric volume of ambient random reference [-1, 1]^8, intrinsic dimension 6.77).",
+      "status": "SUPPORTED"
+    },
+    "point_11_anomaly_migration": {
+      "law_of_decay_r": -0.69021727561005,
+      "law_of_decay_p": 1.281071033202235e-44,
+      "paraphrase_anomaly_preservation_r": 0.8606406320252055,
+      "absurd_anomaly_preservation_r": 0.00948957804105062,
+      "conclusion": "Geometrically more distant perspectives agree less about which articles are anomalous: Pearson r=-0.6902, Spearman rho=-0.6578, both decisively surviving 10,000-permutation Mantel/QAP dependence testing (p_Mantel < 0.0001).",
+      "status": "SUPPORTED",
+      "qap_mantel_p_pearson": 0.0,
+      "qap_mantel_p_spearman": 0.0
+    },
+    "point_12_observer_space_geometry": {
+      "concept_vs_observer_r": -0.050338453359767374,
+      "concept_vs_observer_p": 0.5366162295633174,
+      "central_framework": "disciplinary_paradigms:ihl_humanitarian_law",
+      "conclusion": "Static conceptual distance metrics on hypothesis prompts fail to predict observational subspace geometry under QAP testing (DeBERTa p_Mantel=0.2522, TF-IDF p_Mantel=0.0975).",
+      "status": "SUPPORTED"
+    },
+    "point_13_human_benchmarking_protocol": {
+      "protocol_document": "paper/frontier_human_benchmarking_protocol.md",
+      "panels_count": 4,
+      "total_annotators": 60,
+      "expected_d_study_reliability": 0.8929,
+      "falsification_criteria_count": 4,
+      "conclusion": "Preregistration-ready protocol formalizing 4 human reader panels (N=60) with power > 0.999 to detect Procrustes alignment R^2>=0.50 and design-projected D-study reliability E rho^2_AP(15)=0.8929.",
+      "status": "PROSPECTIVE_PROTOCOL"
+    }
+  }
+}

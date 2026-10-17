@@ -1,0 +1,194 @@
+{
+  "point_10_possibility_space": {
+    "num_frameworks": 18,
+    "total_profiles": 2160,
+    "intrinsic_dim_two_nn_empirical": 6.771475784883445,
+    "intrinsic_dim_two_nn_random": 7.412202829718271,
+    "effective_rank_empirical": 6.740872486666228,
+    "effective_rank_random": 7.983549591528581,
+    "variance_trace_empirical": 0.6340800054016018,
+    "variance_trace_random": 2.6662159675904933,
+    "geometric_volume_compression_ratio": 0.20351478998056421
+  },
+  "point_11_anomaly_migration": {
+    "mean_migration_correlation": 0.37369866760068937,
+    "max_migration_correlation": 0.8606406320252055,
+    "min_migration_correlation": -0.05311174276089016,
+    "law_of_anomaly_decay_r": -0.69021727561005,
+    "law_of_anomaly_decay_p": 1.281071033202235e-44,
+    "top_preserved": [
+      {
+        "from_fw": "q0_original_geopolitical",
+        "to_fw": "q1_paraphrase_control",
+        "r2_predictability": 0.7230086389916703,
+        "r_correlation": 0.8606406320252055,
+        "grassmann_distance": 1.6881890118805356
+      },
+      {
+        "from_fw": "q1_paraphrase_control",
+        "to_fw": "q0_original_geopolitical",
+        "r2_predictability": 0.719628743842667,
+        "r_correlation": 0.8606406320252055,
+        "grassmann_distance": 1.6881890118805354
+      },
+      {
+        "from_fw": "extreme_political_ontologies:legal_culpability",
+        "to_fw": "q3_realpolitik_statecraft",
+        "r2_predictability": 0.5455158996555947,
+        "r_correlation": 0.7616671687576877,
+        "grassmann_distance": 1.9057903883554217
+      },
+      {
+        "from_fw": "q3_realpolitik_statecraft",
+        "to_fw": "extreme_political_ontologies:legal_culpability",
+        "r2_predictability": 0.565241428981192,
+        "r_correlation": 0.7616671687576877,
+        "grassmann_distance": 1.9057903883554217
+      },
+      {
+        "from_fw": "q2_humanitarian_rights",
+        "to_fw": "q3_realpolitik_statecraft",
+        "r2_predictability": 0.4562912886320998,
+        "r_correlation": 0.6949875371180966,
+        "grassmann_distance": 1.799696646319558
+      }
+    ],
+    "top_disrupted": [
+      {
+        "from_fw": "q1_paraphrase_control",
+        "to_fw": "absurd_structurally_matched_paradigms:sports_tactics",
+        "r2_predictability": -0.04910586746901968,
+        "r_correlation": 0.00948957804105062,
+        "grassmann_distance": 2.2395553832961026
+      },
+      {
+        "from_fw": "absurd_structurally_matched_paradigms:meteorology",
+        "to_fw": "q1_paraphrase_control",
+        "r2_predictability": -0.03537168654849898,
+        "r_correlation": -0.014750393633638652,
+        "grassmann_distance": 2.260599663334449
+      },
+      {
+        "from_fw": "q1_paraphrase_control",
+        "to_fw": "absurd_structurally_matched_paradigms:meteorology",
+        "r2_predictability": -0.012573650037824624,
+        "r_correlation": -0.014750393633638652,
+        "grassmann_distance": 2.260599663334449
+      },
+      {
+        "from_fw": "absurd_structurally_matched_paradigms:meteorology",
+        "to_fw": "q0_original_geopolitical",
+        "r2_predictability": -0.036959198161159446,
+        "r_correlation": -0.05311174276089016,
+        "grassmann_distance": 2.2922912312042483
+      },
+      {
+        "from_fw": "q0_original_geopolitical",
+        "to_fw": "absurd_structurally_matched_paradigms:meteorology",
+        "r2_predictability": -0.026456868082538554,
+        "r_correlation": -0.05311174276089016,
+        "grassmann_distance": 2.2922912312042483
+      }
+    ]
+  },
+  "point_12_observer_space_geometry": {
+    "num_frameworks": 18,
+    "num_pairs": 153,
+    "pearson_r_concept_vs_observer": -0.050338453359767374,
+    "pearson_p": 0.5366162295633174,
+    "spearman_rho_concept_vs_observer": -0.038672885422111426,
+    "spearman_p": 0.6350636424904924,
+    "observer_map_mds": {
+      "absurd_structurally_matched_paradigms:botanical_taxonomy": {
+        "x": -1.0101595337614098,
+        "y": -1.3039470298377476,
+        "mean_dist_to_others": 2.2010189289815085
+      },
+      "absurd_structurally_matched_paradigms:culinary_arts": {
+        "x": 1.4342552992136273,
+        "y": -0.7982106199710263,
+        "mean_dist_to_others": 2.1897365621658436
+      },
+      "absurd_structurally_matched_paradigms:meteorology": {
+        "x": -1.350889181858507,
+        "y": -0.6569958587319651,
+        "mean_dist_to_others": 2.1685226322709275
+      },
+      "absurd_structurally_matched_paradigms:sports_tactics": {
+        "x": -0.24209145211120192,
+        "y": -1.1957240643251732,
+        "mean_dist_to_others": 2.130375367575934
+      },
+      "disciplinary_paradigms:ihl_humanitarian_law": {
+        "x": -0.4201760957134847,
+        "y": 0.799343004731578,
+        "mean_dist_to_others": 2.031335302402035
+      },
+      "disciplinary_paradigms:media_framing_analysis": {
+        "x": 0.41423474883634126,
+        "y": -0.5302473135019959,
+        "mean_dist_to_others": 2.112118044416828
+      },
+      "disciplinary_paradigms:peace_conflict_studies": {
+        "x": 0.9332176474061943,
+        "y": -1.1550262940538352,
+        "mean_dist_to_others": 2.162727823845852
+      },
+      "disciplinary_paradigms:realist_international_relations": {
+        "x": 1.5356647925175433,
+        "y": 0.1886631550869176,
+        "mean_dist_to_others": 2.1250775539700903
+      },
+      "disciplinary_paradigms:strategic_security": {
+        "x": 0.6560642162376592,
+        "y": 1.2947396573130077,
+        "mean_dist_to_others": 2.1200561948989614
+      },
+      "extreme_political_ontologies:economic_cost": {
+        "x": -0.6713113923103049,
+        "y": -0.3235984055195228,
+        "mean_dist_to_others": 2.093517784369505
+      },
+      "extreme_political_ontologies:humanitarian_welfare": {
+        "x": -1.5973496840467336,
+        "y": 0.0961405160580751,
+        "mean_dist_to_others": 2.202281643453085
+      },
+      "extreme_political_ontologies:legal_culpability": {
+        "x": 0.2079996985973871,
+        "y": 0.5287436419119244,
+        "mean_dist_to_others": 2.0580694884064665
+      },
+      "extreme_political_ontologies:operational_efficacy": {
+        "x": 0.07869651591980382,
+        "y": -1.817376281073535,
+        "mean_dist_to_others": 2.2981388127969677
+      },
+      "extreme_political_ontologies:religious_obligation": {
+        "x": 0.9632458722387367,
+        "y": 0.029899068494192153,
+        "mean_dist_to_others": 2.0949148399549524
+      },
+      "q0_original_geopolitical": {
+        "x": -1.3692969866686324,
+        "y": 0.9534783321158391,
+        "mean_dist_to_others": 2.2121158885515677
+      },
+      "q1_paraphrase_control": {
+        "x": -0.7942130380414193,
+        "y": 1.3702329949821381,
+        "mean_dist_to_others": 2.14400576366518
+      },
+      "q2_humanitarian_rights": {
+        "x": 0.028267358217853488,
+        "y": 1.5013897145434685,
+        "mean_dist_to_others": 2.1105695657419328
+      },
+      "q3_realpolitik_statecraft": {
+        "x": 1.2038412153265474,
+        "y": 1.0184957817776608,
+        "mean_dist_to_others": 2.140717727217114
+      }
+    }
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "analysis": {
+    "n_articles": 320,
+    "permutations_per_null": 10000,
+    "seed": 42
+  },
+  "claim_boundaries": {
+    "extraction_provenance": "The existing checkpoint was produced without a hash-bound pre-run manifest. Current hashes and exact article-ID order are verified post hoc, not at extraction time.",
+    "historical_results": "preserved separately and not retroactively replaced",
+    "not_equivalent_to": "hidden-state displacement phi_A-phi_B",
+    "primary_measurement": "paired scalar c=s_A-s_B",
+    "q1": "paraphrase-A bank; not independent authorship"
+  },
+  "formulas": {
+    "paired_scalar": "c=s_A-s_B",
+    "pca": "covariance PCA on each column-centered article-by-eight score matrix",
+    "procrustes_null": "hold PCA fits fixed and permute only Q1 article-row correspondence",
+    "side_score": "s=P(entailment)-P(contradiction), softmax applied after paragraph-logit aggregation",
+    "variance_null": "independently permute each score column and refit PCA"
+  },
+  "provenance": {
+    "article_ids_exactly_match_corpus_order": true,
+    "inputs": {
+      "checkpoint": "6d9a266aefeb88dd5a45b2ea03f160d295ba60ff3adb33fcb4d8c5a7edf5333f",
+      "corpus": "3b16c0355c8896a1025235e1d07265a9606bd937f1f8b50bf86bbb2e879899c9",
+      "q0": "7e85fcb306be36c50687d19defa3c8be249b82e7eb5be399cf7a82ef75b30c81",
+      "q1": "5a281bfde1784749d6e437d51a13949cd3603e8ee472011e4b4e927bf3bbd236"
+    },
+    "paths": {
+      "checkpoint": "outputs\\fresh_scalar_structure_run\\extraction_checkpoint.jsonl",
+      "corpus": "data\\controlled_N_dense_corpus.jsonl",
+      "q0": "config\\framing_queries.yaml",
+      "q1": "config\\prompt_banks\\probe_hypotheses_paraphrase_a.json"
+    },
+    "pre_run_manifest": null,
+    "runtime": {
+      "numpy": "2.3.3",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "python": "3.13.2",
+      "python_implementation": "CPython",
+      "scipy": "1.16.2",
+      "torch": "2.10.0+cu128"
+    },
+    "source_sha256": {
+      "data_helper": "924274721971595a8abc88f376a5c111ebaa28b8300dc2593049ab15edf9e682",
+      "extraction_helper": "12e0093f93069c4ea2b636c1d0c4c285e4e5f4cd7f437ef1ca15fdb97522dfa1",
+      "pca_helper": "910bcb55bc8661207b34d20cec40512e70ac17c0d9922f9f7857c8d7167d0a9a",
+      "protocol": "5622dbdbe2354dd0b450c7ffef514d0fcc82ef57a37119e364175fb8281be10e",
+      "robustness_helper": "ba1e53c3d49a475590a83a87ca23a75d325d761ce04c611da3cc575763c11ec9",
+      "runner": "363ee015c4fafe8a240ffeb882d596e7c78cfeeee6a696a20822160beb0b43e9"
+    }
+  },
+  "results": {
+    "A_side": {
+      "pairwise_distance_spearman": {
+        "n_pairwise_distances": 51040,
+        "rho": 0.7964495964403422,
+        "scipy_p_display_naive": "<0.001",
+        "scipy_p_value_naive": 2.2250738585072014e-308
+      },
+      "principal_angles_degrees": [
+        25.54476037088189,
+        8.639120219621045
+      ],
+      "principal_angles_radians": [
+        0.4458401751048568,
+        0.15078109230800285
+      ],
+      "procrustes": {
+        "count_null_le_observed": 0,
+        "lower_tail_percentile": 0.009999000099990002,
+        "lower_tail_rank": 1,
+        "lower_tail_rank_out_of": 10001,
+        "null_mean": 0.9955192926081851,
+        "null_quantiles": {
+          "2.5%": 0.9859304893152603,
+          "97.5%": 0.9995637164822286
+        },
+        "observed": 0.17298721499314917,
+        "p_display": "<0.001",
+        "p_value": 9.999000099990002e-05,
+        "tail": "lower"
+      },
+      "q0_full_explained_variance_ratio": [
+        0.5577365216963829,
+        0.22314462165072185,
+        0.08611253213197366,
+        0.05546912954113729,
+        0.02675663947884096,
+        0.025514639203646126,
+        0.013434626896871174,
+        0.011831289400426057
+      ],
+      "q0_loadings": [
+        [
+          0.4384737414097305,
+          0.4887311585886579,
+          0.5666873688947004,
+          0.3826973699531947,
+          0.11238971696125451,
+          0.18796357044856515,
+          0.20522888689278135,
+          0.10587791731610542
+        ],
+        [
+          -0.3277159061238773,
+          0.04828134919543832,
+          -0.40988819565389834,
+          0.31886357734566567,
+          0.4255272362150343,
+          0.33063283009721767,
+          0.35238013135394003,
+          0.45390046070396106
+        ]
+      ],
+      "q0_variance_null": {
+        "count_null_ge_observed": 0,
+        "null_mean": 0.4387131827864596,
+        "null_quantiles": {
+          "2.5%": 0.43028936345718644,
+          "97.5%": 0.4523626911938385
+        },
+        "observed": 0.7808811433471048,
+        "p_display": "<0.001",
+        "p_value": 9.999000099990002e-05,
+        "tail": "upper"
+      },
+      "q0_variance_ratio": 0.7808811433471048,
+      "q1_full_explained_variance_ratio": [
+        0.5459933500281765,
+        0.23676104046408922,
+        0.06931818266339253,
+        0.0637398536965217,
+        0.03352872905122666,
+        0.022889369543007188,
+        0.015051616534558753,
+        0.012717858019027575
+      ],
+      "q1_loadings": [
+        [
+          0.4460339028105554,
+          0.21576656636904024,
+          0.6514586871889516,
+          0.4177413953568381,
+          0.1725809663402061,
+          0.1926004622773726,
+          0.25191870823423634,
+          0.1589027636684969
+        ],
+        [
+          0.20834000817539367,
+          -0.2621376416674136,
+          0.5373151297055897,
+          -0.2662368539365169,
+          -0.27314554797987695,
+          -0.46189510801108036,
+          -0.3153415623323332,
+          -0.3753569030802325
+        ]
+      ],
+      "q1_variance_null": {
+        "count_null_ge_observed": 0,
+        "null_mean": 0.49678502219538484,
+        "null_quantiles": {
+          "2.5%": 0.4905668514751291,
+          "97.5%": 0.5084582207115032
+        },
+        "observed": 0.782754390492266,
+        "p_display": "<0.001",
+        "p_value": 9.999000099990002e-05,
+        "tail": "upper"
+      },
+      "q1_variance_ratio": 0.782754390492266
+    },
+    "paired_scalar": {
+      "pairwise_distance_spearman": {
+        "n_pairwise_distances": 51040,
+        "rho": 0.8461888862184497,
+        "scipy_p_display_naive": "<0.001",
+        "scipy_p_value_naive": 2.2250738585072014e-308
+      },
+      "principal_angles_degrees": [
+        27.61780791781147,
+        9.726602142202472
+      ],
+      "principal_angles_radians": [
+        0.4820216803491696,
+        0.16976123241296684
+      ],
+      "procrustes": {
+        "count_null_le_observed": 0,
+        "lower_tail_percentile": 0.009999000099990002,
+        "lower_tail_rank": 1,
+        "lower_tail_rank_out_of": 10001,
+        "null_mean": 0.995978038501046,
+        "null_quantiles": {
+          "2.5%": 0.9859097338137223,
+          "97.5%": 0.9996994196455466
+        },
+        "observed": 0.189037013930089,
+        "p_display": "<0.001",
+        "p_value": 9.999000099990002e-05,
+        "tail": "lower"
+      },
+      "q0_full_explained_variance_ratio": [
+        0.6012713592297948,
+        0.14885400487131034,
+        0.08527039056639792,
+        0.04797037975761603,
+        0.03694560376269383,
+        0.033944090242349144,
+        0.027111700231545886,
+        0.018632471338292177
+      ],
+      "q0_loadings": [
+        [
+          -0.5482413645123559,
+          -0.11818822447246446,
+          -0.48250800202266947,
+          -0.03886833162738816,
+          0.27333892877450167,
+          0.15128849918651674,
+          0.11501145153808626,
+          0.5833594232200877
+        ],
+        [
+          -0.15308515319159996,
+          0.6482754747747265,
+          0.0755930678280124,
+          0.7227893347662157,
+          0.07669757619686443,
+          -0.022512501256049755,
+          0.14202639868052402,
+          0.04005348290762978
+        ]
+      ],
+      "q0_variance_null": {
+        "count_null_ge_observed": 0,
+        "null_mean": 0.45046078157557023,
+        "null_quantiles": {
+          "2.5%": 0.44280374039404224,
+          "97.5%": 0.4642257132034982
+        },
+        "observed": 0.750125364101105,
+        "p_display": "<0.001",
+        "p_value": 9.999000099990002e-05,
+        "tail": "upper"
+      },
+      "q0_variance_ratio": 0.750125364101105,
+      "q1_full_explained_variance_ratio": [
+        0.6125648045479778,
+        0.11034739799678812,
+        0.08334933285219252,
+        0.06238725516312301,
+        0.048806502600928024,
+        0.04047866747094776,
+        0.022969924974808972,
+        0.01909611439323381
+      ],
+      "q1_loadings": [
+        [
+          -0.459737640969814,
+          0.09201474837022106,
+          -0.5594189603905009,
+          -0.05346476463648877,
+          0.2195873443360965,
+          0.25725004554700986,
+          0.16974114777667162,
+          0.5667082920522623
+        ],
+        [
+          -0.2935766694782303,
+          0.35247576356757826,
+          0.24844685638955677,
+          0.8041446045033485,
+          0.18233246098562572,
+          0.0655872612590801,
+          0.167509949008869,
+          -0.12487110013260996
+        ]
+      ],
+      "q1_variance_null": {
+        "count_null_ge_observed": 0,
+        "null_mean": 0.4718932163174173,
+        "null_quantiles": {
+          "2.5%": 0.4669821738902638,
+          "97.5%": 0.48103356338484254
+        },
+        "observed": 0.7229122025447657,
+        "p_display": "<0.001",
+        "p_value": 9.999000099990002e-05,
+        "tail": "upper"
+      },
+      "q1_variance_ratio": 0.7229122025447657
+    }
+  },
+  "schema": {
+    "name": "belief_transformer.paired_scalar_structure",
+    "version": "1.0.0"
+  },
+  "status": "exploratory_posthoc_analysis_of_existing_unmanifested_extraction"
+}

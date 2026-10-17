@@ -1,0 +1,300 @@
+{
+  "two_way_anova_decomposition": {
+    "grand_mean": 0.013709404398927984,
+    "ss_total": 39.78144978705188,
+    "ss_article_object": 1.6824147890146735,
+    "ss_framework": 11.25997891841611,
+    "ss_interaction_object_x_framework": 26.8390560796211,
+    "df": {
+      "article": 119,
+      "framework": 13,
+      "interaction": 1547,
+      "total": 1679
+    },
+    "ms": {
+      "article": 0.01413793940348465,
+      "framework": 0.8661522244935469,
+      "interaction": 0.017349098952566967
+    },
+    "f_stat": {
+      "article": 0.8149091455491875,
+      "framework": 49.924911193465256
+    },
+    "p_val": {
+      "article": 0.9248420966622951,
+      "framework": 1.1102230246251565e-16
+    },
+    "eta_squared": {
+      "eta2_article_object": 0.04229143980474708,
+      "eta2_framework": 0.2830459668687344,
+      "eta2_interaction_object_x_framework": 0.6746625933265185
+    },
+    "variance_percentages": {
+      "object_pct": 4.229143980474708,
+      "framework_pct": 28.304596686873438,
+      "interaction_pct": 67.46625933265184
+    }
+  },
+  "exact_bank_permutation_cca": {
+    "n_banks": 9,
+    "n_political": 5,
+    "n_absurd": 4,
+    "n_combinations": 126,
+    "observed_mean_political": 0.4782775488248149,
+    "observed_mean_absurd": 0.3947460720588311,
+    "observed_delta_semantic": 0.08353147676598377,
+    "comb_deltas_min": -0.21952732907845607,
+    "comb_deltas_max": 0.21013479961379372,
+    "comb_deltas_mean": -2.026597584633222e-17,
+    "exact_p_one_sided": 0.18253968253968253,
+    "exact_p_two_sided": 0.3888888888888889,
+    "count_greater_or_equal": 23,
+    "calibrated_statement": "The current bank set does not establish a domain-specific canonical-correlation advantage above the generic cross-bank floor (Delta = +0.0835, exact permutation p = 0.2222 one-sided, 0.4444 two-sided; article bootstrap 95% CI [-0.0619, +0.2210])."
+  },
+  "intrinsic_vs_relational_benchmarks": {
+    "weak_sentiment_length": {
+      "representation": "Weak (Length + VADER)",
+      "1_scalar_pooled_m0": {
+        "r2_pooled": 0.0016193569575729816,
+        "rmse": 0.15375658990824564
+      },
+      "2_multioutput_m0": {
+        "r2_pooled": 0.41849827426537,
+        "r2_macro": 0.15981996377199817,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.15782152402813499,
+          "q1_paraphrase_control": 0.002878307171639838,
+          "q2_humanitarian_rights": 0.19116046996661895,
+          "q3_realpolitik_statecraft": 0.1901049397755037,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.22975081387667606,
+          "disciplinary_paradigms:strategic_security": 0.1605202612346096,
+          "disciplinary_paradigms:peace_conflict_studies": 0.0728572724012927,
+          "disciplinary_paradigms:realist_international_relations": -0.0050605699698058615,
+          "disciplinary_paradigms:media_framing_analysis": 0.21390117981775492,
+          "extreme_political_ontologies:legal_culpability": 0.2927109899745838,
+          "extreme_political_ontologies:operational_efficacy": -0.03768848182637896,
+          "extreme_political_ontologies:humanitarian_welfare": 0.3895976164802598,
+          "extreme_political_ontologies:economic_cost": 0.3323579239096217,
+          "extreme_political_ontologies:religious_obligation": 0.04656724596746342
+        },
+        "rmse": 0.11734407512229691
+      },
+      "3_per_framework_models": {
+        "r2_pooled": 0.4102844186252006,
+        "r2_macro": 0.14874048953541777,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.15294168775988093,
+          "q1_paraphrase_control": 0.0026632764929530595,
+          "q2_humanitarian_rights": 0.15497355723189732,
+          "q3_realpolitik_statecraft": 0.17761439376395005,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.22575421298940324,
+          "disciplinary_paradigms:strategic_security": 0.1540859982306907,
+          "disciplinary_paradigms:peace_conflict_studies": 0.05427440537619699,
+          "disciplinary_paradigms:realist_international_relations": -0.052330209988709964,
+          "disciplinary_paradigms:media_framing_analysis": 0.21019051380553389,
+          "extreme_political_ontologies:legal_culpability": 0.2951709090615726,
+          "extreme_political_ontologies:operational_efficacy": -0.02650448640496994,
+          "extreme_political_ontologies:humanitarian_welfare": 0.38394674994971956,
+          "extreme_political_ontologies:economic_cost": 0.33194962362405545,
+          "extreme_political_ontologies:religious_obligation": 0.01763622160367495
+        },
+        "rmse": 0.11816992604755887
+      },
+      "4_framework_main_effects_m1": {
+        "r2_pooled": 0.2685981762023244,
+        "rmse": 0.1316023613181132,
+        "delta_over_scalar": 0.2669788192447514
+      },
+      "5_relational_interaction_m2": {
+        "r2_pooled": 0.4102844186252006,
+        "rmse": 0.11816992604755887,
+        "delta_m2_over_m1": 0.1416862424228762,
+        "delta_m2_over_multioutput": -0.00821385564016941,
+        "total_gain_over_scalar": 0.4086650616676276
+      }
+    },
+    "tfidf_100": {
+      "representation": "TF-IDF (100 features)",
+      "1_scalar_pooled_m0": {
+        "r2_pooled": -0.00015908782605533744,
+        "rmse": 0.1538934745426041
+      },
+      "2_multioutput_m0": {
+        "r2_pooled": 0.40778242977514034,
+        "r2_macro": 0.15346424773452824,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.1341407220554599,
+          "q1_paraphrase_control": 0.06281837932688938,
+          "q2_humanitarian_rights": 0.26642020623013807,
+          "q3_realpolitik_statecraft": 0.1338245643104249,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.25790596982229785,
+          "disciplinary_paradigms:strategic_security": 0.22218832181251857,
+          "disciplinary_paradigms:peace_conflict_studies": 0.03580213121127962,
+          "disciplinary_paradigms:realist_international_relations": 0.05305702924940281,
+          "disciplinary_paradigms:media_framing_analysis": 0.09167340957353443,
+          "extreme_political_ontologies:legal_culpability": 0.38556239040725715,
+          "extreme_political_ontologies:operational_efficacy": -0.034999760918837275,
+          "extreme_political_ontologies:humanitarian_welfare": 0.31604399330002697,
+          "extreme_political_ontologies:economic_cost": 0.12753178467570336,
+          "extreme_political_ontologies:religious_obligation": 0.09653032722729926
+        },
+        "rmse": 0.11842034074821223
+      },
+      "3_per_framework_models": {
+        "r2_pooled": 0.396165184533819,
+        "r2_macro": 0.14464956937744824,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.15228149829685989,
+          "q1_paraphrase_control": 0.033899558638046834,
+          "q2_humanitarian_rights": 0.23051819952576325,
+          "q3_realpolitik_statecraft": 0.14748729379969328,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.27119202444770396,
+          "disciplinary_paradigms:strategic_security": 0.21560818657998015,
+          "disciplinary_paradigms:peace_conflict_studies": 0.02488411739705465,
+          "disciplinary_paradigms:realist_international_relations": 0.03474680023654653,
+          "disciplinary_paradigms:media_framing_analysis": 0.11162678870594944,
+          "extreme_political_ontologies:legal_culpability": 0.4140901930260106,
+          "extreme_political_ontologies:operational_efficacy": -0.0014375976259426437,
+          "extreme_political_ontologies:humanitarian_welfare": 0.23692672727109243,
+          "extreme_political_ontologies:economic_cost": 0.06969388019714617,
+          "extreme_political_ontologies:religious_obligation": 0.0835763007883703
+        },
+        "rmse": 0.1195761970439312
+      },
+      "4_framework_main_effects_m1": {
+        "r2_pooled": 0.26821017199008446,
+        "rmse": 0.13163726381535257,
+        "delta_over_scalar": 0.2683692598161398
+      },
+      "5_relational_interaction_m2": {
+        "r2_pooled": 0.396165184533819,
+        "rmse": 0.1195761970439312,
+        "delta_m2_over_m1": 0.12795501254373454,
+        "delta_m2_over_multioutput": -0.01161724524132135,
+        "total_gain_over_scalar": 0.39632427235987433
+      }
+    },
+    "deberta_1536": {
+      "representation": "DeBERTa-v2-xlarge (1536-dim article-only)",
+      "1_scalar_pooled_m0": {
+        "r2_pooled": 0.008195500806577494,
+        "rmse": 0.15324937054798735
+      },
+      "2_multioutput_m0": {
+        "r2_pooled": 0.48735729917334547,
+        "r2_macro": 0.22476129582438298,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.12773702006945398,
+          "q1_paraphrase_control": -0.03122931834542597,
+          "q2_humanitarian_rights": 0.28453137389804195,
+          "q3_realpolitik_statecraft": 0.09793969236073108,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.2884603248584474,
+          "disciplinary_paradigms:strategic_security": 0.24743202749157667,
+          "disciplinary_paradigms:peace_conflict_studies": 0.18126516581753893,
+          "disciplinary_paradigms:realist_international_relations": 0.08319414442680295,
+          "disciplinary_paradigms:media_framing_analysis": 0.30691019264581676,
+          "extreme_political_ontologies:legal_culpability": 0.565269791741746,
+          "extreme_political_ontologies:operational_efficacy": 0.03820245624676888,
+          "extreme_political_ontologies:humanitarian_welfare": 0.45662243922309675,
+          "extreme_political_ontologies:economic_cost": 0.35791716802762297,
+          "extreme_political_ontologies:religious_obligation": 0.1424056630791427
+        },
+        "rmse": 0.1101775349304644
+      },
+      "3_per_framework_models": {
+        "r2_pooled": 0.4903475286303126,
+        "r2_macro": 0.22648280041822696,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.14424613920687968,
+          "q1_paraphrase_control": 0.012476945167653075,
+          "q2_humanitarian_rights": 0.2999806911485975,
+          "q3_realpolitik_statecraft": 0.030420160012464503,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.29305248006587004,
+          "disciplinary_paradigms:strategic_security": 0.24142111248582532,
+          "disciplinary_paradigms:peace_conflict_studies": 0.1797815354482748,
+          "disciplinary_paradigms:realist_international_relations": 0.05320202324775014,
+          "disciplinary_paradigms:media_framing_analysis": 0.3034023395596267,
+          "extreme_political_ontologies:legal_culpability": 0.6233070743782115,
+          "extreme_political_ontologies:operational_efficacy": 0.028525810248294037,
+          "extreme_political_ontologies:humanitarian_welfare": 0.46150248940660876,
+          "extreme_political_ontologies:economic_cost": 0.3630147723534949,
+          "extreme_political_ontologies:religious_obligation": 0.1364256331256266
+        },
+        "rmse": 0.10985573385625033
+      },
+      "4_framework_main_effects_m1": {
+        "r2_pooled": 0.2752565498225229,
+        "rmse": 0.13100196556988236,
+        "delta_over_scalar": 0.2670610490159454
+      },
+      "5_relational_interaction_m2": {
+        "r2_pooled": 0.4903475286303126,
+        "rmse": 0.10985573385625033,
+        "delta_m2_over_m1": 0.2150909788077897,
+        "delta_m2_over_multioutput": 0.0029902294569671417,
+        "total_gain_over_scalar": 0.4821520278237351
+      }
+    },
+    "minilm_384": {
+      "representation": "all-MiniLM-L6-v2 (384-dim independent encoder)",
+      "1_scalar_pooled_m0": {
+        "r2_pooled": 0.003184193258906065,
+        "rmse": 0.15363604558069335
+      },
+      "2_multioutput_m0": {
+        "r2_pooled": 0.45199348858798816,
+        "r2_macro": 0.19880655334223557,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.20537885603499606,
+          "q1_paraphrase_control": 0.04963472411640901,
+          "q2_humanitarian_rights": 0.2253094989973854,
+          "q3_realpolitik_statecraft": -0.013221635927657793,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.3044099505228689,
+          "disciplinary_paradigms:strategic_security": 0.19635824723217565,
+          "disciplinary_paradigms:peace_conflict_studies": 0.17423832271244433,
+          "disciplinary_paradigms:realist_international_relations": 0.13184665353966296,
+          "disciplinary_paradigms:media_framing_analysis": 0.23741744835514422,
+          "extreme_political_ontologies:legal_culpability": 0.3635160242644071,
+          "extreme_political_ontologies:operational_efficacy": 0.11505066401198383,
+          "extreme_political_ontologies:humanitarian_welfare": 0.3706669448154831,
+          "extreme_political_ontologies:economic_cost": 0.2880791439376035,
+          "extreme_political_ontologies:religious_obligation": 0.13460690417839194
+        },
+        "rmse": 0.11391437238618987
+      },
+      "3_per_framework_models": {
+        "r2_pooled": 0.4403168529711835,
+        "r2_macro": 0.19030632596941346,
+        "r2_per_framework": {
+          "q0_original_geopolitical": 0.23107610528441969,
+          "q1_paraphrase_control": 0.061724111349406585,
+          "q2_humanitarian_rights": 0.2030096273833023,
+          "q3_realpolitik_statecraft": -0.001258425640891181,
+          "disciplinary_paradigms:ihl_humanitarian_law": 0.3055030213962602,
+          "disciplinary_paradigms:strategic_security": 0.18601414281750772,
+          "disciplinary_paradigms:peace_conflict_studies": 0.1299680249613877,
+          "disciplinary_paradigms:realist_international_relations": 0.11140322107164446,
+          "disciplinary_paradigms:media_framing_analysis": 0.23446539398177502,
+          "extreme_political_ontologies:legal_culpability": 0.3344407406952822,
+          "extreme_political_ontologies:operational_efficacy": 0.09575384577368029,
+          "extreme_political_ontologies:humanitarian_welfare": 0.3737122663853101,
+          "extreme_political_ontologies:economic_cost": 0.2919051618032541,
+          "extreme_political_ontologies:religious_obligation": 0.10657132630944877
+        },
+        "rmse": 0.11512158947480691
+      },
+      "4_framework_main_effects_m1": {
+        "r2_pooled": 0.2719946985057442,
+        "rmse": 0.13129643474763986,
+        "delta_over_scalar": 0.26881050524683814
+      },
+      "5_relational_interaction_m2": {
+        "r2_pooled": 0.4403168529711835,
+        "rmse": 0.11512158947480691,
+        "delta_m2_over_m1": 0.1683221544654393,
+        "delta_m2_over_multioutput": -0.011676635616804654,
+        "total_gain_over_scalar": 0.43713265971227744
+      }
+    }
+  }
+}

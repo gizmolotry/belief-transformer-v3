@@ -1,0 +1,412 @@
+{
+  "views": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8"
+  ],
+  "view_labels": {
+    "V1": "Scalar Q0 (8D margin)",
+    "V2": "Scalar Q1 (8D margin)",
+    "V3": "Layer 24 CLS Q0 (8x1536)",
+    "V4": "Layer 24 CLS Q1 (8x1536)",
+    "V5": "Layer 24 Mean Q0 (8x1536)",
+    "V6": "Layer 24 Mean Q1 (8x1536)",
+    "V7": "Layer 12 CLS Q0 (8x1536)",
+    "V8": "Layer 12 CLS Q1 (8x1536)"
+  },
+  "cka_matrix_rbf": [
+    [
+      1.0,
+      0.7525,
+      0.5413,
+      0.4947,
+      0.5058,
+      0.4406,
+      0.1547,
+      0.1457
+    ],
+    [
+      0.7525,
+      1.0,
+      0.4815,
+      0.5556,
+      0.4568,
+      0.5149,
+      0.1368,
+      0.1321
+    ],
+    [
+      0.5413,
+      0.4815,
+      1.0,
+      0.7943,
+      0.8123,
+      0.6884,
+      0.3437,
+      0.3295
+    ],
+    [
+      0.4947,
+      0.5556,
+      0.7943,
+      1.0,
+      0.7095,
+      0.8428,
+      0.3333,
+      0.3234
+    ],
+    [
+      0.5058,
+      0.4568,
+      0.8123,
+      0.7095,
+      1.0,
+      0.7279,
+      0.2719,
+      0.2596
+    ],
+    [
+      0.4406,
+      0.5149,
+      0.6884,
+      0.8428,
+      0.7279,
+      1.0,
+      0.253,
+      0.2467
+    ],
+    [
+      0.1547,
+      0.1368,
+      0.3437,
+      0.3333,
+      0.2719,
+      0.253,
+      1.0,
+      0.9302
+    ],
+    [
+      0.1457,
+      0.1321,
+      0.3295,
+      0.3234,
+      0.2596,
+      0.2467,
+      0.9302,
+      1.0
+    ]
+  ],
+  "cka_matrix_linear": [
+    [
+      1.0,
+      0.7883,
+      0.5481,
+      0.5123,
+      0.5055,
+      0.4562,
+      0.1287,
+      0.1214
+    ],
+    [
+      0.7883,
+      1.0,
+      0.4788,
+      0.5645,
+      0.4451,
+      0.5203,
+      0.1114,
+      0.11
+    ],
+    [
+      0.5481,
+      0.4788,
+      1.0,
+      0.7814,
+      0.8006,
+      0.6766,
+      0.2918,
+      0.278
+    ],
+    [
+      0.5123,
+      0.5645,
+      0.7814,
+      1.0,
+      0.6949,
+      0.8355,
+      0.2822,
+      0.2725
+    ],
+    [
+      0.5055,
+      0.4451,
+      0.8006,
+      0.6949,
+      1.0,
+      0.7191,
+      0.2262,
+      0.2149
+    ],
+    [
+      0.4562,
+      0.5203,
+      0.6766,
+      0.8355,
+      0.7191,
+      1.0,
+      0.2091,
+      0.2034
+    ],
+    [
+      0.1287,
+      0.1114,
+      0.2918,
+      0.2822,
+      0.2262,
+      0.2091,
+      1.0,
+      0.9201
+    ],
+    [
+      0.1214,
+      0.11,
+      0.278,
+      0.2725,
+      0.2149,
+      0.2034,
+      0.9201,
+      1.0
+    ]
+  ],
+  "pairwise_null_controls": {
+    "V1_vs_V2": {
+      "empirical_cka_rbf": 0.7525,
+      "empirical_cka_lin": 0.7883,
+      "null_mean": 0.0125,
+      "null_q95": 0.0172,
+      "null_q99": 0.0214,
+      "p_value": 0.001996007984031936
+    },
+    "V1_vs_V3": {
+      "empirical_cka_rbf": 0.5413,
+      "empirical_cka_lin": 0.5481,
+      "null_mean": 0.0406,
+      "null_q95": 0.0449,
+      "null_q99": 0.0477,
+      "p_value": 0.001996007984031936
+    },
+    "V1_vs_V4": {
+      "empirical_cka_rbf": 0.4947,
+      "empirical_cka_lin": 0.5123,
+      "null_mean": 0.0414,
+      "null_q95": 0.0463,
+      "null_q99": 0.0513,
+      "p_value": 0.001996007984031936
+    },
+    "V1_vs_V5": {
+      "empirical_cka_rbf": 0.5058,
+      "empirical_cka_lin": 0.5055,
+      "null_mean": 0.0315,
+      "null_q95": 0.0358,
+      "null_q99": 0.0393,
+      "p_value": 0.001996007984031936
+    },
+    "V1_vs_V6": {
+      "empirical_cka_rbf": 0.4406,
+      "empirical_cka_lin": 0.4562,
+      "null_mean": 0.0316,
+      "null_q95": 0.0367,
+      "null_q99": 0.0396,
+      "p_value": 0.001996007984031936
+    },
+    "V1_vs_V7": {
+      "empirical_cka_rbf": 0.1547,
+      "empirical_cka_lin": 0.1287,
+      "null_mean": 0.0517,
+      "null_q95": 0.0563,
+      "null_q99": 0.0593,
+      "p_value": 0.001996007984031936
+    },
+    "V1_vs_V8": {
+      "empirical_cka_rbf": 0.1457,
+      "empirical_cka_lin": 0.1214,
+      "null_mean": 0.0503,
+      "null_q95": 0.0543,
+      "null_q99": 0.0576,
+      "p_value": 0.001996007984031936
+    },
+    "V2_vs_V3": {
+      "empirical_cka_rbf": 0.4815,
+      "empirical_cka_lin": 0.4788,
+      "null_mean": 0.0418,
+      "null_q95": 0.046,
+      "null_q99": 0.0495,
+      "p_value": 0.001996007984031936
+    },
+    "V2_vs_V4": {
+      "empirical_cka_rbf": 0.5556,
+      "empirical_cka_lin": 0.5645,
+      "null_mean": 0.0428,
+      "null_q95": 0.0477,
+      "null_q99": 0.0523,
+      "p_value": 0.001996007984031936
+    },
+    "V2_vs_V5": {
+      "empirical_cka_rbf": 0.4568,
+      "empirical_cka_lin": 0.4451,
+      "null_mean": 0.0324,
+      "null_q95": 0.0374,
+      "null_q99": 0.0418,
+      "p_value": 0.001996007984031936
+    },
+    "V2_vs_V6": {
+      "empirical_cka_rbf": 0.5149,
+      "empirical_cka_lin": 0.5203,
+      "null_mean": 0.0324,
+      "null_q95": 0.0373,
+      "null_q99": 0.0408,
+      "p_value": 0.001996007984031936
+    },
+    "V2_vs_V7": {
+      "empirical_cka_rbf": 0.1368,
+      "empirical_cka_lin": 0.1114,
+      "null_mean": 0.0532,
+      "null_q95": 0.0576,
+      "null_q99": 0.0614,
+      "p_value": 0.001996007984031936
+    },
+    "V2_vs_V8": {
+      "empirical_cka_rbf": 0.1321,
+      "empirical_cka_lin": 0.11,
+      "null_mean": 0.0516,
+      "null_q95": 0.0564,
+      "null_q99": 0.0598,
+      "p_value": 0.001996007984031936
+    },
+    "V3_vs_V4": {
+      "empirical_cka_rbf": 0.7943,
+      "empirical_cka_lin": 0.7814,
+      "null_mean": 0.137,
+      "null_q95": 0.1413,
+      "null_q99": 0.1452,
+      "p_value": 0.001996007984031936
+    },
+    "V3_vs_V5": {
+      "empirical_cka_rbf": 0.8123,
+      "empirical_cka_lin": 0.8006,
+      "null_mean": 0.104,
+      "null_q95": 0.108,
+      "null_q99": 0.1097,
+      "p_value": 0.001996007984031936
+    },
+    "V3_vs_V6": {
+      "empirical_cka_rbf": 0.6884,
+      "empirical_cka_lin": 0.6766,
+      "null_mean": 0.1048,
+      "null_q95": 0.1091,
+      "null_q99": 0.1115,
+      "p_value": 0.001996007984031936
+    },
+    "V3_vs_V7": {
+      "empirical_cka_rbf": 0.3437,
+      "empirical_cka_lin": 0.2918,
+      "null_mean": 0.1714,
+      "null_q95": 0.1756,
+      "null_q99": 0.1778,
+      "p_value": 0.001996007984031936
+    },
+    "V3_vs_V8": {
+      "empirical_cka_rbf": 0.3295,
+      "empirical_cka_lin": 0.278,
+      "null_mean": 0.1664,
+      "null_q95": 0.1707,
+      "null_q99": 0.1724,
+      "p_value": 0.001996007984031936
+    },
+    "V4_vs_V5": {
+      "empirical_cka_rbf": 0.7095,
+      "empirical_cka_lin": 0.6949,
+      "null_mean": 0.1062,
+      "null_q95": 0.1104,
+      "null_q99": 0.1129,
+      "p_value": 0.001996007984031936
+    },
+    "V4_vs_V6": {
+      "empirical_cka_rbf": 0.8428,
+      "empirical_cka_lin": 0.8355,
+      "null_mean": 0.107,
+      "null_q95": 0.1115,
+      "null_q99": 0.1139,
+      "p_value": 0.001996007984031936
+    },
+    "V4_vs_V7": {
+      "empirical_cka_rbf": 0.3333,
+      "empirical_cka_lin": 0.2822,
+      "null_mean": 0.175,
+      "null_q95": 0.1792,
+      "null_q99": 0.1828,
+      "p_value": 0.001996007984031936
+    },
+    "V4_vs_V8": {
+      "empirical_cka_rbf": 0.3234,
+      "empirical_cka_lin": 0.2725,
+      "null_mean": 0.1698,
+      "null_q95": 0.1734,
+      "null_q99": 0.1764,
+      "p_value": 0.001996007984031936
+    },
+    "V5_vs_V6": {
+      "empirical_cka_rbf": 0.7279,
+      "empirical_cka_lin": 0.7191,
+      "null_mean": 0.0813,
+      "null_q95": 0.0853,
+      "null_q99": 0.0877,
+      "p_value": 0.001996007984031936
+    },
+    "V5_vs_V7": {
+      "empirical_cka_rbf": 0.2719,
+      "empirical_cka_lin": 0.2262,
+      "null_mean": 0.1329,
+      "null_q95": 0.1369,
+      "null_q99": 0.1395,
+      "p_value": 0.001996007984031936
+    },
+    "V5_vs_V8": {
+      "empirical_cka_rbf": 0.2596,
+      "empirical_cka_lin": 0.2149,
+      "null_mean": 0.1291,
+      "null_q95": 0.1331,
+      "null_q99": 0.136,
+      "p_value": 0.001996007984031936
+    },
+    "V6_vs_V7": {
+      "empirical_cka_rbf": 0.253,
+      "empirical_cka_lin": 0.2091,
+      "null_mean": 0.1339,
+      "null_q95": 0.1381,
+      "null_q99": 0.1414,
+      "p_value": 0.001996007984031936
+    },
+    "V6_vs_V8": {
+      "empirical_cka_rbf": 0.2467,
+      "empirical_cka_lin": 0.2034,
+      "null_mean": 0.1301,
+      "null_q95": 0.1344,
+      "null_q99": 0.1367,
+      "p_value": 0.001996007984031936
+    },
+    "V7_vs_V8": {
+      "empirical_cka_rbf": 0.9302,
+      "empirical_cka_lin": 0.9201,
+      "null_mean": 0.2125,
+      "null_q95": 0.2161,
+      "null_q99": 0.2186,
+      "p_value": 0.001996007984031936
+    }
+  }
+}

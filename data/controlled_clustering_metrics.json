@@ -1,0 +1,10 @@
+{
+  "nmi_euclidean": 0.09403037711486198,
+  "ari_euclidean": 0.030450669914738125,
+  "nmi_hadamard": 0.07057893027398039,
+  "ari_hadamard": 0.06118583064974427,
+  "nmi_riemannian": 0.07761253832227653,
+  "ari_riemannian": 0.057888944472236116,
+  "N": 60,
+  "model_used": "cross-encoder/nli-deberta-v3-small"
+}

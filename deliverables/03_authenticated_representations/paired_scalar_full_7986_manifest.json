@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETED",
+  "total_articles": 7986,
+  "historical_cached_articles": 6371,
+  "newly_inferred_articles": 1615,
+  "final_dataset_path": "d:\\belief-transformer\\V3\\deliverables\\03_authenticated_representations\\paired_scalar_full_7986.jsonl",
+  "final_dataset_sha256": "41fec0150af5bae7d06e8d2ac85f761b68153671d3a29e11cf230037ef895cdc",
+  "cache_signature_verified": true,
+  "cache_signature": {
+    "q0_sha256": "7e85fcb306be36c50687d19defa3c8be249b82e7eb5be399cf7a82ef75b30c81",
+    "q1_sha256": "5a281bfde1784749d6e437d51a13949cd3603e8ee472011e4b4e927bf3bbd236",
+    "model_revision": "2b65bccdedcead4bc685988bcc30153d4922a789",
+    "model_files_sha256": {
+      "config.json": "617f9d0b46fe934497a5aab5b44b1b343a751c0c43fec3e56e26b21e76b77c60",
+      "pytorch_model.bin": "cc41eeb065c6ab3f7e88f8dab756334abb1f77a1136fec8cf02442143934c253",
+      "spm.model": "5598d5e96f339a8d980c15f9afd405a2e5e1be7db41de3ed13b0f03fac1e8c17",
+      "tokenizer_config.json": "0704f75eb3defe60aab06311d14756aa2f48c9aae758c8e5f78aa02dd92cc757"
+    },
+    "paragraph_weights": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "max_length": 512
+  },
+  "completed_utc": "2026-10-15 00:59:41"
+}

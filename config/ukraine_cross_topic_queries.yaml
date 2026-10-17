@@ -1,0 +1,40 @@
+queries:
+  sovereign_defense_vs_proxy_war:
+    A: "This article frames Ukrainian military actions as legitimate sovereign self-defense against unprovoked foreign aggression."
+    B: "This article frames the conflict as a Western proxy war utilizing Ukraine to weaken and encircle Russia."
+    description: "Core conflict framing and actor agency"
+
+  democratic_sovereignty_vs_security_sphere:
+    A: "This article emphasizes Ukraine's democratic right to choose its own international alliances and European integration."
+    B: "This article emphasizes Russia's historical security sphere and legitimate sphere of influence in the post-Soviet space."
+    description: "Geopolitical legitimacy and regional sphere of influence"
+
+  civilian_terror_vs_precision_targeting:
+    A: "This article portrays Russian strikes as deliberate terror targeting of civilian infrastructure and population centers."
+    B: "This article portrays Russian strikes as precision tactical operations against legitimate military and logistics infrastructure."
+    description: "Targeting intent and civilian impact"
+
+  unprovoked_imperialism_vs_defensive_preemption:
+    A: "This article characterizes the war as an unprovoked neo-imperial conquest driven by expansionist territorial ambition."
+    B: "This article characterizes the war as a defensive preemptive measure provoked by NATO expansion and security threats."
+    description: "Causality and origin of armed conflict"
+
+  international_law_vs_western_hypocrisy:
+    A: "This article condemns Russian territorial annexations as flagrant violations of the UN Charter and international law."
+    B: "This article characterizes Western condemnation of annexations as hypocritical and based on selective double standards."
+    description: "Legal norms and international legitimacy"
+
+  heroic_resistance_vs_proxy_sacrifice:
+    A: "This article depicts the Ukrainian people as united in resilient and heroic national resistance."
+    B: "This article depicts the Ukrainian leadership as forcibly conscripting citizens to serve foreign geopolitical objectives."
+    description: "Civilian and military agency"
+
+  war_crimes_vs_information_warfare:
+    A: "This article highlights documented war crimes, forced deportations, and human rights atrocities committed by invading forces."
+    B: "This article dismisses allegations of systematic war crimes as Western propaganda and staged information warfare."
+    description: "Atrocities and information veracity"
+
+  territorial_restoration_vs_pragmatic_compromise:
+    A: "This article insists that lasting peace requires complete liberation of all sovereign territory and military defeat of the aggressor."
+    B: "This article argues that peace requires pragmatic territorial compromise, recognition of security realities, and negotiated settlement."
+    description: "Conflict resolution conditions"

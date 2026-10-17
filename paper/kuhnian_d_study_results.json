@@ -1,0 +1,700 @@
+{
+  "timestamp": "2026-09-18T00:24:38Z",
+  "theoretical_distinction": {
+    "target_1_article_invariant": {
+      "description": "Object of measurement is the article A_i across all frameworks (scalar ranking).",
+      "universe_score_variance": "sigma^2_A",
+      "finding": "Because sigma^2_A approx 0.00%, E rho^2_A approx 0.000 and Phi_A approx 0.000, demonstrating that no framework-invariant article ranking exists.",
+      "current_design_metrics": {
+        "target": "Article Main Effect A_i (framework-invariant scalar polarity)",
+        "n_frameworks": 5,
+        "n_banks_per_framework": 3,
+        "n_probes_per_bank": 8,
+        "total_items": 120,
+        "universe_score_variance": 0.0,
+        "relative_error_variance": 0.0025722188555442416,
+        "absolute_error_variance": 0.0037496740343988897,
+        "g_coefficient_relative_e_rho2": 0.0,
+        "dependability_coefficient_absolute_phi": 0.0
+      }
+    },
+    "target_2_article_within_framework": {
+      "description": "Object of measurement is relational stance (AP)_{ip} within a specified framework p.",
+      "universe_score_variance": "sigma^2_A + sigma^2_AP approx sigma^2_AP",
+      "finding": "Item residual noise (74.4%) averages out across probe replications (1 / (n_b * n_k)), while genuine relational interaction is stable universe variance.",
+      "empirical_3x8_design": {
+        "n_banks": 3,
+        "n_probes_per_bank": 8,
+        "total_probes_per_framework": 24,
+        "universe_score_variance": 0.010093399001924292,
+        "relative_error_variance": 0.0027676952757969137,
+        "absolute_error_variance": 0.004149364544693756,
+        "g_coefficient_relative_e_rho2": 0.7848009495901691,
+        "dependability_coefficient_absolute_phi": 0.7086685788813067
+      }
+    }
+  },
+  "variance_components": {
+    "var_a": 0.0,
+    "var_p": 0.004505606625376397,
+    "var_bp": 0.004145007806690529,
+    "var_ap": 0.010093399001924292,
+    "var_abp": 0.0010902152541253539,
+    "var_res": 0.0577029645861231,
+    "var_total": 0.07753719327423966
+  },
+  "focal_configurations": {
+    "single_bank_single_probe": {
+      "n_banks": 1,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 1,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.05879317984024845,
+      "absolute_error_variance": 0.06293818764693898,
+      "g_coefficient_relative_e_rho2": 0.14652199559872842,
+      "dependability_coefficient_absolute_phi": 0.13820593889673344
+    },
+    "single_bank_eight_probes": {
+      "n_banks": 1,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 8,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.008303085827390741,
+      "absolute_error_variance": 0.01244809363408127,
+      "g_coefficient_relative_e_rho2": 0.5486591104535543,
+      "dependability_coefficient_absolute_phi": 0.44776977127956863
+    },
+    "three_banks_eight_probes_empirical": {
+      "n_banks": 3,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 24,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0027676952757969137,
+      "absolute_error_variance": 0.004149364544693756,
+      "g_coefficient_relative_e_rho2": 0.7848009495901691,
+      "dependability_coefficient_absolute_phi": 0.7086685788813067
+    },
+    "five_banks_eight_probes": {
+      "n_banks": 5,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 40,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0016606171654781482,
+      "absolute_error_variance": 0.0024896187268162537,
+      "g_coefficient_relative_e_rho2": 0.8587191695308741,
+      "dependability_coefficient_absolute_phi": 0.802144542709355
+    },
+    "five_banks_sixteen_probes": {
+      "n_banks": 5,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 80,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0009393301081516096,
+      "absolute_error_variance": 0.0017683316694897153,
+      "g_coefficient_relative_e_rho2": 0.9148596780742361,
+      "dependability_coefficient_absolute_phi": 0.8509212762897004
+    },
+    "ten_banks_eight_probes": {
+      "n_banks": 10,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 80,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0008303085827390741,
+      "absolute_error_variance": 0.0012448093634081269,
+      "g_coefficient_relative_e_rho2": 0.9239902225225428,
+      "dependability_coefficient_absolute_phi": 0.8902111053793788
+    }
+  },
+  "bootstrap_95_ci": {
+    "1_bank_1_probe": {
+      "e_rho2_mean": 0.1464588797564175,
+      "e_rho2_std": 0.012932699121324448,
+      "e_rho2_95_ci": [
+        0.12132338702492383,
+        0.17267841980798357
+      ],
+      "phi_mean": 0.1380512934444896,
+      "phi_std": 0.012342942210257453,
+      "phi_95_ci": [
+        0.11429377953508589,
+        0.16302066412198613
+      ]
+    },
+    "1_bank_8_probes": {
+      "e_rho2_mean": 0.5498393562069961,
+      "e_rho2_std": 0.024260600706350454,
+      "e_rho2_95_ci": [
+        0.499934214838057,
+        0.596320351365912
+      ],
+      "phi_mean": 0.44738132111030565,
+      "phi_std": 0.02586206653198403,
+      "phi_95_ci": [
+        0.39595377610697735,
+        0.4978590033382415
+      ]
+    },
+    "3_banks_8_probes": {
+      "e_rho2_mean": 0.7852217836400143,
+      "e_rho2_std": 0.016592978824594328,
+      "e_rho2_95_ci": [
+        0.7499506539099804,
+        0.8158933889900947
+      ],
+      "phi_mean": 0.7077537473451609,
+      "phi_std": 0.02164450895331642,
+      "phi_95_ci": [
+        0.6629032371356558,
+        0.7483908072137107
+      ]
+    },
+    "5_banks_8_probes": {
+      "e_rho2_mean": 0.8589347127322782,
+      "e_rho2_std": 0.011942116125608783,
+      "e_rho2_95_ci": [
+        0.8332967788907907,
+        0.8807544777773557
+      ],
+      "phi_mean": 0.8012774947766275,
+      "phi_std": 0.01667931439901902,
+      "phi_95_ci": [
+        0.7662192464954263,
+        0.8321404855525404
+      ]
+    },
+    "5_banks_16_probes": {
+      "e_rho2_mean": 0.9156780282883235,
+      "e_rho2_std": 0.008545597169827975,
+      "e_rho2_95_ci": [
+        0.8970124788378996,
+        0.9313955199630954
+      ],
+      "phi_mean": 0.8503804724601955,
+      "phi_std": 0.014213251106701076,
+      "phi_95_ci": [
+        0.8202383382629158,
+        0.8762534070563801
+      ]
+    },
+    "10_banks_8_probes": {
+      "e_rho2_mean": 0.9240704833949384,
+      "e_rho2_std": 0.006927664342969665,
+      "e_rho2_95_ci": [
+        0.909069156722194,
+        0.9365969754913754
+      ],
+      "phi_mean": 0.8895815127069114,
+      "phi_std": 0.010303033734831444,
+      "phi_95_ci": [
+        0.8676377487406435,
+        0.9083806532443983
+      ]
+    },
+    "target_1_current": {
+      "e_rho2_mean": 0.009743362151210928,
+      "e_rho2_std": 0.032435124638181496,
+      "e_rho2_95_ci": [
+        0.0,
+        0.12592385366999162
+      ],
+      "phi_mean": 0.0068640092284158166,
+      "phi_std": 0.023174534700815864,
+      "phi_95_ci": [
+        0.0,
+        0.088031869202721
+      ]
+    }
+  },
+  "d_study_full_matrix": [
+    {
+      "n_banks": 1,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 1,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.05879317984024845,
+      "absolute_error_variance": 0.06293818764693898,
+      "g_coefficient_relative_e_rho2": 0.14652199559872842,
+      "dependability_coefficient_absolute_phi": 0.13820593889673344
+    },
+    {
+      "n_banks": 1,
+      "n_probes_per_bank": 2,
+      "total_probes_per_framework": 2,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.029941697547186903,
+      "absolute_error_variance": 0.03408670535387743,
+      "g_coefficient_relative_e_rho2": 0.2521137669680073,
+      "dependability_coefficient_absolute_phi": 0.22846027978199715
+    },
+    {
+      "n_banks": 1,
+      "n_probes_per_bank": 4,
+      "total_probes_per_framework": 4,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.015515956400656127,
+      "absolute_error_variance": 0.019660964207346657,
+      "g_coefficient_relative_e_rho2": 0.39412936574371066,
+      "dependability_coefficient_absolute_phi": 0.33922416456821913
+    },
+    {
+      "n_banks": 1,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 8,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.008303085827390741,
+      "absolute_error_variance": 0.01244809363408127,
+      "g_coefficient_relative_e_rho2": 0.5486591104535543,
+      "dependability_coefficient_absolute_phi": 0.44776977127956863
+    },
+    {
+      "n_banks": 1,
+      "n_probes_per_bank": 12,
+      "total_probes_per_framework": 12,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.005898795636302278,
+      "absolute_error_variance": 0.010043803442992806,
+      "g_coefficient_relative_e_rho2": 0.6311453324734911,
+      "dependability_coefficient_absolute_phi": 0.5012314411365518
+    },
+    {
+      "n_banks": 1,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 16,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.004696650540758048,
+      "absolute_error_variance": 0.008841658347448576,
+      "g_coefficient_relative_e_rho2": 0.6824452462309833,
+      "dependability_coefficient_absolute_phi": 0.5330535216075586
+    },
+    {
+      "n_banks": 1,
+      "n_probes_per_bank": 24,
+      "total_probes_per_framework": 24,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.003494505445213816,
+      "absolute_error_variance": 0.007639513251904345,
+      "g_coefficient_relative_e_rho2": 0.7428223418255027,
+      "dependability_coefficient_absolute_phi": 0.5691901509152886
+    },
+    {
+      "n_banks": 2,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 2,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.029396589920124224,
+      "absolute_error_variance": 0.03146909382346949,
+      "g_coefficient_relative_e_rho2": 0.2555938676470184,
+      "dependability_coefficient_absolute_phi": 0.2428487397117202
+    },
+    {
+      "n_banks": 2,
+      "n_probes_per_bank": 2,
+      "total_probes_per_framework": 4,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.014970848773593452,
+      "absolute_error_variance": 0.017043352676938715,
+      "g_coefficient_relative_e_rho2": 0.40270105419973234,
+      "dependability_coefficient_absolute_phi": 0.3719457332760319
+    },
+    {
+      "n_banks": 2,
+      "n_probes_per_bank": 4,
+      "total_probes_per_framework": 8,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.007757978200328064,
+      "absolute_error_variance": 0.009830482103673328,
+      "g_coefficient_relative_e_rho2": 0.5654129027451608,
+      "dependability_coefficient_absolute_phi": 0.5065980342097378
+    },
+    {
+      "n_banks": 2,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 16,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0041515429136953705,
+      "absolute_error_variance": 0.006224046817040635,
+      "g_coefficient_relative_e_rho2": 0.7085602076661907,
+      "dependability_coefficient_absolute_phi": 0.6185648853323144
+    },
+    {
+      "n_banks": 2,
+      "n_probes_per_bank": 12,
+      "total_probes_per_framework": 24,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.002949397818151139,
+      "absolute_error_variance": 0.005021901721496403,
+      "g_coefficient_relative_e_rho2": 0.7738676865983656,
+      "dependability_coefficient_absolute_phi": 0.6677603831119866
+    },
+    {
+      "n_banks": 2,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 32,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.002348325270379024,
+      "absolute_error_variance": 0.004420829173724288,
+      "g_coefficient_relative_e_rho2": 0.8112540336867405,
+      "dependability_coefficient_absolute_phi": 0.6954141053713495
+    },
+    {
+      "n_banks": 2,
+      "n_probes_per_bank": 24,
+      "total_probes_per_framework": 48,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.001747252722606908,
+      "absolute_error_variance": 0.0038197566259521726,
+      "g_coefficient_relative_e_rho2": 0.8524361020612583,
+      "dependability_coefficient_absolute_phi": 0.7254572055315122
+    },
+    {
+      "n_banks": 3,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 3,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.01959772661341615,
+      "absolute_error_variance": 0.020979395882312995,
+      "g_coefficient_relative_e_rho2": 0.3399466605843114,
+      "dependability_coefficient_absolute_phi": 0.3248307414742568
+    },
+    {
+      "n_banks": 3,
+      "n_probes_per_bank": 2,
+      "total_probes_per_framework": 6,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0099805658490623,
+      "absolute_error_variance": 0.011362235117959142,
+      "g_coefficient_relative_e_rho2": 0.5028104351506933,
+      "dependability_coefficient_absolute_phi": 0.4704311671949376
+    },
+    {
+      "n_banks": 3,
+      "n_probes_per_bank": 4,
+      "total_probes_per_framework": 12,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0051719854668853755,
+      "absolute_error_variance": 0.006553654735782218,
+      "g_coefficient_relative_e_rho2": 0.6611952042575272,
+      "dependability_coefficient_absolute_phi": 0.6063174397678658
+    },
+    {
+      "n_banks": 3,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 24,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0027676952757969137,
+      "absolute_error_variance": 0.004149364544693756,
+      "g_coefficient_relative_e_rho2": 0.7848009495901691,
+      "dependability_coefficient_absolute_phi": 0.7086685788813067
+    },
+    {
+      "n_banks": 3,
+      "n_probes_per_bank": 12,
+      "total_probes_per_framework": 36,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0019662652121007597,
+      "absolute_error_variance": 0.0033479344809976023,
+      "g_coefficient_relative_e_rho2": 0.8369552271767194,
+      "dependability_coefficient_absolute_phi": 0.7509224449157984
+    },
+    {
+      "n_banks": 3,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 48,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0015655501802526823,
+      "absolute_error_variance": 0.002947219449149525,
+      "g_coefficient_relative_e_rho2": 0.8657211592751484,
+      "dependability_coefficient_absolute_phi": 0.7739969572603483
+    },
+    {
+      "n_banks": 3,
+      "n_probes_per_bank": 24,
+      "total_probes_per_framework": 72,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0011648351484046054,
+      "absolute_error_variance": 0.0025465044173014484,
+      "g_coefficient_relative_e_rho2": 0.8965348266121667,
+      "dependability_coefficient_absolute_phi": 0.7985345035605157
+    },
+    {
+      "n_banks": 5,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 5,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.01175863596804969,
+      "absolute_error_variance": 0.012587637529387796,
+      "g_coefficient_relative_e_rho2": 0.4618974395653875,
+      "dependability_coefficient_absolute_phi": 0.44501489109591386
+    },
+    {
+      "n_banks": 5,
+      "n_probes_per_bank": 2,
+      "total_probes_per_framework": 10,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.005988339509437381,
+      "absolute_error_variance": 0.006817341070775486,
+      "g_coefficient_relative_e_rho2": 0.6276310857058988,
+      "dependability_coefficient_absolute_phi": 0.5968632335741941
+    },
+    {
+      "n_banks": 5,
+      "n_probes_per_bank": 4,
+      "total_probes_per_framework": 20,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.003103191280131226,
+      "absolute_error_variance": 0.003932192841469332,
+      "g_coefficient_relative_e_rho2": 0.7648490091905871,
+      "dependability_coefficient_absolute_phi": 0.7196415748172877
+    },
+    {
+      "n_banks": 5,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 40,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0016606171654781482,
+      "absolute_error_variance": 0.0024896187268162537,
+      "g_coefficient_relative_e_rho2": 0.8587191695308741,
+      "dependability_coefficient_absolute_phi": 0.802144542709355
+    },
+    {
+      "n_banks": 5,
+      "n_probes_per_bank": 12,
+      "total_probes_per_framework": 60,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0011797591272604557,
+      "absolute_error_variance": 0.0020087606885985615,
+      "g_coefficient_relative_e_rho2": 0.8953479483086276,
+      "dependability_coefficient_absolute_phi": 0.8340163458451458
+    },
+    {
+      "n_banks": 5,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 80,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0009393301081516096,
+      "absolute_error_variance": 0.0017683316694897153,
+      "g_coefficient_relative_e_rho2": 0.9148596780742361,
+      "dependability_coefficient_absolute_phi": 0.8509212762897004
+    },
+    {
+      "n_banks": 5,
+      "n_probes_per_bank": 24,
+      "total_probes_per_framework": 120,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0006989010890427632,
+      "absolute_error_variance": 0.001527902650380869,
+      "g_coefficient_relative_e_rho2": 0.9352407658097156,
+      "dependability_coefficient_absolute_phi": 0.8685256870448932
+    },
+    {
+      "n_banks": 8,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 8,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.007349147480031056,
+      "absolute_error_variance": 0.007867273455867373,
+      "g_coefficient_relative_e_rho2": 0.5786654495870834,
+      "dependability_coefficient_absolute_phi": 0.5619722215659911
+    },
+    {
+      "n_banks": 8,
+      "n_probes_per_bank": 2,
+      "total_probes_per_framework": 16,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.003742712193398363,
+      "absolute_error_variance": 0.004260838169234679,
+      "g_coefficient_relative_e_rho2": 0.7294968115995194,
+      "dependability_coefficient_absolute_phi": 0.7031651268939807
+    },
+    {
+      "n_banks": 8,
+      "n_probes_per_bank": 4,
+      "total_probes_per_framework": 32,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.001939494550082016,
+      "absolute_error_variance": 0.002457620525918332,
+      "g_coefficient_relative_e_rho2": 0.8388172768503687,
+      "dependability_coefficient_absolute_phi": 0.8041895703798041
+    },
+    {
+      "n_banks": 8,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 64,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0010378857284238426,
+      "absolute_error_variance": 0.0015560117042601588,
+      "g_coefficient_relative_e_rho2": 0.9067595741582128,
+      "dependability_coefficient_absolute_phi": 0.8664300071904838
+    },
+    {
+      "n_banks": 8,
+      "n_probes_per_bank": 12,
+      "total_probes_per_framework": 96,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0007373494545377848,
+      "absolute_error_variance": 0.0012554754303741008,
+      "g_coefficient_relative_e_rho2": 0.931920729439723,
+      "dependability_coefficient_absolute_phi": 0.8893744540162437
+    },
+    {
+      "n_banks": 8,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 128,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.000587081317594756,
+      "absolute_error_variance": 0.001105207293431072,
+      "g_coefficient_relative_e_rho2": 0.9450323112789376,
+      "dependability_coefficient_absolute_phi": 0.9013084964073201
+    },
+    {
+      "n_banks": 8,
+      "n_probes_per_bank": 24,
+      "total_probes_per_framework": 192,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.000436813180651727,
+      "absolute_error_variance": 0.0009549391564880431,
+      "g_coefficient_relative_e_rho2": 0.9585181026670567,
+      "dependability_coefficient_absolute_phi": 0.9135671679490601
+    },
+    {
+      "n_banks": 10,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 10,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.005879317984024845,
+      "absolute_error_variance": 0.006293818764693898,
+      "g_coefficient_relative_e_rho2": 0.6319149716859844,
+      "dependability_coefficient_absolute_phi": 0.6159312182013711
+    },
+    {
+      "n_banks": 10,
+      "n_probes_per_bank": 2,
+      "total_probes_per_framework": 20,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0029941697547186904,
+      "absolute_error_variance": 0.003408670535387743,
+      "g_coefficient_relative_e_rho2": 0.771220322857986,
+      "dependability_coefficient_absolute_phi": 0.7475445874450491
+    },
+    {
+      "n_banks": 10,
+      "n_probes_per_bank": 4,
+      "total_probes_per_framework": 40,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.001551595640065613,
+      "absolute_error_variance": 0.001966096420734666,
+      "g_coefficient_relative_e_rho2": 0.8667585784478751,
+      "dependability_coefficient_absolute_phi": 0.8369669416648637
+    },
+    {
+      "n_banks": 10,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 80,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0008303085827390741,
+      "absolute_error_variance": 0.0012448093634081269,
+      "g_coefficient_relative_e_rho2": 0.9239902225225428,
+      "dependability_coefficient_absolute_phi": 0.8902111053793788
+    },
+    {
+      "n_banks": 10,
+      "n_probes_per_bank": 12,
+      "total_probes_per_framework": 120,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0005898795636302279,
+      "absolute_error_variance": 0.0010043803442992807,
+      "g_coefficient_relative_e_rho2": 0.9447847811876644,
+      "dependability_coefficient_absolute_phi": 0.9094971784025371
+    },
+    {
+      "n_banks": 10,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 160,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0004696650540758048,
+      "absolute_error_variance": 0.0008841658347448577,
+      "g_coefficient_relative_e_rho2": 0.9555370438363456,
+      "dependability_coefficient_absolute_phi": 0.9194570154765641
+    },
+    {
+      "n_banks": 10,
+      "n_probes_per_bank": 24,
+      "total_probes_per_framework": 240,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0003494505445213816,
+      "absolute_error_variance": 0.0007639513251904345,
+      "g_coefficient_relative_e_rho2": 0.9665368592195871,
+      "dependability_coefficient_absolute_phi": 0.9296374067176804
+    },
+    {
+      "n_banks": 15,
+      "n_probes_per_bank": 1,
+      "total_probes_per_framework": 15,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.00391954532268323,
+      "absolute_error_variance": 0.0041958791764625985,
+      "g_coefficient_relative_e_rho2": 0.720291094299127,
+      "dependability_coefficient_absolute_phi": 0.7063617123215478
+    },
+    {
+      "n_banks": 15,
+      "n_probes_per_bank": 2,
+      "total_probes_per_framework": 30,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0019961131698124604,
+      "absolute_error_variance": 0.002272447023591829,
+      "g_coefficient_relative_e_rho2": 0.834888857262658,
+      "dependability_coefficient_absolute_phi": 0.8162319813053809
+    },
+    {
+      "n_banks": 15,
+      "n_probes_per_bank": 4,
+      "total_probes_per_framework": 60,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0010343970933770752,
+      "absolute_error_variance": 0.0013107309471564437,
+      "g_coefficient_relative_e_rho2": 0.9070438490678454,
+      "dependability_coefficient_absolute_phi": 0.8850652392590371
+    },
+    {
+      "n_banks": 15,
+      "n_probes_per_bank": 8,
+      "total_probes_per_framework": 120,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0005535390551593827,
+      "absolute_error_variance": 0.0008298729089387512,
+      "g_coefficient_relative_e_rho2": 0.9480095542782745,
+      "dependability_coefficient_absolute_phi": 0.9240270757964513
+    },
+    {
+      "n_banks": 15,
+      "n_probes_per_bank": 12,
+      "total_probes_per_framework": 180,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0003932530424201519,
+      "absolute_error_variance": 0.0006695868961995204,
+      "g_coefficient_relative_e_rho2": 0.9624996575878345,
+      "dependability_coefficient_absolute_phi": 0.9377879983735515
+    },
+    {
+      "n_banks": 15,
+      "n_probes_per_bank": 16,
+      "total_probes_per_framework": 240,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.0003131100360505365,
+      "absolute_error_variance": 0.0005894438898299051,
+      "g_coefficient_relative_e_rho2": 0.9699120968513117,
+      "dependability_coefficient_absolute_phi": 0.9448233119402252
+    },
+    {
+      "n_banks": 15,
+      "n_probes_per_bank": 24,
+      "total_probes_per_framework": 360,
+      "universe_score_variance": 0.010093399001924292,
+      "relative_error_variance": 0.00023296702968092107,
+      "absolute_error_variance": 0.0005093008834602896,
+      "g_coefficient_relative_e_rho2": 0.9774395921113105,
+      "dependability_coefficient_absolute_phi": 0.9519649816588375
+    }
+  ]
+}

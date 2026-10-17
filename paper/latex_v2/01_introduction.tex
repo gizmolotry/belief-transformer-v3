@@ -1,0 +1,91 @@
+\section{Introduction and Literature Review}
+
+This paper evaluates whether media framing and ideological stance can be recovered as an endogenous geometric manifold directly from article content, without relying on external publisher-level metadata. Contemporary news aggregators and media monitoring platforms (such as Ground News) frequently critique journalistic bias by mapping articles onto an assumed one-dimensional spectrum relative to an unmarked, objective ``center.'' In practice, however, such platforms classify coverage not by analyzing the text of individual articles, but by appending third-party ratings assigned to the publishing outlet as a whole. We critique this ``geometric fiction of objective neutrality'' \citep{bowkerstar1999,mouffe2000} and evaluate an alternative, content-grounded framework: probing news text with frozen cross-encoder natural language inference (NLI) prompted with authored contrastive hypothesis pairs ($(h_A, h_B)$).
+
+Holding corpus and conceptual probes fixed, we benchmark this relational cross-attentive apparatus against a matched sentence-level semantic projection baseline \citep{kwak2021frameaxis}. Our empirical findings establish a clean scientific resolution:
+\begin{equation*}
+    \boxed{\text{Low-dimensionality is not unique to NLI}} \quad \text{and} \quad \boxed{\text{the recovered dominant coordinate depends on the measurement operator}}.
+\end{equation*}
+Under an audited paired contrast operator ($s_A - s_B$) that removes response components shared between opposing hypotheses, frozen NLI models consistently compress article response covariance onto a dominant rank-1 stance axis that decisively clears non-parametric permutation null gates ($p \le 0.0003$) across diverse conflict and domestic policy domains. This coordinate reproduces across prospectively sampled unseen text ($N=120, r = 0.925$), non-overlapping disjoint probe partitions (mean $|r| \approx 0.76$), and distinct model architectures ($r \in [0.55, 0.81]$). Furthermore, canonical correlation analysis demonstrates that NLI and semantic projection share a statistically significant multivariate semantic subspace ($r_{\mathrm{canon,test}} = 0.364$, Monte Carlo $p = 0.0010$) that generalizes out-of-sample under strictly fold-local cross-validation.
+
+However, their dominant coordinates diverge sharply ($r \in [0.01, 0.19]$ standardized). Minimal compositional controls and anisotropy ablations identify the causal sources of this divergence: proposition-level NLI exhibits greater compositional sensitivity on tested perturbations (negation, quantifiers, causal direction) and captures systematic outlet differentiation ($\eta^2 = 40.1\%$) that survives sentiment controls ($\eta^2 = 34.8\%$), whereas naive semantic projection PC1 is substantially organized by the dominant representation geometry of the underlying embedding space ($73.7\% \to 34.5\%$ upon removing the top principal component). Consequently, the observed geometry of political discourse is fundamentally conditioned by the measurement operator:
+\begin{equation}
+    \mathcal{G}_{\text{observed}} = f(C,\; H,\; O,\; M),
+\end{equation}
+where corpus ($C$), hypothesis bank ($H$), measurement operator ($O$), and model ($M$) jointly determine which latent variation dominates.
+
+\subsection{Ground News and Horizontal Metadata Expansion}
+
+Ground News\footnote{Website link: \url{https://ground.news/}} is a prominent news aggregator designed to expose ``bias,'' which it operationalizes as a directional deviation from neutrality. The platform organizes reporting on political issues by placing articles along a left-center-right continuum relative to an assumed consensus baseline. While marketed as an instrument for critical media literacy and viewpoint pluralism, its classification architecture does not examine the semantic content of the individual articles it displays. Instead, it classifies articles horizontally: at ingestion, it queries third-party media monitoring organizations (principally AllSides, Ad Fontes Media, and Media Bias/Fact Check) to obtain an external, publisher-level rating, and appends this label to every article published by that outlet \citep{allsidesmethod,groundnewsrating}.
+
+Formally, a horizontal metadata pipeline implements a mapping:
+\begin{equation}
+    H(a) = (a,\; m(p(a))),
+\end{equation}
+where $a$ is an article, $p(a)$ maps the article to its publishing organization, and $m(\cdot)$ retrieves static external metadata. The bias score is then computed as a projection over publisher metadata:
+\begin{equation}
+    b_{\text{hor}}(a) = \psi(m(p(a))),
+\end{equation}
+which is independent of the text content of $a$. If a prestigious legacy publication runs an adversarial opinion column, an investigative exposé, or an unedited wire dispatch, the horizontal pipeline assigns all three identical political coordinates based entirely on organizational identity.
+
+This architectural dependency raises fundamental methodological concerns. Systems that claim to reveal bias often rely on antecedent classificatory frameworks that are external to the content they categorize, reinforcing conventional editorial boundaries and reifying an unmarked ``middle'' perspective as objective reality \citep{bowkerstar1999}. In contrast, an endogenous, content-level measurement extracts representations directly from the source text under declared analytical frames:
+\begin{equation}
+    x \mapsto \{z_h(x)\}_{h \in \mathcal{H}},
+\end{equation}
+deriving framing geometry from textual interaction rather than institutional proxy labels.
+
+\subsection{Philosophical Foundations of Observer-Conditioned Semantics}
+
+The critique of external neutrality connects directly to foundational debates in epistemology and the philosophy of science. Thomas Kuhn \citeyearpar{kuhn1962} argued that observation is inherently theory-laden: empirical data cannot be collected or interpreted outside of an interpretive paradigm. Nelson Goodman \citeyearpar{goodman1978} extended this insight into a formal theory of worldmaking, demonstrating that measurement systems do not merely describe preexisting structures, but actively construct the categories they map through their choice of frame, scale, and projection.
+
+In this work, we operationalize Kuhn's insight computationally. Rather than invoking the observer as a vague metaphor, we formalize an interpretive \emph{paradigm} as an explicit four-tuple measurement system:
+\begin{equation}
+    P = (H,\; O,\; M,\; L),
+\end{equation}
+where:
+\begin{itemize}
+    \item $H$ denotes the conceptual distinctions the paradigm recognizes (the authored contrastive hypothesis bank or probe space);
+    \item $O$ denotes the operational measurement rules (the mathematical operator, such as paired contrast $s_A - s_B$, single-side polarity $s_A$, or cosine projection $Z(P)$);
+    \item $M$ denotes the representational machinery (the pre-trained transformer model, such as DeBERTa-v2, BART, or RoBERTa);
+    \item $L$ denotes the analytical vocabulary and ontology through which observations are articulated.
+\end{itemize}
+The empirical discourse world presented by a fixed corpus $C$ under paradigm $P$ is the recovered geometry:
+\begin{equation}
+    \mathcal{G}_P(C) = f(C;\; P) = f(C,\; H,\; O,\; M).
+\end{equation}
+This formulation gives empirical research what classical philosophy of science lacked: an experimental apparatus capable of \emph{holding the empirical object ($C$) strictly fixed while systematically varying the interpretive paradigm ($P$)}. Two paradigms can interrogate the exact same articles and organize them into divergent relational spaces because they ask different questions, enforce different contrastive oppositions, and apply different measurement operators.
+
+This experimental framework allows us to define a clear five-tier hierarchy of epistemological and ontological claims:
+\begin{enumerate}
+    \item \textbf{Tier 1 (Empirical)}: Changing the measurement operator or hypothesis bank substantially alters the recovered document geometry $\mathcal{G}(C)$.
+    \item \textbf{Tier 2 (Epistemological)}: Observations of framing are theory-laden; framing measurements are conditioned by the representational apparatus through which the text is interrogated.
+    \item \textbf{Tier 3 (Structural)}: Perspectivally robust invariants ($I(\mathcal{G}_{P_1}) \approx I(\mathcal{G}_{P_2})$) survive across changing paradigms---such as low effective dimensionality and extremal anchor ordering---even when local coordinates rotate: \emph{coordinates vary, but higher-order structure persists}.
+    \item \textbf{Tier 4 (Ontological)}: Political framing is an \emph{ontologically relational property}. Rather than treating bias as an intrinsic substance or text-internal scalar attribute $B(x) \in [-1, 1]$, framing stance exists as a relation $B(x; P) = R(x, P)$ instantiated between a text and an interpretive scheme. Just as velocity is relational ($v(A \mid B)$) rather than an intrinsic property like rest mass ($m(A)$), an article's political stance is fundamentally relational. A text possesses intrinsic syntactic and lexical tokens (e.g., casualty numbers or event nouns), but its framing stance is an emergent relational property under an interrogated paradigm.
+    \item \textbf{Tier 5 (Metaphysical Boundary)}: We falsify the empirical existence of any single, privileged, observer-independent paradigm $P^*$ within the tested family; we explicitly do not claim to establish total metaphysical relativism or deny the existence of an external reality.
+\end{enumerate}
+
+In computational linguistics, this insight connects with \emph{perspectivist NLP} \citep{frenda2024,xujurgens2026}. Rather than forcing divergent annotator judgments into a single aggregated consensus label, perspectivist approaches treat interpretive variation as a primary information signal. Empirical studies of natural language inference demonstrate that even under standardized annotation guidelines, human semantic judgments on complex propositions exhibit persistent, structured divergence \citep{pavlick2019}. Attempting to eliminate this divergence by post-hoc averaging or increasingly coercive annotation manuals often merely perfumes the consensus metrics \citep{aroyo2015}, suppressing the legitimate interpretive ambiguities that constitute ideological discourse. Natural language inference provides a rigorous mechanism for operationalizing perspectival analysis without supervised fine-tuning on political labels, evaluating whether proposition $h_A$ logically follows from the text more strongly than $h_B$.
+
+\subsection{Pluralism, Civility, and Democratic Agonism}
+
+The assumption that media bias can be neutralized by locating an arithmetic center reflects a specific, and contested, political philosophy. In political theory, Chantal Mouffe \citeyearpar{mouffe2000} critiques consensus-driven models of liberal democracy, arguing that genuine political conflict cannot be transformed into technical consensus without disenfranchising legitimate dissent. Real-world politics is irreducibly \emph{agonistic}: it consists of conflicting, legitimate interpretations of justice, sovereignty, and rights that cannot be dissolved into an unproblematic middle ground.
+
+Similarly, Alison Reiheld \citeyearpar{reiheld2013}, drawing on Isaiah Berlin's \citeyearpar{berlin1998} value pluralism, demonstrates that projects enforcing ``exceptionless civility'' frequently prioritize institutional social management over democratic pluralism. By sanitizing rhetorical friction and treating disagreement as a pathological deviation from consensus, middle-ground aggregators risk manufacturing a depoliticized center that silences structural critique. Journalistic reporting on violent conflict or polarized policy debates does not deviate from a natural baseline; it navigates conflicting worldviews whose tensions require explicit, transparent measurement containers rather than statistical erasure \citep{swanstromweissmann2005}.
+
+\subsection{Representation, Projection, and the Measurement Operator}
+
+When analyzing complex semantic representations, high-dimensional spaces must inevitably be projected onto lower-dimensional coordinates for human interpretation. News aggregators heuristically compress coverage into a single left-right axis. The fundamental error occurs when this single coordinate is treated as an objective, observer-independent ground truth. As Ludwig Wittgenstein observed, the perspective from which a system is described cannot be placed inside the description itself: ``the subject does not belong to the world but it is a limit of the world'' \citep{wittgenstein1922}. Every coordinate system is an artifact of its projection apparatus.
+
+In computational social science, this raises a central methodological challenge: how does the mathematical measurement operator condition the recovered geometry? The dominant paradigm in framing analysis projects text embeddings onto semantic axes defined by antonym pole vectors \citep{kwak2021frameaxis}. However, dense embedding spaces are notoriously susceptible to representation anisotropy, organizing token representations into narrow cones governed by lexical frequency and sequence length \citep{gabaix1999,mu2018allbutthetop}. Furthermore, independent vector encoders lack joint cross-attention, causing meaning-reversing compositional operations (such as negation or quantifier inversion) to collapse into near-identical cosine proximities \citep{ettinger2020}.
+
+Crucially, this framework allows us to turn Kuhn's concept of \emph{incommensurability} into a measurable empirical hypothesis. Rather than a metaphysical slogan that frameworks cannot communicate, incommensurability can be operationalized by testing whether there exists a low-distortion transformation $T_{A \to B}$ such that $T_{A \to B}(\mathcal{G}_A) \approx \mathcal{G}_B$. If no linear, affine, or rigid transformation can simultaneously preserve article orderings, relational distances, and topological neighborhoods, the paradigms exhibit measurable incommensurability. Furthermore, by evaluating local $k$-nearest-neighbor Jaccard overlap $J_k(x; P_A, P_B)$, we can empirically test Kuhnian ``world change'': whether shifting the conceptual paradigm fundamentally alters which documents resemble which. Finally, by defining anomaly scores $A_P(x)$ as residual variance off the dominant paradigm manifold, we can interrogate whether anomalies are text-intrinsic properties or emergent relational collisions between text and paradigm.
+
+This paper interrogates the empirical consequences of that architectural choice across corpora, conceptual frames, and operators. Specifically, we investigate:
+\begin{enumerate}
+    \item Whether authored contrastive hypotheses elicit reproducible low-dimensional framing structure from frozen NLI models across prospective news text, disjoint probe splits, and diverse policy domains;
+    \item Whether apparatus resolving power can distinguish genuine multi-dimensional factor structure ($k=2$) from rank-1 collapse under synthetic factorial positive controls with known generating factors;
+    \item Whether the recovered stance ordering aligns with or diverges from matched semantic-axis projections, and whether canonical correlation analysis reveals a shared underlying semantic subspace;
+    \item What mechanistic factors (compositional sensitivity versus representation anisotropy) explain the organization of their respective dominant coordinates;
+    \item Whether varying the conceptual and operator paradigm operationalizes a measurable form of Kuhnian incommensurability, relational neighborhood shift (``world change''), and anomaly relativity, while preserving higher-order structural invariants.
+\end{enumerate}
+In the following methodology, we formalize the measurement apparatus, the corpus construction protocols, the non-parametric permutation gates, and the diagnostic baseline comparisons.

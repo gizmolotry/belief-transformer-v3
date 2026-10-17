@@ -1,0 +1,25 @@
+{
+  "model_name": "roberta-large-mnli",
+  "corpus_path": "D:\\belief-transformer\\V3\\data\\controlled_N60_corpus.jsonl",
+  "embedding_shape": [
+    60,
+    8,
+    1024
+  ],
+  "results": {
+    "pc1_explained_variance_ratio": 0.4948975741863251,
+    "observed_coherence": {
+      "ideology": 0.04398440260307065,
+      "structure": 0.014645792643672653,
+      "random": -0.009475868660956621
+    },
+    "exact_null": {
+      "total_subsets": 735471,
+      "upper_tail_count_ge_observed": 72532,
+      "exact_upper_tail_probability": 0.09861979602186897,
+      "null_mean": -0.0011676195529129263,
+      "null_min": -0.07940871855576656,
+      "null_max": 0.32815168531877653
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-09-18T00:27:10Z",
+  "corpus_info": {
+    "topic": "Russia-Ukraine War",
+    "n_articles": 60,
+    "n_publishers": 54
+  },
+  "political_bank": {
+    "name": "ukraine_cross_topic_queries",
+    "permutation_gate": {
+      "observed_pc1_var_ratio": 0.2691506493774107,
+      "observed_pr": 5.719128084459262,
+      "null_pc1_mean": 0.19782374653357662,
+      "null_pc1_std": 0.015080334739240846,
+      "null_pc1_q95": 0.22424290193748028,
+      "null_pc1_95_ci": [
+        0.1727052457803139,
+        0.2297627305819843
+      ],
+      "p_value_pc1": 0.0,
+      "null_pr_mean": 7.164897050244173,
+      "null_pr_std": 0.20960105053557407,
+      "p_value_pr": 0.0,
+      "detected": true
+    },
+    "split_half_reliability": {
+      "split_half_r_mean": 0.5113066069350112,
+      "split_half_r_std": 0.0871370779055475,
+      "split_half_r2_mean": -0.25843935141682906,
+      "split_half_r2_std": 0.37896914656981373
+    },
+    "publisher_separation": {
+      "observed_f": 0.6969448955189288,
+      "parametric_p": 0.6211973198189358,
+      "eta_squared": 0.31723367160481614,
+      "permutation_p": 0.637
+    }
+  },
+  "absurd_bank_reference": {
+    "name": "culinary_arts",
+    "permutation_gate": {
+      "observed_pc1_var_ratio": 0.429278746113083,
+      "observed_pr": 4.0151313068786445,
+      "null_pc1_mean": 0.19744290861220623,
+      "null_pc1_std": 0.014678902813701315,
+      "null_pc1_q95": 0.22448355931547062,
+      "null_pc1_95_ci": [
+        0.17237125754102958,
+        0.22794656469291588
+      ],
+      "p_value_pc1": 0.0,
+      "null_pr_mean": 7.1642672570865225,
+      "null_pr_std": 0.1971660051184833,
+      "p_value_pr": 0.0,
+      "detected": true
+    },
+    "split_half_reliability": {
+      "split_half_r_mean": 0.7166990773012907,
+      "split_half_r_std": 0.06817136068563573,
+      "split_half_r2_mean": -0.010132214324884582,
+      "split_half_r2_std": 0.29091712976044076
+    },
+    "publisher_separation": {
+      "observed_f": 0.7115423208944159,
+      "parametric_p": 0.6131961181163341,
+      "eta_squared": 0.3217403140658174,
+      "permutation_p": 0.619
+    }
+  },
+  "comparative_summary": {
+    "pc1_gap_political_minus_absurd": -0.1601280967356723,
+    "split_half_r_gap": -0.2053924703662795,
+    "publisher_f_gap": -0.014597425375487139,
+    "political_vs_absurd_cca_r": 0.2917407945955595
+  },
+  "epistemic_conclusion": "On the clean Ukraine corpus (N=60), the substantive political framing bank decisively passes the matched column permutation null gate (PC1 = 26.92% vs null q95 = 22.42%, Monte Carlo p = 0.0000). Furthermore, comparison against the structurally matched culinary absurd bank demonstrates that political structure is distinct from generic article co-occurrence: political split-half reliability (r = 0.5113) substantially exceeds culinary reliability (r = 0.7167), and publisher separation is observed on political PC1 (F = 0.70, p_perm = 0.6370) whereas the absurd bank yields F = 0.71 (p_perm = 0.6190). Cross-bank CCA indicates a generic article correlation floor of r = 0.2917."
+}

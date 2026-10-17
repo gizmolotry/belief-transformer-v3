@@ -1,0 +1,40 @@
+queries:
+  weather_unprecedented_vs_normal:
+    A: "This article portrays the weather event as historically unprecedented."
+    B: "This article portrays the weather event as within normal historical variation."
+    description: "Assessment of weather extremity relative to history"
+
+  climate_attribution_vs_natural:
+    A: "This article attributes the storm severity primarily to human-caused climate change."
+    B: "This article attributes the storm severity to natural seasonal cyclical patterns."
+    description: "Attribution of weather mechanisms"
+
+  infrastructure_failure_vs_resilience:
+    A: "This article emphasizes catastrophic infrastructural failures during the event."
+    B: "This article emphasizes effective emergency response and infrastructure resilience."
+    description: "Infrastructural impact framing"
+
+  economic_destruction_vs_agricultural_benefit:
+    A: "This article focuses on the economic costs and property destruction caused by the weather."
+    B: "This article focuses on the agricultural benefits of the precipitation."
+    description: "Economic and agricultural impact assessment"
+
+  authorities_unprepared_vs_coordinated:
+    A: "This article frames the local authorities as unprepared and slow to respond."
+    B: "This article frames the local authorities as proactive and well-coordinated."
+    description: "Municipal emergency readiness"
+
+  anomaly_localized_vs_global:
+    A: "This article characterizes the weather anomalies as localized and temporary."
+    B: "This article characterizes the weather anomalies as part of a widespread global trend."
+    description: "Geographic scale and systemic context"
+
+  disruption_severe_vs_minimal:
+    A: "This article highlights severe disruptions to daily transportation and utilities."
+    B: "This article highlights rapid utility restoration and minimal disruption."
+    description: "Daily life and utility impact"
+
+  policy_intervention_vs_disaster_management:
+    A: "This article urges immediate long-term policy intervention and emissions cuts."
+    B: "This article focuses solely on short-term disaster management and immediate recovery."
+    description: "Prescriptive response framing"

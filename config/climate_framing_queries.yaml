@@ -1,0 +1,33 @@
+queries:
+  pair_01:
+    theme: "Climate Urgency vs Economic Disruption"
+    A: "This article frames climate change as an urgent existential crisis demanding immediate emissions reductions."
+    B: "This article portrays aggressive climate mandates as economically disruptive and threatening affordable energy."
+  pair_02:
+    theme: "Renewable Transition vs Grid Reliability"
+    A: "This article promotes renewable energy as viable, cost-effective, and essential for the future."
+    B: "This article questions the reliability and feasibility of transitioning rapidly away from fossil fuels."
+  pair_03:
+    theme: "Corporate Accountability vs Market Innovation"
+    A: "This article holds fossil fuel corporations accountable for environmental damage and climate deception."
+    B: "This article highlights market innovation and private sector investments as the primary drivers of clean technology."
+  pair_04:
+    theme: "Regulatory Mandates vs Energy Independence"
+    A: "This article supports strict government regulations and carbon pricing to enforce environmental standards."
+    B: "This article opposes regulatory burdens and advocates for domestic energy production and independence."
+  pair_05:
+    theme: "Environmental Justice vs Cost Burden"
+    A: "This article emphasizes that vulnerable communities suffer disproportionately from climate impacts and industrial pollution."
+    B: "This article argues that expensive green policies impose unfair costs on low-income families and developing nations."
+  pair_06:
+    theme: "Global Multilateralism vs National Sovereignty"
+    A: "This article urges compliance with international climate treaties and global emissions agreements."
+    B: "This article prioritizes national economic competitiveness and rejects international climate constraints."
+  pair_07:
+    theme: "Ecological Preservation vs Resource Development"
+    A: "This article prioritizes preserving natural ecosystems and biodiversity over industrial resource extraction."
+    B: "This article emphasizes the economic necessity of developing domestic natural resources and critical minerals."
+  pair_08:
+    theme: "Scientific Consensus vs Uncertainty"
+    A: "This article highlights overwhelming scientific consensus on anthropogenic global warming."
+    B: "This article highlights scientific uncertainties, climate modeling limitations, and economic cost-benefit debates."

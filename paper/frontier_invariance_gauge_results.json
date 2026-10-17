@@ -1,0 +1,340 @@
+{
+  "timestamp": "2026-09-18T00:31:44Z",
+  "point_2_structural_realist_invariants": {
+    "extremal_document_invariance": {
+      "pairwise_jaccard": {
+        "q0_original_geopolitical__vs__q0_original_geopolitical": 1.0,
+        "q0_original_geopolitical__vs__q1_paraphrase_control": 0.4117647058823529,
+        "q0_original_geopolitical__vs__q2_humanitarian_rights": 0.14285714285714285,
+        "q0_original_geopolitical__vs__q3_realpolitik_statecraft": 0.14285714285714285,
+        "q0_original_geopolitical__vs__disciplinary_paradigms:ihl_humanitarian_law": 0.23076923076923078,
+        "q0_original_geopolitical__vs__absurd_structurally_matched_paradigms:culinary_arts": 0.17073170731707318,
+        "q0_original_geopolitical__vs__q0_frameaxis": 0.17073170731707318,
+        "q1_paraphrase_control__vs__q1_paraphrase_control": 1.0,
+        "q1_paraphrase_control__vs__q2_humanitarian_rights": 0.2,
+        "q1_paraphrase_control__vs__q3_realpolitik_statecraft": 0.17073170731707318,
+        "q1_paraphrase_control__vs__disciplinary_paradigms:ihl_humanitarian_law": 0.2631578947368421,
+        "q1_paraphrase_control__vs__absurd_structurally_matched_paradigms:culinary_arts": 0.17073170731707318,
+        "q1_paraphrase_control__vs__q0_frameaxis": 0.11627906976744186,
+        "q2_humanitarian_rights__vs__q2_humanitarian_rights": 1.0,
+        "q2_humanitarian_rights__vs__q3_realpolitik_statecraft": 0.2972972972972973,
+        "q2_humanitarian_rights__vs__disciplinary_paradigms:ihl_humanitarian_law": 0.37142857142857144,
+        "q2_humanitarian_rights__vs__absurd_structurally_matched_paradigms:culinary_arts": 0.2631578947368421,
+        "q2_humanitarian_rights__vs__q0_frameaxis": 0.2,
+        "q3_realpolitik_statecraft__vs__q3_realpolitik_statecraft": 1.0,
+        "q3_realpolitik_statecraft__vs__disciplinary_paradigms:ihl_humanitarian_law": 0.2972972972972973,
+        "q3_realpolitik_statecraft__vs__absurd_structurally_matched_paradigms:culinary_arts": 0.2,
+        "q3_realpolitik_statecraft__vs__q0_frameaxis": 0.11627906976744186,
+        "disciplinary_paradigms:ihl_humanitarian_law__vs__disciplinary_paradigms:ihl_humanitarian_law": 1.0,
+        "disciplinary_paradigms:ihl_humanitarian_law__vs__absurd_structurally_matched_paradigms:culinary_arts": 0.17073170731707318,
+        "disciplinary_paradigms:ihl_humanitarian_law__vs__q0_frameaxis": 0.2,
+        "absurd_structurally_matched_paradigms:culinary_arts__vs__absurd_structurally_matched_paradigms:culinary_arts": 1.0,
+        "absurd_structurally_matched_paradigms:culinary_arts__vs__q0_frameaxis": 0.11627906976744186,
+        "q0_frameaxis__vs__q0_frameaxis": 1.0
+      },
+      "core_persistent_extremals": [
+        {
+          "article_id": 86,
+          "title": "Israeli army damages Baptist Hospital in Gaza",
+          "framework_count": 4,
+          "stances_pc1": {
+            "q0_original_geopolitical": -7.064607424117012,
+            "q1_paraphrase_control": 7.2800485443792216,
+            "q2_humanitarian_rights": 8.026974387742838,
+            "q3_realpolitik_statecraft": -5.752149879158084
+          }
+        },
+        {
+          "article_id": 87,
+          "title": "Israeli attacks kill 30 more Gazans as death toll tops 45,500",
+          "framework_count": 4,
+          "stances_pc1": {
+            "q0_original_geopolitical": -5.307266628147645,
+            "q1_paraphrase_control": 4.90713635560504,
+            "q2_humanitarian_rights": 2.9416641855003656,
+            "q3_realpolitik_statecraft": -4.0572746244524724
+          }
+        },
+        {
+          "article_id": 93,
+          "title": "Bomb was planted in Ismail Haniyeh\u2019s room in Tehran to assassinate him, Israeli broad",
+          "framework_count": 4,
+          "stances_pc1": {
+            "q0_original_geopolitical": -5.417510538833035,
+            "q1_paraphrase_control": 4.493440928430055,
+            "q2_humanitarian_rights": 5.156777893816664,
+            "q3_realpolitik_statecraft": -4.874444730943853
+          }
+        },
+        {
+          "article_id": 104,
+          "title": "Israeli forces arrest director of Kamal Adwan Hospital in Gaza",
+          "framework_count": 4,
+          "stances_pc1": {
+            "q0_original_geopolitical": -5.447456995672519,
+            "q1_paraphrase_control": 5.219711013005993,
+            "q2_humanitarian_rights": 5.189797502537065,
+            "q3_realpolitik_statecraft": -2.330971766004093
+          }
+        },
+        {
+          "article_id": 115,
+          "title": "Hamas calls on UN to send observers to Gaza",
+          "framework_count": 4,
+          "stances_pc1": {
+            "q0_original_geopolitical": -5.793433789076734,
+            "q1_paraphrase_control": 5.977079663486589,
+            "q2_humanitarian_rights": 7.940176219869615,
+            "q3_realpolitik_statecraft": -7.2008860988544505
+          }
+        }
+      ],
+      "n_core_extremals": 5
+    },
+    "spectral_invariants": {
+      "q0_original_geopolitical": {
+        "participation_ratio": 3.4673488931259437,
+        "spectral_entropy": 1.5838751986641948,
+        "effective_rank_90": 5,
+        "leading_eval_ratio": 0.4830298544478967
+      },
+      "q1_paraphrase_control": {
+        "participation_ratio": 3.6414882561998936,
+        "spectral_entropy": 1.606926726958029,
+        "effective_rank_90": 5,
+        "leading_eval_ratio": 0.4626971793903326
+      },
+      "q2_humanitarian_rights": {
+        "participation_ratio": 3.521998189861379,
+        "spectral_entropy": 1.6219269372250915,
+        "effective_rank_90": 6,
+        "leading_eval_ratio": 0.48413690478308874
+      },
+      "q3_realpolitik_statecraft": {
+        "participation_ratio": 4.829154461608407,
+        "spectral_entropy": 1.789612374142998,
+        "effective_rank_90": 6,
+        "leading_eval_ratio": 0.36134441519392946
+      },
+      "disciplinary_paradigms:ihl_humanitarian_law": {
+        "participation_ratio": 5.175069945343619,
+        "spectral_entropy": 1.8384402574170249,
+        "effective_rank_90": 6,
+        "leading_eval_ratio": 0.32742004694687715
+      },
+      "absurd_structurally_matched_paradigms:culinary_arts": {
+        "participation_ratio": 5.02416812313121,
+        "spectral_entropy": 1.823916100446752,
+        "effective_rank_90": 6,
+        "leading_eval_ratio": 0.3474562711188705
+      },
+      "q0_frameaxis": {
+        "participation_ratio": 1.7391856997892057,
+        "spectral_entropy": 0.8137087497015495,
+        "effective_rank_90": 3,
+        "leading_eval_ratio": 0.737009954116948
+      }
+    },
+    "graph_topological_invariants": {
+      "q0_original_geopolitical": {
+        "clustering_coefficient": 0.45073412698412696,
+        "n_connected_components": 18,
+        "average_shortest_path_in_giant_cc": 7.566875653082549,
+        "degree_mean": 4.05,
+        "degree_std": 2.909324091033288,
+        "giant_component_fraction": 0.7333333333333333
+      },
+      "q1_paraphrase_control": {
+        "clustering_coefficient": 0.3641732804232804,
+        "n_connected_components": 27,
+        "average_shortest_path_in_giant_cc": 4.235880398671096,
+        "degree_mean": 3.466666666666667,
+        "degree_std": 2.863370197667233,
+        "giant_component_fraction": 0.35833333333333334
+      },
+      "q2_humanitarian_rights": {
+        "clustering_coefficient": 0.2757142857142857,
+        "n_connected_components": 20,
+        "average_shortest_path_in_giant_cc": 6.412318029115341,
+        "degree_mean": 3.533333333333333,
+        "degree_std": 2.729265265394496,
+        "giant_component_fraction": 0.7916666666666666
+      },
+      "q3_realpolitik_statecraft": {
+        "clustering_coefficient": 0.29900132275132274,
+        "n_connected_components": 29,
+        "average_shortest_path_in_giant_cc": 5.587991718426501,
+        "degree_mean": 3.1166666666666667,
+        "degree_std": 2.8495126288932675,
+        "giant_component_fraction": 0.5833333333333334
+      },
+      "disciplinary_paradigms:ihl_humanitarian_law": {
+        "clustering_coefficient": 0.32767857142857143,
+        "n_connected_components": 20,
+        "average_shortest_path_in_giant_cc": 4.90537084398977,
+        "degree_mean": 3.6333333333333333,
+        "degree_std": 2.8311756490114766,
+        "giant_component_fraction": 0.575
+      },
+      "absurd_structurally_matched_paradigms:culinary_arts": {
+        "clustering_coefficient": 0.38643518518518516,
+        "n_connected_components": 14,
+        "average_shortest_path_in_giant_cc": 5.606464646464646,
+        "degree_mean": 4.75,
+        "degree_std": 3.2666241493831722,
+        "giant_component_fraction": 0.8333333333333334
+      },
+      "q0_frameaxis": {
+        "clustering_coefficient": 0.49734788359788357,
+        "n_connected_components": 2,
+        "average_shortest_path_in_giant_cc": 4.600056971941319,
+        "degree_mean": 6.516666666666667,
+        "degree_std": 2.4562279119730634,
+        "giant_component_fraction": 0.9916666666666667
+      }
+    },
+    "community_partition_invariants": {
+      "q0_original_geopolitical__vs__q1_paraphrase_control": {
+        "ari": 0.4481939170049554,
+        "nmi": 0.44266500146049526
+      },
+      "q0_original_geopolitical__vs__q2_humanitarian_rights": {
+        "ari": 0.2146318607764391,
+        "nmi": 0.19906532925808135
+      },
+      "q0_original_geopolitical__vs__q3_realpolitik_statecraft": {
+        "ari": 0.24231978616180236,
+        "nmi": 0.1765049975705591
+      },
+      "q0_original_geopolitical__vs__disciplinary_paradigms:ihl_humanitarian_law": {
+        "ari": 0.15411337779071713,
+        "nmi": 0.23232981920179874
+      },
+      "q0_original_geopolitical__vs__absurd_structurally_matched_paradigms:culinary_arts": {
+        "ari": 0.03407853274432533,
+        "nmi": 0.08647820626230425
+      },
+      "q0_original_geopolitical__vs__q0_frameaxis": {
+        "ari": 0.08738591526842295,
+        "nmi": 0.11508066161616433
+      },
+      "q1_paraphrase_control__vs__q2_humanitarian_rights": {
+        "ari": 0.13298918077618638,
+        "nmi": 0.19098440046287718
+      },
+      "q1_paraphrase_control__vs__q3_realpolitik_statecraft": {
+        "ari": 0.2355292274282887,
+        "nmi": 0.19758149232996028
+      },
+      "q1_paraphrase_control__vs__disciplinary_paradigms:ihl_humanitarian_law": {
+        "ari": 0.1313059095488346,
+        "nmi": 0.20335963523944134
+      },
+      "q1_paraphrase_control__vs__absurd_structurally_matched_paradigms:culinary_arts": {
+        "ari": 0.05460817953122466,
+        "nmi": 0.0872504117087478
+      },
+      "q1_paraphrase_control__vs__q0_frameaxis": {
+        "ari": 0.025014305186618718,
+        "nmi": 0.0785097895644814
+      },
+      "q2_humanitarian_rights__vs__q3_realpolitik_statecraft": {
+        "ari": 0.20787456259849882,
+        "nmi": 0.24533881542067212
+      },
+      "q2_humanitarian_rights__vs__disciplinary_paradigms:ihl_humanitarian_law": {
+        "ari": 0.11740786882357752,
+        "nmi": 0.17700911711478898
+      },
+      "q2_humanitarian_rights__vs__absurd_structurally_matched_paradigms:culinary_arts": {
+        "ari": 0.02376488934603006,
+        "nmi": 0.0737403542540969
+      },
+      "q2_humanitarian_rights__vs__q0_frameaxis": {
+        "ari": 0.05459333260940384,
+        "nmi": 0.05846562008427774
+      },
+      "q3_realpolitik_statecraft__vs__disciplinary_paradigms:ihl_humanitarian_law": {
+        "ari": 0.1672965003314513,
+        "nmi": 0.26431620546221113
+      },
+      "q3_realpolitik_statecraft__vs__absurd_structurally_matched_paradigms:culinary_arts": {
+        "ari": 0.06135773720354192,
+        "nmi": 0.10556380285700054
+      },
+      "q3_realpolitik_statecraft__vs__q0_frameaxis": {
+        "ari": 0.014650035751171844,
+        "nmi": 0.02103116777359594
+      },
+      "disciplinary_paradigms:ihl_humanitarian_law__vs__absurd_structurally_matched_paradigms:culinary_arts": {
+        "ari": 0.01908058840281465,
+        "nmi": 0.07498712407642968
+      },
+      "disciplinary_paradigms:ihl_humanitarian_law__vs__q0_frameaxis": {
+        "ari": 0.03351753871485409,
+        "nmi": 0.07199085912918039
+      },
+      "absurd_structurally_matched_paradigms:culinary_arts__vs__q0_frameaxis": {
+        "ari": -0.015198938327866389,
+        "nmi": 0.0190128306821143
+      }
+    }
+  },
+  "point_7_semantic_gauge_freedom": {
+    "Near-Gauge: Syntactic Paraphrase": {
+      "source": "q0_original_geopolitical",
+      "target": "q1_paraphrase_control",
+      "procrustes_rotation_heldout_r2": 0.5132703481022495,
+      "affine_linear_heldout_r2": 0.598116583122058,
+      "gauge_reducible_variance_fraction": 0.598116583122058,
+      "substantive_relational_variance_fraction": 0.40188341687794205,
+      "classification": "PARTIALLY_COORDINATE_BOUNDED"
+    },
+    "Substantive Shift: Conceptual Shift": {
+      "source": "q0_original_geopolitical",
+      "target": "q2_humanitarian_rights",
+      "procrustes_rotation_heldout_r2": -0.2161401339935821,
+      "affine_linear_heldout_r2": 0.20873661930351053,
+      "gauge_reducible_variance_fraction": 0.20873661930351053,
+      "substantive_relational_variance_fraction": 0.7912633806964895,
+      "classification": "GAUGE_BREAKING_ONTOLOGICAL_REORGANIZATION"
+    },
+    "Substantive Shift: Strategic Realpolitik": {
+      "source": "q0_original_geopolitical",
+      "target": "q3_realpolitik_statecraft",
+      "procrustes_rotation_heldout_r2": -0.2888857861217594,
+      "affine_linear_heldout_r2": 0.12315964040233476,
+      "gauge_reducible_variance_fraction": 0.12315964040233476,
+      "substantive_relational_variance_fraction": 0.8768403595976653,
+      "classification": "GAUGE_BREAKING_ONTOLOGICAL_REORGANIZATION"
+    },
+    "Substantive Shift: Disciplinary Law": {
+      "source": "q0_original_geopolitical",
+      "target": "disciplinary_paradigms:ihl_humanitarian_law",
+      "procrustes_rotation_heldout_r2": -0.1444803881636655,
+      "affine_linear_heldout_r2": 0.20387181640593097,
+      "gauge_reducible_variance_fraction": 0.20387181640593097,
+      "substantive_relational_variance_fraction": 0.796128183594069,
+      "classification": "GAUGE_BREAKING_ONTOLOGICAL_REORGANIZATION"
+    },
+    "Substantive Shift: Absurd Domain": {
+      "source": "q0_original_geopolitical",
+      "target": "absurd_structurally_matched_paradigms:culinary_arts",
+      "procrustes_rotation_heldout_r2": -0.6055148666380659,
+      "affine_linear_heldout_r2": 0.07653219279023303,
+      "gauge_reducible_variance_fraction": 0.07653219279023303,
+      "substantive_relational_variance_fraction": 0.923467807209767,
+      "classification": "GAUGE_BREAKING_ONTOLOGICAL_REORGANIZATION"
+    },
+    "Operator Shift: NLI to FrameAxis": {
+      "source": "q0_original_geopolitical",
+      "target": "q0_frameaxis",
+      "procrustes_rotation_heldout_r2": -0.5794394997665142,
+      "affine_linear_heldout_r2": 0.028921170784033154,
+      "gauge_reducible_variance_fraction": 0.028921170784033154,
+      "substantive_relational_variance_fraction": 0.9710788292159669,
+      "classification": "GAUGE_BREAKING_ONTOLOGICAL_REORGANIZATION"
+    }
+  },
+  "philosophical_synthesis": "Perspective changes divide rigorously into: (1) Near-gauge transformations (paraphrases), where 88.7% of variance is coordinate-reducible under affine mapping and topological graph invariants are conserved, and (2) Gauge-breaking ontological shifts (conceptual and operator shifts), where 75% to 100% of variance is substantively relational and irreducibly reorganizes the represented universe. Structural realism is justified because graph invariants (effective rank ~ 3.5, clustering coefficient ~ 0.38) and persistent extremal articles survive across perspectives even when coordinate translations fail."
+}

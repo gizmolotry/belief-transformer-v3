@@ -1,0 +1,17 @@
+{
+  "experiment_1_blind_generator": {
+    "nmi": 0.33427896768146764,
+    "ari": 0.20027674604908602
+  },
+  "experiment_2_cross_val": {
+    "nmi": 0.6205387872245495,
+    "ari": 0.41887410908259326
+  },
+  "experiment_3_adversarial_noise": {
+    "mean_structured_displacement": 1.0,
+    "mean_ood_displacement": 1.0,
+    "displacement_ratio": 1.0,
+    "robustness_nmi": 0.6930920719775789,
+    "robustness_ari": 0.48985751386256754
+  }
+}

@@ -1,0 +1,1119 @@
+{
+  "metadata": {
+    "description": "Empirical evaluation of Kuhnian paradigms, incommensurability, neighborhood overlap, and anomaly relativity.",
+    "formula": "G_observed = f(C, H, O, M)",
+    "paradigm_formalization": "P = (H, O, M, L)"
+  },
+  "conceptual_paradigms": {
+    "summaries": {
+      "P0_Military_Security": {
+        "pc1_evr": 0.6553264260292053,
+        "pc2_evr": 0.19256846606731415,
+        "participation_ratio": 2.1200695037841797,
+        "mean_anomaly_score": 0.5253369212150574,
+        "std_anomaly_score": 0.33167827129364014
+      },
+      "P1_Paraphrase_Control": {
+        "pc1_evr": 0.6385168433189392,
+        "pc2_evr": 0.1361159384250641,
+        "participation_ratio": 2.2869198322296143,
+        "mean_anomaly_score": 0.5654082894325256,
+        "std_anomaly_score": 0.3440486490726471
+      },
+      "P2_Humanitarian_Rights": {
+        "pc1_evr": 0.8191954493522644,
+        "pc2_evr": 0.06267943978309631,
+        "participation_ratio": 1.4750317335128784,
+        "mean_anomaly_score": 0.3715343177318573,
+        "std_anomaly_score": 0.3108395040035248
+      },
+      "P3_Realpolitik_Statecraft": {
+        "pc1_evr": 0.6959238052368164,
+        "pc2_evr": 0.1390601098537445,
+        "participation_ratio": 1.959760308265686,
+        "mean_anomaly_score": 0.478883296251297,
+        "std_anomaly_score": 0.32758742570877075
+      }
+    },
+    "pairwise_analysis": {
+      "P0_Military_Security__vs__P1_Paraphrase_Control": {
+        "paradigm_A": "P0_Military_Security",
+        "paradigm_B": "P1_Paraphrase_Control",
+        "pc1_pearson_r": 0.9528513550758362,
+        "pc1_pearson_p": 5.886876666090638e-63,
+        "pc1_spearman_rho": 0.9005000347246335,
+        "pc1_spearman_p": 1.7159834139845365e-44,
+        "procrustes_disparity_2d": 0.13494257922220204,
+        "subspace_angle_pc1_deg": 7.78212308883667,
+        "subspace_angle_2d_deg": 36.71306228637695,
+        "affine_predictability_mean_r2": 0.8031770891752013,
+        "canonical_correlation": 0.9786840434141022,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.25383597883597886,
+            "std": 0.2049453244497893,
+            "median": 0.25,
+            "q25": 0.1111111111111111,
+            "q75": 0.42857142857142855,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 18,
+            "zero_overlap_pct": 15.0
+          },
+          "k_10": {
+            "mean": 0.3210098918109754,
+            "std": 0.17935745082165855,
+            "median": 0.3333333333333333,
+            "q25": 0.17647058823529413,
+            "q75": 0.42857142857142855,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 4,
+            "zero_overlap_pct": 3.3333333333333335
+          },
+          "k_15": {
+            "mean": 0.3903839276077151,
+            "std": 0.1846913490756269,
+            "median": 0.42857142857142855,
+            "q25": 0.25,
+            "q75": 0.5,
+            "min": 0.0,
+            "max": 0.7647058823529411,
+            "zero_overlap_count": 1,
+            "zero_overlap_pct": 0.8333333333333334
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.16560846560846562,
+            "std": 0.19133249246517822,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 1.0,
+            "zero_overlap_count": 42,
+            "zero_overlap_pct": 35.0
+          },
+          "k_10": {
+            "mean": 0.26667271783370855,
+            "std": 0.20332304168557924,
+            "median": 0.25,
+            "q25": 0.1111111111111111,
+            "q75": 0.3333333333333333,
+            "min": 0.0,
+            "max": 0.8181818181818182,
+            "zero_overlap_count": 7,
+            "zero_overlap_pct": 5.833333333333333
+          },
+          "k_15": {
+            "mean": 0.35621761756237086,
+            "std": 0.19860366132614907,
+            "median": 0.36363636363636365,
+            "q25": 0.2,
+            "q75": 0.5,
+            "min": 0.0,
+            "max": 0.875,
+            "zero_overlap_count": 2,
+            "zero_overlap_pct": 1.6666666666666667
+          }
+        },
+        "anomaly_correlation_r": 0.7491312026977539,
+        "anomaly_correlation_p": 7.613917628562963e-23
+      },
+      "P0_Military_Security__vs__P2_Humanitarian_Rights": {
+        "paradigm_A": "P0_Military_Security",
+        "paradigm_B": "P2_Humanitarian_Rights",
+        "pc1_pearson_r": 0.6113383173942566,
+        "pc1_pearson_p": 1.2069072843887885e-13,
+        "pc1_spearman_rho": 0.735655253837072,
+        "pc1_spearman_p": 1.0759762333302314e-21,
+        "procrustes_disparity_2d": 0.6892318854941176,
+        "subspace_angle_pc1_deg": 6.502074241638184,
+        "subspace_angle_2d_deg": 84.39089965820312,
+        "affine_predictability_mean_r2": 0.39278356018579474,
+        "canonical_correlation": 0.8762166735137578,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.14904100529100528,
+            "std": 0.16497535311442305,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 41,
+            "zero_overlap_pct": 34.166666666666664
+          },
+          "k_10": {
+            "mean": 0.18942184836147685,
+            "std": 0.15170732816900664,
+            "median": 0.17647058823529413,
+            "q25": 0.05263157894736842,
+            "q75": 0.3333333333333333,
+            "min": 0.0,
+            "max": 0.5384615384615384,
+            "zero_overlap_count": 14,
+            "zero_overlap_pct": 11.666666666666666
+          },
+          "k_15": {
+            "mean": 0.23533249853714042,
+            "std": 0.15676294579309816,
+            "median": 0.2,
+            "q25": 0.1111111111111111,
+            "q75": 0.36363636363636365,
+            "min": 0.0,
+            "max": 0.7647058823529411,
+            "zero_overlap_count": 5,
+            "zero_overlap_pct": 4.166666666666666
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.09583333333333334,
+            "std": 0.1358932902374862,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 59,
+            "zero_overlap_pct": 49.166666666666664
+          },
+          "k_10": {
+            "mean": 0.159198098942681,
+            "std": 0.1480634871567007,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.17647058823529413,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 16,
+            "zero_overlap_pct": 13.333333333333334
+          },
+          "k_15": {
+            "mean": 0.1989811236412278,
+            "std": 0.15664746466954477,
+            "median": 0.15384615384615385,
+            "q25": 0.07142857142857142,
+            "q75": 0.30434782608695654,
+            "min": 0.0,
+            "max": 0.5789473684210527,
+            "zero_overlap_count": 7,
+            "zero_overlap_pct": 5.833333333333333
+          }
+        },
+        "anomaly_correlation_r": 0.46501073241233826,
+        "anomaly_correlation_p": 8.756252767238576e-08
+      },
+      "P0_Military_Security__vs__P3_Realpolitik_Statecraft": {
+        "paradigm_A": "P0_Military_Security",
+        "paradigm_B": "P3_Realpolitik_Statecraft",
+        "pc1_pearson_r": 0.665766716003418,
+        "pc1_pearson_p": 1.0752039037145489e-16,
+        "pc1_spearman_rho": 0.8167789429821515,
+        "pc1_spearman_p": 5.8285094502959295e-30,
+        "procrustes_disparity_2d": 0.6479663031222822,
+        "subspace_angle_pc1_deg": 5.607388973236084,
+        "subspace_angle_2d_deg": 43.514007568359375,
+        "affine_predictability_mean_r2": 0.41031265442415643,
+        "canonical_correlation": 0.8662102403229575,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.10446428571428572,
+            "std": 0.1461518966876304,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 57,
+            "zero_overlap_pct": 47.5
+          },
+          "k_10": {
+            "mean": 0.17368085560810018,
+            "std": 0.13325433685278099,
+            "median": 0.17647058823529413,
+            "q25": 0.05263157894736842,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.5384615384615384,
+            "zero_overlap_count": 13,
+            "zero_overlap_pct": 10.833333333333334
+          },
+          "k_15": {
+            "mean": 0.23525907212484978,
+            "std": 0.14179009272300375,
+            "median": 0.2,
+            "q25": 0.1111111111111111,
+            "q75": 0.30434782608695654,
+            "min": 0.0,
+            "max": 0.5789473684210527,
+            "zero_overlap_count": 3,
+            "zero_overlap_pct": 2.5
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.08644179894179894,
+            "std": 0.09205748152093914,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 52,
+            "zero_overlap_pct": 43.333333333333336
+          },
+          "k_10": {
+            "mean": 0.14587813645476186,
+            "std": 0.11687895794025215,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.17647058823529413,
+            "min": 0.0,
+            "max": 0.5384615384615384,
+            "zero_overlap_count": 16,
+            "zero_overlap_pct": 13.333333333333334
+          },
+          "k_15": {
+            "mean": 0.20517036839000857,
+            "std": 0.13315697789509345,
+            "median": 0.15384615384615385,
+            "q25": 0.1111111111111111,
+            "q75": 0.30434782608695654,
+            "min": 0.0,
+            "max": 0.5,
+            "zero_overlap_count": 3,
+            "zero_overlap_pct": 2.5
+          }
+        },
+        "anomaly_correlation_r": 0.580882728099823,
+        "anomaly_correlation_p": 3.5239013106651966e-12
+      },
+      "P1_Paraphrase_Control__vs__P2_Humanitarian_Rights": {
+        "paradigm_A": "P1_Paraphrase_Control",
+        "paradigm_B": "P2_Humanitarian_Rights",
+        "pc1_pearson_r": 0.6229302883148193,
+        "pc1_pearson_p": 3.0316189601381726e-14,
+        "pc1_spearman_rho": 0.7482464060004166,
+        "pc1_spearman_p": 9.106565987089736e-23,
+        "procrustes_disparity_2d": 0.6675103027660383,
+        "subspace_angle_pc1_deg": 8.183855056762695,
+        "subspace_angle_2d_deg": 89.45283508300781,
+        "affine_predictability_mean_r2": 0.41955269886518887,
+        "canonical_correlation": 0.8850590257518524,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.1552910052910053,
+            "std": 0.20625438738607377,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 1.0,
+            "zero_overlap_count": 42,
+            "zero_overlap_pct": 35.0
+          },
+          "k_10": {
+            "mean": 0.15622739761671647,
+            "std": 0.12424420132396358,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.5384615384615384,
+            "zero_overlap_count": 14,
+            "zero_overlap_pct": 11.666666666666666
+          },
+          "k_15": {
+            "mean": 0.20692019492806601,
+            "std": 0.12832227422073106,
+            "median": 0.2,
+            "q25": 0.1111111111111111,
+            "q75": 0.30434782608695654,
+            "min": 0.0,
+            "max": 0.5,
+            "zero_overlap_count": 5,
+            "zero_overlap_pct": 4.166666666666666
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.09695767195767195,
+            "std": 0.13029812243876085,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 56,
+            "zero_overlap_pct": 46.666666666666664
+          },
+          "k_10": {
+            "mean": 0.15142566698294252,
+            "std": 0.1351634587490489,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.5384615384615384,
+            "zero_overlap_count": 22,
+            "zero_overlap_pct": 18.333333333333332
+          },
+          "k_15": {
+            "mean": 0.20929537388870223,
+            "std": 0.14380708191455943,
+            "median": 0.2,
+            "q25": 0.07142857142857142,
+            "q75": 0.36363636363636365,
+            "min": 0.0,
+            "max": 0.5,
+            "zero_overlap_count": 9,
+            "zero_overlap_pct": 7.5
+          }
+        },
+        "anomaly_correlation_r": 0.5016266107559204,
+        "anomaly_correlation_p": 5.338429042808252e-09
+      },
+      "P1_Paraphrase_Control__vs__P3_Realpolitik_Statecraft": {
+        "paradigm_A": "P1_Paraphrase_Control",
+        "paradigm_B": "P3_Realpolitik_Statecraft",
+        "pc1_pearson_r": 0.6511183381080627,
+        "pc1_pearson_p": 8.195188614812329e-16,
+        "pc1_spearman_rho": 0.8068963122439057,
+        "pc1_spearman_p": 9.485203660525568e-29,
+        "procrustes_disparity_2d": 0.6332644652735607,
+        "subspace_angle_pc1_deg": 5.025751113891602,
+        "subspace_angle_2d_deg": 32.65639877319336,
+        "affine_predictability_mean_r2": 0.4388079802220919,
+        "canonical_correlation": 0.8266781103419506,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.11210317460317461,
+            "std": 0.17013527345874022,
+            "median": 0.05555555555555555,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 60,
+            "zero_overlap_pct": 50.0
+          },
+          "k_10": {
+            "mean": 0.153567333366095,
+            "std": 0.11086181775135767,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 13,
+            "zero_overlap_pct": 10.833333333333334
+          },
+          "k_15": {
+            "mean": 0.20612412418732942,
+            "std": 0.12152367719791736,
+            "median": 0.2,
+            "q25": 0.1111111111111111,
+            "q75": 0.30434782608695654,
+            "min": 0.0,
+            "max": 0.5789473684210527,
+            "zero_overlap_count": 1,
+            "zero_overlap_pct": 0.8333333333333334
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.09219576719576719,
+            "std": 0.11340778002844715,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 54,
+            "zero_overlap_pct": 45.0
+          },
+          "k_10": {
+            "mean": 0.14462616918112273,
+            "std": 0.11246204508092122,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.17647058823529413,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 18,
+            "zero_overlap_pct": 15.0
+          },
+          "k_15": {
+            "mean": 0.20144010710539947,
+            "std": 0.11770194429677958,
+            "median": 0.2,
+            "q25": 0.1111111111111111,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.5,
+            "zero_overlap_count": 7,
+            "zero_overlap_pct": 5.833333333333333
+          }
+        },
+        "anomaly_correlation_r": 0.5604653358459473,
+        "anomaly_correlation_p": 2.8024718119773882e-11
+      },
+      "P2_Humanitarian_Rights__vs__P3_Realpolitik_Statecraft": {
+        "paradigm_A": "P2_Humanitarian_Rights",
+        "paradigm_B": "P3_Realpolitik_Statecraft",
+        "pc1_pearson_r": 0.8566200733184814,
+        "pc1_pearson_p": 1.0434213478829552e-35,
+        "pc1_spearman_rho": 0.8262309882630737,
+        "pc1_spearman_p": 3.4392604458803463e-31,
+        "procrustes_disparity_2d": 0.4094071228747422,
+        "subspace_angle_pc1_deg": 6.776330471038818,
+        "subspace_angle_2d_deg": 78.7558364868164,
+        "affine_predictability_mean_r2": 0.6730445770813658,
+        "canonical_correlation": 0.9404098419373617,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.1673280423280423,
+            "std": 0.16740383502098097,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 35,
+            "zero_overlap_pct": 29.166666666666668
+          },
+          "k_10": {
+            "mean": 0.21140576901025815,
+            "std": 0.155635788773921,
+            "median": 0.17647058823529413,
+            "q25": 0.1111111111111111,
+            "q75": 0.3333333333333333,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 11,
+            "zero_overlap_pct": 9.166666666666666
+          },
+          "k_15": {
+            "mean": 0.2719460639064266,
+            "std": 0.15689785932782865,
+            "median": 0.25,
+            "q25": 0.15384615384615385,
+            "q75": 0.36363636363636365,
+            "min": 0.0,
+            "max": 0.7647058823529411,
+            "zero_overlap_count": 3,
+            "zero_overlap_pct": 2.5
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.10793650793650794,
+            "std": 0.13927158161014935,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 57,
+            "zero_overlap_pct": 47.5
+          },
+          "k_10": {
+            "mean": 0.18274312689947364,
+            "std": 0.1755564565511182,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.2708333333333333,
+            "min": 0.0,
+            "max": 0.8181818181818182,
+            "zero_overlap_count": 15,
+            "zero_overlap_pct": 12.5
+          },
+          "k_15": {
+            "mean": 0.21413253196709575,
+            "std": 0.1604182014516127,
+            "median": 0.15384615384615385,
+            "q25": 0.10119047619047619,
+            "q75": 0.31916996047430835,
+            "min": 0.0,
+            "max": 0.7647058823529411,
+            "zero_overlap_count": 5,
+            "zero_overlap_pct": 4.166666666666666
+          }
+        },
+        "anomaly_correlation_r": 0.5287719964981079,
+        "anomaly_correlation_p": 5.367687847817335e-10
+      }
+    }
+  },
+  "operator_paradigms": {
+    "summaries": {
+      "P_NLI_Paired": {
+        "pc1_evr": 0.44417592883110046,
+        "pc2_evr": 0.17721273005008698,
+        "participation_ratio": 3.821568489074707,
+        "mean_anomaly_score": 0.5257721543312073,
+        "std_anomaly_score": 0.3189636170864105
+      },
+      "P_NLI_Single": {
+        "pc1_evr": 0.46491408348083496,
+        "pc2_evr": 0.2332356721162796,
+        "participation_ratio": 3.3941938877105713,
+        "mean_anomaly_score": 0.5923840403556824,
+        "std_anomaly_score": 0.3133138418197632
+      },
+      "P_FrameAxis_Baseline": {
+        "pc1_evr": 0.7370099541169486,
+        "pc2_evr": 0.1421575685902018,
+        "participation_ratio": 1.7391856997892028,
+        "mean_anomaly_score": 0.5374631678664268,
+        "std_anomaly_score": 0.3609434668231104
+      },
+      "P_FrameAxis_Ablated": {
+        "pc1_evr": 0.3437161979145384,
+        "pc2_evr": 0.21942952876143113,
+        "participation_ratio": 4.589913765364339,
+        "mean_anomaly_score": 0.7085723627188683,
+        "std_anomaly_score": 0.270747235962333
+      }
+    },
+    "pairwise_analysis": {
+      "P_NLI_Paired__vs__P_NLI_Single": {
+        "paradigm_A": "P_NLI_Paired",
+        "paradigm_B": "P_NLI_Single",
+        "pc1_pearson_r": 0.5047945976257324,
+        "pc1_pearson_p": 4.125178418009875e-09,
+        "pc1_spearman_rho": 0.553198138759636,
+        "pc1_spearman_p": 5.6690362870894583e-11,
+        "procrustes_disparity_2d": 0.5977549502206727,
+        "subspace_angle_pc1_deg": 82.3335189819336,
+        "subspace_angle_2d_deg": 54.05216979980469,
+        "affine_predictability_mean_r2": 0.6129949372282626,
+        "canonical_correlation": 0.9926149394919435,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.2358796296296296,
+            "std": 0.2287683761622283,
+            "median": 0.1111111111111111,
+            "q25": 0.08333333333333333,
+            "q75": 0.42857142857142855,
+            "min": 0.0,
+            "max": 1.0,
+            "zero_overlap_count": 30,
+            "zero_overlap_pct": 25.0
+          },
+          "k_10": {
+            "mean": 0.2621044067444996,
+            "std": 0.17530494544068287,
+            "median": 0.25,
+            "q25": 0.1111111111111111,
+            "q75": 0.42857142857142855,
+            "min": 0.0,
+            "max": 0.8181818181818182,
+            "zero_overlap_count": 6,
+            "zero_overlap_pct": 5.0
+          },
+          "k_15": {
+            "mean": 0.2945226982964693,
+            "std": 0.1463533733800586,
+            "median": 0.30434782608695654,
+            "q25": 0.2,
+            "q75": 0.36363636363636365,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 1,
+            "zero_overlap_pct": 0.8333333333333334
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.10231481481481482,
+            "std": 0.11851089695236074,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 52,
+            "zero_overlap_pct": 43.333333333333336
+          },
+          "k_10": {
+            "mean": 0.1759562146946048,
+            "std": 0.12893852426764846,
+            "median": 0.1437908496732026,
+            "q25": 0.05263157894736842,
+            "q75": 0.25,
+            "min": 0.0,
+            "max": 0.5384615384615384,
+            "zero_overlap_count": 7,
+            "zero_overlap_pct": 5.833333333333333
+          },
+          "k_15": {
+            "mean": 0.21781660951076243,
+            "std": 0.12931241171405952,
+            "median": 0.2,
+            "q25": 0.1111111111111111,
+            "q75": 0.30434782608695654,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 1,
+            "zero_overlap_pct": 0.8333333333333334
+          }
+        },
+        "anomaly_correlation_r": 0.27345842123031616,
+        "anomaly_correlation_p": 0.0025106518614636123
+      },
+      "P_NLI_Paired__vs__P_FrameAxis_Baseline": {
+        "paradigm_A": "P_NLI_Paired",
+        "paradigm_B": "P_FrameAxis_Baseline",
+        "pc1_pearson_r": 0.1265817266094316,
+        "pc1_pearson_p": 0.1683058326242413,
+        "pc1_spearman_rho": 0.07641502882144594,
+        "pc1_spearman_p": 0.4068007096444285,
+        "procrustes_disparity_2d": 0.9684254214180873,
+        "subspace_angle_pc1_deg": 34.22494438620001,
+        "subspace_angle_2d_deg": 74.90634183413917,
+        "affine_predictability_mean_r2": 0.11945815055057829,
+        "canonical_correlation": 0.6305096365874764,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.053670634920634924,
+            "std": 0.11388608031214216,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.6666666666666666,
+            "zero_overlap_count": 84,
+            "zero_overlap_pct": 70.0
+          },
+          "k_10": {
+            "mean": 0.07524581470014906,
+            "std": 0.07485864719831267,
+            "median": 0.05263157894736842,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.3333333333333333,
+            "zero_overlap_count": 33,
+            "zero_overlap_pct": 27.500000000000004
+          },
+          "k_15": {
+            "mean": 0.08876499250374811,
+            "std": 0.06283556385209167,
+            "median": 0.07142857142857142,
+            "q25": 0.034482758620689655,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.30434782608695654,
+            "zero_overlap_count": 11,
+            "zero_overlap_pct": 9.166666666666666
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.043948412698412695,
+            "std": 0.07802129990894138,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 82,
+            "zero_overlap_pct": 68.33333333333333
+          },
+          "k_10": {
+            "mean": 0.07559769521843825,
+            "std": 0.0740826670031118,
+            "median": 0.05263157894736842,
+            "q25": 0.039473684210526314,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.3333333333333333,
+            "zero_overlap_count": 30,
+            "zero_overlap_pct": 25.0
+          },
+          "k_15": {
+            "mean": 0.09749134971586247,
+            "std": 0.07307140999018143,
+            "median": 0.07142857142857142,
+            "q25": 0.034482758620689655,
+            "q75": 0.12179487179487179,
+            "min": 0.0,
+            "max": 0.30434782608695654,
+            "zero_overlap_count": 10,
+            "zero_overlap_pct": 8.333333333333332
+          }
+        },
+        "anomaly_correlation_r": -0.04009878286356875,
+        "anomaly_correlation_p": 0.6636804432353681
+      },
+      "P_NLI_Paired__vs__P_FrameAxis_Ablated": {
+        "paradigm_A": "P_NLI_Paired",
+        "paradigm_B": "P_FrameAxis_Ablated",
+        "pc1_pearson_r": 0.20695962954357439,
+        "pc1_pearson_p": 0.02332840806254079,
+        "pc1_spearman_rho": 0.21107021320925062,
+        "pc1_spearman_p": 0.020662668677925804,
+        "procrustes_disparity_2d": 0.9414839030836966,
+        "subspace_angle_pc1_deg": 24.15413979548648,
+        "subspace_angle_2d_deg": 60.54645628157973,
+        "affine_predictability_mean_r2": 0.1814359944169569,
+        "canonical_correlation": 0.6642448302425193,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.0566468253968254,
+            "std": 0.09821323352009731,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 79,
+            "zero_overlap_pct": 65.83333333333333
+          },
+          "k_10": {
+            "mean": 0.07245943699117072,
+            "std": 0.06614290315381433,
+            "median": 0.05263157894736842,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.25,
+            "zero_overlap_count": 34,
+            "zero_overlap_pct": 28.333333333333332
+          },
+          "k_15": {
+            "mean": 0.09638332771953463,
+            "std": 0.060935466745043056,
+            "median": 0.1111111111111111,
+            "q25": 0.07142857142857142,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 8,
+            "zero_overlap_pct": 6.666666666666667
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.02939814814814815,
+            "std": 0.05718623388862816,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "min": 0.0,
+            "max": 0.25,
+            "zero_overlap_count": 92,
+            "zero_overlap_pct": 76.66666666666667
+          },
+          "k_10": {
+            "mean": 0.05757582272675152,
+            "std": 0.05895531758933248,
+            "median": 0.05263157894736842,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.3333333333333333,
+            "zero_overlap_count": 45,
+            "zero_overlap_pct": 37.5
+          },
+          "k_15": {
+            "mean": 0.08582493017837844,
+            "std": 0.055817919168155046,
+            "median": 0.07142857142857142,
+            "q25": 0.034482758620689655,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.25,
+            "zero_overlap_count": 8,
+            "zero_overlap_pct": 6.666666666666667
+          }
+        },
+        "anomaly_correlation_r": -0.2455149392001801,
+        "anomaly_correlation_p": 0.006875188452564197
+      },
+      "P_NLI_Single__vs__P_FrameAxis_Baseline": {
+        "paradigm_A": "P_NLI_Single",
+        "paradigm_B": "P_FrameAxis_Baseline",
+        "pc1_pearson_r": 0.1470378588788685,
+        "pc1_pearson_p": 0.1090267320700374,
+        "pc1_spearman_rho": 0.08990902145982357,
+        "pc1_spearman_p": 0.32877978722896206,
+        "procrustes_disparity_2d": 0.9531977770080904,
+        "subspace_angle_pc1_deg": 67.07552818237588,
+        "subspace_angle_2d_deg": 60.58700251306863,
+        "affine_predictability_mean_r2": 0.12658105979376566,
+        "canonical_correlation": 0.6775158866388029,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.04646164021164022,
+            "std": 0.09168927638851734,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 85,
+            "zero_overlap_pct": 70.83333333333334
+          },
+          "k_10": {
+            "mean": 0.061779039101020526,
+            "std": 0.06406202790024319,
+            "median": 0.05263157894736842,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.3333333333333333,
+            "zero_overlap_count": 40,
+            "zero_overlap_pct": 33.33333333333333
+          },
+          "k_15": {
+            "mean": 0.08992752936718455,
+            "std": 0.05383227321726945,
+            "median": 0.1111111111111111,
+            "q25": 0.034482758620689655,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.25,
+            "zero_overlap_count": 12,
+            "zero_overlap_pct": 10.0
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.040707671957671956,
+            "std": 0.0811190055483578,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 88,
+            "zero_overlap_pct": 73.33333333333333
+          },
+          "k_10": {
+            "mean": 0.05974802201582387,
+            "std": 0.07157075867172444,
+            "median": 0.05263157894736842,
+            "q25": 0.0,
+            "q75": 0.05263157894736842,
+            "min": 0.0,
+            "max": 0.3333333333333333,
+            "zero_overlap_count": 44,
+            "zero_overlap_pct": 36.666666666666664
+          },
+          "k_15": {
+            "mean": 0.08628115394794555,
+            "std": 0.0643308019377324,
+            "median": 0.07142857142857142,
+            "q25": 0.034482758620689655,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.36363636363636365,
+            "zero_overlap_count": 11,
+            "zero_overlap_pct": 9.166666666666666
+          }
+        },
+        "anomaly_correlation_r": -0.1851773335070422,
+        "anomaly_correlation_p": 0.04288471797593981
+      },
+      "P_NLI_Single__vs__P_FrameAxis_Ablated": {
+        "paradigm_A": "P_NLI_Single",
+        "paradigm_B": "P_FrameAxis_Ablated",
+        "pc1_pearson_r": 0.14431021892425033,
+        "pc1_pearson_p": 0.11582632140493776,
+        "pc1_spearman_rho": 0.15758038752691156,
+        "pc1_spearman_p": 0.08563347599892968,
+        "procrustes_disparity_2d": 0.8620598830083078,
+        "subspace_angle_pc1_deg": 71.4350584143624,
+        "subspace_angle_2d_deg": 72.01380733224967,
+        "affine_predictability_mean_r2": 0.2026301415851685,
+        "canonical_correlation": 0.6850010186876718,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.05294312169312169,
+            "std": 0.09210210578616881,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 78,
+            "zero_overlap_pct": 65.0
+          },
+          "k_10": {
+            "mean": 0.06843538585024653,
+            "std": 0.06480060118219219,
+            "median": 0.05263157894736842,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.3333333333333333,
+            "zero_overlap_count": 33,
+            "zero_overlap_pct": 27.500000000000004
+          },
+          "k_15": {
+            "mean": 0.09698517159724056,
+            "std": 0.06270389400259097,
+            "median": 0.07142857142857142,
+            "q25": 0.034482758620689655,
+            "q75": 0.15384615384615385,
+            "min": 0.0,
+            "max": 0.36363636363636365,
+            "zero_overlap_count": 7,
+            "zero_overlap_pct": 5.833333333333333
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.044642857142857144,
+            "std": 0.0834926198756282,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 85,
+            "zero_overlap_pct": 70.83333333333334
+          },
+          "k_10": {
+            "mean": 0.05713149294805641,
+            "std": 0.054131738665849895,
+            "median": 0.05263157894736842,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.25,
+            "zero_overlap_count": 38,
+            "zero_overlap_pct": 31.666666666666664
+          },
+          "k_15": {
+            "mean": 0.08475157186364084,
+            "std": 0.05093119994145657,
+            "median": 0.07142857142857142,
+            "q25": 0.034482758620689655,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.25,
+            "zero_overlap_count": 11,
+            "zero_overlap_pct": 9.166666666666666
+          }
+        },
+        "anomaly_correlation_r": -0.13869321507885238,
+        "anomaly_correlation_p": 0.13086063084877403
+      },
+      "P_FrameAxis_Baseline__vs__P_FrameAxis_Ablated": {
+        "paradigm_A": "P_FrameAxis_Baseline",
+        "paradigm_B": "P_FrameAxis_Ablated",
+        "pc1_pearson_r": 0.09598872294836056,
+        "pc1_pearson_p": 0.2969908282317882,
+        "pc1_spearman_rho": 0.1743523855823321,
+        "pc1_spearman_p": 0.056837519836075115,
+        "procrustes_disparity_2d": 0.9224151601719797,
+        "subspace_angle_pc1_deg": 12.131191971300566,
+        "subspace_angle_2d_deg": 40.7679157128322,
+        "affine_predictability_mean_r2": 0.7136229185323917,
+        "canonical_correlation": 0.9848649360822262,
+        "knn_overlap_8d": {
+          "k_5": {
+            "mean": 0.11362433862433864,
+            "std": 0.12532180518843133,
+            "median": 0.1111111111111111,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 48,
+            "zero_overlap_pct": 40.0
+          },
+          "k_10": {
+            "mean": 0.14930305905538105,
+            "std": 0.10566008298526286,
+            "median": 0.1111111111111111,
+            "q25": 0.05263157894736842,
+            "q75": 0.1948529411764706,
+            "min": 0.0,
+            "max": 0.5384615384615384,
+            "zero_overlap_count": 13,
+            "zero_overlap_pct": 10.833333333333334
+          },
+          "k_15": {
+            "mean": 0.17107524097591564,
+            "std": 0.09317929626627736,
+            "median": 0.15384615384615385,
+            "q25": 0.1111111111111111,
+            "q75": 0.2,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 3,
+            "zero_overlap_pct": 2.5
+          }
+        },
+        "knn_overlap_2d": {
+          "k_5": {
+            "mean": 0.042460317460317455,
+            "std": 0.07215350821543894,
+            "median": 0.0,
+            "q25": 0.0,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 82,
+            "zero_overlap_pct": 68.33333333333333
+          },
+          "k_10": {
+            "mean": 0.08787266368535716,
+            "std": 0.07454357345115073,
+            "median": 0.05263157894736842,
+            "q25": 0.05263157894736842,
+            "q75": 0.1111111111111111,
+            "min": 0.0,
+            "max": 0.3333333333333333,
+            "zero_overlap_count": 27,
+            "zero_overlap_pct": 22.5
+          },
+          "k_15": {
+            "mean": 0.11452978645819725,
+            "std": 0.07584398803665278,
+            "median": 0.1111111111111111,
+            "q25": 0.07142857142857142,
+            "q75": 0.15384615384615385,
+            "min": 0.0,
+            "max": 0.42857142857142855,
+            "zero_overlap_count": 7,
+            "zero_overlap_pct": 5.833333333333333
+          }
+        },
+        "anomaly_correlation_r": 0.13622846711602046,
+        "anomaly_correlation_p": 0.13791137542320028
+      }
+    }
+  },
+  "perspectival_invariants": {
+    "mean_nli_pc1_evr": 0.7022406309843063,
+    "mean_nli_participation_ratio": 1.9604453444480896,
+    "extremal_retention": {
+      "P1_Paraphrase_Control": {
+        "top5_retained_pct": 100.0,
+        "bot5_retained_pct": 100.0,
+        "mean_top5_score": 5.144600868225098,
+        "mean_bot5_score": -5.251592636108398
+      },
+      "P2_Humanitarian_Rights": {
+        "top5_retained_pct": 100.0,
+        "bot5_retained_pct": 80.0,
+        "mean_top5_score": 4.607082366943359,
+        "mean_bot5_score": -4.168581962585449
+      },
+      "P3_Realpolitik_Statecraft": {
+        "top5_retained_pct": 100.0,
+        "bot5_retained_pct": 80.0,
+        "mean_top5_score": 5.155157566070557,
+        "mean_bot5_score": -2.2817113399505615
+      }
+    }
+  }
+}

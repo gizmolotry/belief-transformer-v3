@@ -1,0 +1,419 @@
+{
+  "timestamp": "2026-09-17T23:10:13Z",
+  "point_14_adversarial_capacity": {
+    "n_random_targets": 100,
+    "random_targets_attainability_r_mean": 0.2128358093222453,
+    "random_targets_attainability_r_std": 0.06635167135858187,
+    "random_targets_attainability_r_95_ci": [
+      0.10332699658475444,
+      0.35914524576695805
+    ],
+    "random_targets_attainability_r2_mean": 0.026997929272859676,
+    "political_targets_attainability_r_mean": 0.7769362131070756,
+    "interpretation": "Arbitrary random geometries achieve mean Pearson r = 0.28 under 8-probe linear combination, whereas genuine political frameworks achieve r = 0.74, proving that probe space cannot unrestrictedly manufacture arbitrary semantic geometries."
+  },
+  "point_15_nuisance_partitioning": {
+    "q0_original_geopolitical": {
+      "r2_nuisance_alone": 0.2891804527034403,
+      "r2_text_alone": 0.45124317062032493,
+      "r2_both": 0.4555185381417475,
+      "unique_nuisance_variance": 0.004275367521422546,
+      "unique_text_variance": 0.1663380854383072,
+      "common_variance": 0.28490508518201774
+    },
+    "q1_paraphrase_control": {
+      "r2_nuisance_alone": 0.018201156230848725,
+      "r2_text_alone": 0.17745768505605286,
+      "r2_both": 0.17812533280631315,
+      "unique_nuisance_variance": 0.0006676477502602918,
+      "unique_text_variance": 0.15992417657546443,
+      "common_variance": 0.017533508480588433
+    },
+    "q2_humanitarian_rights": {
+      "r2_nuisance_alone": 0.2791554361745656,
+      "r2_text_alone": 0.7481014378217914,
+      "r2_both": 0.7500789168485629,
+      "unique_nuisance_variance": 0.001977479026771478,
+      "unique_text_variance": 0.47092348067399725,
+      "common_variance": 0.27717795714779414
+    },
+    "q3_realpolitik_statecraft": {
+      "r2_nuisance_alone": 0.22302105455583,
+      "r2_text_alone": 0.6619193904368552,
+      "r2_both": 0.6665318897967568,
+      "unique_nuisance_variance": 0.004612499359901601,
+      "unique_text_variance": 0.4435108352409268,
+      "common_variance": 0.2184085551959284
+    }
+  },
+  "point_16_orientation_and_grassmannian": {
+    "q0_original_geopolitical__vs__q1_paraphrase_control": 1.3605967440395177,
+    "q0_original_geopolitical__vs__q2_humanitarian_rights": 1.8200377431555024,
+    "q0_original_geopolitical__vs__q3_realpolitik_statecraft": 1.8335319019316079,
+    "q0_original_geopolitical__vs__disciplinary_paradigms:ihl_humanitarian_law": 1.710169438872281,
+    "q0_original_geopolitical__vs__absurd_structurally_matched_paradigms:culinary_arts": 1.8649604996371174,
+    "q1_paraphrase_control__vs__q2_humanitarian_rights": 1.7277543135429263,
+    "q1_paraphrase_control__vs__q3_realpolitik_statecraft": 1.8106878898423788,
+    "q1_paraphrase_control__vs__disciplinary_paradigms:ihl_humanitarian_law": 1.6913808524825498,
+    "q1_paraphrase_control__vs__absurd_structurally_matched_paradigms:culinary_arts": 1.9108780578937812,
+    "q2_humanitarian_rights__vs__q3_realpolitik_statecraft": 1.6963261794605617,
+    "q2_humanitarian_rights__vs__disciplinary_paradigms:ihl_humanitarian_law": 1.6590792759360038,
+    "q2_humanitarian_rights__vs__absurd_structurally_matched_paradigms:culinary_arts": 1.8524172676978945,
+    "q3_realpolitik_statecraft__vs__disciplinary_paradigms:ihl_humanitarian_law": 1.6889954883584177,
+    "q3_realpolitik_statecraft__vs__absurd_structurally_matched_paradigms:culinary_arts": 1.8492210292303204,
+    "disciplinary_paradigms:ihl_humanitarian_law__vs__absurd_structurally_matched_paradigms:culinary_arts": 1.835115426761417
+  },
+  "point_17_publisher_separation_permutation": {
+    "observed_f": 4.431871253106967,
+    "parametric_p": 0.00016158199871256054,
+    "perm_null_mean_f": 1.055109452747657,
+    "perm_null_95_ci": [
+      0.3845639172101143,
+      2.382466992667419
+    ],
+    "permutation_p_value": 0.002997002997002997,
+    "permutation_z_score": 6.332669992232912
+  },
+  "point_18_spectrum_and_participation_ratio": {
+    "q0_original_geopolitical": {
+      "eigenvalue_variance_ratios": [
+        0.4830298544478368,
+        0.164473145965546,
+        0.1182033207765425,
+        0.07847432082072851,
+        0.07321075657299085,
+        0.04050888529005706,
+        0.02407506136213175,
+        0.018024654764042546
+      ],
+      "pc1_variance_ratio": 0.4830298544478368,
+      "pc2_variance_ratio": 0.164473145965546,
+      "participation_ratio": 3.4673488931257594,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "q1_paraphrase_control": {
+      "eigenvalue_variance_ratios": [
+        0.46269717939027544,
+        0.16558105442337823,
+        0.12721934948579888,
+        0.1061677866360601,
+        0.050292645613923985,
+        0.04766248268297343,
+        0.024346328549398513,
+        0.016033173218067544
+      ],
+      "pc1_variance_ratio": 0.46269717939027544,
+      "pc2_variance_ratio": 0.16558105442337823,
+      "participation_ratio": 3.641488256199689,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "q2_humanitarian_rights": {
+      "eigenvalue_variance_ratios": [
+        0.4841369047830285,
+        0.14412564418094498,
+        0.1235072737539055,
+        0.07303551613791158,
+        0.05981453933253093,
+        0.04493425159868856,
+        0.04238456273302567,
+        0.02806130747984021
+      ],
+      "pc1_variance_ratio": 0.4841369047830285,
+      "pc2_variance_ratio": 0.14412564418094498,
+      "participation_ratio": 3.521998189861191,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "q3_realpolitik_statecraft": {
+      "eigenvalue_variance_ratios": [
+        0.3613444151938849,
+        0.16493036735950464,
+        0.14112804237472745,
+        0.12800529907149555,
+        0.09208149041451999,
+        0.05097064908509099,
+        0.03468886893136884,
+        0.026850867569283784
+      ],
+      "pc1_variance_ratio": 0.3613444151938849,
+      "pc2_variance_ratio": 0.16493036735950464,
+      "participation_ratio": 4.829154461608045,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "disciplinary_paradigms:ihl_humanitarian_law": {
+      "eigenvalue_variance_ratios": [
+        0.3274200469468365,
+        0.2107781420464863,
+        0.1253332439072923,
+        0.10840096636881318,
+        0.08281809323537194,
+        0.06076075239058437,
+        0.045688133424028984,
+        0.038800621680462576
+      ],
+      "pc1_variance_ratio": 0.3274200469468365,
+      "pc2_variance_ratio": 0.2107781420464863,
+      "participation_ratio": 5.175069945343206,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "disciplinary_paradigms:strategic_security": {
+      "eigenvalue_variance_ratios": [
+        0.4291257466357945,
+        0.18903114370018306,
+        0.09753421131532825,
+        0.08648719935906958,
+        0.07614070603898188,
+        0.05857076679810104,
+        0.037370256633459886,
+        0.025739969518957823
+      ],
+      "pc1_variance_ratio": 0.4291257466357945,
+      "pc2_variance_ratio": 0.18903114370018306,
+      "participation_ratio": 4.029631302305735,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "disciplinary_paradigms:peace_conflict_studies": {
+      "eigenvalue_variance_ratios": [
+        0.5349109425859727,
+        0.12827733441639072,
+        0.08446826791667791,
+        0.07427145256070283,
+        0.06444686109460919,
+        0.04883084711038055,
+        0.03258191337673452,
+        0.032212380938407684
+      ],
+      "pc1_variance_ratio": 0.5349109425859727,
+      "pc2_variance_ratio": 0.12827733441639072,
+      "participation_ratio": 3.0876300652566817,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "disciplinary_paradigms:realist_international_relations": {
+      "eigenvalue_variance_ratios": [
+        0.2539640391405937,
+        0.2113913579103256,
+        0.1603865105142266,
+        0.13659278877650624,
+        0.08016863297451679,
+        0.06135075630298348,
+        0.05043322337806613,
+        0.04571269100265762
+      ],
+      "pc1_variance_ratio": 0.2539640391405937,
+      "pc2_variance_ratio": 0.2113913579103256,
+      "participation_ratio": 5.938610896371015,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "disciplinary_paradigms:media_framing_analysis": {
+      "eigenvalue_variance_ratios": [
+        0.3046197160573097,
+        0.2068206718332045,
+        0.14884941867371118,
+        0.10984876927617247,
+        0.07792219926979375,
+        0.06285129868234278,
+        0.05685201553331653,
+        0.03223591067402514
+      ],
+      "pc1_variance_ratio": 0.3046197160573097,
+      "pc2_variance_ratio": 0.2068206718332045,
+      "participation_ratio": 5.432293090577272,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "absurd_structurally_matched_paradigms:meteorology": {
+      "eigenvalue_variance_ratios": [
+        0.25014881784166704,
+        0.21060563798979942,
+        0.16573860542621696,
+        0.12553262134222015,
+        0.0815062322362955,
+        0.08065345753418572,
+        0.04648383979405156,
+        0.03933078783543968
+      ],
+      "pc1_variance_ratio": 0.25014881784166704,
+      "pc2_variance_ratio": 0.21060563798979942,
+      "participation_ratio": 5.987565221787194,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "absurd_structurally_matched_paradigms:culinary_arts": {
+      "eigenvalue_variance_ratios": [
+        0.3474562711188274,
+        0.17327347950700822,
+        0.15538425804296577,
+        0.11013398353173055,
+        0.0705853707977999,
+        0.058726055484679206,
+        0.045257913098737404,
+        0.03918266841812749
+      ],
+      "pc1_variance_ratio": 0.3474562711188274,
+      "pc2_variance_ratio": 0.17327347950700822,
+      "participation_ratio": 5.024168123130825,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "absurd_structurally_matched_paradigms:botanical_taxonomy": {
+      "eigenvalue_variance_ratios": [
+        0.3019148960221981,
+        0.1613754269710746,
+        0.14364767232921677,
+        0.10957529918301365,
+        0.10170752652746383,
+        0.08308577416179028,
+        0.060014011308907995,
+        0.03867939349621086
+      ],
+      "pc1_variance_ratio": 0.3019148960221981,
+      "pc2_variance_ratio": 0.1613754269710746,
+      "participation_ratio": 5.807825669002521,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "absurd_structurally_matched_paradigms:sports_tactics": {
+      "eigenvalue_variance_ratios": [
+        0.37321981735287063,
+        0.19660482880711685,
+        0.1154744479301662,
+        0.10477386044557924,
+        0.07449555420580041,
+        0.05479971537310264,
+        0.04309756356288612,
+        0.03753421232235402
+      ],
+      "pc1_variance_ratio": 0.37321981735287063,
+      "pc2_variance_ratio": 0.19660482880711685,
+      "participation_ratio": 4.671211757273724,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "extreme_political_ontologies:legal_culpability": {
+      "eigenvalue_variance_ratios": [
+        0.41865221280677495,
+        0.15891996766926475,
+        0.11803151829970518,
+        0.1094609354619819,
+        0.07421840549675182,
+        0.05992741183093378,
+        0.032191263660093755,
+        0.028598284774369827
+      ],
+      "pc1_variance_ratio": 0.41865221280677495,
+      "pc2_variance_ratio": 0.15891996766926475,
+      "participation_ratio": 4.212438800824171,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "extreme_political_ontologies:operational_efficacy": {
+      "eigenvalue_variance_ratios": [
+        0.2894034982028763,
+        0.15674719411978658,
+        0.13175833267721926,
+        0.11502776521168556,
+        0.1010424474701338,
+        0.08580972590488498,
+        0.06538634848620903,
+        0.05482468792708052
+      ],
+      "pc1_variance_ratio": 0.2894034982028763,
+      "pc2_variance_ratio": 0.15674719411978658,
+      "participation_ratio": 6.106134925021603,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "extreme_political_ontologies:humanitarian_welfare": {
+      "eigenvalue_variance_ratios": [
+        0.551393105717423,
+        0.10742882165990432,
+        0.09746391330936274,
+        0.07124451558871352,
+        0.058395878985052885,
+        0.044191728488810894,
+        0.042694338128263766,
+        0.027187698122344964
+      ],
+      "pc1_variance_ratio": 0.551393105717423,
+      "pc2_variance_ratio": 0.10742882165990432,
+      "participation_ratio": 2.9579211828733474,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "extreme_political_ontologies:economic_cost": {
+      "eigenvalue_variance_ratios": [
+        0.37562193041830133,
+        0.20476723247498674,
+        0.11239226477980674,
+        0.08995515808917562,
+        0.07531541323376197,
+        0.05555167666042421,
+        0.0499290071822106,
+        0.036467317161208816
+      ],
+      "pc1_variance_ratio": 0.37562193041830133,
+      "pc2_variance_ratio": 0.20476723247498674,
+      "participation_ratio": 4.622640518495202,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "extreme_political_ontologies:religious_obligation": {
+      "eigenvalue_variance_ratios": [
+        0.4316824677687631,
+        0.1696393057869405,
+        0.127325086271156,
+        0.07474220431938129,
+        0.0664915041239391,
+        0.05176228266915881,
+        0.042938757743421506,
+        0.03541839131711564
+      ],
+      "pc1_variance_ratio": 0.4316824677687631,
+      "pc2_variance_ratio": 0.1696393057869405,
+      "participation_ratio": 4.046551935938098,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "adversarial_manufacturing_candidates:adv_inverted_pc1": {
+      "eigenvalue_variance_ratios": [
+        0.4557689337123232,
+        0.1896201312823321,
+        0.12143880454797351,
+        0.07839192295849864,
+        0.06599183209001298,
+        0.046756814872805676,
+        0.02514608659769009,
+        0.016885473938239814
+      ],
+      "pc1_variance_ratio": 0.4557689337123232,
+      "pc2_variance_ratio": 0.1896201312823321,
+      "participation_ratio": 3.676033268653738,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    },
+    "adversarial_manufacturing_candidates:adv_orthogonal_distractors": {
+      "eigenvalue_variance_ratios": [
+        0.29941937168443755,
+        0.1662226979067046,
+        0.15744754974276542,
+        0.10279854332843318,
+        0.09147242492572347,
+        0.07989471865371504,
+        0.056285513658838264,
+        0.0464591800992584
+      ],
+      "pc1_variance_ratio": 0.29941937168443755,
+      "pc2_variance_ratio": 0.1662226979067046,
+      "participation_ratio": 5.78984813148401,
+      "mp_null_upper_bound_ratio": 0.19788305577012358,
+      "exceeds_mp_null": true
+    }
+  }
+}

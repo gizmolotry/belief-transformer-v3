@@ -1,0 +1,528 @@
+"""
+metric_fusion.py - Implements the Track 3 Unified Metric Tensor logic.
+
+Fuses Track 1.5 (Gradients), Track 2 geometry, and Track 3 Dirichlet density
+to generate unified metrics for visualization, including density, stress,
+z_height, zones, and color codes.
+
+Density contract:
+    - density is the capstone-facing Track 3 conformal density when available.
+    - geometry_density_knn is retained separately as a visualization/geometry
+      diagnostic, not the thesis Track 3 density.
+    - when Track 3 rho is missing or flat, density falls back to KNN geometry
+      density with an explicit density_basis provenance marker.
+
+CRITICAL 'NO BUTTERFLY' CONSTRAINTS:
+1. NON-DESTRUCTIVE: Only appends new columns.
+2. PRESERVE FLOW: Does not alter existing function signatures.
+3. COMPATIBILITY: Output 'MONOLITH_DATA.csv' is a superset of the input metadata.
+"""
+
+from __future__ import annotations
+import numpy as np
+import pandas as pd
+from pathlib import Path
+from sklearn.cluster import KMeans
+from sklearn.neighbors import NearestNeighbors
+from typing import Tuple, List, Optional
+import json
+import argparse
+from .thermo_config import ThermodynamicConfig
+from .artifact_ledger import ArtifactContract
+
+
+def _canonicalize_track5_verdict(raw_verdict: object) -> str:
+    text = str(raw_verdict or "").strip().upper()
+    if text in {"TYPE_2_RUPTURE", "TYPE 2 RUPTURE", "TRAPPED", "FAILED"}:
+        return "TAUTOLOGY"
+    if text in {"TYPE_1_RUPTURE", "TYPE 1 RUPTURE", "RUPTURE", "BROKEN"}:
+        return "PHANTOM"
+    if text in {"HONEST", "PHANTOM", "TAUTOLOGY"}:
+        return text
+    return "UNKNOWN"
+
+
+def _robust_unit_interval(values: np.ndarray) -> np.ndarray:
+    arr = np.asarray(values, dtype=float).reshape(-1)
+    arr = np.nan_to_num(arr, nan=0.0, posinf=0.0, neginf=0.0)
+    finite = arr[np.isfinite(arr)]
+    if finite.size <= 0:
+        return np.full(arr.shape, 0.5, dtype=float)
+    lo = float(np.percentile(finite, 10.0))
+    hi = float(np.percentile(finite, 90.0))
+    if hi <= lo + 1e-12:
+        lo = float(np.min(finite))
+        hi = float(np.max(finite))
+    if hi <= lo + 1e-12:
+        return np.full(arr.shape, 0.5, dtype=float)
+    return np.clip((arr - lo) / (hi - lo), 0.0, 1.0)
+
+
+def _compute_density_field(
+    embeddings: np.ndarray,
+    *,
+    knn_k: int,
+    epsilon: float,
+) -> np.ndarray:
+    arr = np.asarray(embeddings, dtype=float)
+    n = int(arr.shape[0])
+    if n <= 1:
+        raise ValueError("Need at least 2 samples to compute a density field.")
+
+    effective_k = int(max(1, min(int(knn_k), n - 1)))
+    print(f"Calculating density with KNN (requested_k={knn_k}, effective_k={effective_k})...")
+
+    nn = NearestNeighbors(n_neighbors=effective_k + 1, metric="euclidean")
+    nn.fit(arr)
+    distances, _ = nn.kneighbors(arr)
+
+    neighbor_distances = np.asarray(distances[:, 1 : effective_k + 1], dtype=float)
+    neighbor_distances = np.nan_to_num(neighbor_distances, nan=np.inf, posinf=np.inf, neginf=0.0)
+    mean_neighbor_distance = np.mean(neighbor_distances, axis=1)
+    density = 1.0 / (mean_neighbor_distance + epsilon)
+    density = _robust_unit_interval(density)
+
+    # Never silently flatten the manifold on small/degenerate runs. If the local
+    # KNN estimate collapses, fall back to inverse mean distance over the full
+    # point cloud before giving up.
+    if n >= 3 and float(np.ptp(density)) <= 1e-9:
+        pairwise = np.linalg.norm(arr[:, None, :] - arr[None, :, :], axis=2)
+        finite_mask = np.isfinite(pairwise)
+        diag_mask = np.eye(n, dtype=bool)
+        pairwise = np.where(diag_mask, np.nan, pairwise)
+        pairwise = np.where(finite_mask, pairwise, np.nan)
+        mean_pairwise_distance = np.nanmean(pairwise, axis=1)
+        if np.isfinite(mean_pairwise_distance).any():
+            fallback_density = 1.0 / (np.nan_to_num(mean_pairwise_distance, nan=np.nanmax(mean_pairwise_distance)) + epsilon)
+            density = _robust_unit_interval(fallback_density)
+            print("  [WARN] Local KNN density collapsed; using inverse mean pairwise distance fallback.")
+
+    if n >= 3 and float(np.ptp(density)) <= 1e-9:
+        raise ValueError(
+            "Density field collapsed after adaptive KNN and pairwise-distance fallback; refusing to emit flat manifold metrics."
+        )
+    return density.astype(float)
+
+
+def _compute_track3_density_rho(blinker_variance: np.ndarray) -> np.ndarray:
+    """
+    Convert Track 3 Dirichlet variance to capstone conformal density.
+
+    rho_i = 1 / (1 + tau ||b_i||), with tau fixed to 1.0 for the canonical
+    artifact path. This mirrors core.hadamard_fusion.ConformalMetric without
+    adding a torch dependency to metric-fusion CSV emission.
+    """
+    arr = np.asarray(blinker_variance, dtype=float)
+    if arr.ndim == 0:
+        arr = arr.reshape(1)
+    if arr.ndim == 1:
+        variance_magnitude = np.abs(arr)
+    else:
+        variance_magnitude = np.linalg.norm(arr, axis=-1)
+    variance_magnitude = np.nan_to_num(variance_magnitude, nan=0.0, posinf=1e6, neginf=0.0)
+    return (1.0 / (1.0 + variance_magnitude)).astype(float)
+
+
+def _load_track3_density_artifact(run_dir: Path, n_expected: int) -> Tuple[Optional[np.ndarray], str]:
+    """
+    Load or derive the capstone Track 3 rho vector for MONOLITH_DATA.csv.
+
+    Preference order:
+      1. track3_density_rho.npy, the direct conformal density artifact.
+      2. dirichlet_fused_std.npy, converted through rho_i = 1/(1+||b_i||).
+
+    Returns (rho_raw, basis), where rho_raw is None if no compatible Track 3
+    artifact exists.
+    """
+    rho_path = run_dir / "track3_density_rho.npy"
+    if rho_path.exists():
+        try:
+            rho = np.asarray(np.load(rho_path), dtype=float).reshape(-1)
+            if rho.shape[0] == n_expected and np.isfinite(rho).any():
+                return np.nan_to_num(rho, nan=0.0, posinf=1.0, neginf=0.0), "track3_density_rho"
+            print(
+                f"  [WARN] {rho_path.name} shape/finite mismatch "
+                f"({rho.shape[0]} vs {n_expected}); ignoring Track 3 rho artifact."
+            )
+        except Exception as exc:
+            print(f"  [WARN] Failed to load {rho_path.name}: {exc}")
+
+    blinker_path = run_dir / "dirichlet_fused_std.npy"
+    if blinker_path.exists():
+        try:
+            blinker = np.asarray(np.load(blinker_path), dtype=float)
+            if blinker.shape[0] == n_expected and np.isfinite(blinker).any():
+                return _compute_track3_density_rho(blinker), "dirichlet_fused_std"
+            print(
+                f"  [WARN] {blinker_path.name} shape/finite mismatch "
+                f"({blinker.shape[0] if blinker.ndim else 0} vs {n_expected}); "
+                "cannot derive Track 3 rho."
+            )
+        except Exception as exc:
+            print(f"  [WARN] Failed to derive Track 3 rho from {blinker_path.name}: {exc}")
+
+    return None, "missing"
+
+
+def calculate_unified_metric(
+    embeddings_path: Path,
+    gradients_path: Path,
+    metadata_path: Path,
+    output_path: Path,
+    knn_k: int = 20,
+    z_stress_factor: float = 1.2, # Retained for signature compatibility
+    z_density_factor: float = 0.8, # Retained for signature compatibility
+) -> pd.DataFrame:
+    """
+    Fuses Track 1.5 (Gradients) and Track 2 (Density) to calculate unified metrics.
+    """
+    # 0. ENFORCE CONTRACT
+    ArtifactContract(embeddings_path.parent).verify()
+
+    print(f"Loading data: {embeddings_path}, {gradients_path}, {metadata_path}")
+    thermo_config = ThermodynamicConfig()
+
+    # 1. Load 'embeddings.npy', 'gradients.npy', and 'articles.csv'
+    embeddings = np.load(embeddings_path)
+    gradients = np.load(gradients_path)
+    if Path(metadata_path).suffix == ".json":
+        metadata_df = pd.read_json(metadata_path)
+    else:
+        metadata_df = pd.read_csv(metadata_path)
+
+    # Ensure embeddings and gradients match metadata length
+    if len(embeddings) != len(metadata_df) or len(gradients) != len(metadata_df):
+        raise ValueError(
+            "Mismatch in number of articles between embeddings, gradients, and metadata."
+            f"Embeddings: {len(embeddings)}, Gradients: {len(gradients)}, Metadata: {len(metadata_df)}"
+        )
+
+    # 2. Calculate density with explicit basis provenance.
+    # Track 3 rho is the capstone-facing density. KNN density remains a local
+    # geometry diagnostic and fallback, so screenshots/evidence do not silently
+    # substitute one concept for the other.
+    track3_density_rho_raw, track3_basis = _load_track3_density_artifact(
+        Path(embeddings_path).parent,
+        len(metadata_df),
+    )
+    try:
+        geometry_density_knn = _compute_density_field(
+            embeddings,
+            knn_k=knn_k,
+            epsilon=float(thermo_config.density_clamp_min),
+        )
+    except ValueError:
+        if track3_density_rho_raw is None:
+            raise
+        geometry_density_knn = np.full(len(metadata_df), 0.5, dtype=float)
+        print(
+            "  [WARN] Geometry KNN density collapsed, but Track 3 rho is available; "
+            "retaining neutral geometry_density_knn diagnostic."
+        )
+    track3_density_rho_norm = None
+    density_basis = "geometry_knn_track3_missing"
+    density_contract = "fallback_geometry_density_not_capstone_track3"
+
+    if track3_density_rho_raw is not None:
+        track3_density_rho_raw = np.clip(
+            np.nan_to_num(track3_density_rho_raw, nan=0.0, posinf=1.0, neginf=0.0),
+            0.0,
+            1.0,
+        )
+        track3_density_rho_norm = _robust_unit_interval(track3_density_rho_raw)
+        if len(track3_density_rho_norm) >= 3 and float(np.ptp(track3_density_rho_norm)) <= 1e-9:
+            density = geometry_density_knn
+            density_basis = f"geometry_knn_fallback_track3_flat:{track3_basis}"
+            density_contract = "track3_rho_available_but_flat_geometry_fallback"
+            print(
+                "  [WARN] Track 3 rho collapsed after normalization; "
+                "using geometry_density_knn for visible terrain with explicit fallback provenance."
+            )
+        else:
+            density = track3_density_rho_norm
+            density_basis = f"track3_dirichlet_rho:{track3_basis}"
+            density_contract = "capstone_track3_dirichlet_rho_primary"
+            print(f"  [OK] Using Track 3 conformal rho as primary density ({track3_basis}).")
+    else:
+        density = geometry_density_knn
+        print("  [WARN] Track 3 rho unavailable; using geometry_density_knn as explicit fallback density.")
+
+    # 3. Calculate STRESS as a varying article-level scalar.
+    # `spectral_u_axis.npy` can be unit-normalized, which makes its L2 norm
+    # effectively constant and collapses the manifold skin. Prefer the existing
+    # spectral probe magnitudes when available.
+    print("Calculating stress...")
+    probe_magnitudes_path = embeddings_path.parent / "spectral_probe_magnitudes.npy"
+    raw_stress = None
+    if probe_magnitudes_path.exists():
+        try:
+            probe_magnitudes = np.load(probe_magnitudes_path)
+            if (
+                isinstance(probe_magnitudes, np.ndarray)
+                and probe_magnitudes.ndim == 2
+                and probe_magnitudes.shape[0] == len(metadata_df)
+            ):
+                raw_stress = np.linalg.norm(np.asarray(probe_magnitudes, dtype=float), axis=1).astype(float)
+                print(f"  [OK] Using spectral probe magnitudes from {probe_magnitudes_path.name} for stress.")
+        except Exception as probe_err:
+            print(f"  [WARN] Failed to load spectral probe magnitudes for stress: {probe_err}")
+            raw_stress = None
+    if raw_stress is None:
+        raw_stress = np.linalg.norm(np.asarray(gradients, dtype=float), axis=1).astype(float)
+        print("  [WARN] Falling back to gradient-vector norm for stress.")
+    stress = _robust_unit_interval(raw_stress)
+
+    # 4. Calculate Z_HEIGHT from soft-floored density potential:
+    #    Z = -log(rho + epsilon_z), preserving raw potential scale.
+    print("Calculating Z_HEIGHT...")
+    epsilon_z = thermo_config.epsilon_z
+    z_potential = -np.log(density + epsilon_z)
+    z_height = z_potential
+    if len(z_height) >= 3 and float(np.ptp(z_height)) <= 1e-9:
+        raise ValueError("Z-height collapsed after density computation; refusing to emit flat manifold metrics.")
+
+    # 5. Calculate ZONES (Bridge/Swamp/Tightrope/Void) using ABSOLUTE THRESHOLDS
+    print("Classifying zones (Bridge/Swamp/Tightrope/Void)...")
+    # ASTER v3.2 Strict Physical Thresholds (No percentiles)
+    density_thresh = 0.5
+    stress_thresh = 0.5
+
+    zones = []
+    color_codes = [] 
+    for i in range(len(metadata_df)):
+        if density[i] >= density_thresh and stress[i] < stress_thresh:
+            zones.append("Bridge")
+            color_codes.append("#00F0FF")
+        elif density[i] >= density_thresh and stress[i] >= stress_thresh:
+            zones.append("Swamp")
+            color_codes.append("#9932CC")
+        elif density[i] < density_thresh and stress[i] < stress_thresh:
+            zones.append("Tightrope")
+            color_codes.append("#FFFFCC")
+        else: 
+            zones.append("Void")
+            color_codes.append("#FF0000")
+
+    # 5.5. Calculate VERDICTS (ASTER v3.2 Strict Physical Handoff)
+    print("Classifying verdicts (Honest/Phantom/Rupture/Tautology)...")
+    
+    # Try to load walker work integrals and states for actual physics
+    walker_work_path = embeddings_path.parent / "walker_work_integrals.npy"
+    walker_states_path = embeddings_path.parent / "walker_states.json"
+    phantom_verdicts_path = embeddings_path.parent / "phantom_verdicts.json"
+    
+    if walker_work_path.exists():
+        w_actual = np.load(walker_work_path)
+    else:
+        print(f"  [WARN] {walker_work_path.name} missing. Using zero-work fallback.")
+        w_actual = np.zeros(len(metadata_df))
+    
+    walker_states = None
+    if walker_states_path.exists():
+        with open(walker_states_path, 'r') as f:
+            walker_states = json.load(f)
+        print(f"  [OK] Using actual walker states from {walker_states_path.name}")
+    else:
+        print(f"  [WARN] walker_states.json missing. Falling back to work-only classification.")
+
+    phantom_verdicts = None
+    if phantom_verdicts_path.exists():
+        with open(phantom_verdicts_path, 'r') as f:
+            phantom_verdicts = json.load(f)
+        if not isinstance(phantom_verdicts, list) or len(phantom_verdicts) != len(metadata_df):
+            print(f"  [WARN] phantom_verdicts.json shape mismatch. Ignoring verdict ledger.")
+            phantom_verdicts = None
+        else:
+            print(f"  [OK] Using Track 5 verdict ledger from {phantom_verdicts_path.name}")
+
+    # Divergence Ratio Logic (Panic Function)
+    d_spectral = None
+    d_spectral_path = embeddings_path.parent / "d_spectral.npy"
+    if d_spectral_path.exists():
+        d_spectral = np.asarray(np.load(d_spectral_path), dtype=float).reshape(-1)
+        if d_spectral.shape[0] != len(metadata_df):
+            print(
+                f"  [WARN] {d_spectral_path.name} length mismatch "
+                f"({d_spectral.shape[0]} vs {len(metadata_df)}). Ignoring persisted spectral distance."
+            )
+            d_spectral = None
+        else:
+            print(f"  [OK] Using persisted Track 1.5 spectral distance from {d_spectral_path.name}")
+
+    if d_spectral is None and phantom_verdicts is not None:
+        extracted = [
+            float(payload.get("d_spectral", payload.get("d", np.nan)))
+            for payload in phantom_verdicts
+        ]
+        d_candidate = np.asarray(extracted, dtype=float).reshape(-1)
+        if d_candidate.shape[0] == len(metadata_df) and np.isfinite(d_candidate).any():
+            d_spectral = d_candidate
+            print("  [OK] Using Track 5 verdict ledger for persisted spectral distance.")
+
+    if d_spectral is None:
+        # Lightweight fixtures and partial research leaves do not always persist
+        # canonical Track 1.5 distances. Preserve the unified-metric export by
+        # falling back to the already-computed stress field rather than failing
+        # metadata propagation entirely.
+        d_spectral = np.asarray(raw_stress, dtype=float).reshape(-1)
+        print(
+            "  [WARN] Missing canonical Track 1.5 spectral distance; "
+            "falling back to raw stress magnitudes for metric fusion."
+        )
+
+    d_spectral = np.clip(np.asarray(d_spectral, dtype=float), 0.1, None)
+
+    # 1) Calculate absolute curvature penalty for surviving walkers.
+    valid_indices = []
+    for i in range(len(metadata_df)):
+        raw_state = walker_states[i] if walker_states is not None else "UNKNOWN"
+        if isinstance(raw_state, dict):
+            state = _canonicalize_track5_verdict(raw_state.get("label", raw_state.get("status", "UNKNOWN")))
+        else:
+            state = _canonicalize_track5_verdict(raw_state)
+        if state in {"HONEST", "PHANTOM", "TAUTOLOGY"}:
+            valid_indices.append(i)
+
+    delta_values = []
+    for i in valid_indices:
+        d = d_spectral[i] + 1e-8
+        delta_values.append(w_actual[i] / d)
+
+    # 2) Fit 1D K-Means to find natural energetic states.
+    delta_array = np.array(delta_values).reshape(-1, 1)
+    sorted_centers = np.array([1.0, 5.0, 10.0], dtype=float)
+    min_stable_samples = 10
+    threshold_mode = "kmeans_3cluster"
+    if len(delta_array) >= min_stable_samples:
+        kmeans = KMeans(n_clusters=3, random_state=42, n_init=10).fit(delta_array)
+        sorted_centers = np.sort(kmeans.cluster_centers_.flatten())
+        threshold_tautology = sorted_centers[0] + (sorted_centers[1] - sorted_centers[0]) / 2.0
+        threshold_honest = sorted_centers[1] + (sorted_centers[2] - sorted_centers[1]) / 2.0
+    else:
+        # Sparse-state fallback: use stable calibrated thresholds to avoid
+        # run-local quantile drift on tiny/failed runs.
+        threshold_tautology, threshold_honest = 1.0, 10.0
+        threshold_mode = "sparse_fixed_calibrated"
+
+    verdicts = []
+    output_delta = []
+    output_d_spectral = []
+    output_w_actual = []
+    for i in range(len(metadata_df)):
+        if phantom_verdicts is not None:
+            verdict_payload = phantom_verdicts[i]
+            verdict = _canonicalize_track5_verdict(verdict_payload.get("verdict"))
+            if verdict != "UNKNOWN":
+                verdicts.append(verdict)
+                output_delta.append(float(verdict_payload.get("delta", w_actual[i] / (d_spectral[i] + 1e-8))))
+                output_d_spectral.append(float(verdict_payload.get("d_spectral", verdict_payload.get("d", d_spectral[i]))))
+                output_w_actual.append(float(verdict_payload.get("w_actual", verdict_payload.get("w", w_actual[i]))))
+                continue
+
+        raw_state = walker_states[i] if walker_states is not None else "UNKNOWN"
+        if isinstance(raw_state, dict):
+            state = _canonicalize_track5_verdict(raw_state.get("label", raw_state.get("status", "UNKNOWN")))
+        else:
+            state = _canonicalize_track5_verdict(raw_state)
+
+        delta = w_actual[i] / (d_spectral[i] + 1e-8)
+        if state in {"HONEST", "PHANTOM", "TAUTOLOGY"}:
+            verdicts.append(state)
+            output_delta.append(float(delta))
+            output_d_spectral.append(float(d_spectral[i]))
+            output_w_actual.append(float(w_actual[i]))
+            continue
+
+        if delta < threshold_tautology:
+            verdicts.append("TAUTOLOGY")
+        elif delta <= threshold_honest:
+            verdicts.append("HONEST")
+        else:
+            verdicts.append("PHANTOM")
+        output_delta.append(float(delta))
+        output_d_spectral.append(float(d_spectral[i]))
+        output_w_actual.append(float(w_actual[i]))
+
+    # 6. Save the result as 'MONOLITH_DATA.csv' with new columns:
+    #    'density', 'geometry_density_knn', Track 3 rho provenance, 'stress',
+    #    'z_height', 'zone', 'color_code', 'verdict'.
+    print(f"Appending new columns and saving to {output_path}...")
+    metadata_df['density'] = density
+    metadata_df['density_basis'] = density_basis
+    metadata_df['density_contract'] = density_contract
+    metadata_df['geometry_density_knn'] = geometry_density_knn
+    if track3_density_rho_raw is not None:
+        metadata_df['track3_density_rho'] = track3_density_rho_raw
+    else:
+        metadata_df['track3_density_rho'] = np.nan
+    if track3_density_rho_norm is not None:
+        metadata_df['track3_density_rho_norm'] = track3_density_rho_norm
+    else:
+        metadata_df['track3_density_rho_norm'] = np.nan
+    metadata_df['stress'] = stress
+    metadata_df['z_height'] = z_height
+    metadata_df['zone'] = zones
+    metadata_df['color_code'] = color_codes
+    metadata_df['verdict'] = verdicts
+    metadata_df['delta'] = output_delta
+    metadata_df['d_spectral'] = output_d_spectral
+    metadata_df['w_actual'] = output_w_actual
+
+    metadata_df.to_csv(output_path, index=False)
+    print("Unified metric calculation complete and saved.")
+    print(f"LEARNED CENTROIDS: {sorted_centers}")
+    print(
+        f"THRESHOLDS: Tautology < {threshold_tautology:.2f} | "
+        f"Honest <= {threshold_honest:.2f} | Phantom > {threshold_honest:.2f} "
+        f"(mode={threshold_mode})"
+    )
+
+    return metadata_df
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Fuse metrics for MONOLITH visualization.")
+    parser.add_argument("experiment_dir", type=str, help="Path to the experiment directory (e.g., experiments_20260212_180018/rbf/real/seed_43)")
+    args = parser.parse_args()
+
+    exp_dir = Path(args.experiment_dir)
+
+    # Define paths
+    embeddings_path = exp_dir / "features.npy"
+    gradients_path = exp_dir / "spectral_u_axis.npy"
+    
+    # Prioritize 'articles_with_sources.csv' if it exists for richer metadata
+    articles_with_sources_path = exp_dir / "articles_with_sources.csv"
+    article_metadata_csv = exp_dir / "article_metadata.csv"
+    
+    if articles_with_sources_path.exists():
+        metadata_path = articles_with_sources_path
+        print(f"Using rich metadata from: {metadata_path}")
+    elif article_metadata_csv.exists():
+        metadata_path = article_metadata_csv
+        print(f"Using metadata from: {metadata_path}")
+    else: # Fallback to original metadata logic
+        metadata_path = exp_dir / "article_metadata.json" # Fallback to original metadata file
+        if metadata_path.exists() and metadata_path.suffix == '.json':
+            print(f"Converting {metadata_path} to temporary CSV for processing...")
+            with open(metadata_path, 'r') as f:
+                metadata_list = json.load(f)
+            temp_csv_path = exp_dir / "articles.csv"
+            pd.DataFrame(metadata_list).to_csv(temp_csv_path, index=False)
+            metadata_path = temp_csv_path
+        elif not metadata_path.exists():
+            print(f"Error: {metadata_path} not found.")
+            exit(1)
+
+    output_file = exp_dir / "MONOLITH_DATA.csv"
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"Running calculate_unified_metric for {exp_dir.name}...")
+    result_df = calculate_unified_metric(
+        embeddings_path=embeddings_path,
+        gradients_path=gradients_path,
+        metadata_path=metadata_path,
+        output_path=output_file,
+    )
+    print(f"Generated MONOLITH_DATA.csv with {len(result_df.columns)} columns.")
+    print(result_df.head())
+    print(result_df["verdict"].value_counts())

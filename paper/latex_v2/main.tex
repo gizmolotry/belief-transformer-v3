@@ -1,0 +1,292 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage[round,authoryear]{natbib}
+\usepackage[hidelinks]{hyperref}
+
+\doublespacing
+
+\title{Measurement-Conditioned Framing Geometry: Contrastive NLI and Semantic Projection in Political News}
+\author{Andrew Clair \\
+Student Number: 22184813 \\
+Supervisor: Henry Silke \\
+Module: JM4018 - INDIVIDUAL JOURNALISM PROJECT 2025/6 SEM2}
+\date{March 4, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Automated news aggregators frequently summarize political bias by projecting coverage onto an assumed one-dimensional spectrum using third-party publisher metadata, rather than measuring article text directly. We evaluate whether framing stance can be recovered as an endogenous low-dimensional geometry using frozen cross-encoder natural language inference (NLI) prompted with authored contrastive hypothesis pairs ($h_A, h_B$). Under an audited paired contrast operator ($s_A - s_B$) that removes response components shared between opposing hypotheses, article response covariance compresses onto a robust, primary stance axis ($\mathrm{PC1} \approx 42\% - 64\%$) that decisively clears 10,000-draw non-parametric permutation null gates ($p \le 0.0003$, detected rank strictly $k=1$) across both conflict and domestic policy domains (Israel--Palestine, Clean Ukraine $\mathrm{PC1} = 42.09\%, p = 0.0003$, US Immigration, Climate Politics, Abortion Rights). Synthetic factorial positive controls with known generating factors verify apparatus resolving power for higher-dimensional structure ($k=2$, $99.11\%$). Article stance coordinates reproduce across prospectively sampled text ($N=120$, $\mathrm{PC1} = 58.36\%$; cross-bank $r = 0.925$), non-overlapping disjoint probe partitions (mean $|r| \approx 0.76$ across 35 unique 4-vs-4 splits), and diverse transformer architectures (cross-model stance $r = 0.55 - 0.81$ across DeBERTa, BART, and RoBERTa).
+
+We benchmark this relational NLI apparatus against a matched sentence-level semantic projection baseline (FrameAxis). Holding corpus and conceptual contrasts fixed, the two instruments produce weakly aligned dominant coordinates ($r \in [0.01, 0.19]$ standardized). Canonical correlation analysis reveals that this is not orthogonal noise: the instruments share a significant multivariate semantic subspace ($r_{\mathrm{canon,test}} = 0.364 \pm 0.080$, Monte Carlo permutation $p = 0.0010$) that generalizes out-of-sample under strictly fold-local repeated 5-fold cross-validation. Minimal compositional controls establish that NLI exhibits substantially greater compositional sensitivity on tested perturbations, achieving complete concordance and sign inversion on negation ($100\%$) and quantifiers ($100\%$, where dense projection collapses to cosine similarities of $0.73 - 0.99$), while remaining bounded on syntactic agent--patient reversal ($50\%$). Anisotropy-removal ablations demonstrate that dominant semantic projection variance is substantially driven by leading representation components ($73.7\% \to 34.5\%$ upon removing the top embedding PC), whereas NLI stance coordinates separate news outlets ($\eta^2 = 40.1\%, p = 0.005$) and survive collinear sentiment controls ($\eta^2 = 34.8\%, p = 0.022$). We conclude that low-dimensional framing structure is not unique to NLI, but the recovered dominant coordinate depends on the measurement operator: $\mathcal{G}_{\text{observed}} = f(C, H, O, M)$.
+\end{abstract}
+
+\newpage
+
+\section*{Declaration}
+I acknowledge the use of Gemini CLI, Codex CLI, and ChatGPT to generate the equation LaTeX, generation of repository code, as well as serving as a sounding board for the machine learning and mathematical operations as the system developed. I confirm that this is entirely my own work and that it has not been submitted for assessment as part of any other programme.
+
+\vspace{1cm}
+Signed: Andrew Clair \\
+Date: January 12, 2026
+
+\newpage
+
+\input{01_introduction.tex}
+\input{02_methodology.tex}
+\input{03_results.tex}
+\input{04_discussion.tex}
+
+\newpage
+
+\section*{Declaration of AI-assisted writing and development support}
+
+During preparation of this revised manuscript, the author used OpenAI ChatGPT/Codex to assist with manuscript restructuring, codebase auditing, wording refinement, and consistency checks between the written methods and the implemented software. The author reviewed, edited, and verified the final manuscript, code claims, citations, and reported results, and takes full responsibility for the content of the work.
+
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem[AllSides(n.d.)]{allsidesmethod}
+AllSides.
+\newblock n.d.
+\newblock Media Bias Rating Methods.
+\newblock \url{https://www.allsides.com/media-bias/media-bias-rating-methods} (accessed July 12, 2026).
+
+\bibitem[Aroyo and Welty(2015)]{aroyo2015}
+Lora Aroyo and Chris Welty.
+\newblock 2015.
+\newblock Truth is a lie: CrowdTruth and the seven myths of human annotation.
+\newblock \emph{AI Magazine}, 36(1):15--24.
+
+\bibitem[Berlin(1998)]{berlin1998}
+Isaiah Berlin.
+\newblock 1998.
+\newblock The first and the last.
+\newblock \emph{The New York Review of Books}, 45(8):47--50.
+
+\bibitem[Bochner(1933)]{bochner1933}
+Salomon Bochner.
+\newblock 1933.
+\newblock Monotone Funktionen, Stieltjessche Integrale und harmonische Analyse.
+\newblock \emph{Mathematische Annalen}, 108:378--410.
+
+\bibitem[Bowker and Star(1999)]{bowkerstar1999}
+Geoffrey C. Bowker and Susan Leigh Star.
+\newblock 1999.
+\newblock \emph{Sorting Things Out: Classification and Its Consequences}.
+\newblock MIT Press, Cambridge, MA.
+
+\bibitem[Chodera and No\'{e}(2014)]{chodera2014}
+John D. Chodera and Frank No\'{e}.
+\newblock 2014.
+\newblock Markov state models of biomolecular conformational dynamics.
+\newblock \emph{Current Opinion in Structural Biology}, 25:135--144.
+
+\bibitem[Dasgupta and Gupta(2003)]{dasguptagupta2003}
+Sanjoy Dasgupta and Anupam Gupta.
+\newblock 2003.
+\newblock An elementary proof of a theorem of Johnson and Lindenstrauss.
+\newblock \emph{Random Structures \& Algorithms}, 22(1):60--65.
+
+\bibitem[E and Vanden-Eijnden(2010)]{evandeneijnden2010}
+Weinan E and Eric Vanden-Eijnden.
+\newblock 2010.
+\newblock Transition-path theory and path-finding algorithms for the study of rare events.
+\newblock \emph{Annual Review of Physical Chemistry}, 61:391--420.
+
+\bibitem[Ettinger(2020)]{ettinger2020}
+Allyson Ettinger.
+\newblock 2020.
+\newblock What {BERT} is not: Lessons from a new suite of psycholinguistic diagnostics for language models.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 8:34--48.
+
+\bibitem[Frenda et~al.(2024)]{frenda2024}
+Simona Frenda, Gavin Abercrombie, Valerio Basile, and others.
+\newblock 2024.
+\newblock Perspectivist approaches to natural language processing: A survey.
+\newblock \emph{Language Resources and Evaluation}, 58.
+
+\bibitem[Gabaix(1999)]{gabaix1999}
+Xavier Gabaix.
+\newblock 1999.
+\newblock Zipf's law for cities: An explanation.
+\newblock \emph{The Quarterly Journal of Economics}, 114(3):739--767.
+
+\bibitem[Golub and Van~Loan(2013)]{golub2013}
+Gene H. Golub and Charles F. Van~Loan.
+\newblock 2013.
+\newblock \emph{Matrix Computations}.
+\newblock 4th ed. Johns Hopkins University Press, Baltimore.
+
+\bibitem[Goodman(1978)]{goodman1978}
+Nelson Goodman.
+\newblock 1978.
+\newblock \emph{Ways of Worldmaking}.
+\newblock Hackett Publishing, Indianapolis.
+
+\bibitem[Ground News(n.d.)]{groundnewsrating}
+Ground News.
+\newblock n.d.
+\newblock Rating system.
+\newblock \url{https://ground.news/rating-system} (accessed July 12, 2026).
+
+\bibitem[He et~al.(2021)]{he2021deberta}
+Pengcheng He, Xiaodong Liu, Jianfeng Gao, and Weizhi Chen.
+\newblock 2021.
+\newblock DeBERTa: Decoding-enhanced BERT with disentangled attention.
+\newblock \emph{International Conference on Learning Representations}.
+
+\bibitem[International Federation of Journalists(2019)]{ifj2019}
+International Federation of Journalists.
+\newblock 2019.
+\newblock Global Charter of Ethics for Journalists.
+\newblock \url{https://www.ifj.org/who/rules-and-policy/global-charter-of-ethics-for-journalists}.
+
+\bibitem[Johnson and Lindenstrauss(1984)]{johnsonlindenstrauss1984}
+William B. Johnson and Joram Lindenstrauss.
+\newblock 1984.
+\newblock Extensions of Lipschitz mappings into a Hilbert space.
+\newblock In \emph{Conference in Modern Analysis and Probability}, Contemporary Mathematics, volume 26, pages 189--206. American Mathematical Society.
+
+\bibitem[Kwak et~al.(2021)]{kwak2021frameaxis}
+Haewoon Kwak, Jisun An, and Yong-Yeol Ahn.
+\newblock 2021.
+\newblock FrameAxis: Characterizing frames by tracking linguistic bias in high-dimensional embedding spaces.
+\newblock \emph{Journal of Quantitative Description: Digital Media}, 1.
+
+\bibitem[Kuhn(1962)]{kuhn1962}
+Thomas S. Kuhn.
+\newblock 1962.
+\newblock \emph{The Structure of Scientific Revolutions}.
+\newblock University of Chicago Press, Chicago.
+
+\bibitem[Larsen and Nelson(2016)]{larsennelson2016}
+Kasper Green Larsen and Jelani Nelson.
+\newblock 2016.
+\newblock The Johnson--Lindenstrauss lemma is optimal for linear dimensionality reduction.
+\newblock In \emph{43rd International Colloquium on Automata, Languages, and Programming (ICALP 2016)}, LIPIcs 55, article 82.
+
+\bibitem[Mac Lane and Moerdijk(1992)]{maclanemoerdijk1992}
+Saunders Mac Lane and Ieke Moerdijk.
+\newblock 1992.
+\newblock \emph{Sheaves in Geometry and Logic: A First Introduction to Topos Theory}.
+\newblock Springer-Verlag, New York.
+
+\bibitem[Mackinac Center for Public Policy(2019)]{overton2019}
+Mackinac Center for Public Policy.
+\newblock 2019.
+\newblock The Overton Window.
+\newblock \url{https://www.mackinac.org/OvertonWindow}.
+
+\bibitem[McInnes et~al.(2018)]{mcinnes2018}
+Leland McInnes, John Healy, and James Melville.
+\newblock 2018.
+\newblock UMAP: Uniform manifold approximation and projection for dimension reduction.
+\newblock \emph{arXiv preprint arXiv:1802.03426}.
+
+\bibitem[Mouffe(2000)]{mouffe2000}
+Chantal Mouffe.
+\newblock 2000.
+\newblock \emph{The Democratic Paradox}.
+\newblock Verso, London.
+
+\bibitem[Mu and Viswanath(2018)]{mu2018allbutthetop}
+Jiaqi Mu and Pramod Viswanath.
+\newblock 2018.
+\newblock All-but-the-top: Simple and effective postprocessing for word representations.
+\newblock In \emph{International Conference on Learning Representations (ICLR 2018)}.
+
+\bibitem[Pavlick and Kwiatkowski(2019)]{pavlick2019}
+Ellie Pavlick and Tom Kwiatkowski.
+\newblock 2019.
+\newblock Inherent disagreements in human textual inferences.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 7:677--694.
+
+\bibitem[Pye(1999)]{pye1999}
+Lucian W. Pye.
+\newblock 1999.
+\newblock Civility, social capital, and civil society: Three powerful concepts for explaining Asia.
+\newblock \emph{Journal of Interdisciplinary History}, 29(4):763--782.
+
+\bibitem[Poole and Rosenthal(2000)]{poole2000}
+Keith T. Poole and Howard Rosenthal.
+\newblock 2000.
+\newblock \emph{Congress: A Political-Economic History of Roll Call Voting}.
+\newblock Oxford University Press, Oxford.
+
+\bibitem[Rahimi and Recht(2008)]{rahimi2008}
+Ali Rahimi and Benjamin Recht.
+\newblock 2008.
+\newblock Weighted sums of random kitchen sinks: Replacing minimization with randomization in learning.
+\newblock In \emph{Advances in Neural Information Processing Systems 21}.
+
+\bibitem[Rasmussen and Williams(2006)]{rasmussen2006}
+Carl~Edward Rasmussen and Christopher~K.~I. Williams.
+\newblock 2006.
+\newblock \emph{Gaussian Processes for Machine Learning}.
+\newblock MIT Press, Cambridge, MA.
+
+\bibitem[Reiheld(2013)]{reiheld2013}
+Alison Reiheld.
+\newblock 2013.
+\newblock Asking too much? Civility vs. pluralism.
+\newblock \emph{Journal of Social Philosophy}, 44(2):144--164.
+
+\bibitem[Sch\"{o}lkopf et~al.(1998)]{scholkopf1998}
+Bernhard Sch\"{o}lkopf, Alexander Smola, and Klaus-Robert M\"{u}ller.
+\newblock 1998.
+\newblock Nonlinear component analysis as a kernel eigenvalue problem.
+\newblock \emph{Neural Computation}, 10(5):1299--1319.
+
+\bibitem[Swanstrom and Weissmann(2005)]{swanstromweissmann2005}
+Niklas L.~P. Swanstrom and Mikael S. Weissmann.
+\newblock 2005.
+\newblock \emph{Conflict, Conflict Prevention, Conflict Management and Beyond: A Conceptual Exploration}.
+\newblock Central Asia-Caucasus Institute and Silk Road Studies Program, Uppsala.
+
+\bibitem[Univalent Foundations Program(2013)]{hottbook2013}
+The Univalent Foundations Program.
+\newblock 2013.
+\newblock \emph{Homotopy Type Theory: Univalent Foundations of Mathematics}.
+\newblock Institute for Advanced Study, Princeton, NJ.
+\newblock \url{https://homotopytypetheory.org/book/}.
+
+\bibitem[V-Dem Institute(2023)]{vdem2023}
+V-Dem Institute.
+\newblock 2023.
+\newblock \emph{Democracy Report 2023: Defiance in the Face of Autocratization}.
+\newblock University of Gothenburg, Gothenburg.
+
+\bibitem[Williams et~al.(2018)]{williams2018}
+Adina Williams, Nikita Nangia, and Samuel R. Bowman.
+\newblock 2018.
+\newblock A broad-coverage challenge corpus for sentence understanding through inference.
+\newblock \emph{Proceedings of NAACL-HLT 2018}, pp.~1112--1122.
+
+\bibitem[Wittgenstein(1922)]{wittgenstein1922}
+Ludwig Wittgenstein.
+\newblock 1922.
+\newblock \emph{Tractatus Logico-Philosophicus}.
+\newblock Kegan Paul, Trench, Trubner \& Co., London.
+
+\bibitem[Xu and Jurgens(2026)]{xujurgens2026}
+Yige Xu and David Jurgens.
+\newblock 2026.
+\newblock Beyond consensus: Perspectivist modeling and evaluation of annotator disagreement in NLP.
+\newblock \emph{arXiv preprint arXiv:2601.09065}.
+
+\end{thebibliography}
+
+\newpage
+\input{05_appendix.tex}
+
+\end{document}

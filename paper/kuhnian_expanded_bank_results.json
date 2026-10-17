@@ -1,0 +1,504 @@
+{
+  "timestamp": "2026-09-17T23:09:32Z",
+  "individual_banks": {
+    "q0_original_geopolitical": {
+      "category": "political",
+      "pc1_variance_ratio": 0.4830298544478368,
+      "participation_ratio": 3.4673488931257594,
+      "cca_heldout_r": 1.0,
+      "cca_fold_r": [
+        0.9999999999999999,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "j10_overlap_q0": 1.0,
+      "publisher_anova_f": 4.431871253106965,
+      "publisher_anova_eta2": 0.3523685952909758,
+      "publisher_anova_p": 0.00016158199871256122,
+      "anomaly_spearman_rho": 1.0
+    },
+    "q1_paraphrase_control": {
+      "category": "political",
+      "pc1_variance_ratio": 0.46269717939027544,
+      "participation_ratio": 3.641488256199689,
+      "cca_heldout_r": 0.8872916964167701,
+      "cca_fold_r": [
+        0.9033578573111593,
+        0.8354859383757761,
+        0.8370162691434667,
+        0.9165603368937534,
+        0.944038080359695
+      ],
+      "j10_overlap_q0": 0.2800818033016175,
+      "publisher_anova_f": 4.071503491530359,
+      "publisher_anova_eta2": 0.35243932861005284,
+      "publisher_anova_p": 0.0003567146198083472,
+      "anomaly_spearman_rho": 0.743266893534273
+    },
+    "q2_humanitarian_rights": {
+      "category": "political",
+      "pc1_variance_ratio": 0.4841369047830285,
+      "participation_ratio": 3.521998189861191,
+      "cca_heldout_r": 0.588188314508486,
+      "cca_fold_r": [
+        0.6641950071051768,
+        0.4066228192322261,
+        0.23593635952826836,
+        0.7865806441802997,
+        0.8476067424964587
+      ],
+      "j10_overlap_q0": 0.10305287319606204,
+      "publisher_anova_f": 1.8323207991842234,
+      "publisher_anova_eta2": 0.17849422867091144,
+      "publisher_anova_p": 0.0746299727168913,
+      "anomaly_spearman_rho": 0.4584346135148273
+    },
+    "q3_realpolitik_statecraft": {
+      "category": "political",
+      "pc1_variance_ratio": 0.3613444151938849,
+      "participation_ratio": 4.829154461608045,
+      "cca_heldout_r": 0.6711317446977451,
+      "cca_fold_r": [
+        0.596960714524482,
+        0.603762727632407,
+        0.527918330013781,
+        0.7828399463940877,
+        0.8441770049239682
+      ],
+      "j10_overlap_q0": 0.11303780284043442,
+      "publisher_anova_f": 1.7058017124033187,
+      "publisher_anova_eta2": 0.1613042715958259,
+      "publisher_anova_p": 0.1010884541568771,
+      "anomaly_spearman_rho": 0.43453712063337724
+    },
+    "disciplinary_paradigms:ihl_humanitarian_law": {
+      "category": "political",
+      "pc1_variance_ratio": 0.3274200469468365,
+      "participation_ratio": 5.175069945343206,
+      "cca_heldout_r": 0.6329495445890864,
+      "cca_fold_r": [
+        0.6878633468338635,
+        0.7188653393660981,
+        0.11001760700398618,
+        0.8310633266139259,
+        0.8169381031275582
+      ],
+      "j10_overlap_q0": 0.11268489852081182,
+      "publisher_anova_f": 2.901553095402471,
+      "publisher_anova_eta2": 0.27076453713869714,
+      "publisher_anova_p": 0.005449683852330062,
+      "anomaly_spearman_rho": 0.38293631502187647
+    },
+    "disciplinary_paradigms:strategic_security": {
+      "category": "political",
+      "pc1_variance_ratio": 0.4291257466357945,
+      "participation_ratio": 4.029631302305735,
+      "cca_heldout_r": 0.3553451079525064,
+      "cca_fold_r": [
+        0.4922585737318315,
+        0.3045883458189741,
+        -0.3438075680715581,
+        0.7433700430317194,
+        0.580316145251565
+      ],
+      "j10_overlap_q0": 0.11592768686421938,
+      "publisher_anova_f": 3.2206030927424196,
+      "publisher_anova_eta2": 0.20243693602422835,
+      "publisher_anova_p": 0.0025351535793247224,
+      "anomaly_spearman_rho": 0.403340509757622
+    },
+    "extreme_political_ontologies:legal_culpability": {
+      "category": "political",
+      "pc1_variance_ratio": 0.41865221280677495,
+      "participation_ratio": 4.212438800824171,
+      "cca_heldout_r": 0.5490782168166274,
+      "cca_fold_r": [
+        0.6275789491901174,
+        0.49935711844858816,
+        0.099396185202961,
+        0.650848129810001,
+        0.8682107014314697
+      ],
+      "j10_overlap_q0": 0.10734075794060315,
+      "publisher_anova_f": 2.233761901615156,
+      "publisher_anova_eta2": 0.2229600352083906,
+      "publisher_anova_p": 0.027965440392161013,
+      "anomaly_spearman_rho": 0.3493784290575734
+    },
+    "extreme_political_ontologies:operational_efficacy": {
+      "category": "political",
+      "pc1_variance_ratio": 0.2894034982028763,
+      "participation_ratio": 6.106134925021603,
+      "cca_heldout_r": 0.4355236515051638,
+      "cca_fold_r": [
+        0.22063416240886263,
+        0.527471940908722,
+        0.368122936846738,
+        0.5307369411184274,
+        0.5306522762430692
+      ],
+      "j10_overlap_q0": 0.08437423214899994,
+      "publisher_anova_f": 1.9170489813838034,
+      "publisher_anova_eta2": 0.19993668915445972,
+      "publisher_anova_p": 0.06077438979333722,
+      "anomaly_spearman_rho": 0.34637127578304044
+    },
+    "extreme_political_ontologies:humanitarian_welfare": {
+      "category": "political",
+      "pc1_variance_ratio": 0.551393105717423,
+      "participation_ratio": 2.9579211828733474,
+      "cca_heldout_r": 0.5441614628665058,
+      "cca_fold_r": [
+        0.6194070799317978,
+        0.3471136848761799,
+        0.28478877523030366,
+        0.6838700653493145,
+        0.7856277089449334
+      ],
+      "j10_overlap_q0": 0.08417182662538698,
+      "publisher_anova_f": 2.9976454644120754,
+      "publisher_anova_eta2": 0.24273813693498825,
+      "publisher_anova_p": 0.004321425272393999,
+      "anomaly_spearman_rho": 0.20467393568997844
+    },
+    "extreme_political_ontologies:economic_cost": {
+      "category": "political",
+      "pc1_variance_ratio": 0.37562193041830133,
+      "participation_ratio": 4.622640518495202,
+      "cca_heldout_r": 0.5607018912153664,
+      "cca_fold_r": [
+        0.5332814008801248,
+        0.4109879612553461,
+        0.484373322297628,
+        0.6545762945137945,
+        0.7202904771299384
+      ],
+      "j10_overlap_q0": 0.08148148148148149,
+      "publisher_anova_f": 2.1485440324607037,
+      "publisher_anova_eta2": 0.11452698933420105,
+      "publisher_anova_p": 0.03448820344298115,
+      "anomaly_spearman_rho": 0.16765053128689492
+    },
+    "extreme_political_ontologies:religious_obligation": {
+      "category": "political",
+      "pc1_variance_ratio": 0.4316824677687631,
+      "participation_ratio": 4.046551935938098,
+      "cca_heldout_r": 0.4258410496169809,
+      "cca_fold_r": [
+        0.47504672804337017,
+        0.37231143052723203,
+        0.06901845143344333,
+        0.798240861379908,
+        0.4145877767009509
+      ],
+      "j10_overlap_q0": 0.08569974773535144,
+      "publisher_anova_f": 1.2338076651509706,
+      "publisher_anova_eta2": 0.07839541180532765,
+      "publisher_anova_p": 0.2941676089726291,
+      "anomaly_spearman_rho": 0.3558858254045419
+    },
+    "disciplinary_paradigms:peace_conflict_studies": {
+      "category": "disciplinary_non_political",
+      "pc1_variance_ratio": 0.5349109425859727,
+      "participation_ratio": 3.0876300652566817,
+      "cca_heldout_r": 0.5133702843647461,
+      "cca_fold_r": [
+        0.5687133634473597,
+        0.1915178560999009,
+        0.49987355676467105,
+        0.5240190396935733,
+        0.7827276058182251
+      ],
+      "j10_overlap_q0": 0.09583538093600014,
+      "publisher_anova_f": 1.3327908766419716,
+      "publisher_anova_eta2": 0.11081134918026607,
+      "publisher_anova_p": 0.23796920728006135,
+      "anomaly_spearman_rho": 0.21731370234044026
+    },
+    "disciplinary_paradigms:realist_international_relations": {
+      "category": "disciplinary_non_political",
+      "pc1_variance_ratio": 0.2539640391405937,
+      "participation_ratio": 5.938610896371015,
+      "cca_heldout_r": 0.36220118199660567,
+      "cca_fold_r": [
+        0.5421972688492529,
+        0.2983623256525835,
+        0.19529962166551051,
+        0.27509706700731096,
+        0.5000496268083704
+      ],
+      "j10_overlap_q0": 0.08858922223860304,
+      "publisher_anova_f": 3.461537564840056,
+      "publisher_anova_eta2": 0.1669892518620308,
+      "publisher_anova_p": 0.0014368730674407277,
+      "anomaly_spearman_rho": 0.25341343148829776
+    },
+    "disciplinary_paradigms:media_framing_analysis": {
+      "category": "disciplinary_non_political",
+      "pc1_variance_ratio": 0.3046197160573097,
+      "participation_ratio": 5.432293090577272,
+      "cca_heldout_r": 0.5213399696545113,
+      "cca_fold_r": [
+        0.3610359008011258,
+        0.6216624865297785,
+        0.410368604596789,
+        0.51815700651934,
+        0.6954758498255237
+      ],
+      "j10_overlap_q0": 0.09546271725064294,
+      "publisher_anova_f": 2.098479285193149,
+      "publisher_anova_eta2": 0.15388427907781332,
+      "publisher_anova_p": 0.0390016015923205,
+      "anomaly_spearman_rho": 0.30920897284533644
+    },
+    "absurd_structurally_matched_paradigms:meteorology": {
+      "category": "absurd_structurally_matched",
+      "pc1_variance_ratio": 0.25014881784166704,
+      "participation_ratio": 5.987565221787194,
+      "cca_heldout_r": 0.4385747980069278,
+      "cca_fold_r": [
+        0.40554281183016766,
+        0.4367922487757206,
+        0.41816821010593175,
+        0.3745775828701715,
+        0.557793136452647
+      ],
+      "j10_overlap_q0": 0.07308938195161103,
+      "publisher_anova_f": 0.6489489370657537,
+      "publisher_anova_eta2": 0.06261259856426163,
+      "publisher_anova_p": 0.7878857521763145,
+      "anomaly_spearman_rho": 0.01623029377040072
+    },
+    "absurd_structurally_matched_paradigms:culinary_arts": {
+      "category": "absurd_structurally_matched",
+      "pc1_variance_ratio": 0.3474562711188274,
+      "participation_ratio": 5.024168123130825,
+      "cca_heldout_r": 0.5384627908035131,
+      "cca_fold_r": [
+        0.5366834634775578,
+        0.6404959573742429,
+        0.5429845249293526,
+        0.3572594984891838,
+        0.6148905097472284
+      ],
+      "j10_overlap_q0": 0.08123853342506594,
+      "publisher_anova_f": 1.9130607811007005,
+      "publisher_anova_eta2": 0.18594714998084022,
+      "publisher_anova_p": 0.061366657573394906,
+      "anomaly_spearman_rho": 0.011431349399263836
+    },
+    "absurd_structurally_matched_paradigms:botanical_taxonomy": {
+      "category": "absurd_structurally_matched",
+      "pc1_variance_ratio": 0.3019148960221981,
+      "participation_ratio": 5.807825669002521,
+      "cca_heldout_r": 0.21325791455827697,
+      "cca_fold_r": [
+        0.34073540592365503,
+        0.28365220653475764,
+        -0.07707459707643648,
+        0.21114900922587795,
+        0.3078275481835307
+      ],
+      "j10_overlap_q0": 0.07425753927301915,
+      "publisher_anova_f": 1.897307613496627,
+      "publisher_anova_eta2": 0.15836599135915744,
+      "publisher_anova_p": 0.06376127068905105,
+      "anomaly_spearman_rho": 0.1725467046322661
+    },
+    "absurd_structurally_matched_paradigms:sports_tactics": {
+      "category": "absurd_structurally_matched",
+      "pc1_variance_ratio": 0.37321981735287063,
+      "participation_ratio": 4.671211757273724,
+      "cca_heldout_r": 0.3070548679347231,
+      "cca_fold_r": [
+        0.5794288978538544,
+        0.4131413082046246,
+        -0.029838232252377323,
+        0.11815989699879657,
+        0.4543824688687173
+      ],
+      "j10_overlap_q0": 0.08772288155028092,
+      "publisher_anova_f": 2.1898394299479795,
+      "publisher_anova_eta2": 0.16058566645333194,
+      "publisher_anova_p": 0.03115772491952611,
+      "anomaly_spearman_rho": -0.048496423362733514
+    },
+    "adversarial_manufacturing_candidates:adv_inverted_pc1": {
+      "category": "adversarial_distractors",
+      "pc1_variance_ratio": 0.4557689337123232,
+      "participation_ratio": 3.676033268653738,
+      "cca_heldout_r": 0.9792780911940339,
+      "cca_fold_r": [
+        0.9857583810311857,
+        0.9781080625623241,
+        0.9758352229661313,
+        0.9673854159069396,
+        0.9893033735035884
+      ],
+      "j10_overlap_q0": 0.437692781075134,
+      "publisher_anova_f": 5.388625697202342,
+      "publisher_anova_eta2": 0.4117289721467948,
+      "publisher_anova_p": 2.2080058406838504e-05,
+      "anomaly_spearman_rho": 0.8652198069310367
+    },
+    "adversarial_manufacturing_candidates:adv_orthogonal_distractors": {
+      "category": "adversarial_distractors",
+      "pc1_variance_ratio": 0.29941937168443755,
+      "participation_ratio": 5.78984813148401,
+      "cca_heldout_r": 0.311484084571772,
+      "cca_fold_r": [
+        0.16108185951469128,
+        0.3246812724570872,
+        0.5977292501682557,
+        0.3469508021656441,
+        0.12697723855318183
+      ],
+      "j10_overlap_q0": 0.07178434239192753,
+      "publisher_anova_f": 0.9951331058080934,
+      "publisher_anova_eta2": 0.13784962280921523,
+      "publisher_anova_p": 0.470173637666052,
+      "anomaly_spearman_rho": 0.08233905132300853
+    },
+    "nonsense:shuffled_articles": {
+      "category": "nonsense_controls",
+      "pc1_variance_ratio": 0.17129845306640964,
+      "participation_ratio": 7.579183961569896,
+      "cca_heldout_r": -0.1548029649592257,
+      "cca_fold_r": [
+        -0.11435749165639439,
+        -0.07474832579038607,
+        0.06053297008125409,
+        -0.39035965043054094,
+        -0.2550823270000612
+      ],
+      "j10_overlap_q0": 0.04204219699575737,
+      "publisher_anova_f": 1.093758284376223,
+      "publisher_anova_eta2": 0.09794360033353351,
+      "publisher_anova_p": 0.39062094835125455,
+      "anomaly_spearman_rho": -0.0753524550315994
+    },
+    "nonsense:gaussian_noise": {
+      "category": "nonsense_controls",
+      "pc1_variance_ratio": 0.18042785223949945,
+      "participation_ratio": 7.638859108997687,
+      "cca_heldout_r": -0.01675303546893437,
+      "cca_fold_r": [
+        0.09965844587632805,
+        -0.12008848216900875,
+        0.02644900664996635,
+        -0.28720805214190837,
+        0.19742390443995086
+      ],
+      "j10_overlap_q0": 0.04283052402247448,
+      "publisher_anova_f": 1.2579455559129251,
+      "publisher_anova_eta2": 0.11171134094088393,
+      "publisher_anova_p": 0.2795660976240526,
+      "anomaly_spearman_rho": -0.10386137926244876
+    }
+  },
+  "category_summaries": {
+    "political": {
+      "n_banks": 11,
+      "pc1_var_mean": 0.4195006693010723,
+      "pc1_var_std": 0.07288142320675717,
+      "pr_mean": 4.237307128326913,
+      "cca_mean": 0.6045647891077489,
+      "cca_std": 0.18416577488829838,
+      "j10_mean": 0.19707755551408798,
+      "publisher_f_mean": 2.608587408126588,
+      "publisher_eta2_mean": 0.21603319634255078
+    },
+    "disciplinary_non_political": {
+      "n_banks": 3,
+      "pc1_var_mean": 0.3644982325946253,
+      "pc1_var_std": 0.12226165437541178,
+      "pr_mean": 4.819511350734989,
+      "cca_mean": 0.46563714533862105,
+      "cca_std": 0.07321260299189175,
+      "j10_mean": 0.09329577347508204,
+      "publisher_f_mean": 2.297602575558392,
+      "publisher_eta2_mean": 0.14389496004003674
+    },
+    "absurd_structurally_matched": {
+      "n_banks": 4,
+      "pc1_var_mean": 0.3181849505838908,
+      "pc1_var_std": 0.04684889753264294,
+      "pr_mean": 5.372692692798566,
+      "cca_mean": 0.37433759282586027,
+      "cca_std": 0.12403338961771837,
+      "j10_mean": 0.07907708404999426,
+      "publisher_f_mean": 1.6622891904027652,
+      "publisher_eta2_mean": 0.1418778515893978
+    },
+    "adversarial_distractors": {
+      "n_banks": 2,
+      "pc1_var_mean": 0.37759415269838037,
+      "pc1_var_std": 0.07817478101394282,
+      "pr_mean": 4.732940700068873,
+      "cca_mean": 0.6453810878829029,
+      "cca_std": 0.3338970033111309,
+      "j10_mean": 0.25473856173353077,
+      "publisher_f_mean": 3.1918794015052177,
+      "publisher_eta2_mean": 0.274789297478005
+    },
+    "nonsense_controls": {
+      "n_banks": 2,
+      "pc1_var_mean": 0.17586315265295455,
+      "pc1_var_std": 0.004564699586544901,
+      "pr_mean": 7.609021535283792,
+      "cca_mean": -0.08577800021408002,
+      "cca_std": 0.06902496474514566,
+      "j10_mean": 0.04243636050911592,
+      "publisher_f_mean": 1.175851920144574,
+      "publisher_eta2_mean": 0.10482747063720872
+    }
+  },
+  "inference_on_cca_gap": {
+    "observed_political_cca_mean": 0.5292134426409408,
+    "observed_absurd_cca_mean": 0.37433759282586027,
+    "observed_delta_cca": 0.15487584981508057,
+    "article_bootstrap": {
+      "mean_delta": 0.08746834914313747,
+      "std_delta": 0.028646803270031558,
+      "ci_95": [
+        0.028703593143100548,
+        0.14267951780465699
+      ],
+      "p_value_one_sided": 0.002997002997002997,
+      "interpretation": "Articles resampled with replacement; tests whether article sampling variance explains the gap."
+    },
+    "bank_bootstrap": {
+      "mean_delta": 0.151718865193233,
+      "std_delta": 0.07194755191426354,
+      "ci_95": [
+        0.012649787921282216,
+        0.2923134873890422
+      ],
+      "p_value_one_sided": 0.012987012987012988,
+      "interpretation": "Banks resampled with replacement; tests whether bank wording selection explains the gap."
+    },
+    "cluster_bootstrap": {
+      "mean_delta": 0.08821349132801878,
+      "std_delta": 0.04037326503925025,
+      "ci_95": [
+        0.009277538191373998,
+        0.16536647479234412
+      ],
+      "p_value_one_sided": 0.015984015984015984,
+      "interpretation": "Joint resampling of articles and banks; accounts for both sources of variance."
+    },
+    "permutation_test": {
+      "n_permutations": 10000,
+      "null_mean": -0.0014861254464879363,
+      "null_std": 0.0808022226069685,
+      "null_95_ci": [
+        -0.1461081056428209,
+        0.15487584981508068
+      ],
+      "p_value_exact_perm": 0.026097390260973904,
+      "interpretation": "Exact label permutation across political and absurd banks."
+    }
+  }
+}

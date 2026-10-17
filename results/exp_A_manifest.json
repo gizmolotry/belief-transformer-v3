@@ -1,0 +1,22 @@
+{
+  "provenance": {
+    "config": {
+      "hidden_dim": 1536,
+      "n_articles": 60,
+      "n_framings": 8,
+      "rbf_sigma": 1.0,
+      "seed": 42,
+      "train_fraction": 0.8
+    },
+    "embeddings_sha256": "2e0f6a37b66e98e889dfc00a31df7ac1601a4910c07de83552aebdb04ecf3ce4",
+    "git_commit": "98352f5317b83c412a02af91e863a31337758b12",
+    "timestamp_utc": "2026-08-13T05:34:54.283506Z"
+  },
+  "results": {
+    "max_norm_error": 5.7220458984375e-06,
+    "mean_aligned_frobenius_error": 18.552755866731918,
+    "mean_cosine_cka": 0.23593698335545404,
+    "mean_rbf_cka": 0.6222912456308093,
+    "mean_shuffled_frobenius_error": 20.751893588474818
+  }
+}

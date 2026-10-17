@@ -1,0 +1,39 @@
+{
+  "smoke_test_samples": 5,
+  "status": "PASS",
+  "scalar_jsonl_sha256": "5a1d60fe178ed7a7ef8fbbf65c0d85202d329187e702d0984bb201b980254d29",
+  "tensor_npz_sha256": "fd27def194f23875052db8e0a9cfbdb6890081113d020862da45c3f6dc6bc816",
+  "shapes": {
+    "v3": [
+      5,
+      8,
+      1536
+    ],
+    "v4": [
+      5,
+      8,
+      1536
+    ],
+    "v5": [
+      5,
+      8,
+      1536
+    ],
+    "v6": [
+      5,
+      8,
+      1536
+    ],
+    "v7": [
+      5,
+      8,
+      1536
+    ],
+    "v8": [
+      5,
+      8,
+      1536
+    ]
+  },
+  "all_finite": true
+}

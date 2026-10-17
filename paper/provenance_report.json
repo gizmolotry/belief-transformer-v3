@@ -1,0 +1,12 @@
+{
+  "audit_passed": true,
+  "summary": {
+    "prospective_confirmatory_N": 120,
+    "prospective_confirmatory_publishers": 70,
+    "total_hypothesis_banks_registered": 20,
+    "cache_margin_distinction": "VERIFIED: Prospective cache is paired (q0_la, q0_lb); Fresh Q0-Q3 caches are single-side margin (logits_raw = s_A).",
+    "exact_collisions_under_frozen_registry_detected": false,
+    "provenance_scope": "zero exact collisions under the frozen registry, with known post-hoc syndication overlap sensitivity",
+    "known_post_hoc_syndication_overlap_sensitivity": true
+  }
+}

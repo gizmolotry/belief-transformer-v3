@@ -1,0 +1,18 @@
+{
+  "dataset": "real_pilot_embeddings.pt",
+  "ground_truth_target": "publisher_metadata_publication",
+  "n_articles": 60,
+  "n_publishers": 5,
+  "full_suite": {
+    "nmi": 0.09932001207825816,
+    "ari": -0.013272947401461817
+  },
+  "subset_A": {
+    "nmi": 0.1050529315359388,
+    "ari": -0.007283608808778943
+  },
+  "subset_B_held_out": {
+    "nmi": 0.08623789354937025,
+    "ari": -0.008712436201621947
+  }
+}

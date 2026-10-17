@@ -1,0 +1,24 @@
+{
+  "n_articles": 50,
+  "total_pairs": 1225,
+  "n_bonds": 1223,
+  "bond_ratio": 0.9983673469387755,
+  "n_cracks": 1166,
+  "crack_ratio": 0.9518367346938775,
+  "correlation_crack_friction": {
+    "pearson_r": 0.3412425952403506,
+    "pearson_p": 8.786405872364147e-35,
+    "spearman_rho": 0.36958999936102155,
+    "spearman_p": 6.065469621561229e-41
+  },
+  "correlation_bond_friction": {
+    "pearson_r": -0.044443666027156895,
+    "pearson_p": 0.12001550525379752
+  },
+  "t_test_cracked_vs_non_cracked": {
+    "t_statistic": 54.88058415340992,
+    "p_value": 0.0,
+    "cracked_mean_friction": 0.05799954815662702,
+    "non_cracked_mean_friction": 0.0028699586704493386
+  }
+}

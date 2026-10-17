@@ -1,0 +1,144 @@
+{
+  "analysis": {
+    "confirmatory_decision": null,
+    "permutations": 1000,
+    "runtime_seconds": 0.8724084999994375,
+    "seed": 42
+  },
+  "formulas_and_null_interpretations": {
+    "artifact_snapshot_and_hash_limitation": "Artifacts are snapshotted once, those exact bytes are analyzed, and final path hashes must match the snapshot hashes. This prevents unobserved replacement bytes from being analyzed but cannot prove that an unobservable A\u2192B\u2192A filesystem event did not occur.",
+    "observer_polarity": "softmax(logits_raw)[entailment] - softmax(logits_raw)[contradiction]",
+    "pairwise_distance_spearman": "Spearman correlation of upper-triangular pairwise distances; distances are dependent, so the scipy p-value is descriptive/naive only.",
+    "pca": "independent SVD of each column-centered article-by-eight polarity matrix",
+    "procrustes": "scipy.spatial.procrustes disparity on the paired projected article rows",
+    "procrustes_null": "Hold both projected clouds and PCA fits fixed; independently permute only Q1 row correspondence before the same scipy.spatial.procrustes operation.",
+    "procrustes_p_value": "(1 + count(null <= observed)) / (B + 1)",
+    "scope": "robustness analysis only; no confirmatory decision label is emitted",
+    "variance_null": "For each bank, independently permute each observer column across rows and refit PCA; this tests cross-axis dependence/non-independence, not validity of a specific 2D structure.",
+    "variance_p_value": "(1 + count(null >= observed)) / (B + 1)"
+  },
+  "provenance": {
+    "alignment": {
+      "article_ids_independently_authenticated": false,
+      "limitation": "Q0 and Q1 rows are paired by position and equal row counts only; article IDs are absent and semantic alignment cannot be independently authenticated.",
+      "mode": "row_order_only"
+    },
+    "class_order": [
+      "contradiction",
+      "neutral",
+      "entailment"
+    ],
+    "git_commit": "1a160a46584cdedef736c013b373ac1c551a252f",
+    "harness": {
+      "exact_head_match": true,
+      "git_head_sha256": "ba1e53c3d49a475590a83a87ca23a75d325d761ce04c611da3cc575763c11ec9",
+      "repo_relative_path": "scripts/q0_q1_robustness.py",
+      "sha256": "ba1e53c3d49a475590a83a87ca23a75d325d761ce04c611da3cc575763c11ec9"
+    },
+    "helper": {
+      "exact_head_match": true,
+      "git_head_sha256": "910bcb55bc8661207b34d20cec40512e70ac17c0d9922f9f7857c8d7167d0a9a",
+      "repo_relative_path": "scripts/exploratory_internal_structure_analysis.py",
+      "sha256": "910bcb55bc8661207b34d20cec40512e70ac17c0d9922f9f7857c8d7167d0a9a"
+    },
+    "inputs": {
+      "q0_artifact": {
+        "path": "D:\\belief-transformer\\V3\\data\\controlled_ideo_embeddings_dense.pt",
+        "sha256_after": "375b10220219de0b1efde4ac1c47ed7a5307206bd1fcb904deed1d1f76a31fca",
+        "sha256_before": "375b10220219de0b1efde4ac1c47ed7a5307206bd1fcb904deed1d1f76a31fca"
+      },
+      "q1_artifact": {
+        "path": "D:\\belief-transformer\\V3\\data\\Q1_embeddings_dense.pt",
+        "sha256_after": "6159dc557010b0aafac87a1f71d6c3899cd43d2af6d6208f52b10a5a29178993",
+        "sha256_before": "6159dc557010b0aafac87a1f71d6c3899cd43d2af6d6208f52b10a5a29178993"
+      }
+    },
+    "runtime_environment": {
+      "numpy": "2.3.3",
+      "python": "3.13.2",
+      "python_implementation": "CPython",
+      "scipy": "1.16.2",
+      "torch": "2.10.0+cu128"
+    }
+  },
+  "results": {
+    "n_articles": 320,
+    "pairwise_projected_distance_spearman": {
+      "n_pairwise_distances": 51040,
+      "rho": 0.7964495964403422,
+      "scipy_p_display_naive": "<0.001",
+      "scipy_p_value_naive": 2.2250738585072014e-308
+    },
+    "pca": {
+      "q0": {
+        "explained_variance_ratio": [
+          0.557736521696383,
+          0.22314462165072177
+        ],
+        "two_pc_variance_ratio": 0.7808811433471048
+      },
+      "q1": {
+        "explained_variance_ratio": [
+          0.5459933500281766,
+          0.23676104046408947
+        ],
+        "two_pc_variance_ratio": 0.782754390492266
+      }
+    },
+    "principal_angles": {
+      "degrees": [
+        25.54476037088189,
+        8.639120219621045
+      ],
+      "radians": [
+        0.4458401751048568,
+        0.15078109230800285
+      ]
+    },
+    "procrustes": {
+      "count_null_le_observed": 0,
+      "lower_tail_percentile": 0.0999000999000999,
+      "lower_tail_rank": 1,
+      "lower_tail_rank_out_of": 1001,
+      "null_mean": 0.9953006885619541,
+      "null_quantiles": {
+        "2.5%": 0.9867505581105736,
+        "97.5%": 0.9996033255324528
+      },
+      "observed": 0.17298721499314917,
+      "p_display": "<0.001",
+      "p_value": 0.000999000999000999,
+      "tail": "lower"
+    },
+    "variance_null": {
+      "q0": {
+        "count_null_ge_observed": 0,
+        "null_mean": 0.438584753725992,
+        "null_quantiles": {
+          "2.5%": 0.43042381409640473,
+          "97.5%": 0.4526288890046421
+        },
+        "observed": 0.7808811433471048,
+        "p_display": "<0.001",
+        "p_value": 0.000999000999000999,
+        "tail": "upper"
+      },
+      "q1": {
+        "count_null_ge_observed": 0,
+        "null_mean": 0.49700848082955124,
+        "null_quantiles": {
+          "2.5%": 0.4906299950433351,
+          "97.5%": 0.5081727370154387
+        },
+        "observed": 0.782754390492266,
+        "p_display": "<0.001",
+        "p_value": 0.000999000999000999,
+        "tail": "upper"
+      }
+    }
+  },
+  "schema": {
+    "name": "belief_transformer.q0_q1_paraphrase_robustness",
+    "version": "1.0.0"
+  }
+}

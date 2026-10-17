@@ -1,0 +1,6 @@
+{
+  "ideo_ideo_sim": 0.07564206652542842,
+  "ctrl_ctrl_sim": -0.02969729609321803,
+  "ideo_ctrl_sim": 0.00015570704090350773,
+  "model_used": "cross-encoder/nli-deberta-v3-small"
+}

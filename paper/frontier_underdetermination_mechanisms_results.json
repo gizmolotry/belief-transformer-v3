@@ -1,0 +1,400 @@
+{
+  "point_4_empirical_underdetermination": {
+    "framework_metrics": {
+      "q0_original_geopolitical": {
+        "anova_F": 2.9080738304880773,
+        "anova_p": 0.0010170844873860871,
+        "pub_acc": 0.3866666666666666
+      },
+      "q1_paraphrase_control": {
+        "anova_F": 2.702632341195211,
+        "anova_p": 0.0020466722238150553,
+        "pub_acc": 0.32
+      },
+      "q2_humanitarian_rights": {
+        "anova_F": 1.2285931173597693,
+        "anova_p": 0.269843656978426,
+        "pub_acc": 0.2533333333333333
+      },
+      "q3_realpolitik_statecraft": {
+        "anova_F": 1.8619035700595599,
+        "anova_p": 0.03683302234036877,
+        "pub_acc": 0.27999999999999997
+      },
+      "disciplinary_paradigms:ihl_humanitarian_law": {
+        "anova_F": 2.598334679228863,
+        "anova_p": 0.0029268114307901,
+        "pub_acc": 0.17333333333333334
+      },
+      "disciplinary_paradigms:strategic_security": {
+        "anova_F": 1.5801211626290592,
+        "anova_p": 0.09350593200269611,
+        "pub_acc": 0.24
+      },
+      "disciplinary_paradigms:peace_conflict_studies": {
+        "anova_F": 1.2924466618397843,
+        "anova_p": 0.2254251988495833,
+        "pub_acc": 0.24
+      },
+      "disciplinary_paradigms:realist_international_relations": {
+        "anova_F": 3.0565296190722195,
+        "anova_p": 0.0006168991620178183,
+        "pub_acc": 0.16666666666666666
+      },
+      "disciplinary_paradigms:media_framing_analysis": {
+        "anova_F": 1.598043650292496,
+        "anova_p": 0.0882638168784004,
+        "pub_acc": 0.13333333333333333
+      },
+      "absurd_structurally_matched_paradigms:meteorology": {
+        "anova_F": 0.9580373485821211,
+        "anova_p": 0.5259311123661855,
+        "pub_acc": 0.2733333333333333
+      },
+      "absurd_structurally_matched_paradigms:culinary_arts": {
+        "anova_F": 1.716401695557945,
+        "anova_p": 0.05993964833007937,
+        "pub_acc": 0.24666666666666667
+      },
+      "absurd_structurally_matched_paradigms:botanical_taxonomy": {
+        "anova_F": 2.22167872228441,
+        "anova_p": 0.010736775273255495,
+        "pub_acc": 0.17333333333333334
+      },
+      "absurd_structurally_matched_paradigms:sports_tactics": {
+        "anova_F": 1.5241316789140478,
+        "anova_p": 0.11177275202092574,
+        "pub_acc": 0.18
+      },
+      "extreme_political_ontologies:legal_culpability": {
+        "anova_F": 1.993367149187446,
+        "anova_p": 0.02355164441359639,
+        "pub_acc": 0.27999999999999997
+      },
+      "extreme_political_ontologies:operational_efficacy": {
+        "anova_F": 1.5337618715942838,
+        "anova_p": 0.10841638711737837,
+        "pub_acc": 0.1
+      },
+      "extreme_political_ontologies:humanitarian_welfare": {
+        "anova_F": 2.344634376077696,
+        "anova_p": 0.007020385442912213,
+        "pub_acc": 0.35333333333333333
+      },
+      "extreme_political_ontologies:economic_cost": {
+        "anova_F": 1.1778165942006509,
+        "anova_p": 0.30970321760933667,
+        "pub_acc": 0.2866666666666666
+      },
+      "extreme_political_ontologies:religious_obligation": {
+        "anova_F": 1.378124480166194,
+        "anova_p": 0.1753130725844101,
+        "pub_acc": 0.1
+      }
+    },
+    "top_co_adequate_divergent_pairs": [
+      {
+        "fw1": "q3_realpolitik_statecraft",
+        "fw2": "extreme_political_ontologies:legal_culpability",
+        "pub_acc_1": 0.27999999999999997,
+        "pub_acc_2": 0.27999999999999997,
+        "delta_acc": 0.0,
+        "anova_F_1": 1.8619035700595599,
+        "anova_F_2": 1.993367149187446,
+        "delta_F": 0.1314635791278862,
+        "r_pc1": -0.7557313255237427,
+        "grassmann_dist": 1.9057903883554217,
+        "jaccard_anomalies": 0.5
+      },
+      {
+        "fw1": "q2_humanitarian_rights",
+        "fw2": "extreme_political_ontologies:economic_cost",
+        "pub_acc_1": 0.2533333333333333,
+        "pub_acc_2": 0.2866666666666666,
+        "delta_acc": 0.033333333333333326,
+        "anova_F_1": 1.2285931173597693,
+        "anova_F_2": 1.1778165942006509,
+        "delta_F": 0.0507765231591184,
+        "r_pc1": -0.6738669031874504,
+        "grassmann_dist": 2.1338441489377122,
+        "jaccard_anomalies": 0.3333333333333333
+      },
+      {
+        "fw1": "disciplinary_paradigms:strategic_security",
+        "fw2": "extreme_political_ontologies:economic_cost",
+        "pub_acc_1": 0.24,
+        "pub_acc_2": 0.2866666666666666,
+        "delta_acc": 0.046666666666666634,
+        "anova_F_1": 1.5801211626290592,
+        "anova_F_2": 1.1778165942006509,
+        "delta_F": 0.40230456842840834,
+        "r_pc1": -0.6722841614517349,
+        "grassmann_dist": 2.073918285263968,
+        "jaccard_anomalies": 0.3333333333333333
+      },
+      {
+        "fw1": "absurd_structurally_matched_paradigms:meteorology",
+        "fw2": "extreme_political_ontologies:economic_cost",
+        "pub_acc_1": 0.2733333333333333,
+        "pub_acc_2": 0.2866666666666666,
+        "delta_acc": 0.013333333333333308,
+        "anova_F_1": 0.9580373485821211,
+        "anova_F_2": 1.1778165942006509,
+        "delta_F": 0.2197792456185298,
+        "r_pc1": -0.6165566431171875,
+        "grassmann_dist": 1.9950139898910313,
+        "jaccard_anomalies": 0.14285714285714285
+      },
+      {
+        "fw1": "disciplinary_paradigms:strategic_security",
+        "fw2": "extreme_political_ontologies:legal_culpability",
+        "pub_acc_1": 0.24,
+        "pub_acc_2": 0.27999999999999997,
+        "delta_acc": 0.03999999999999998,
+        "anova_F_1": 1.5801211626290592,
+        "anova_F_2": 1.993367149187446,
+        "delta_F": 0.41324598655838685,
+        "r_pc1": -0.5133840196688941,
+        "grassmann_dist": 2.0591431902823834,
+        "jaccard_anomalies": 0.2
+      },
+      {
+        "fw1": "q3_realpolitik_statecraft",
+        "fw2": "absurd_structurally_matched_paradigms:culinary_arts",
+        "pub_acc_1": 0.27999999999999997,
+        "pub_acc_2": 0.24666666666666667,
+        "delta_acc": 0.0333333333333333,
+        "anova_F_1": 1.8619035700595599,
+        "anova_F_2": 1.716401695557945,
+        "delta_F": 0.14550187450161478,
+        "r_pc1": -0.4858300618029295,
+        "grassmann_dist": 2.306964240509813,
+        "jaccard_anomalies": 0.09090909090909091
+      },
+      {
+        "fw1": "q2_humanitarian_rights",
+        "fw2": "absurd_structurally_matched_paradigms:culinary_arts",
+        "pub_acc_1": 0.2533333333333333,
+        "pub_acc_2": 0.24666666666666667,
+        "delta_acc": 0.006666666666666626,
+        "anova_F_1": 1.2285931173597693,
+        "anova_F_2": 1.716401695557945,
+        "delta_F": 0.4878085781981758,
+        "r_pc1": -0.43485083386768114,
+        "grassmann_dist": 2.147692890987151,
+        "jaccard_anomalies": 0.2
+      },
+      {
+        "fw1": "disciplinary_paradigms:peace_conflict_studies",
+        "fw2": "absurd_structurally_matched_paradigms:culinary_arts",
+        "pub_acc_1": 0.24,
+        "pub_acc_2": 0.24666666666666667,
+        "delta_acc": 0.006666666666666682,
+        "anova_F_1": 1.2924466618397843,
+        "anova_F_2": 1.716401695557945,
+        "delta_F": 0.4239550337181608,
+        "r_pc1": -0.4095644440233131,
+        "grassmann_dist": 2.0429390930353186,
+        "jaccard_anomalies": 0.3333333333333333
+      },
+      {
+        "fw1": "disciplinary_paradigms:strategic_security",
+        "fw2": "absurd_structurally_matched_paradigms:culinary_arts",
+        "pub_acc_1": 0.24,
+        "pub_acc_2": 0.24666666666666667,
+        "delta_acc": 0.006666666666666682,
+        "anova_F_1": 1.5801211626290592,
+        "anova_F_2": 1.716401695557945,
+        "delta_F": 0.13628053292888587,
+        "r_pc1": -0.40400790715223694,
+        "grassmann_dist": 2.252780660547819,
+        "jaccard_anomalies": 0.2
+      },
+      {
+        "fw1": "disciplinary_paradigms:strategic_security",
+        "fw2": "disciplinary_paradigms:peace_conflict_studies",
+        "pub_acc_1": 0.24,
+        "pub_acc_2": 0.24,
+        "delta_acc": 0.0,
+        "anova_F_1": 1.5801211626290592,
+        "anova_F_2": 1.2924466618397843,
+        "delta_F": 0.2876745007892749,
+        "r_pc1": -0.2900922427314004,
+        "grassmann_dist": 2.1435202096820274,
+        "jaccard_anomalies": 0.2
+      }
+    ]
+  },
+  "point_6_mechanistic_constitution": {
+    "Geopolitical": {
+      "eval_layers": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ],
+      "mean_art_token_penetration": [
+        -0.0002644856770833333,
+        -8.138020833333333e-05,
+        0.0001220703125,
+        8.138020833333333e-05,
+        0.00010172526041666667,
+        -0.00010172526041666667,
+        -4.0690104166666664e-05,
+        0.00016276041666666666,
+        2.0345052083333332e-05,
+        0.0002848307291666667,
+        0.0002848307291666667,
+        0.028422037760416668,
+        0.1080322265625
+      ],
+      "mean_cls_divergence": [
+        -0.0009765625,
+        0.0,
+        2.0345052083333332e-05,
+        -2.0345052083333332e-05,
+        -0.00014241536458333334,
+        -0.00014241536458333334,
+        0.0001220703125,
+        8.138020833333333e-05,
+        -0.0001220703125,
+        0.000244140625,
+        0.0005696614583333334,
+        0.01031494140625,
+        0.19818115234375
+      ],
+      "probe_r2_article_tokens": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03662109375,
+        0.1962890625,
+        0.3505859375,
+        0.935546875,
+        0.9501953125
+      ],
+      "probe_r2_cls_token": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.001953125,
+        0.03515625,
+        0.01318359375,
+        0.0,
+        0.0595703125,
+        0.23779296875,
+        0.30029296875,
+        0.99462890625
+      ],
+      "readout_vs_constitutive_summary": {
+        "layer_0_penetration": -0.0002644856770833333,
+        "layer_12_penetration": -4.0690104166666664e-05,
+        "layer_24_penetration": 0.1080322265625,
+        "midpoint_penetration_pct": -0.037664783427146645,
+        "midpoint_cls_probe_r2": 0.03515625,
+        "final_cls_probe_r2": 0.99462890625
+      }
+    },
+    "Humanitarian": {
+      "eval_layers": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ],
+      "mean_art_token_penetration": [
+        -0.0002644856770833333,
+        0.00010172526041666667,
+        -6.103515625e-05,
+        8.138020833333333e-05,
+        6.103515625e-05,
+        0.0,
+        -6.103515625e-05,
+        -8.138020833333333e-05,
+        0.0001220703125,
+        0.0003458658854166667,
+        0.00018310546875,
+        0.03643798828125,
+        0.1436767578125
+      ],
+      "mean_cls_divergence": [
+        -0.0009765625,
+        8.138020833333333e-05,
+        0.00022379557291666666,
+        0.00016276041666666666,
+        -2.0345052083333332e-05,
+        -0.0001220703125,
+        0.00018310546875,
+        0.0003255208333333333,
+        0.0004069010416666667,
+        0.0006103515625,
+        0.0010579427083333333,
+        0.030802408854166668,
+        0.19087727864583334
+      ],
+      "probe_r2_article_tokens": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.88037109375,
+        0.916015625
+      ],
+      "probe_r2_cls_token": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.16259765625,
+        0.23388671875,
+        0.98828125
+      ],
+      "readout_vs_constitutive_summary": {
+        "layer_0_penetration": -0.0002644856770833333,
+        "layer_12_penetration": -6.103515625e-05,
+        "layer_24_penetration": 0.1436767578125,
+        "midpoint_penetration_pct": -0.042480883602083255,
+        "midpoint_cls_probe_r2": 0.0,
+        "final_cls_probe_r2": 0.98828125
+      }
+    }
+  }
+}

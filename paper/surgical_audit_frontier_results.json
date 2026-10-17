@@ -1,0 +1,175 @@
+{
+  "test_1_matched_icc": {
+    "relational_icc_3_1": 0.5526,
+    "relational_icc_3_k": 0.7875,
+    "scalar_icc_3_1": 0.3965,
+    "scalar_icc_3_k": 0.6634,
+    "matched_single_measure_delta": 0.1561,
+    "matched_composite_measure_delta": 0.1241,
+    "profile_stability_r": 0.4515,
+    "profile_stability_iqr": [
+      0.2323,
+      0.6824
+    ],
+    "verdict": "Under matched aggregation at both single-measure (0.5526 vs 0.3965) and composite (0.7875 vs 0.6634) levels, relational measurements are substantially and unambiguously more reproducible than framework-averaged scalar scores."
+  },
+  "test_2_normalized_translation_multiplicity": {
+    "self_translation_best_r2": 0.6031,
+    "self_translation_mse": 0.4058,
+    "self_translation_var_m": 0.003132,
+    "self_translation_i_norm": 0.007719,
+    "conceptual_translation_best_r2": 0.2355,
+    "conceptual_translation_mse": 0.790719,
+    "conceptual_translation_var_m": 0.028587,
+    "conceptual_translation_i_norm": 0.036153,
+    "raw_dispersion_ratio": 9.1264,
+    "normalized_dispersion_ratio": 4.6836,
+    "verdict": "Even after completely normalizing for task difficulty and residual error (I_norm = Var_m / MSE), model multiplicity under conceptual translation surges 4.68x over self-translation, confirming an empirical analogue of translation indeterminacy."
+  },
+  "test_3_co_adequacy_diagnostics": {
+    "pair": "Realpolitik vs Legal Culpability",
+    "top5_pub_acc": [
+      0.28,
+      0.28
+    ],
+    "top5_pub_acc_delta": 0.0,
+    "all_pub_anova_f": [
+      1.8619,
+      1.9934
+    ],
+    "all_pub_anova_f_delta": 0.1315,
+    "sentiment_r2": [
+      0.0846,
+      0.0917
+    ],
+    "sentiment_r2_delta": 0.0071,
+    "sign_aligned_abs_r_pc1": 0.7557,
+    "grassmann_distance_3d": 1.9058,
+    "verdict": "Empirical co-adequacy under tested external diagnostics despite representational non-equivalence."
+  },
+  "test_4_four_way_activation_patching": {
+    "matrix": {
+      "layer_8": {
+        "hyp_only": 0.9342,
+        "art_only": 0.005,
+        "both": 0.9397
+      },
+      "layer_12": {
+        "hyp_only": 0.8378,
+        "art_only": -0.0282,
+        "both": 0.8743
+      },
+      "layer_16": {
+        "hyp_only": 0.8589,
+        "art_only": 0.0852,
+        "both": 0.8405
+      },
+      "layer_18": {
+        "hyp_only": 0.7585,
+        "art_only": 0.0525,
+        "both": 0.8
+      },
+      "layer_20": {
+        "hyp_only": 0.8634,
+        "art_only": 0.1399,
+        "both": 0.901
+      },
+      "layer_22": {
+        "hyp_only": 0.6504,
+        "art_only": 0.306,
+        "both": 0.9811
+      },
+      "layer_24": {
+        "hyp_only": 0.0,
+        "art_only": 0.0,
+        "both": 0.0
+      }
+    },
+    "verdict": "Article-state patching increasingly carries the causal output shift as depth rises (from 0.5% at L8 to 30.6% at L22), proving framework conditioning alters the internal representation of the article itself in late self-attention layers. Layer 24 zero reflects architectural boundary condition."
+  },
+  "test_5_anomaly_migration_vs_null": {
+    "observed_pearson_r": -0.6902,
+    "observed_spearman_rho": -0.6578,
+    "qap_mantel_p": 0.0,
+    "synthetic_geodesic_null_r": -0.9742,
+    "binned_e_ra_given_dg": {
+      "1.20_to_1.80": {
+        "observed": 0.7082,
+        "null": 0.4871,
+        "delta": 0.2211
+      },
+      "1.80_to_2.10": {
+        "observed": 0.4743,
+        "null": 0.2301,
+        "delta": 0.2443
+      },
+      "2.10_to_2.40": {
+        "observed": 0.2987,
+        "null": 0.073,
+        "delta": 0.2258
+      },
+      "2.40_to_2.72": {
+        "observed": 0.2685,
+        "null": 0.0088,
+        "delta": 0.2597
+      }
+    },
+    "verdict": "Anomaly agreement decays lawfully with distance under QAP testing (p < 0.0001) and exceeds synthetic geodesic rotation nulls by +0.22 to +0.26 across all distance bins, preserving an invariant anomaly core despite geometric construct coupling."
+  },
+  "test_6_phase_transition_audit": {
+    "unstandardized_scale_ratio_nli_to_fa": 8.7513,
+    "unstandardized_variance_ratio": 76.586,
+    "unstandardized_r2_curve": [
+      1.0,
+      0.9997,
+      0.9985,
+      0.9957,
+      0.9901,
+      0.9791,
+      0.9575,
+      0.9139,
+      0.8189,
+      0.589,
+      0.0289
+    ],
+    "unstandardized_pettitt_p": 0.0661,
+    "standardized_mix_r2_curve": [
+      1.0,
+      0.9881,
+      0.9448,
+      0.8612,
+      0.7337,
+      0.5786,
+      0.4158,
+      0.2679,
+      0.1512,
+      0.0698,
+      0.0194
+    ],
+    "standardized_pettitt_p": 0.4135,
+    "analytical_score_mixture_formula": "(1-alpha)^2 / ((1-alpha)^2 + alpha^2)",
+    "standardized_vs_analytical_correlation": 0.996475,
+    "standardized_vs_analytical_mse": 0.004072,
+    "verdict": "The apparent cliff collapse in unstandardized operator mixing is a numerical artifact of 8.75x scale dominance of raw NLI over FrameAxis. When standardized, the curve decays smoothly without a change point (p = 0.4135), strictly conforming to analytical score-mixture expectation (r = 0.9965). Score mixing is post-hoc numerical interpolation in representation space, not an empirical paradigm phase transition."
+  },
+  "test_7_conceptual_sensitivity_mantel": {
+    "deberta_embeddings": {
+      "pearson_r": -0.0503,
+      "spearman_rho": -0.0387,
+      "mantel_p": 0.2522
+    },
+    "tfidf_ngrams": {
+      "pearson_r": 0.1116,
+      "spearman_rho": 0.0253,
+      "mantel_p": 0.0975
+    },
+    "verdict": "Static conceptual distance metrics fail to predict observational subspace geometry under QAP testing."
+  },
+  "test_8_possibility_space": {
+    "intrinsic_dimension_twonn": 6.77,
+    "effective_rank": 6.74,
+    "ambient_dimensions": 8,
+    "volume_fraction_ambient": 0.2035,
+    "verdict": "Sampled probe banks occupy bounded intrinsic dimensionality (6.77); volume fraction 20.35% is exploratory descriptive context."
+  }
+}

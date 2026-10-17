@@ -1,0 +1,91 @@
+{
+  "status": "PILOT_PASSED",
+  "sample_size": 25,
+  "pilot_timestamp_utc": "2026-10-15 00:43:38",
+  "model": "microsoft/deberta-v2-xlarge-mnli",
+  "model_revision": "2b65bccdedcead4bc685988bcc30153d4922a789",
+  "device": "NVIDIA GeForce RTX 5070 Ti",
+  "tensor_views": {
+    "V3": {
+      "shape": [
+        25,
+        8,
+        1536
+      ],
+      "dtype": "float32",
+      "is_finite": true,
+      "mean_norm": 12.649292945861816
+    },
+    "V4": {
+      "shape": [
+        25,
+        8,
+        1536
+      ],
+      "dtype": "float32",
+      "is_finite": true,
+      "mean_norm": 13.273835182189941
+    },
+    "V5": {
+      "shape": [
+        25,
+        8,
+        1536
+      ],
+      "dtype": "float32",
+      "is_finite": true,
+      "mean_norm": 4.845938682556152
+    },
+    "V6": {
+      "shape": [
+        25,
+        8,
+        1536
+      ],
+      "dtype": "float32",
+      "is_finite": true,
+      "mean_norm": 4.625582695007324
+    },
+    "V7": {
+      "shape": [
+        25,
+        8,
+        1536
+      ],
+      "dtype": "float32",
+      "is_finite": true,
+      "mean_norm": 0.9701071381568909
+    },
+    "V8": {
+      "shape": [
+        25,
+        8,
+        1536
+      ],
+      "dtype": "float32",
+      "is_finite": true,
+      "mean_norm": 0.9529328942298889
+    }
+  },
+  "resumption_verified": true,
+  "resumption_details": {
+    "initial_phase_articles": 15,
+    "resumed_phase_articles": 10,
+    "total_articles": 25,
+    "duplicate_ids": 0
+  },
+  "resource_profiling": {
+    "peak_vram_allocated_gb": 2.993,
+    "peak_vram_reserved_gb": 4.809,
+    "vram_headroom_gb": 12.291,
+    "sec_per_article": 0.735,
+    "projected_7986_extraction_hours": 1.63
+  },
+  "storage_profiling": {
+    "raw_float32_bytes_per_article": 294912,
+    "projected_7986_raw_gb": 2.193,
+    "compressed_npz_bytes_per_article": 194538.0,
+    "projected_7986_compressed_npz_gb": 1.447,
+    "checkpoint_jsonl_bytes": 32461023
+  }
+}

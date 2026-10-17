@@ -1,0 +1,47 @@
+{
+  "claim_boundary": {
+    "historical_run_reproduced": false,
+    "statement": "This is a new deterministic verification conditional on the surviving unmanifested cache; it is not provenance for, or a reproduction of, the historical unseeded Monte Carlo run."
+  },
+  "method": {
+    "coherence": "mean over all within-group axis pairs of article-mean cosine similarity",
+    "null": "complete enumeration of every equally likely axes-sized subset from 3*axes",
+    "pc1": "global center pooled [N, 3*axes, D] vectors; torch.svd; subtract PC1 projection",
+    "tail": "upper tail, statistic >= observed ideology coherence"
+  },
+  "provenance": {
+    "expected_tensor_shape": [
+      60,
+      8,
+      1536
+    ],
+    "input_path": "D:\\belief-transformer\\V3\\data\\controlled_ideo_embeddings_xlarge.pt",
+    "input_sha256": "33e87e83666a478233be4332eb710a2fc76f1198d4093537d6210d8577e7bd28",
+    "runner_path": "D:\\belief-transformer\\V3\\scripts\\verify_axis_coherence_exact.py",
+    "runner_sha256": "2465f2569c85379433b04f255ec38102366590cbdc239fa5ffb92c287b1fb897",
+    "tensor_dtype": "torch.float32",
+    "tensor_keys": [
+      "ideo_emb",
+      "ctrl_emb",
+      "rand_emb"
+    ]
+  },
+  "results": {
+    "exact_null": {
+      "exact_upper_tail_probability": 7.614168335665173e-05,
+      "null_max": 0.09490454275094505,
+      "null_mean": 0.008939284964150787,
+      "null_min": -0.047145554363461475,
+      "total_subsets": 735471,
+      "upper_tail_count_ge_observed": 56
+    },
+    "observed_coherence": {
+      "ideology": 0.07525498082187758,
+      "random": -0.01243337064183184,
+      "structure": 0.0021785389066540767
+    },
+    "pc1_explained_variance_ratio": 0.6810198426246643
+  },
+  "schema_version": 1,
+  "status": "new_verification_conditional_on_surviving_unmanifested_cache"
+}

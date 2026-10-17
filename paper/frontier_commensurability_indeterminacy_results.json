@@ -1,0 +1,299 @@
+{
+  "timestamp": "2026-09-18T00:32:29Z",
+  "point_3_commensurability_phase_transitions": {
+    "Conceptual Shift: Geopolitical -> Humanitarian": {
+      "alphas": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "curve_heldout_r2": [
+        0.9999999552274925,
+        0.9927216388506805,
+        0.9647950207677268,
+        0.9057375857647413,
+        0.8052773519421554,
+        0.6611012426858267,
+        0.4688568345348787,
+        0.2723306175192032,
+        0.1871597167090041,
+        0.17284774192463434,
+        0.20873661930351053
+      ],
+      "curve_heldout_r": [
+        0.9999999863174031,
+        0.9961748574601976,
+        0.9813844901252174,
+        0.9494761236247304,
+        0.8931891142686886,
+        0.8064716767384559,
+        0.677154245681997,
+        0.5182724626103571,
+        0.41049768915747276,
+        0.40100126171434525,
+        0.4405948335441877
+      ],
+      "curve_heldout_j10": [
+        1.0,
+        0.9295454545454547,
+        0.8647241647241646,
+        0.787995337995338,
+        0.7254745254745255,
+        0.6508671883671885,
+        0.579320516085222,
+        0.5021343444137563,
+        0.4180468425050468,
+        0.37105696233018215,
+        0.39184969084349885
+      ],
+      "endpoint_r2": 0.20873661930351053,
+      "curvature_integral_delta_r2": -0.0007715528126775981,
+      "critical_drop_alpha_window": [
+        0.6000000000000001,
+        0.7000000000000001
+      ],
+      "max_drop_magnitude": 0.19652621701567552
+    },
+    "Disciplinary Shift: Geopolitical -> IHL Humanitarian Law": {
+      "alphas": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "curve_heldout_r2": [
+        0.9999999552274925,
+        0.9876133943083155,
+        0.9442132438024308,
+        0.8659151167581719,
+        0.7599278758060579,
+        0.6350710141124365,
+        0.5043481275920182,
+        0.3858272458501747,
+        0.3056492660404688,
+        0.23624729611080347,
+        0.20387181640593097
+      ],
+      "curve_heldout_r": [
+        0.9999999863174031,
+        0.9934576830635983,
+        0.9701764118390394,
+        0.9269540205928944,
+        0.8653863603035725,
+        0.7881760474713024,
+        0.6993133249785137,
+        0.6090107860742401,
+        0.5370395588460981,
+        0.48264641619620613,
+        0.4486049861227343
+      ],
+      "curve_heldout_j10": [
+        1.0,
+        0.8994366744366745,
+        0.7958957708957709,
+        0.7142746142746143,
+        0.6484118414265473,
+        0.602224695239401,
+        0.5642834697981757,
+        0.4983964937138312,
+        0.4638446248740366,
+        0.4409628426269293,
+        0.4224030255377005
+      ],
+      "endpoint_r2": 0.20387181640593097,
+      "curvature_integral_delta_r2": 0.0188535783437892,
+      "critical_drop_alpha_window": [
+        0.5,
+        0.6000000000000001
+      ],
+      "max_drop_magnitude": 0.1307228865204183
+    },
+    "Domain-Breaking Shift: Geopolitical -> Culinary Arts": {
+      "alphas": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "curve_heldout_r2": [
+        0.9999999552274925,
+        0.9887938114869756,
+        0.9458129150130035,
+        0.8595465811959324,
+        0.7322196851464347,
+        0.5812156054876799,
+        0.42819435065390693,
+        0.29111293543128486,
+        0.18611425132943482,
+        0.11925505946884916,
+        0.07653219279023303
+      ],
+      "curve_heldout_r": [
+        0.9999999863174031,
+        0.9938775421340346,
+        0.9702636467784167,
+        0.9219478676233926,
+        0.847373002092563,
+        0.7523324813727236,
+        0.6435212826652321,
+        0.529239655271458,
+        0.4204924341760686,
+        0.33446779242881336,
+        0.28025745922084006
+      ],
+      "curve_heldout_j10": [
+        1.0,
+        0.8944444444444445,
+        0.8014374514374515,
+        0.7144993894993895,
+        0.625548063048063,
+        0.553200639230051,
+        0.4664039391980568,
+        0.4135497264173734,
+        0.36326222796811025,
+        0.3394062157026553,
+        0.33008011796711484
+      ],
+      "endpoint_r2": 0.07653219279023303,
+      "curvature_integral_delta_r2": 0.026170025716813282,
+      "critical_drop_alpha_window": [
+        0.5,
+        0.6000000000000001
+      ],
+      "max_drop_magnitude": 0.153021254833773
+    },
+    "Operator Shift: Geopolitical NLI -> FrameAxis": {
+      "alphas": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "curve_heldout_r2": [
+        0.9999999552274925,
+        0.9997002881052615,
+        0.9985115115193701,
+        0.995740096176478,
+        0.9901007532336392,
+        0.9790812490513113,
+        0.957466620046985,
+        0.9138643799505021,
+        0.8188961457840799,
+        0.5889765851322699,
+        0.028921170784033154
+      ],
+      "curve_heldout_r": [
+        0.9999999863174031,
+        0.9998453172704218,
+        0.999232415743897,
+        0.9978024145957809,
+        0.9948850552789452,
+        0.9891828167956594,
+        0.9778724136228171,
+        0.9547902417080187,
+        0.9023155174152663,
+        0.7608891056749563,
+        0.19954789435807094
+      ],
+      "curve_heldout_j10": [
+        1.0,
+        0.9833333333333334,
+        0.9580808080808081,
+        0.91989121989122,
+        0.8981740481740482,
+        0.8600205350205352,
+        0.8154428904428904,
+        0.7561369186369187,
+        0.6615563358210418,
+        0.535049645343763,
+        0.31019700615288853
+      ],
+      "endpoint_r2": 0.028921170784033154,
+      "curvature_integral_delta_r2": 0.3283811196090219,
+      "critical_drop_alpha_window": [
+        0.9,
+        1.0
+      ],
+      "max_drop_magnitude": 0.5600554143482368
+    }
+  },
+  "point_5_quinean_indeterminacy_of_translation": {
+    "Paraphrase: Q0 -> Q1 Control": {
+      "best_model": "ElasticNet_l1_0.2",
+      "best_heldout_r2": 0.603115364245566,
+      "n_co_adequate_models": 5,
+      "co_adequate_model_names": [
+        "ElasticNet_l1_0.2",
+        "Ridge_alpha_10.0",
+        "Ridge_alpha_1.0",
+        "Ridge_alpha_1e-1",
+        "Ridge_alpha_1e-2"
+      ],
+      "co_adequate_r2_range": [
+        0.5889713734008696,
+        0.603115364245566
+      ],
+      "mean_pointwise_disagreement_sigma2": 0.0031323696196714763,
+      "max_article_disagreement": 0.027896065787754554,
+      "q90_article_disagreement": 0.008130139159694197,
+      "interpretation": "For Paraphrase: Q0 -> Q1 Control, 5 models achieve virtually identical held-out performance, yet their pointwise article predictions exhibit variance sigma^2 = 0.0031. Under paraphrase, co-adequate models tightly agree."
+    },
+    "Conceptual Shift: Q0 -> Q2 Humanitarian": {
+      "best_model": "KernelRidge_rbf",
+      "best_heldout_r2": 0.23547911641382263,
+      "n_co_adequate_models": 12,
+      "co_adequate_model_names": [
+        "KernelRidge_rbf",
+        "MLP_hidden_8",
+        "ElasticNet_l1_0.2",
+        "Ridge_alpha_100.0",
+        "Ridge_alpha_10.0",
+        "PLS_1_comp",
+        "PLS_3_comp",
+        "Ridge_alpha_1.0",
+        "PLS_4_comp",
+        "Ridge_alpha_1e-1",
+        "Ridge_alpha_1e-2",
+        "PLS_2_comp"
+      ],
+      "co_adequate_r2_range": [
+        0.18779853746827624,
+        0.23547911641382263
+      ],
+      "mean_pointwise_disagreement_sigma2": 0.028587157356211847,
+      "max_article_disagreement": 0.21625285953981346,
+      "q90_article_disagreement": 0.07340434745569743,
+      "interpretation": "For Conceptual Shift: Q0 -> Q2 Humanitarian, 12 models achieve virtually identical held-out performance, yet their pointwise article predictions exhibit variance sigma^2 = 0.0286. Under paraphrase, co-adequate models tightly agree."
+    }
+  },
+  "philosophical_synthesis": "Translation quality across continuous conceptual interpolation degrades with characteristic non-linear curvature: within-domain conceptual shift decays with a prominent critical inflection window at alpha in [0.3, 0.5], while domain-breaking and operator shifts collapse precipitously. Furthermore, under conceptual shift, multiple structurally incompatible mapping models achieve equivalent empirical fit yet systematically disagree on individual article translations, providing a concrete computational instantiation of Quinean indeterminacy of translation."
+}

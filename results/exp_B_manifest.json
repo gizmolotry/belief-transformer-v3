@@ -1,0 +1,221 @@
+{
+  "provenance": {
+    "config": {
+      "conformal_metric": {
+        "temperature_scale": 1.0
+      },
+      "dirichlet_fusion": {
+        "alpha": 1.0,
+        "annealing_kl_weight": 0.5,
+        "annealing_schedule": [
+          10.0,
+          5.0,
+          2.0,
+          1.0,
+          0.5,
+          0.1
+        ],
+        "basis_path": null,
+        "basis_seed": 42,
+        "cooling_decay": 0.1,
+        "cooling_iterations": 10,
+        "cooling_reinforce": 1.5,
+        "crn_enabled": true,
+        "crn_seed": 12345,
+        "hidden_dim": 1536,
+        "kernel_ctx": null,
+        "kernel_type": "rbf",
+        "kernel_types": [
+          "rbf"
+        ],
+        "locked_dirichlet_weights": null,
+        "multi_kernel": false,
+        "n_bots": 8,
+        "n_consensus_components": 1,
+        "n_observers": 50,
+        "nu": 1.5,
+        "remove_consensus": false,
+        "rks_dim": 2048,
+        "roughness": 3,
+        "sigma": null,
+        "sigma_policy": "median",
+        "use_annealing": true,
+        "use_sequential_cooling": false
+      },
+      "evaluation_max_splits": 5,
+      "hadamard_fusion": {
+        "dark_manifold_rescue": false,
+        "dark_manifold_threshold": 0.01,
+        "eigenvalue_floor": 1e-10,
+        "hadamard_softening": 0.0,
+        "kernel_floor": 0.15,
+        "nystrom_threshold": 5000,
+        "output_dim": 2048,
+        "rks_dim": 2048,
+        "sigma_conformal": null,
+        "sigma_rks": null,
+        "sigma_spectral": null,
+        "spectral_dim": 2048,
+        "temperature_scale": 1.0,
+        "use_nystrom": false
+      },
+      "hidden_dim": 1536,
+      "n_articles": 60,
+      "n_bots": 8,
+      "seed": 42,
+      "spectral_polarity": {
+        "adaptive_sigma_max_samples": 1000,
+        "adaptive_sigma_min": 1e-06,
+        "dynamic_k_threshold_ratio": 0.1,
+        "evr_threshold": 0.5,
+        "min_persistent_scales": 2,
+        "multi_scale_enabled": true,
+        "normalization_epsilon": 1e-12,
+        "reference_probe_idx": 0,
+        "sigma_scale_epsilon": 1e-06,
+        "sigma_values": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "use_adaptive_sigma": true,
+        "weighted_sigma_mode": "sigma_squared",
+        "whitened_sigma_epsilon": 1e-06,
+        "whitened_sigma_mode": "sigma"
+      }
+    },
+    "embeddings_sha256": "2e0f6a37b66e98e889dfc00a31df7ac1601a4910c07de83552aebdb04ecf3ce4",
+    "git_commit": "98352f5317b83c412a02af91e863a31337758b12",
+    "timestamp_utc": "2026-08-13T05:35:01.936494+00:00"
+  },
+  "results": {
+    "dirichlet": {
+      "module_provenance": {
+        "alpha": 1.0,
+        "basis_hashes": {
+          "rbf": "8c442208805e"
+        },
+        "basis_seed": 42,
+        "crn_enabled": true,
+        "crn_seed": 12345,
+        "hidden_dim": 1536,
+        "kernel_types": [
+          "rbf"
+        ],
+        "multi_kernel": false,
+        "n_observers": 50,
+        "remove_consensus": false,
+        "rks_dim": 2048,
+        "sigmas": {
+          "rbf": 3.0340416431427
+        },
+        "thermodynamic_objective": {
+          "cold_stage": "weak prior regularization, strong separation pressure",
+          "hot_stage": "strong prior regularization, weak separation pressure",
+          "prior_reference": "simplex weights"
+        },
+        "use_sequential_cooling": false,
+        "weights_hash": "73c190f99dc1"
+      },
+      "observer_weights_mean": [
+        0.11799056082963943,
+        0.1157466247677803,
+        0.10660215467214584,
+        0.14634525775909424,
+        0.12581411004066467,
+        0.11328405141830444,
+        0.13445721566677094,
+        0.13976003229618073
+      ],
+      "observer_weights_sha256": "d3837522d9ac9fb5d89c7b945a64649090b63bb5a5de08993e1fe8fb0f4279c5",
+      "observer_weights_shape": [
+        50,
+        8
+      ],
+      "rho_max": 0.9123331904411316,
+      "rho_mean": 0.8406926989555359,
+      "rho_min": 0.7619236707687378,
+      "rho_sha256": "e7a0cc49720b5837c6c83af9f58ccc7e8dcc90fdf630d137203658a887ec08da",
+      "rho_shape": [
+        60
+      ]
+    },
+    "embeddings_shape": [
+      60,
+      8,
+      1536
+    ],
+    "evaluations": {
+      "dirichlet_average": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "exact_rbf": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "full_hadamard_track5": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "product_kernel": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "production_rks": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "scaled_representation": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "simple_rbf_energy": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "spectral_off": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "spectral_on": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      },
+      "uniform_average": {
+        "reason": "row_count_mismatch",
+        "status": "skipped"
+      }
+    },
+    "hadamard": {
+      "conformal_kernel_sigma": 1.0107160720007147,
+      "d_conformal_max": 1.8022265434265137,
+      "d_conformal_mean": 1.3737430572509766,
+      "d_conformal_min": 0.0,
+      "d_conformal_sha256": "4f077299574889c7b2eb78fdb436a4a1767514ba6ce4827dae506a4d4e536522",
+      "d_conformal_shape": [
+        60,
+        60
+      ],
+      "isolated_indices": [],
+      "maximum_product_concat_gram_difference": 1.6653345369377348e-16,
+      "n_isolated_rescued": 0
+    },
+    "labels": {
+      "expected_rows": 60,
+      "observed_rows": 30,
+      "path": "D:\\belief-transformer\\V3\\gemini_blind_ratings.csv",
+      "reason": "row_count_mismatch",
+      "status": "skipped"
+    },
+    "spectral": {
+      "dipole_valid_count": 47,
+      "evr_mean": 0.6363413333892822,
+      "u_axis_sha256": "33719ad5a1552089735c49a8b89f0126db7d20d845dc141ad73ec7690d328a48",
+      "u_axis_shape": [
+        60,
+        1536
+      ]
+    }
+  }
+}

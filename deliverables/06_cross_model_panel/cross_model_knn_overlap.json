@@ -1,0 +1,130 @@
+{
+  "panel_name": "cross_model_panel_512",
+  "sample_size": 512,
+  "expected_random_k10": 0.009881,
+  "expected_random_k20": 0.01996,
+  "within_model_knn": {
+    "deberta": {
+      "scalar_scores": {
+        "j10": 0.0925,
+        "j20": 0.1349
+      },
+      "final_layer": {
+        "j10": 0.2163,
+        "j20": 0.252
+      },
+      "middle_layer": {
+        "j10": 0.4054,
+        "j20": 0.4411
+      }
+    },
+    "roberta": {
+      "scalar_scores": {
+        "j10": 0.1185,
+        "j20": 0.1674
+      },
+      "final_layer": {
+        "j10": 0.1097,
+        "j20": 0.1399
+      },
+      "middle_layer": {
+        "j10": 0.2653,
+        "j20": 0.3018
+      }
+    },
+    "bart": {
+      "scalar_scores": {
+        "j10": 0.0932,
+        "j20": 0.1369
+      },
+      "final_layer": {
+        "j10": 0.3535,
+        "j20": 0.3896
+      },
+      "middle_layer": {
+        "j10": 0.5075,
+        "j20": 0.5465
+      }
+    }
+  },
+  "cross_model_knn": {
+    "deberta_vs_roberta": {
+      "scalar_margins_q0": {
+        "j10": 0.0237,
+        "j20": 0.0374
+      },
+      "scalar_margins_q1": {
+        "j10": 0.0283,
+        "j20": 0.0427
+      },
+      "final_layer_q0": {
+        "j10": 0.0479,
+        "j20": 0.0618
+      },
+      "final_layer_q1": {
+        "j10": 0.053,
+        "j20": 0.0705
+      },
+      "middle_layer_q0": {
+        "j10": 0.0387,
+        "j20": 0.0542
+      },
+      "middle_layer_q1": {
+        "j10": 0.0425,
+        "j20": 0.0603
+      }
+    },
+    "deberta_vs_bart": {
+      "scalar_margins_q0": {
+        "j10": 0.037,
+        "j20": 0.0573
+      },
+      "scalar_margins_q1": {
+        "j10": 0.0407,
+        "j20": 0.0589
+      },
+      "final_layer_q0": {
+        "j10": 0.1095,
+        "j20": 0.1365
+      },
+      "final_layer_q1": {
+        "j10": 0.1161,
+        "j20": 0.1453
+      },
+      "middle_layer_q0": {
+        "j10": 0.095,
+        "j20": 0.1084
+      },
+      "middle_layer_q1": {
+        "j10": 0.0962,
+        "j20": 0.1092
+      }
+    },
+    "roberta_vs_bart": {
+      "scalar_margins_q0": {
+        "j10": 0.0237,
+        "j20": 0.0381
+      },
+      "scalar_margins_q1": {
+        "j10": 0.0327,
+        "j20": 0.0465
+      },
+      "final_layer_q0": {
+        "j10": 0.0601,
+        "j20": 0.0758
+      },
+      "final_layer_q1": {
+        "j10": 0.0666,
+        "j20": 0.0854
+      },
+      "middle_layer_q0": {
+        "j10": 0.0678,
+        "j20": 0.0885
+      },
+      "middle_layer_q1": {
+        "j10": 0.077,
+        "j20": 0.0975
+      }
+    }
+  }
+}

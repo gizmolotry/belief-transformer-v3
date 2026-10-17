@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "title": "Prospective Confirmatory Preregistered Replication",
+    "model_name": "microsoft/deberta-v2-xlarge-mnli",
+    "n_articles": 120,
+    "n_publishers": 70,
+    "permutations": 10000,
+    "operator": "Audited Paired Contrast: (P_A(E) - P_A(C)) - (P_B(E) - P_B(C))"
+  },
+  "q0_results": {
+    "pc1_evr": 0.5835637992134382,
+    "pc2_evr": 0.15063763697517407,
+    "observed_pr": 2.6248587352332238,
+    "col_null_mean_pr": 5.9402248849632455,
+    "detected_rank_col": 1,
+    "detected_rank_pub": null,
+    "pc1_col_p": 9.999000099990002e-05,
+    "pc1_col_q95": 0.2606234079226869,
+    "pc2_col_p": 1.0,
+    "pc2_col_q95": 0.21929449594583922,
+    "disjoint_partitions": {
+      "n_partitions": 35,
+      "mean_abs_r": 0.7601901729592843,
+      "std_abs_r": 0.12955223541695188,
+      "median_abs_r": 0.800417719065148,
+      "min_abs_r": 0.33694794146846274,
+      "max_abs_r": 0.8739109762295122,
+      "fraction_ge_0_70": 0.8571428571428571
+    }
+  },
+  "q1_results": {
+    "pc1_evr": 0.5608915383498506,
+    "pc2_evr": 0.15343877156975266,
+    "observed_pr": 2.794231828225332,
+    "col_null_mean_pr": 6.325695858397852,
+    "detected_rank_col": 1,
+    "detected_rank_pub": null,
+    "pc1_col_p": 9.999000099990002e-05,
+    "pc1_col_q95": 0.2590852069170921,
+    "pc2_col_p": 1.0,
+    "pc2_col_q95": 0.20958054286821295,
+    "disjoint_partitions": {
+      "n_partitions": 35,
+      "mean_abs_r": 0.7294211240905202,
+      "std_abs_r": 0.2560410481052993,
+      "median_abs_r": 0.8478687873548498,
+      "min_abs_r": 0.04551677658517109,
+      "max_abs_r": 0.9064882339728799,
+      "fraction_ge_0_70": 0.7714285714285715
+    }
+  },
+  "cross_bank_q0_vs_q1": {
+    "pearson_r": 0.9252957016179437,
+    "pearson_p": 1.62529209309196e-51,
+    "spearman_rho": 0.7827349121466768,
+    "spearman_p": 4.631602646256105e-26,
+    "procrustes_disparity_2pc": 0.3054719267557461,
+    "subspace_angle_pc1_deg": 24.310625176339588
+  },
+  "descriptive_hidden_state_coherence": {
+    "observed_coherence": -0.01693522703966924,
+    "exact_p_value": 0.780907744832903,
+    "upper_tail_count": 574335,
+    "total_subsets": 735471
+  }
+}

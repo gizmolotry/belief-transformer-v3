@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "title": "Clean Ukraine Replication under Audited Paired Contrast",
+    "model_name": "microsoft/deberta-v2-xlarge-mnli",
+    "n_articles": 60,
+    "n_publishers": 54,
+    "publisher_counts": {
+      "eurasiareview.com": 1,
+      "brisbanetimes.com.au": 1,
+      "businessghana.com": 1,
+      "pakobserver.net": 1,
+      "thenationonlineng.net": 1,
+      "thecipherbrief.com": 1,
+      "cyprus-mail.com": 1,
+      "jamaica-gleaner.com": 1,
+      "koreatimes.co.kr:443": 1,
+      "en.globes.co.il": 1,
+      "biznews.com": 1,
+      "gatestoneinstitute.org": 1,
+      "eng.obozrevatel.com": 2,
+      "columbian.com": 1,
+      "thehill.com": 1,
+      "grandforksherald.com": 1,
+      "sofrep.com": 1,
+      "fairobserver.com": 1,
+      "kyivpost.com": 3,
+      "times-standard.com": 1,
+      "arunachaltimes.in": 1,
+      "sbs.com.au": 1,
+      "slguardian.org": 2,
+      "redstate.com": 1,
+      "wmtw.com": 1,
+      "outlookindia.com": 1,
+      "tribuneindia.com": 1,
+      "prokerala.com": 1,
+      "aol.com": 1,
+      "theguardian.com": 2,
+      "spotlightnepal.com": 1,
+      "thisdaylive.com": 1,
+      "newslaundry.com": 1,
+      "wsws.org": 1,
+      "timesofmalta.com": 1,
+      "en.antaranews.com": 1,
+      "firstpost.com": 1,
+      "brandonsun.com": 1,
+      "ncregister.com": 1,
+      "aa.com.tr": 1,
+      "menafn.com": 1,
+      "ncr-iran.org": 1,
+      "timesofindia.indiatimes.com": 1,
+      "clickorlando.com": 1,
+      "washingtonexaminer.com": 1,
+      "english.aawsat.com": 1,
+      "english.news.cn": 1,
+      "pressenza.com": 1,
+      "newsghana.com.gh": 1,
+      "hindustantimes.com": 1,
+      "businessinsider.com": 1,
+      "middleeasteye.net": 2,
+      "irishdentist.ie": 1,
+      "ynetnews.com": 1
+    },
+    "permutations": 10000,
+    "operator": "Audited Paired Contrast: (P_A(E) - P_A(C)) - (P_B(E) - P_B(C))",
+    "clean_criteria": {
+      "max_shingle_jaccard": 0.35,
+      "junk_filters": [
+        "grozny",
+        "azerbaijan",
+        "airliner",
+        "plane crash",
+        "drowning",
+        "aviation accident",
+        "shopping mall"
+      ]
+    }
+  },
+  "pca": {
+    "explained_variance_ratios": [
+      0.42091994706134767,
+      0.2067025820770763,
+      0.14120084301714791,
+      0.10260551276338434,
+      0.049495003739476004,
+      0.039096686136101934,
+      0.030291823320751934,
+      0.009687601884713995
+    ],
+    "observed_pr": 3.9161186336112985,
+    "column_null_mean_pr": 4.87072413741329,
+    "detected_rank_col": 1,
+    "detected_rank_pub": null
+  },
+  "pc1": {
+    "evr": 0.42091994706134767,
+    "column_null_q95": 0.3461817718358087,
+    "column_null_p": 0.00029997000299970003,
+    "detected": true
+  },
+  "pc2": {
+    "evr": 0.2067025820770763,
+    "column_null_q95": 0.2735892153044674,
+    "column_null_p": 0.9662033796620338,
+    "detected": false
+  },
+  "axis_diagnostics": {
+    "means": [
+      0.040308443705240886,
+      0.05999755859375,
+      0.04270769755045573,
+      0.06370684305826822,
+      -0.033349609375,
+      -0.1598751703898112,
+      0.1809674580891927,
+      -0.09817765553792318
+    ],
+    "stds": [
+      0.1313470876394615,
+      0.207595430948803,
+      0.11994952304133498,
+      0.09499374775968161,
+      0.07523257694784788,
+      0.2611861581647502,
+      0.25452175821393414,
+      0.1740114277103128
+    ],
+    "mins": [
+      -0.35986328125,
+      -0.6949462890625,
+      -0.2587890625,
+      -0.12017822265625,
+      -0.2962646484375,
+      -0.8325653076171875,
+      -0.232421875,
+      -0.876556396484375
+    ],
+    "maxs": [
+      0.377685546875,
+      0.911041259765625,
+      0.471099853515625,
+      0.4588623046875,
+      0.32427978515625,
+      0.44195556640625,
+      1.0035247802734375,
+      0.115478515625
+    ],
+    "mean_off_diagonal_r": 0.032063724857137564,
+    "min_off_diagonal_r": -0.5106497694326203,
+    "max_off_diagonal_r": 0.4865384225733822,
+    "fraction_negative_off_diagonal": 0.32142857142857145
+  }
+}

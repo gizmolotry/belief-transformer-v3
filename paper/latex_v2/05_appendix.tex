@@ -1,0 +1,141 @@
+\appendix
+\section{Audited Master Claim Ledger}
+\label{app:claim_ledger}
+
+Table~\ref{tab:master_claim_ledger} provides the complete accounting of all 30 audited empirical and methodological claims across the Belief Transformer project, cataloging their exact falsification status, effect sizes, inferential bounds, and primary artifact sources.
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lp{4.2cm}cp{3.8cm}l}
+\toprule
+\textbf{ID} & \textbf{Claim Description} & \textbf{Status} & \textbf{Effect Size / Metric} & \textbf{Primary Artifact} \\
+\midrule
+\texttt{CLM\_01} & Replicated G-Theory Variance Decomposition & \texttt{SUPPORTED} & Cell-mean $AP = 37.32\%$; Item residual $74.42\%$ & \path{kuhnian_g_theory_results.json} \\
+\texttt{CLM\_02} & Framework-Blind Prediction Collapse & \texttt{SUPPORTED} & Blind $R^2 = 0.0082$ vs.\ Relational $R^2 = 0.4903$ & \path{kuhnian_framework_prediction_results.json} \\
+\texttt{CLM\_03} & Unseen-Framework Generalization Drop & \texttt{SUPPORTED} & Seen $R^2 = 0.3650$ vs.\ Unseen $R^2 = -0.1085$ & \path{kuhnian_framework_prediction_results.json} \\
+\texttt{CLM\_04} & Relational Permutation Null Gate & \texttt{SUPPORTED} & Observed $\Delta R^2 = +0.2087$ (null $p = 0.0010$) & \path{kuhnian_framework_prediction_results.json} \\
+\texttt{CLM\_05} & Paraphrase Translatability vs.\ Operator Failure & \texttt{SUPPORTED} & Paraphrase test $R^2 = 0.5488$; Operator test $R^2 \le 0.00$ & \path{kuhnian_translation_complexity_results.json} \\
+\texttt{CLM\_06} & Complexity Overfitting Gap & \texttt{SUPPORTED} & High-capacity test generalization gap $\Delta R^2 > 1.02$ & \path{kuhnian_translation_complexity_results.json} \\
+\texttt{CLM\_07} & Expanded Bank Distribution and Floor & \texttt{SUPPORTED} & Political $\bar{r} = 0.5292$ vs.\ Absurd floor $0.3743$ & \path{kuhnian_expanded_bank_results.json} \\
+\texttt{CLM\_08} & Political vs.\ Absurd CCA Inference & \texttt{SUPPORTED} & Cluster bootstrap $\Delta r = +0.0882$ ($p = 0.0160$) & \path{kuhnian_expanded_bank_results.json} \\
+\texttt{CLM\_09} & Factorial $H \times O$ ANOVA Decomposition & \texttt{SUPPORTED} & $AO = 20.87\%$, $AH = 16.67\%$ ($\Delta_{O-H}$ spans 0) & \path{kuhnian_factorial_and_replication_results.json} \\
+\texttt{CLM\_10} & Cross-Model Architecture Concordance & \texttt{SUPPORTED} & Cross-model $r = 0.55 - 0.81$ (DeBERTa, BART, RoBERTa) & \path{paired_operator_cross_model_cross_topic_rerun.json} \\
+\texttt{CLM\_11} & Cross-Topic Replication: Ukraine & \texttt{SUPPORTED} & Political $\mathrm{PC1} = 26.92\%$ ($p < 0.001$); Split-half $r = 0.51$ & \path{kuhnian_ukraine_null_results.json} \\
+\texttt{CLM\_12} & Metric-Independent Neighborhood Shift & \texttt{SUPPORTED} & Paraphrase $J_{10} \approx 0.23$ vs.\ Cross-fw $J_{10} \approx 0.09$ & \path{kuhnian_metric_anomaly_results.json} \\
+\texttt{CLM\_13} & Strict Anomaly Hierarchy Agreement & \texttt{SUPPORTED} & $0.7433 > 0.4253 > 0.0200$ across all 3 metrics & \path{kuhnian_metric_anomaly_results.json} \\
+\texttt{CLM\_14} & Bounded Adversarial Attainability & \texttt{SUPPORTED} & Random targets held-out $R^2 < 0.00$ ($94\%-97\%$ fail) & \path{kuhnian_out_of_sample_adversarial_results.json} \\
+\texttt{CLM\_15} & Nuisance Variable Commonality Partition & \texttt{SUPPORTED} & Unique nuisance $< 0.5\%$ vs.\ Unique text $47.1\%$ & \path{kuhnian_adversarial_nuisance_results.json} \\
+\texttt{CLM\_16} & Grassmannian Projection Distance & \texttt{SUPPORTED} & Paraphrase $d_G = 1.36$ vs.\ Cross-framework $d_G = 1.82$ & \path{kuhnian_adversarial_nuisance_results.json} \\
+\texttt{CLM\_17} & Publisher Separation Permutation Null & \texttt{SUPPORTED} & Observed $F = 4.43$ vs.\ Permutation null mean $1.02$ & \path{kuhnian_adversarial_nuisance_results.json} \\
+\texttt{CLM\_18} & Low Effective Stance Dimensionality & \texttt{SUPPORTED} & Leading ratio $48.3\%$, $\mathrm{PR} = 3.47$ (detected $k=1$) & \path{kuhnian_paradigms_results.json} \\
+\texttt{CLM\_19} & Functional Untranslatability Across Operators & \texttt{SUPPORTED} & Held-out test $R^2 \le 0.00$ across all 14 mapping families & \path{kuhnian_translation_complexity_results.json} \\
+\texttt{CLM\_20} & Structural Realism Interpretation & \texttt{INTERPRETATION} & Interpretive reflection on invariant tail rankings & \path{claim_ledger.json} \\
+\texttt{CLM\_21} & Matched Relational Stance Reproducibility & \texttt{SUPPORTED} & $\mathrm{ICC}_R(3,1) = 0.5526$ vs.\ $\mathrm{ICC}_A(3,1) = 0.3965$ & \path{surgical_audit_frontier_results.json} \\
+\texttt{CLM\_22} & Semantic Coordinate Reducibility & \texttt{PARTIAL} & Paraphrase affine $R^2 = 0.5981$ (fails $\ge 0.85$ gauge) & \path{frontier_invariance_gauge_results.json} \\
+\texttt{CLM\_23A} & Score-Mixture Transition Continuum & \texttt{FAILED} & Smooth decay ($p_{\text{Pettitt}} = 0.4135$); analytical $r = 0.9965$ & \path{surgical_audit_frontier_results.json} \\
+\texttt{CLM\_23B} & Difficulty-Normalized Multiplicity & \texttt{SUPPORTED} & Normalized dispersion surge $4.68\times$ ($I_{\text{norm}}: 0.0077 \to 0.0362$) & \path{surgical_audit_frontier_results.json} \\
+\texttt{CLM\_24A} & Diagnostic Co-Adequacy Underdetermination & \texttt{SUPPORTED} & Identical top-5 publisher accuracy ($\Delta = 0.000$), $d_G = 1.91$ & \path{frontier_underdetermination_mechanisms_results.json} \\
+\texttt{CLM\_24B} & Exploratory Causal Activation Patching & \texttt{EXPLORATORY} & L22 article transfer $+0.3060$ (Exploratory / Unaudited) & \path{surgical_audit_frontier_results.json} \\
+\texttt{CLM\_25A} & Bounded Observer Intrinsic Dimension & \texttt{SUPPORTED} & Two-NN intrinsic dimension $d_{\text{eff}} = 6.77$, rank $6.74/8$ & \path{frontier_possibility_observer_space_results.json} \\
+\texttt{CLM\_25B} & Anomaly Core vs.\ Geodesic Rotation Null & \texttt{SUPPORTED} & Observed $E[r_A \mid d_G]$ exceeds geodesic null by $+0.22 - +0.26$ & \path{surgical_audit_frontier_results.json} \\
+\texttt{CLM\_25C} & Prompt Descriptions vs.\ Observational Geometry & \texttt{SUPPORTED} & Prompt embeddings fail to predict geometry ($p_{\text{Mantel}} \ge 0.098$) & \path{surgical_audit_frontier_results.json} \\
+\texttt{CLM\_26} & Preregistered Human Reader Panel Protocol & \texttt{PROTOCOL} & Prospective 4-panel study design ($N=60$), power $> 0.999$ & \path{frontier_human_benchmarking_protocol.md} \\
+\bottomrule
+\end{tabular}
+\caption{Master claim ledger summarizing empirical findings, verification statuses, and supporting artifact files across the project.}
+\label{tab:master_claim_ledger}
+\end{table}
+
+\newpage
+
+\section{Exploratory Activation Patching and Boundary Conditions}
+\label{app:activation_patching}
+
+\begin{center}
+\fbox{\textbf{STATUS: EXPLORATORY / NOT LOAD-BEARING FOR PAPER 1}}
+\end{center}
+
+To investigate whether prompt framing merely acts as an external readout criterion or alters representations of the article text itself, we implemented an activation patching experiment in \texttt{microsoft/deberta-v2-xlarge-mnli} (860M parameters) across encoder layers $l \in \{8, 12, 16, 18, 20, 22, 24\}$.
+
+\subsection{Experimental Design}
+For an article $x$ evaluated under base framework $P_A$ (yielding logit $y_A$) and counterfactual framework $P_B$ (yielding logit $y_B$), we transplanted internal hidden activations $Z^{(\ell)}$ at layer $\ell$ during the forward pass of $(x, P_A)$ using PyTorch forward pre-hooks. We evaluated a $2 \times 2$ factorial intervention:
+\begin{enumerate}
+    \item \textbf{Condition 1 (Hypothesis Only)}: Patch hypothesis tokens $P_A \to P_B$; hold article tokens $x \mid P_A$.
+    \item \textbf{Condition 2 (Article Only)}: Hold hypothesis tokens $P_A$; patch article tokens $(x \mid P_A) \to (x \mid P_B)$.
+    \item \textbf{Condition 3 (Both Patched)}: Patch both hypothesis and article tokens simultaneously.
+    \item \textbf{Condition 4 (Neither Patched / Baseline)}: Unmodified baseline $(x, P_A)$.
+\end{enumerate}
+The causal transfer ratio is defined as:
+\begin{equation}
+    \tau(\ell) = \frac{\hat{y}_{\text{patched}}^{(\ell)} - y_A}{y_B - y_A}.
+\end{equation}
+
+\subsection{Empirical Patching Matrix}
+Table~\ref{tab:activation_patching_matrix} reports the resulting transfer ratios across depth.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{cccc}
+\toprule
+\textbf{Encoder Layer} & \textbf{Hypothesis Only} & \textbf{Article Only} & \textbf{Both Patched} \\
+\midrule
+Layer 8  & $+0.9342 \pm 0.231$ & $+0.0050 \pm 0.153$ & $+0.9397 \pm 0.227$ \\
+Layer 12 & $+0.8378 \pm 0.198$ & $-0.0282 \pm 0.106$ & $+0.8743 \pm 0.185$ \\
+Layer 16 & $+0.8589 \pm 0.245$ & $+0.0852 \pm 0.142$ & $+0.8405 \pm 0.251$ \\
+Layer 18 & $+0.7585 \pm 0.212$ & $+0.0525 \pm 0.119$ & $+0.8000 \pm 0.218$ \\
+Layer 20 & $+0.8634 \pm 0.205$ & $+0.1399 \pm 0.161$ & $+0.9010 \pm 0.201$ \\
+Layer 22 & $+0.6504 \pm 0.264$ & $\mathbf{+0.3060 \pm 0.167}$ & $\mathbf{+0.9811 \pm 0.039}$ \\
+Layer 24 & $0.0000 \pm 0.000$ & $0.0000 \pm 0.000$ & $0.0000 \pm 0.000$ \\
+\bottomrule
+\end{tabular}
+\caption{Causal transfer ratio $\tau(\ell)$ under 4-way activation patching across encoder layers in \texttt{DeBERTa-v2-xlarge-mnli}.}
+\label{tab:activation_patching_matrix}
+\end{table}
+
+\subsection{Methodological Limitations and Required Negative Controls}
+We explicitly designate this experiment as an \textbf{exploratory methodological lead}, rather than a load-bearing causal proof of ``representation constitution,'' due to four unexecuted baseline controls:
+\begin{enumerate}
+    \item \textbf{Self-Patch Calibration Control}: Patching $(x, P_A)$ activations back into an identical $(x, P_A)$ run was not formally executed across layers to verify that hook intervention leaves baseline logits completely unaltered ($\tau = 1.000$).
+    \item \textbf{Random / Scrambled Noise Baseline}: The current design lacks a randomized noise baseline (e.g., injecting Gaussian noise or scrambled token activations matched for norm). Without this control, we cannot rule out the hypothesis that non-specific activation perturbation in late layers arbitrarily steers classification logits.
+    \item \textbf{Unrelated Prompt Control}: Transplanting activations from a semantically unrelated prompt (e.g., meteorology) has not been evaluated to establish the null transfer baseline.
+    \item \textbf{Architectural Boundary Condition at Layer 24}: The zero transfer observed at layer 24 reflects the structural mechanics of \texttt{DeBERTa-v2}: intervention at the final encoder layer occurs after the final joint self-attention opportunity to influence the pooled sequence token (\texttt{[CLS]}). It represents an architectural boundary condition rather than evidence of context integration.
+\end{enumerate}
+Consequently, activation patching is excluded from the core results of Paper~1 and reserved for dedicated mechanistic evaluation in future work.
+
+\newpage
+
+\section{Preregistered Human Reader Panel Protocol (CLM\_26)}
+\label{app:human_protocol}
+
+\begin{center}
+\fbox{\textbf{STATUS: PROSPECTIVE PROTOCOL / RESERVED FOR PAPER 2}}
+\end{center}
+
+To adjudicate whether transformer NLI models capture authentic human perspectival geometry or machine-idiosyncratic artifacts, we specify a complete, preregistration-ready human benchmarking protocol (\path{paper/frontier_human_benchmarking_protocol.md}).
+
+\subsection{Study Architecture}
+\begin{itemize}
+    \item \textbf{Factorial Panel Design}: Four distinct human reader panels representing divergent geopolitical and legal interpretive traditions:
+    \begin{enumerate}
+        \item Panel 1: Israeli national security analysts;
+        \item Panel 2: Palestinian human rights advocates;
+        \item Panel 3: International Humanitarian Law (IHL) scholars;
+        \item Panel 4: Non-aligned international diplomats.
+    \end{enumerate}
+    Each panel contains $M=15$ independent evaluators ($N_{\text{total}} = 60$).
+    \item \textbf{Corpus and Task}: All evaluators score the identical prospective $N=120$ news article corpus across the 8 bipolar framing axes evaluated by the computational model.
+    \item \textbf{Design Power}: Statistical power analysis establishes $1 - \beta > 0.999$ to detect Procrustes manifold alignment $R^2 \ge 0.50$ at $\alpha = 0.01$. The replicated G-theory design ($Articles \times Evaluators \times Panels$) yields a projected D-study profile reliability of $E\rho^2_{AP}(15) = \mathbf{0.8929}$.
+\end{itemize}
+
+\subsection{Preregistered Falsification Gates}
+The hypothesis that language model NLI simulates authentic human perspectival geometry will be formally falsified if:
+\begin{enumerate}
+    \item Procrustes manifold alignment between model and human panels fails to clear chance ($R^2 < 0.20, p > 0.05$);
+    \item Model-derived perspective distance fails to correlate with human inter-panel distance ($r < 0.30, p > 0.05$);
+    \item Anomaly overlap between model and human panels is no better than chance ($J_{10} \le 0.05$);
+    \item Model--human agreement fails to exceed model--absurd baseline agreement.
+\end{enumerate}
+This prospective study defines the empirical bridge from model-specific measurement to human interpretive practice in Paper~2.

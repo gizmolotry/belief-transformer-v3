@@ -1,0 +1,199 @@
+{
+  "timestamp": "2026-09-17T23:12:47Z",
+  "probe_plausibility_ratings": {
+    "q0_original_geopolitical": {
+      "grammaticality": 75.0,
+      "topic_relevance": 91.55075073242188,
+      "conceptual_coherence": 29.04491424560547,
+      "non_redundancy": 100.0,
+      "meaningful_opposition": 25.425792694091797,
+      "composite_plausibility": 66.90712089538575,
+      "passes_threshold_70": false
+    },
+    "q1_paraphrase_control": {
+      "grammaticality": 75.0,
+      "topic_relevance": 95.51465606689453,
+      "conceptual_coherence": 40.72279739379883,
+      "non_redundancy": 91.8302502945624,
+      "meaningful_opposition": 40.24126434326172,
+      "composite_plausibility": 71.5856068419749,
+      "passes_threshold_70": true
+    },
+    "q2_humanitarian_rights": {
+      "grammaticality": 75.0,
+      "topic_relevance": 49.70806884765625,
+      "conceptual_coherence": 34.030921936035156,
+      "non_redundancy": 96.92882230081804,
+      "meaningful_opposition": 53.8492317199707,
+      "composite_plausibility": 60.32622863381899,
+      "passes_threshold_70": false
+    },
+    "q3_realpolitik_statecraft": {
+      "grammaticality": 75.0,
+      "topic_relevance": 42.278526306152344,
+      "conceptual_coherence": 32.00124740600586,
+      "non_redundancy": 98.47524066935662,
+      "meaningful_opposition": 55.56900405883789,
+      "composite_plausibility": 58.36883191491765,
+      "passes_threshold_70": false
+    },
+    "disciplinary_paradigms:ihl_humanitarian_law": {
+      "grammaticality": 100.0,
+      "topic_relevance": 44.719478607177734,
+      "conceptual_coherence": 45.57379913330078,
+      "non_redundancy": 88.13424793070138,
+      "meaningful_opposition": 37.406002044677734,
+      "composite_plausibility": 60.95325105068919,
+      "passes_threshold_70": false
+    },
+    "disciplinary_paradigms:strategic_security": {
+      "grammaticality": 100.0,
+      "topic_relevance": 38.77458953857422,
+      "conceptual_coherence": 38.16967010498047,
+      "non_redundancy": 93.77549010144014,
+      "meaningful_opposition": 36.07139587402344,
+      "composite_plausibility": 58.638430067340046,
+      "passes_threshold_70": false
+    },
+    "disciplinary_paradigms:peace_conflict_studies": {
+      "grammaticality": 100.0,
+      "topic_relevance": 36.62460708618164,
+      "conceptual_coherence": 45.74628829956055,
+      "non_redundancy": 88.00282673671089,
+      "meaningful_opposition": 47.196842193603516,
+      "composite_plausibility": 60.48911782001591,
+      "passes_threshold_70": false
+    },
+    "disciplinary_paradigms:realist_international_relations": {
+      "grammaticality": 100.0,
+      "topic_relevance": 26.5607967376709,
+      "conceptual_coherence": 36.06245422363281,
+      "non_redundancy": 95.38098725893812,
+      "meaningful_opposition": 44.002159118652344,
+      "composite_plausibility": 56.48518706741738,
+      "passes_threshold_70": false
+    },
+    "disciplinary_paradigms:media_framing_analysis": {
+      "grammaticality": 100.0,
+      "topic_relevance": 37.16456985473633,
+      "conceptual_coherence": 31.532577514648438,
+      "non_redundancy": 98.83232063902912,
+      "meaningful_opposition": 50.542999267578125,
+      "composite_plausibility": 60.81270553298816,
+      "passes_threshold_70": false
+    },
+    "absurd_structurally_matched_paradigms:meteorology": {
+      "grammaticality": 100.0,
+      "topic_relevance": 3.0384626388549805,
+      "conceptual_coherence": 37.40753173828125,
+      "non_redundancy": 94.35616597788214,
+      "meaningful_opposition": 45.32286071777344,
+      "composite_plausibility": 49.74066559263569,
+      "passes_threshold_70": false
+    },
+    "absurd_structurally_matched_paradigms:culinary_arts": {
+      "grammaticality": 100.0,
+      "topic_relevance": 4.15923547744751,
+      "conceptual_coherence": 44.01682662963867,
+      "non_redundancy": 89.32051404714345,
+      "meaningful_opposition": 59.966312408447266,
+      "composite_plausibility": 53.24163422644103,
+      "passes_threshold_70": false
+    },
+    "absurd_structurally_matched_paradigms:botanical_taxonomy": {
+      "grammaticality": 100.0,
+      "topic_relevance": 0.0,
+      "conceptual_coherence": 34.68413543701172,
+      "non_redundancy": 96.4311355507595,
+      "meaningful_opposition": 59.77926254272461,
+      "composite_plausibility": 51.623143156710604,
+      "passes_threshold_70": false
+    },
+    "absurd_structurally_matched_paradigms:sports_tactics": {
+      "grammaticality": 100.0,
+      "topic_relevance": 16.053518295288086,
+      "conceptual_coherence": 42.753883361816406,
+      "non_redundancy": 90.2827545234893,
+      "meaningful_opposition": 52.04142379760742,
+      "composite_plausibility": 55.179835930903764,
+      "passes_threshold_70": false
+    },
+    "extreme_political_ontologies:legal_culpability": {
+      "grammaticality": 100.0,
+      "topic_relevance": 29.965784072875977,
+      "conceptual_coherence": 47.232421875,
+      "non_redundancy": 86.87053568764023,
+      "meaningful_opposition": 49.77638626098633,
+      "composite_plausibility": 59.060456108456094,
+      "passes_threshold_70": false
+    },
+    "extreme_political_ontologies:operational_efficacy": {
+      "grammaticality": 100.0,
+      "topic_relevance": 29.47630500793457,
+      "conceptual_coherence": 36.15446472167969,
+      "non_redundancy": 95.31088348157624,
+      "meaningful_opposition": 45.28193664550781,
+      "composite_plausibility": 57.61908106197032,
+      "passes_threshold_70": false
+    },
+    "extreme_political_ontologies:humanitarian_welfare": {
+      "grammaticality": 100.0,
+      "topic_relevance": 23.224716186523438,
+      "conceptual_coherence": 43.67021942138672,
+      "non_redundancy": 89.58459594584492,
+      "meaningful_opposition": 52.61539077758789,
+      "composite_plausibility": 57.47871531655936,
+      "passes_threshold_70": false
+    },
+    "extreme_political_ontologies:economic_cost": {
+      "grammaticality": 100.0,
+      "topic_relevance": 17.982093811035156,
+      "conceptual_coherence": 37.699798583984375,
+      "non_redundancy": 94.1334871753183,
+      "meaningful_opposition": 51.44554901123047,
+      "composite_plausibility": 55.45873080945204,
+      "passes_threshold_70": false
+    },
+    "extreme_political_ontologies:religious_obligation": {
+      "grammaticality": 100.0,
+      "topic_relevance": 34.973388671875,
+      "conceptual_coherence": 37.60195541381836,
+      "non_redundancy": 94.20803338796581,
+      "meaningful_opposition": 46.766483306884766,
+      "composite_plausibility": 59.616811583207074,
+      "passes_threshold_70": false
+    },
+    "adversarial_manufacturing_candidates:adv_inverted_pc1": {
+      "grammaticality": 100.0,
+      "topic_relevance": 89.91846466064453,
+      "conceptual_coherence": 28.903501510620117,
+      "non_redundancy": 100.0,
+      "meaningful_opposition": 26.085508346557617,
+      "composite_plausibility": 71.5281662940979,
+      "passes_threshold_70": true
+    },
+    "adversarial_manufacturing_candidates:adv_orthogonal_distractors": {
+      "grammaticality": 100.0,
+      "topic_relevance": 0.0,
+      "conceptual_coherence": 31.737215042114258,
+      "non_redundancy": 98.67640744594787,
+      "meaningful_opposition": 64.00821685791016,
+      "composite_plausibility": 52.36368674479135,
+      "passes_threshold_70": false
+    }
+  },
+  "constrained_attainability": {
+    "n_all_candidates": 20,
+    "n_plausible_candidates": 2,
+    "plausible_bank_list": [
+      "q1_paraphrase_control",
+      "adversarial_manufacturing_candidates:adv_inverted_pc1"
+    ],
+    "attainability_r_unconstrained_mean": 0.23941038972358386,
+    "attainability_r_unconstrained_std": 0.08602913899789305,
+    "attainability_r_plausible_mean": 0.1088326649713357,
+    "attainability_r_plausible_std": 0.055799679170027656,
+    "attainability_r2_unconstrained_mean": 0.02847654810475324,
+    "attainability_r2_plausible_mean": 0.008588463165883176
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-09-18T00:25:50Z",
+  "design": {
+    "n_articles": 120,
+    "n_frameworks": 4,
+    "n_operators": 3,
+    "total_cells": 1440,
+    "frameworks": [
+      "q0_original_geopolitical",
+      "q1_paraphrase_control",
+      "q2_humanitarian_rights",
+      "q3_realpolitik_statecraft"
+    ],
+    "operators": [
+      "paired_nli",
+      "single_nli",
+      "frameaxis"
+    ]
+  },
+  "point_estimates": {
+    "prop_AH_ss": 16.67087259685053,
+    "prop_AO_ss": 20.86662477574207,
+    "delta_ss_o_minus_h": 4.195752178891543,
+    "pct_ems_AH": 13.7317584860733,
+    "pct_ems_AO": 31.378096652928235,
+    "delta_ems_o_minus_h": 17.646338166854935,
+    "prop_A_ss": 9.984330609188326,
+    "prop_H_ss": 10.177892355611828,
+    "prop_O_ss": 9.29707827709821,
+    "prop_HO_ss": 13.95626151137811,
+    "prop_resid_ss": 19.046939874130924
+  },
+  "cluster_bootstrap_1000": {
+    "delta_ss_o_minus_h": {
+      "mean": 3.9460675972856816,
+      "std": 2.9197892315643617,
+      "ci_95": [
+        -1.2395977048768143,
+        10.520055582349373
+      ],
+      "p_value_one_sided_leq_zero": 0.077,
+      "spans_zero": true
+    },
+    "delta_ems_o_minus_h": {
+      "mean": 17.138880771997627,
+      "std": 5.707782853966072,
+      "ci_95": [
+        6.869642191820023,
+        29.651353394444104
+      ],
+      "p_value_one_sided_leq_zero": 0.001
+    },
+    "prop_AH_ss": {
+      "mean": 16.62146421866361,
+      "ci_95": [
+        13.659993049910334,
+        19.38726867798483
+      ]
+    },
+    "prop_AO_ss": {
+      "mean": 20.567531815949295,
+      "ci_95": [
+        16.66673608923273,
+        25.410923174346287
+      ]
+    }
+  },
+  "epistemic_calibration": "Point estimates show Article x Operator interaction explains 20.87% of SS vs 16.67% for Article x Framework interaction (Delta = +4.20%). Under 1,000 cluster bootstrap resamples over articles, the 95% confidence interval for Delta_{O-H} is [-1.24%, +10.52%] (p(Delta <= 0) = 0.0770). Because the 95% CI spans zero, operator sensitivity is numerically larger in this design but not statistically superior to framework sensitivity; the two interact with articles at comparable magnitudes, and factor level asymmetry (4 frameworks vs 3 operators) must be noted."
+}

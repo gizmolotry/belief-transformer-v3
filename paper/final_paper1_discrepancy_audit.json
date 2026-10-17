@@ -1,0 +1,276 @@
+{
+  "claims_audited": 30,
+  "discrepancies_found": 0,
+  "rows": [
+    {
+      "claim_id": "CLM_01_G_THEORY_VARIANCE_PARTITIONING",
+      "reconstructed_value": "Cell-mean AP = 37.32% (df=476); Item-level residual = 74.42% (df=12600)",
+      "manuscript_value": "Cell-mean AP = 37.32% (df=476); Item-level residual = 74.42% (df=12600)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Model equations (1) and (2) with exact df (476 vs 12600) fully specified in Section 3.8."
+    },
+    {
+      "claim_id": "CLM_02_FRAMEWORK_BLIND_SCALAR_PREDICTION",
+      "reconstructed_value": "Scalar R^2 = 0.0082 vs Per-Framework R^2 = 0.4903 (gain: +0.4821)",
+      "manuscript_value": "Scalar R^2 = 0.0082 vs Per-Framework R^2 = 0.4903 (gain: +0.4821)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_03_UNSEEN_FRAMEWORK_GENERALIZATION_DROP",
+      "reconstructed_value": "Regime 2 R^2 = 0.3650 vs Regime 4 R^2 = -0.1085 (delta R^2 = -0.4734)",
+      "manuscript_value": "Regime 2 R^2 = 0.3650 vs Regime 4 R^2 = -0.1085 (delta R^2 = -0.4734)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_04_RELATIONAL_INTERACTION_PERMUTATION_GATE",
+      "reconstructed_value": "Observed Delta R^2 = +0.2087 vs Permutation Null Mean = -0.1140 (Monte Carlo p = 0.0010)",
+      "manuscript_value": "Observed Delta R^2 = +0.2087 vs Permutation Null Mean = -0.1140 (Monte Carlo p = 0.0010)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_05_RELIABILITY_NORMALIZED_TRANSLATABILITY",
+      "reconstructed_value": "Paraphrase test R^2 = 0.5488 (r=0.7741); Operator test R^2 <= 0.00 (T5 R^2 = -0.0287)",
+      "manuscript_value": "Paraphrase test R^2 = 0.5488 (r=0.7741); Operator test R^2 <= 0.00 (T5 R^2 = -0.0287)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Reported in Section 3.9 without bespoke incommensurability metric nomenclature."
+    },
+    {
+      "claim_id": "CLM_06_TRANSLATION_COMPLEXITY_OVERFITTING_GAP",
+      "reconstructed_value": "MLP / Poly-2 Generalization Gap Delta R^2 = +1.026",
+      "manuscript_value": "MLP / Poly-2 Generalization Gap Delta R^2 = +1.026",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_07_EXPANDED_BANK_DISTRIBUTION_AND_RANK1",
+      "reconstructed_value": "PC1 Var Ratio: Political = 42.0%, Absurd = 31.8%; Distractor separation: inverted = 0.9793 vs orthogonal = 0.3115",
+      "manuscript_value": "PC1 Var Ratio: Political = 42.0%, Absurd = 31.8%; Distractor separation: inverted = 0.9793 vs orthogonal = 0.3115",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_08_POLITICAL_VS_ABSURD_CCA_INFERENCE",
+      "reconstructed_value": "Observed Delta r = +0.1549; Cluster Bootstrap Delta r = +0.0882 (p = 0.0160)",
+      "manuscript_value": "Observed Delta r = +0.1549; Cluster Bootstrap Delta r = +0.0882 (p = 0.0160)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_09_FACTORIAL_HYPOTHESIS_OPERATOR_DECOMPOSITION",
+      "reconstructed_value": "sigma^2_AO = 20.87%, sigma^2_AH = 16.67%, Delta_{O-H} = +4.20%",
+      "manuscript_value": "sigma^2_AO = 20.87%, sigma^2_AH = 16.67%, Delta_{O-H} = +4.20%",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_10_CROSS_MODEL_REPLICATION",
+      "reconstructed_value": "Cross-model r: DeBERTa->BART = 0.418, DeBERTa->RoBERTa = 0.469",
+      "manuscript_value": "Cross-model r: DeBERTa->BART = 0.418, DeBERTa->RoBERTa = 0.469",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_11_CROSS_TOPIC_REPLICATION_UKRAINE",
+      "reconstructed_value": "Ukraine Political PC1 = 26.92% (p < 0.001); Split-half r = 0.5113; Cross-bank CCA floor r = 0.2917",
+      "manuscript_value": "Ukraine Political PC1 = 26.92% (p < 0.001); Split-half r = 0.5113; Cross-bank CCA floor r = 0.2917",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_12_METRIC_INDEPENDENT_NEIGHBORHOOD_DIVERGENCE",
+      "reconstructed_value": "J10 Paraphrase: 0.23 vs Cross-Framework: 0.09 under Euclidean",
+      "manuscript_value": "J10 Paraphrase: 0.23 vs Cross-Framework: 0.09 under Euclidean",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_13_ANOMALY_RANKING_HIERARCHY",
+      "reconstructed_value": "Level 1 (0.74) > Level 2 (0.43) > Level 3 (0.02) under Reconstruction Error",
+      "manuscript_value": "Level 1 (0.74) > Level 2 (0.43) > Level 3 (0.02) under Reconstruction Error",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_14_BOUNDED_ADVERSARIAL_ATTAINABILITY",
+      "reconstructed_value": "Random Targets Held-Out R^2 = -0.0308 (r = -0.1322) vs Political Held-Out r = 0.7257",
+      "manuscript_value": "Random Targets Held-Out R^2 = -0.0308 (r = -0.1322) vs Political Held-Out r = 0.7257",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_15_NUISANCE_VARIABLE_PARTITIONING",
+      "reconstructed_value": "Unique Nuisance Variance = 0.28% vs Unique Text Variance = 47.10%",
+      "manuscript_value": "Unique Nuisance Variance = 0.28% vs Unique Text Variance = 47.10%",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_16_ORIENTATION_INVARIANCE_GRASSMANNIAN",
+      "reconstructed_value": "d_G(Q0, Q1 paraphrase) = 1.36 vs d_G(Q0, Q2 humanitarian) = 1.82",
+      "manuscript_value": "d_G(Q0, Q1 paraphrase) = 1.36 vs d_G(Q0, Q2 humanitarian) = 1.82",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_17_PUBLISHER_SEPARATION_PERMUTATION_NULL",
+      "reconstructed_value": "Observed F = 4.43, eta^2 = 0.352 vs Null Mean F = 1.02 (Monte Carlo p = 0.0030)",
+      "manuscript_value": "Observed F = 4.43, eta^2 = 0.352 vs Null Mean F = 1.02 (Monte Carlo p = 0.0030)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_18_DIMENSIONALITY_AND_MP_NULL",
+      "reconstructed_value": "Leading eigenvalue ratio = 48.3%, PR = 3.47",
+      "manuscript_value": "Leading eigenvalue ratio = 48.3%, PR = 3.47",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_19_FUNCTIONAL_UNTRANSLATABILITY_ACROSS_OPERATORS",
+      "reconstructed_value": "Held-out test R^2 <= 0.00 across all 14 mapping families (T5: -0.0287, Poly-2: -0.6684)",
+      "manuscript_value": "Held-out test R^2 <= 0.00 across all 14 mapping families",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Reported as functional untranslatability across tested ML families."
+    },
+    {
+      "claim_id": "CLM_20_PHILOSOPHICAL_STRUCTURAL_REALISM_HYPOTHESIS",
+      "reconstructed_value": "Status: PHILOSOPHICAL_INTERPRETATION",
+      "manuscript_value": "Status: PHILOSOPHICAL_INTERPRETATION",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Designated strictly as PHILOSOPHICAL_INTERPRETATION."
+    },
+    {
+      "claim_id": "CLM_21_RELATIONAL_STANCE_REPRODUCIBILITY_AND_NON_RECOVERABILITY",
+      "reconstructed_value": "ICC_R(3,1)=0.5526 vs ICC_A(3,1)=0.3965; ICC_R(3,3)=0.7875 vs ICC_A(3,3)=0.6634; Framework-blind R^2 <= 0.0695",
+      "manuscript_value": "ICC_R(3,1)=0.5526 vs ICC_A(3,1)=0.3965; ICC_R(3,3)=0.7875 vs ICC_A(3,3)=0.6634; Framework-blind R^2 <= 0.0695",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Load-bearing Pillar A headline with matched single-measure and composite comparisons."
+    },
+    {
+      "claim_id": "CLM_22_SEMANTIC_COORDINATE_REDUCIBILITY",
+      "reconstructed_value": "Paraphrase affine R^2 = 0.5981 (fails >= 0.85 gauge standard); Conceptual affine R^2 = 0.123-0.209; Operator affine R^2 = 0.0289; Conserved rank = 5-6",
+      "manuscript_value": "Paraphrase affine R^2 = 0.5981 (fails >= 0.85 gauge standard); Conceptual affine R^2 = 0.123-0.209; Operator affine R^2 = 0.0289; Conserved rank = 5-6",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_23A_SCORE_MIXTURE_TRANSITION_CONTINUUM",
+      "reconstructed_value": "Pettitt p = 0.4135, analytical r = 0.9965 (MSE = 0.0041); cliff is scale artifact (76.5x variance ratio)",
+      "manuscript_value": "Pettitt p = 0.4135, analytical r = 0.9965 (MSE = 0.0041)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved as FAILED_HYPOTHESIS in Section 3.9."
+    },
+    {
+      "claim_id": "CLM_23B_TRANSLATION_MODEL_MULTIPLICITY",
+      "reconstructed_value": "I_norm: self = 0.007719 vs concept = 0.036153 (normalized surge 4.68x, raw surge 9.13x)",
+      "manuscript_value": "I_norm: self = 0.007719 vs concept = 0.036153 (normalized surge 4.68x)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Load-bearing Pillar B headline with exact difficulty-normalized formulation."
+    },
+    {
+      "claim_id": "CLM_24A_EMPIRICAL_CO_ADEQUACY_UNDERDETERMINATION",
+      "reconstructed_value": "Delta Acc = 0.000, Delta F = 0.13, Delta R^2 = 0.007, d_G = 1.9058",
+      "manuscript_value": "Delta Acc = 0.000, Delta F = 0.13, Delta R^2 = 0.007, d_G = 1.9058",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Phrased strictly as empirical co-adequacy under tested external diagnostics."
+    },
+    {
+      "claim_id": "CLM_24B_CAUSAL_ACTIVATION_PATCHING_CONSTITUTION",
+      "reconstructed_value": "Layer 22 article transfer: +0.3060 +/- 0.167; Full: +0.9811 +/- 0.039",
+      "manuscript_value": "Layer 22 article transfer: +0.3060 +/- 0.167; Full: +0.9811 +/- 0.039",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Status set to EXPLORATORY. Moved from main results to Appendix B with non-load-bearing and control caveats."
+    },
+    {
+      "claim_id": "CLM_25A_OBSERVER_SPACE_INTRINSIC_DIMENSION",
+      "reconstructed_value": "Two-NN intrinsic dimension = 6.77, effective rank = 6.74 / 8",
+      "manuscript_value": "Two-NN intrinsic dimension = 6.77, effective rank = 6.74 / 8",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Intrinsic dimension reported as primary metric; volume 20.35% noted as descriptive context."
+    },
+    {
+      "claim_id": "CLM_25B_ANOMALY_MIGRATION_STRUCTURAL_LAW",
+      "reconstructed_value": "QAP p < 0.0001; observed E[r_A|d_G] exceeds geodesic null by +0.221 to +0.260",
+      "manuscript_value": "QAP p < 0.0001; observed E[r_A|d_G] exceeds geodesic null by +0.221 to +0.260",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Load-bearing Bridge headline: distinguishes geometric rotation decay from invariant anomaly core."
+    },
+    {
+      "claim_id": "CLM_25C_OBSERVER_SPACE_CONCEPTUAL_DISSOCIATION",
+      "reconstructed_value": "DeBERTa vs Observational: r = -0.0503 (p_Mantel = 0.2522); TF-IDF vs Observational: r = +0.1116 (p_Mantel = 0.0975)",
+      "manuscript_value": "DeBERTa vs Observational: r = -0.0503 (p_Mantel = 0.2522); TF-IDF vs Observational: r = +0.1116 (p_Mantel = 0.0975)",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Preserved in consolidated Paper 1 ledger."
+    },
+    {
+      "claim_id": "CLM_26_HUMAN_BENCHMARKING_PROTOCOL",
+      "reconstructed_value": "Projected D-study profile reliability E rho^2_AP(15) = 0.8929; Power > 0.999",
+      "manuscript_value": "Projected D-study profile reliability E rho^2_AP(15) = 0.8929; Power > 0.999",
+      "match": true,
+      "evidence": "",
+      "discrepancy": "None. Verified against code artifacts, claim ledger, and manuscript.",
+      "required_action": "Status set to PROSPECTIVE_PROTOCOL. Documented in Appendix C and reserved for Paper 2."
+    }
+  ]
+}

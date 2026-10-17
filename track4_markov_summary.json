@@ -1,0 +1,23 @@
+{
+  "adaptive_tpt_connectivity": false,
+  "bridge_count": 4,
+  "bridge_to_void_reachable": true,
+  "committor_mean": 0.5555555555555556,
+  "connectivity_repair_applied": false,
+  "connectivity_repair_failed": false,
+  "dominant_reactive_path_indices": [
+    3,
+    1
+  ],
+  "dominant_reactive_path_length": 2,
+  "effective_k_neighbors": 9,
+  "mfpt_to_bridge_mean": 357304.42617551907,
+  "mfpt_to_void_mean": 234557486440.24786,
+  "reactive_flux_edge_count": 29,
+  "reactive_flux_total": 9.49557117713182e-08,
+  "requested_k_neighbors": 10,
+  "status": "OK",
+  "transition_temperature": 0.5,
+  "void_count": 5,
+  "void_to_bridge_reachable": true
+}
